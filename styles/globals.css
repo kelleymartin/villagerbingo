@@ -32,15 +32,19 @@ h2{
 .facesBox{
   display: grid;
   width: 630px;
+  height: 71px;
   margin-left: auto;
   margin-right: auto;
   margin-top: -30px;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
 }
+.faceWrap{
+  height: 71px;
+}
 
 .faceIcon {
-  background-color: #848484;
+  /* background-color: #848484; */
   height: 50px;
   width: 50px;
   border-radius: 25px;
@@ -122,6 +126,13 @@ button{
   height: 120px;
 }
 
+.nameTagWrap{
+  width: 120px;
+  height: 26px;
+  position: absolute;
+  top: 72px;
+}
+
 .nameTag{
   width: fit-content;
   height: 26px;
@@ -129,7 +140,6 @@ button{
   padding: 8px 10px 0;
   border-radius: 15px;
   line-height: 20px;
-  position: absolute;
   z-index: 2;
   top: 72px;
   margin-left: auto;

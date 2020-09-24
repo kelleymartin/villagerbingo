@@ -28,12 +28,12 @@ export default class Home extends React.Component {
   handleCreateBoard(event) {
     event.preventDefault();
 
-    const excludedVillagers = pickRandom(villagers, {count: 9});
+    const excludedVillagers = pickRandom(villagers, { count: 9 });
 
     const possibleVillagers = villagers.filter((villager) => {
       return !excludedVillagers.includes(villager);
     });
-    const boardVillagers = pickRandom(possibleVillagers, {count: 24});
+    const boardVillagers = pickRandom(possibleVillagers, { count: 24 });
 
     this.setState({
       excludedVillagers,
@@ -74,10 +74,12 @@ export default class Home extends React.Component {
       }
     }}>
       <img src={villager.Photo} class="picture"></img>
-      <p class="nameTag" style={{
-        backgroundColor: villager["Bubble Color"],
-        color: villager["Name Color"],
-      }}>{villager.Name}</p>
+      <div class="nameTagWrap">
+        <p class="nameTag" style={{
+          backgroundColor: villager["Bubble Color"],
+          color: villager["Name Color"],
+        }}>{villager.Name}</p>
+      </div>
       {isSelected ? <div class={`blot ${this.state.selectedColor}`}></div> : null}
     </div>;
   }
@@ -97,7 +99,7 @@ export default class Home extends React.Component {
           <h2>Exclude current villagers:</h2>
           <div class="facesBox">
             {this.state.excludedVillagers.map((villager) => {
-              return <div>
+              return <div class="faceWrap">
                 <div class="faceIcon">
                   <p class="faceNumber" style={{
                     backgroundColor: villager["Name Color"],
@@ -113,9 +115,9 @@ export default class Home extends React.Component {
                   </p>
                 </div>
                 <p class="faceName" style={{
-        backgroundColor: villager["Bubble Color"],
-        color: villager["Name Color"],
-      }}>{villager.Name}</p>
+                  backgroundColor: villager["Bubble Color"],
+                  color: villager["Name Color"],
+                }}>{villager.Name}</p>
               </div>;
             })}
           </div>
@@ -136,8 +138,8 @@ export default class Home extends React.Component {
                 return this.renderBoardTile(villager, index);
               })}
               <div class="free">
-                  <p class="overlap">Free plot</p>
-                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+                <p class="overlap">Free plot</p>
+                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
                   class="plot"></img>
               </div>
               {this.state.boardVillagers.slice(12).map((villager, index) => {
