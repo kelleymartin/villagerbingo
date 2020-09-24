@@ -90,7 +90,7 @@ export default class Home extends React.Component {
         <Head>
           <title>ACNH Villager Bingo</title>
           <link rel="icon" href="/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600&display=swap" rel="stylesheet"></link>
+          <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
         </Head>
 
         <main className={styles.main}>
@@ -123,12 +123,12 @@ export default class Home extends React.Component {
           </div>
 
           <div class="buttons">
+          <button class="save" type="button" onClick={(e) => this.handleSaveClick(e)}>
+              Save picture
+            </button>
+            
             <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
               Create board
-            </button>
-
-            <button class="save" type="button" onClick={(e) => this.handleSaveClick(e)}>
-              Save picture
             </button>
           </div>
 
@@ -148,7 +148,7 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <h2>Choose your blotter color:</h2>
+          <h2>Choose your marker color:</h2>
 
           <div class="blotter">
             {ALL_COLORS.map((color) => {
