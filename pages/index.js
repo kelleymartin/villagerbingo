@@ -106,11 +106,16 @@ export default class Home extends React.Component {
                     width: '50px',
                     height: '50px',
                     borderRadius: '25px',
-                    border: '5px solid magenta',
+                    // borderWidth: '1px',
+                    // borderStyle: 'solid',
+                    // borderColor: villager["Name Color"],
                   }}>
                   </p>
                 </div>
-                <p class="faceName">{villager.Name}</p>
+                <p class="faceName" style={{
+        backgroundColor: villager["Bubble Color"],
+        color: villager["Name Color"],
+      }}>{villager.Name}</p>
               </div>;
             })}
           </div>

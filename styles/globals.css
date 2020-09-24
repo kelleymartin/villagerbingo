@@ -7,9 +7,12 @@ html {
 
 body{
   text-align: center;
-  background: #E7F8FC;
   font-family: 'Baloo Tammudu 2', sans-serif;
   font-weight: 500;
+  /* line-height: 0px; */
+  background: linear-gradient(150deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
+  /* background-image: linear-gradient(150deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%),
+  url("https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6c341704d3a88bad98cd52_Tickets.png"); */
 }
 
 h1{
@@ -51,28 +54,35 @@ h2{
 
 .faceName{
   font-size: 14px;
-  margin-top: -10px;
+  margin-top: -5px;
+  width: fit-content;
+  height: 16px;
+  padding: 1px 8px 0;
+  border-radius: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button{
   font-family: 'Baloo Tammudu 2', sans-serif;
-  
 }
 
 .buttons{
   display: flex;
   width: 630px;
-  margin-left: auto;
-  margin-right: auto;
   justify-content: space-between;
   margin: 20px auto;
 }
 
 .create{
   background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
+  height: 40px;
   font-size: 30px;
   padding: 0 10px;
   border-radius: 25px;
+  border: none;
 }
 
 .save{
@@ -80,6 +90,7 @@ button{
   font-size: 30px;
   padding: 0 10px;
   border-radius: 25px;
+  border: none;
 }
 
 .boardBox{
@@ -87,7 +98,7 @@ button{
   height: 630px;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
+  background: linear-gradient(to left top, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
   padding: 5px;
 }
 
@@ -112,10 +123,8 @@ button{
 }
 
 .nameTag{
-  background-color: #bff2ff;
-  color: #85a2af;
   width: fit-content;
-  height: 18px;
+  height: 26px;
   font-size: 22px;
   padding: 8px 10px 0;
   border-radius: 15px;
@@ -123,6 +132,8 @@ button{
   position: absolute;
   z-index: 2;
   top: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .blot{
   background-color: #000;
