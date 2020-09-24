@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
   text-align: center;
   background: #E7F8FC;
@@ -82,7 +89,6 @@ button{
   margin-right: auto;
   background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
   padding: 5px;
-  box-sizing: border-box;
 }
 
 .boardTiles{

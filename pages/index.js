@@ -17,18 +17,6 @@ const ALL_COLORS = [
   "gold",
 ];
 
-function BoardTile(props) {
-  const {villager} = props;
-  return <div class="tile">
-    <img src={villager.Photo} class="picture"></img>
-    <p class="nameTag" style={{
-      backgroundColor: villager["Bubble Color"],
-      color: villager["Name Color"],
-    }}>{villager.Name}</p>
-    {/* <div class="blot"></div> */}
-  </div>;
-}
-
 export default class Home extends React.Component {
   state = {
     excludedVillagers: [],
@@ -61,11 +49,11 @@ export default class Home extends React.Component {
     event.preventDefault();
   }
 
-  renderBoardTile(villager) {
+  renderBoardTile(villager, index) {
     const isSelected =
       this.state.selectedVillagers.includes(villager);
 
-    return <div class="tile" onClick={(e) => {
+    return <div class={`tile tile${index}`} onClick={(e) => {
       e.preventDefault();
 
       const currentSelection = this.state.selectedVillagers;
@@ -139,16 +127,16 @@ export default class Home extends React.Component {
 
           <div class="boardBox">
             <div class="boardTiles">
-              {this.state.boardVillagers.slice(0, 12).map((villager) => {
-                return this.renderBoardTile(villager);
+              {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
+                return this.renderBoardTile(villager, index);
               })}
               <div class="free">
                   <p class="overlap">Free plot</p>
                   <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
                   class="plot"></img>
               </div>
-              {this.state.boardVillagers.slice(12).map((villager) => {
-                return this.renderBoardTile(villager);
+              {this.state.boardVillagers.slice(12).map((villager, index) => {
+                return this.renderBoardTile(villager, index + 12);
               })}
             </div>
           </div>
