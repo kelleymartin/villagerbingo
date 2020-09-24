@@ -1,16 +1,228 @@
-html,
-body {
-  padding: 0;
+body{
+  text-align: center;
+  background: #E7F8FC;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  font-weight: 500;
+}
+
+h1{
+  font-weight: 600;
+  font-size: 60px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100px;
+  text-decoration: underline;
+}
+h2{
+  font-weight: 600;
+  font-size: 40px;
+  height: 60px;
+  margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.facesBox{
+  display: grid;
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -30px;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 1fr;
 }
 
-* {
+.faceIcon {
+  background-color: #848484;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 10px;   
+}
+
+.faceNumber{
+  font-size: 40px;
+  line-height: 70px;
+}
+
+.faceName{
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+button{
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  
+}
+
+.buttons{
+  display: flex;
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+.create{
+  background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
+  font-size: 30px;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+.save{
+  background: #FFFCE9;
+  font-size: 30px;
+  padding: 0 10px;
+  border-radius: 25px;
+}
+
+.boardBox{
+  width: 630px;
+  height: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
+  padding: 5px;
   box-sizing: border-box;
+}
+
+.boardTiles{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+  width: 620px;
+  height: 620px;
+}
+
+.tile {
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.picture{
+  width: 120px;
+  height: 120px;
+}
+
+.nameTag{
+  background-color: #bff2ff;
+  color: #85a2af;
+  width: fit-content;
+  height: 18px;
+  font-size: 22px;
+  padding: 8px 10px 0;
+  border-radius: 15px;
+  line-height: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 72px;
+}
+.blot{
+  background-color: #000;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  position: absolute;
+  z-index: 10;
+  bottom: 40px;
+  left: 40px;
+}
+
+.free{
+  width: 120px;
+  height: 120px;
+}
+
+.overlap{
+  position: absolute;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.plot{
+  width: 120px;
+  height: 120px;
+}
+
+.blotter{
+  display: grid;
+  width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+.blotter > div {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 10px;
+  transition: opacity 0.25s;
+}
+
+.blotter:hover div:not(:hover) {
+  opacity: 0.3;
+}
+
+.red {
+  background-color: #FF4040;
+}
+
+.orange {
+  background-color: #FF791F;
+}
+
+.yellow {
+  background-color: #FFF80D;
+}
+
+.green {
+  background-color: #78DD62;
+}
+
+.teal {
+  background-color: #3FD8E0;
+}
+
+.blue {
+  background-color: #0961F6;
+}
+
+.purple {
+  background-color: #A06FCE;
+}
+
+.pink {
+  background-color: #EC7EFC;
+}
+
+.gold {
+  background-color: #C0AB72;
+}
+
+@media only screen and (max-width: 630px) {
+  .buttons{
+    width: 480px;
+  }
+  .boardBox{
+    width: 480px;
+    height: 480px;
+  }
+  .boardTiles{
+    width: 470px;
+    height: 470px;
+  }
+  .blotter{
+    width: 480px;
+  }
+  .blotter > div {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin: 5px;
+  }
 }
