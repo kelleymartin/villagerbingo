@@ -1,29 +1,98 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import pickRandom from 'pick-random'
 
 
 import villagers from '../data/villager-names.json'
 
+const ALL_COLORS = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "blue",
+  "purple",
+  "pink",
+  "gold",
+];
+
+function BoardTile(props) {
+  const {villager} = props;
+  return <div class="tile">
+    <img src={villager.Photo} class="picture"></img>
+    <p class="nameTag" style={{
+      backgroundColor: villager["Bubble Color"],
+      color: villager["Name Color"],
+    }}>{villager.Name}</p>
+    {/* <div class="blot"></div> */}
+  </div>;
+}
+
 export default class Home extends React.Component {
   state = {
-    clickCount: 0,
-    excludedVillagers: villagers.slice(0, 9),
+    excludedVillagers: [],
+    boardVillagers: [],
+    selectedColor: 'red',
+    selectedVillagers: [],
   };
+
+  handleCreateBoard(event) {
+    event.preventDefault();
+
+    const excludedVillagers = pickRandom(villagers, {count: 9});
+
+    const possibleVillagers = villagers.filter((villager) => {
+      return !excludedVillagers.includes(villager);
+    });
+    const boardVillagers = pickRandom(possibleVillagers, {count: 24});
+
+    this.setState({
+      excludedVillagers,
+      boardVillagers,
+      selectedVillagers: [],
+    });
+  }
 
   /**
    * @param {Event} event 
    */
   handleSaveClick(event) {
     event.preventDefault();
+  }
 
-    const nextCount = this.state.clickCount + 1;
-    this.setState({
-      clickCount: nextCount,
-      excludedVillagers: this.state.excludedVillagers.concat([
-        `Creative Name #${nextCount}`,
-      ]),
-    });
-    } 
+  renderBoardTile(villager) {
+    const isSelected =
+      this.state.selectedVillagers.includes(villager);
+
+    return <div class="tile" onClick={(e) => {
+      e.preventDefault();
+
+      const currentSelection = this.state.selectedVillagers;
+
+      // Is this villager already selected?
+      if (isSelected) {
+        // Remove from selection!
+        this.setState({
+          selectedVillagers: currentSelection.filter((selected) => {
+            return selected !== villager;
+          }),
+        });
+      } else {
+        // Not selected yet - select it now!
+        this.setState({
+          selectedVillagers: currentSelection.concat([villager]),
+        });
+      }
+    }}>
+      <img src={villager.Photo} class="picture"></img>
+      <p class="nameTag" style={{
+        backgroundColor: villager["Bubble Color"],
+        color: villager["Name Color"],
+      }}>{villager.Name}</p>
+      {isSelected ? <div class={`blot ${this.state.selectedColor}`}></div> : null}
+    </div>;
+  }
 
   render() {
     return (
@@ -39,60 +108,6 @@ export default class Home extends React.Component {
 
           <h2>Exclude current villagers:</h2>
           <div class="facesBox">
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">1</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">2</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">3</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">4</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">5</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">6</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">7</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">8</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
-            <div>
-              <div class="faceIcon">
-                <p class="faceNumber">9</p>
-              </div>
-              <p class="faceName">Cashmere</p>
-            </div>
             {this.state.excludedVillagers.map((villager) => {
               return <div>
                 <div class="faceIcon">
@@ -113,7 +128,7 @@ export default class Home extends React.Component {
           </div>
 
           <div class="buttons">
-            <button class="create" type="button">
+            <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
               Create board
             </button>
 
@@ -124,55 +139,34 @@ export default class Home extends React.Component {
 
           <div class="boardBox">
             <div class="boardTiles">
-              <div class="tile">
-                <img src="https://acnhcdn.com/latest/NpcBromide/NpcNmlShp04.png"
-                class="picture"></img>
-                <p class="nameTag">Cash</p>
-                <div class="blot"></div>
-              </div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
+              {this.state.boardVillagers.slice(0, 12).map((villager) => {
+                return this.renderBoardTile(villager);
+              })}
               <div class="free">
                   <p class="overlap">Free plot</p>
                   <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
                   class="plot"></img>
               </div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
-              <div class="tile"></div>
+              {this.state.boardVillagers.slice(12).map((villager) => {
+                return this.renderBoardTile(villager);
+              })}
             </div>
           </div>
 
           <h2>Choose your blotter color:</h2>
 
           <div class="blotter">
-            <div class="red"></div>
-            <div class="orange"></div>
-            <div class="yellow"></div>
-            <div class="green"></div>
-            <div class="teal"></div>
-            <div class="blue"></div>
-            <div class="purple"></div>
-            <div class="pink"></div>
-            <div class="gold"></div>
+            {ALL_COLORS.map((color) => {
+              const style = color === this.state.selectedColor ? {
+                border: '8px solid pink',
+              } : {};
+              return <div class={color} style={style} onClick={(e) => {
+                e.preventDefault();
+                this.setState({
+                  selectedColor: color,
+                });
+              }}></div>;
+            })}
           </div>
 
 

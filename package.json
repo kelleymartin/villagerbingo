@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "9.5.1",
+    "pick-random": "^2.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-dropdown-input": "^0.1.11"
