@@ -183,6 +183,48 @@ export default class Home extends React.Component {
       </Downshift>
   }
 
+  renderBlank(){
+    return (
+  <div class="boardBox">
+  <div class="boardTiles">
+    {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+
+    <div class="free">
+      <p class="overlap">Free plot</p>
+      <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+        class="plot"></img>
+    </div>
+
+    {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+  </div>
+</div>
+  );
+}
+
+  renderBoard(){
+    const empty = this.state.boardVillagers.length === 0;
+    if (empty){
+      return this.renderBlank();
+    }
+    return (
+  <div class="boardBox">
+  <div class="boardTiles">
+    {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
+      return this.renderBoardTile(villager, index);
+    })}
+    <div class="free">
+      <p class="overlap">Free plot</p>
+      <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+        class="plot"></img>
+    </div>
+    {this.state.boardVillagers.slice(12).map((villager, index) => {
+      return this.renderBoardTile(villager, index + 12);
+    })}
+  </div>
+</div>
+  );
+}
+
   render() {
     return (
       <div className={styles.container}>
@@ -195,7 +237,7 @@ export default class Home extends React.Component {
         <main className={styles.main}>
           <h1>ACNH Villager Bingo</h1>
 
-          <h2 class="exclude">Exclude current villagers:</h2>
+          {/* <h2 class="exclude">Exclude current villagers:</h2> */}
           {this.renderVillagerSelector()}
           <div class="facesBox">
             {this.state.excludedVillagers.map((villager) => {
@@ -238,22 +280,7 @@ export default class Home extends React.Component {
               </button>
           </div>
 
-          <div class="boardBox">
-            <div class="boardTiles">
-              {/* <div class="tileBlank"></div> */}
-              {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
-                return this.renderBoardTile(villager, index);
-              })}
-              <div class="free">
-                <p class="overlap">Free plot</p>
-                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-                  class="plot"></img>
-              </div>
-              {this.state.boardVillagers.slice(12).map((villager, index) => {
-                return this.renderBoardTile(villager, index + 12);
-              })}
-            </div>
-          </div>
+          {this.renderBoard()}
 
           <h2>Choose your marker color:</h2>
 
