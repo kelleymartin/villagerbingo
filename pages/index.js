@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import pickRandom from 'pick-random'
 import Downshift from 'downshift'
+import HTML2Canvas from 'html2canvas'
 
 import villagers from '../data/villager-names.json'
 
@@ -25,6 +26,8 @@ export default class Home extends React.Component {
     selectedVillagers: [],
   };
 
+
+  
   handleCreateBoard(event) {
     event.preventDefault();
 
@@ -70,7 +73,7 @@ export default class Home extends React.Component {
         });
       }
     }}>
-      <img src={villager.Photo} class="picture"></img>
+      <img src={villager.Photo} class="picture" draggable="false"></img>
       <div class="nameTagWrap">
         <p class="nameTag" style={{
           backgroundColor: villager["Bubble Color"],
@@ -91,39 +94,95 @@ export default class Home extends React.Component {
     const disabled = this.state.excludedVillagers.length === 9;
 
     return <Downshift
-        onChange={selection => {
-          if (disabled || !selection){return;}
+      onChange={selection => {
+        if (disabled || !selection) { return; }
 
-          this.setState(
-            prevState => {
-              return {
-                excludedVillagers: prevState.excludedVillagers.concat([selection]),
-              };
-            },
-            () => {
-              // Reset the input to an empty string
-              this.exclusionInput.value = '';
-              this.exclusionDownshift.clearSelection();
-            }
-          );
-        }}
-        itemToString={item => (item ? item.Name : '')}
-        ref={downshift => { this.exclusionDownshift = downshift; }}
-      >
-        {({
-          getInputProps,
-          getItemProps,
-          getLabelProps,
-          getMenuProps,
-          getToggleButtonProps,
-          isOpen,
-          inputValue,
-          highlightedIndex,
-          selectedItem,
-          getRootProps,
-        }) => (
+        this.setState(
+          prevState => {
+            return {
+              excludedVillagers: prevState.excludedVillagers.concat([selection]),
+            };
+          },
+          () => {
+            // Reset the input to an empty string
+            this.exclusionInput.value = '';
+            this.exclusionDownshift.clearSelection();
+          }
+        );
+      }}
+      itemToString={item => (item ? item.Name : '')}
+      ref={downshift => { this.exclusionDownshift = downshift; }}
+    >
+      {({
+        getInputProps,
+        getItemProps,
+        getLabelProps,
+        getMenuProps,
+        getToggleButtonProps,
+        isOpen,
+        inputValue,
+        highlightedIndex,
+        selectedItem,
+        getRootProps,
+      }) => (
           <div>
-            <button type="button" onClick={(e) => {
+            <label {...getLabelProps()}>Exclude a current villager:</label>
+            <div
+              style={comboboxStyles}
+              {...getRootProps({}, { suppressRefError: true })}
+            >
+              <input {...getInputProps({ disabled })} ref={exclusionInput => {
+                this.exclusionInput = exclusionInput;
+              }}
+              placeholder="Type a name..."/>
+              <button class="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
+                &#8595;
+              </button>
+            </div>
+            <ul {...getMenuProps()} style={menuStyles}>
+              {isOpen
+                ? items
+                  .map(
+                    item => {
+                      const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
+                      return { item, matchIndex };
+                    }
+                  )
+                  .filter(
+                    ({ item, matchIndex }) => {
+                      const matchesInput = matchIndex >= 0;
+                      const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
+                      return matchesInput && !isAlreadyExcluded;
+                    }
+                  )
+                  .sort((a, b) => {
+                    if (a.matchIndex === b.matchIndex) {
+                      return a.item.Name.localeCompare(b.item.Name);
+                    }
+                    return a.matchIndex - b.matchIndex;
+                  })
+                  .map(({ item }, index) => (
+                    <li
+                      {...getItemProps({
+                        key: item.Name,
+                        index,
+                        item,
+                        style: {
+                          backgroundColor:
+                            highlightedIndex === index
+                              ? 'white'
+                              : 'green',
+                          fontWeight:
+                            selectedItem === item ? 'bold' : 'normal',
+                        },
+                      })}
+                    >
+                      {item.Name}
+                    </li>
+                  ))
+                : null}
+            </ul>
+            <button type="button" class="copy" onClick={(e) => {
               // Example value:
               // T-Bone,Camofrog,Biskit
               e.preventDefault();
@@ -132,9 +191,9 @@ export default class Home extends React.Component {
                 .map(villager => villager.Name)
                 .join(',');
               navigator.clipboard.writeText(shareData);
-            }}>Copy Selection</button>
-
-            <button type="button" onClick={async (e) => {
+            }}>Copy Villagers</button>
+            <br/>
+            <button type="button" class="import" onClick={async (e) => {
               e.preventDefault();
               const shareData = await navigator.clipboard.readText();
               const excluded = shareData
@@ -145,109 +204,77 @@ export default class Home extends React.Component {
               this.setState({
                 excludedVillagers: excluded,
               });
-            }}>Import from Clipboard</button>
-
-            <label {...getLabelProps()}>Exclude a current villager:</label>
-            <div
-              style={comboboxStyles}
-              {...getRootProps({}, { suppressRefError: true })}
-            >
-              <input {...getInputProps({disabled})} ref={exclusionInput => {
-                this.exclusionInput = exclusionInput;
-              }} />
-              <button {...getToggleButtonProps({disabled})} aria-label={'toggle menu'}>
-                &#8595;
-              </button>
-            </div>
-            <ul {...getMenuProps()} style={menuStyles}>
-              {isOpen
-                ? items
-                    .map(
-                      item => {
-                        const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
-                        return { item, matchIndex };
-                      }
-                    )
-                    .filter(
-                      ({ item, matchIndex }) => {
-                        const matchesInput = matchIndex >= 0;
-                        const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
-                        return matchesInput && !isAlreadyExcluded;
-                      }
-                    )
-                    .sort((a, b) => {
-                      if (a.matchIndex === b.matchIndex) {
-                        return a.item.Name.localeCompare(b.item.Name);
-                      }
-                      return a.matchIndex - b.matchIndex;
-                    })
-                    .map(({ item }, index) => (
-                      <li
-                        {...getItemProps({
-                          key: item.Name,
-                          index,
-                          item,
-                          style: {
-                            backgroundColor:
-                              highlightedIndex === index
-                                ? 'lightgray'
-                                : 'white',
-                            fontWeight:
-                              selectedItem === item ? 'bold' : 'normal',
-                          },
-                        })}
-                      >
-                        {item.Name}
-                      </li>
-                    ))
-                : null}
-            </ul>
+            }}>Paste Villagers</button>
           </div>
         )}
-      </Downshift>
+    </Downshift>
   }
 
-  renderBlank(){
+  renderBlank() {
     return (
-  <div class="boardBox">
-  <div class="boardTiles">
-    {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+      <div class="boardBox" id="capture">
+        <div class="boardTiles">
+          {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
 
-    <div class="free">
-      <p class="overlap">Free plot</p>
-      <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-        class="plot"></img>
-    </div>
+          <div class="free">
+            <p class="overlap">Free plot</p>
+            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+              class="plot"></img>
+          </div>
 
-    {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
-  </div>
-</div>
-  );
-}
+          {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+        </div>
+      </div>
+    );
+  }
 
-  renderBoard(){
+  renderBoard() {
     const empty = this.state.boardVillagers.length === 0;
-    if (empty){
+    if (empty) {
       return this.renderBlank();
     }
     return (
-  <div class="boardBox">
-  <div class="boardTiles">
-    {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
-      return this.renderBoardTile(villager, index);
-    })}
-    <div class="free">
-      <p class="overlap">Free plot</p>
-      <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-        class="plot"></img>
-    </div>
-    {this.state.boardVillagers.slice(12).map((villager, index) => {
-      return this.renderBoardTile(villager, index + 12);
-    })}
-  </div>
-</div>
-  );
-}
+      <div class="boardBox">
+        <div class="boardTiles">
+          {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
+            return this.renderBoardTile(villager, index);
+          })}
+          <div class="free">
+            <p class="overlap">Free plot</p>
+            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+              class="plot"></img>
+          </div>
+          {this.state.boardVillagers.slice(12).map((villager, index) => {
+            return this.renderBoardTile(villager, index + 12);
+          })}
+        </div>
+      </div>
+    );
+  }
+  
+//   render downloadimage() {
+//     //var container = document.getElementById("image-wrap"); //specific element on page
+//     var container = document.getElementById("capture");; // full page 
+//     html2canvas(container, { allowTaint: true }).then(function (canvas) {
+
+//         var link = document.createElement("a");
+//         document.body.appendChild(link);
+//         link.download = "villagerbingo.jpg";
+//         link.href = canvas.toDataURL();
+//         link.target = '_blank';
+//         link.click();
+//     });
+// }
+
+// function getRandomArbitrary(min, max) {
+//   return Math.random() * (max - min) + min;
+// }
+
+// function Random(props) {
+//   var maxTopNumber = 25;
+//   var randomNumber = Math.floor((Math.random() * maxTopNumber) + 0);
+//   return <div>{randomTopNumber}</div>;
+// }
 
   render() {
     return (
@@ -259,9 +286,9 @@ export default class Home extends React.Component {
         </Head>
 
         <main className={styles.main}>
+          <div class="container">
           <h1>ACNH Villager Bingo</h1>
 
-          {/* <h2 class="exclude">Exclude current villagers:</h2> */}
           {this.renderVillagerSelector()}
           <div class="facesBox">
             {this.state.excludedVillagers.map((villager) => {
@@ -294,13 +321,13 @@ export default class Home extends React.Component {
           </div>
 
           <div class="buttons">
-            
-              <button class="save" type="button" onClick={(e) => this.handleSaveClick(e)}>
-                Save picture
+
+            <button class="save" type="button" onclick={(e) => this.downloadimage()}>
+              Save picture
               </button>
 
-              <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
-                Create board
+            <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
+              Create board
               </button>
           </div>
 
@@ -311,7 +338,7 @@ export default class Home extends React.Component {
           <div class="blotter">
             {ALL_COLORS.map((color) => {
               const style = color === this.state.selectedColor ? {
-                outline: '8px solid pink',
+                opacity: '100%',
               } : {};
               return <div class={color} style={style} onClick={(e) => {
                 e.preventDefault();
@@ -322,7 +349,7 @@ export default class Home extends React.Component {
             })}
           </div>
 
-
+        </div>
         </main>
 
 
