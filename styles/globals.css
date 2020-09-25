@@ -35,6 +35,11 @@ h2{
   margin: 0;
 }
 
+.exclusionBox{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
 .copy, .import{
   height: 30px;
   border-radius: 15px;
@@ -62,8 +67,9 @@ label{
 
 input{
   height: 40px;
-  width: 200px;
+  width: 300px;
   font-size: 30px;
+  border: 2px solid #C0AB72;
   border-radius: 20px;
   padding: 0 20px;
 }
@@ -72,6 +78,20 @@ input{
   height: 40px;
   width: 40px;
   border-radius: 20px;
+  margin-left: 10px;
+}
+
+ul{
+  border-radius: 20px;
+  margin-top: 0;
+  position: absolute;
+}
+
+li{
+  width: 200px;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .facesBox{
@@ -83,9 +103,23 @@ input{
   margin-top: -30px;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
+  cursor: pointer;
 }
+
 .faceWrap{
   height: 71px;
+}
+
+.faceX{
+  display: none;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: -25px;
+  z-index: 2;
+}
+
+.faceIcon:hover + .faceX{
+  display: block;
 }
 
 .faceIcon {
@@ -165,7 +199,7 @@ button{
 
 .tileBlank{
   background-color: #fff;
-  opacity: 50%;
+  opacity: 0.5;
   width: 120px;
   height: 120px;
 }
@@ -174,6 +208,7 @@ button{
   width: 120px;
   height: 120px;
   position: relative;
+  cursor: pointer;
 }
 
 .picture{
@@ -243,7 +278,7 @@ button{
   width: 50px;
   border-radius: 25px;
   margin: 10px;
-  opacity: 30%;
+  opacity: 0.3;
   transition: opacity 0.25s;
 }
 
@@ -281,6 +316,14 @@ button{
 
 .gold {
   background-color: #C0AB72;
+}
+
+.cursor{
+  width: 40px;
+  margin-top: 30px;
+  margin-left: 20px;
+  z-index: 10;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 630px) {

@@ -22,12 +22,16 @@ export default class Home extends React.Component {
   state = {
     excludedVillagers: [],
     boardVillagers: [],
-    selectedColor: pickRandom(ALL_COLORS)[0],
+    selectedColor: this.props.randomBlotterColor,
     selectedVillagers: [],
   };
 
+  static getInitialProps() {
+    return {
+      randomBlotterColor: pickRandom(ALL_COLORS)[0],
+    };
+  }
 
-  
   handleCreateBoard(event) {
     event.preventDefault();
 
@@ -125,8 +129,9 @@ export default class Home extends React.Component {
         selectedItem,
         getRootProps,
       }) => (
-          <div>
+          <div class="exclusionBox">
             <label {...getLabelProps()}>Exclude a current villager:</label>
+            <div class="inputBox">
             <div
               style={comboboxStyles}
               {...getRootProps({}, { suppressRefError: true })}
@@ -164,6 +169,7 @@ export default class Home extends React.Component {
                   .map(({ item }, index) => (
                     <li
                       {...getItemProps({
+                        
                         key: item.Name,
                         index,
                         item,
@@ -182,6 +188,7 @@ export default class Home extends React.Component {
                   ))
                 : null}
             </ul>
+            </div>
             <button type="button" class="copy" onClick={(e) => {
               // Example value:
               // T-Bone,Camofrog,Biskit
@@ -252,7 +259,7 @@ export default class Home extends React.Component {
     );
   }
   
-//   render downloadimage() {
+//   render downloadImage() {
 //     //var container = document.getElementById("image-wrap"); //specific element on page
 //     var container = document.getElementById("capture");; // full page 
 //     html2canvas(container, { allowTaint: true }).then(function (canvas) {
@@ -265,6 +272,22 @@ export default class Home extends React.Component {
 //         link.click();
 //     });
 // }
+
+handleDownloadImage(event) {
+  event.preventDefault();
+
+  var container = document.getElementById("capture");
+  html2canvas(container, { allowTaint: true }).then(function (canvas) {
+
+     var link = document.createElement("a");
+     document.body.appendChild(link);
+     link.download = "villagerbingo.jpg";
+     link.href = canvas.toDataURL();
+     link.target = '_blank';
+     link.click();
+    });
+}
+
 
 // function getRandomArbitrary(min, max) {
 //   return Math.random() * (max - min) + min;
@@ -298,6 +321,8 @@ export default class Home extends React.Component {
                   excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
                 });
               }}>
+                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
+                class="faceX"></img>
                 <div class="faceIcon">
                   <p class="faceNumber" style={{
                     backgroundColor: villager["Name Color"],
@@ -322,7 +347,7 @@ export default class Home extends React.Component {
 
           <div class="buttons">
 
-            <button class="save" type="button" onclick={(e) => this.downloadimage()}>
+            <button class="save" type="button" onclick={(e) => this.handleDownloadImage(e)}>
               Save picture
               </button>
 
@@ -338,17 +363,19 @@ export default class Home extends React.Component {
           <div class="blotter">
             {ALL_COLORS.map((color) => {
               const style = color === this.state.selectedColor ? {
-                opacity: '100%',
+                opacity: '1',
               } : {};
-              return <div class={color} style={style} onClick={(e) => {
+              return <div class={color} key={color} style={style} onClick={(e) => {
                 e.preventDefault();
                 this.setState({
                   selectedColor: color,
                 });
-              }}></div>;
+              }}>
+                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png" class="cursor"></img>
+              </div>;
             })}
           </div>
-
+          
         </div>
         </main>
 
