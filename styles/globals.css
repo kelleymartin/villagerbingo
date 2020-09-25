@@ -10,7 +10,7 @@ body{
   font-family: proxima-soft, sans-serif;
   font-weight: 600, 500;
   /* line-height: 0px; */
-  background: linear-gradient(150deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
+  background: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
   /* background-image: linear-gradient(150deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%),
   url("https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6c341704d3a88bad98cd52_Tickets.png"); */
 }

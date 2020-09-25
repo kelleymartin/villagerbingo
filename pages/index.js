@@ -21,7 +21,7 @@ export default class Home extends React.Component {
   state = {
     excludedVillagers: [],
     boardVillagers: [],
-    selectedColor: 'red',
+    selectedColor: pickRandom(ALL_COLORS)[0],
     selectedVillagers: [],
   };
 
@@ -123,6 +123,30 @@ export default class Home extends React.Component {
           getRootProps,
         }) => (
           <div>
+            <button type="button" onClick={(e) => {
+              // Example value:
+              // T-Bone,Camofrog,Biskit
+              e.preventDefault();
+              const excluded = this.state.excludedVillagers;
+              const shareData = excluded
+                .map(villager => villager.Name)
+                .join(',');
+              navigator.clipboard.writeText(shareData);
+            }}>Copy Selection</button>
+
+            <button type="button" onClick={async (e) => {
+              e.preventDefault();
+              const shareData = await navigator.clipboard.readText();
+              const excluded = shareData
+                .split(',')
+                .map(name => villagers.find(v => v.Name === name))
+                .filter(v => v !== null)
+                .slice(0, 9);
+              this.setState({
+                excludedVillagers: excluded,
+              });
+            }}>Import from Clipboard</button>
+
             <label {...getLabelProps()}>Exclude a current villager:</label>
             <div
               style={comboboxStyles}
