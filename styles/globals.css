@@ -16,11 +16,10 @@ body{
 }
 
 h1{
-  font-weight: 800;
+  font-weight: 700;
   font-size: 60px;
   margin: 0;
   height: 100px;
-  text-decoration: underline;
 }
 
 h2{
@@ -28,6 +27,10 @@ h2{
   font-size: 40px;
   height: 60px;
   margin: 0;
+}
+
+.exclude{
+  text-align: left;
 }
 
 .facesBox{
@@ -78,27 +81,29 @@ button{
 .buttons{
   display: flex;
   width: 630px;
+  height: 40px;
   justify-content: space-between;
   margin: 60px auto 20px;
-  
-}
-
-.create{
-  background: linear-gradient(to right bottom, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
-  height: 40px;
-  font-size: 30px;
-  padding: 0 10px;
-  border-radius: 25px;
-  border: none;
 }
 
 .save{
-  background: #FFFCE9;
+  background: linear-gradient(to bottom, #3FD8E0, #0961F6, #A06FCE);
   font-size: 30px;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 25px;
+  border: 2px solid linear-gradient(to top, #FF4040, #FF791F, #FFF80D);
+}
+
+.create{
+  background: linear-gradient(to top, #FF4040, #FF791F, #FFF80D);
+  font-size: 30px;
+  color: #fff;
   padding: 0 10px;
   border-radius: 25px;
   border: none;
 }
+
 
 .boardBox{
   width: 630px;
@@ -118,8 +123,14 @@ button{
   height: 620px;
 }
 
-.tile {
+.tileBlank{
   background-color: #fff;
+  opacity: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.tile {
   width: 120px;
   height: 120px;
   position: relative;

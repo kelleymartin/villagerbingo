@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import pickRandom from 'pick-random'
-
+import Downshift from 'downshift'
 
 import villagers from '../data/villager-names.json'
 
@@ -28,15 +28,12 @@ export default class Home extends React.Component {
   handleCreateBoard(event) {
     event.preventDefault();
 
-    const excludedVillagers = pickRandom(villagers, { count: 9 });
-
     const possibleVillagers = villagers.filter((villager) => {
-      return !excludedVillagers.includes(villager);
+      return !this.state.excludedVillagers.includes(villager);
     });
     const boardVillagers = pickRandom(possibleVillagers, { count: 24 });
 
     this.setState({
-      excludedVillagers,
       boardVillagers,
       selectedVillagers: [],
     });
@@ -84,6 +81,108 @@ export default class Home extends React.Component {
     </div>;
   }
 
+  renderVillagerSelector() {
+    const comboboxStyles = {};
+    const menuStyles = {};
+    const items = villagers.filter(villager => {
+      return !this.state.excludedVillagers.includes(villager);
+    });
+
+    const disabled = this.state.excludedVillagers.length === 9;
+
+    return <Downshift
+        onChange={selection => {
+          if (disabled || !selection){return;}
+
+          this.setState(
+            prevState => {
+              return {
+                excludedVillagers: prevState.excludedVillagers.concat([selection]),
+              };
+            },
+            () => {
+              // Reset the input to an empty string
+              this.exclusionInput.value = '';
+              this.exclusionDownshift.clearSelection();
+            }
+          );
+        }}
+        itemToString={item => (item ? item.Name : '')}
+        ref={downshift => { this.exclusionDownshift = downshift; }}
+      >
+        {({
+          getInputProps,
+          getItemProps,
+          getLabelProps,
+          getMenuProps,
+          getToggleButtonProps,
+          isOpen,
+          inputValue,
+          highlightedIndex,
+          selectedItem,
+          getRootProps,
+        }) => (
+          <div>
+            <label {...getLabelProps()}>Exclude a current villager:</label>
+            <div
+              style={comboboxStyles}
+              {...getRootProps({}, { suppressRefError: true })}
+            >
+              <input {...getInputProps({disabled})} ref={exclusionInput => {
+                this.exclusionInput = exclusionInput;
+              }} />
+              <button {...getToggleButtonProps({disabled})} aria-label={'toggle menu'}>
+                &#8595;
+              </button>
+            </div>
+            <ul {...getMenuProps()} style={menuStyles}>
+              {isOpen
+                ? items
+                    .map(
+                      item => {
+                        const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
+                        return { item, matchIndex };
+                      }
+                    )
+                    .filter(
+                      ({ item, matchIndex }) => {
+                        const matchesInput = matchIndex >= 0;
+                        const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
+                        return matchesInput && !isAlreadyExcluded;
+                      }
+                    )
+                    .sort((a, b) => {
+                      if (a.matchIndex === b.matchIndex) {
+                        return a.item.Name.localeCompare(b.item.Name);
+                      }
+                      return a.matchIndex - b.matchIndex;
+                    })
+                    .map(({ item }, index) => (
+                      <li
+                        {...getItemProps({
+                          key: item.Name,
+                          index,
+                          item,
+                          style: {
+                            backgroundColor:
+                              highlightedIndex === index
+                                ? 'lightgray'
+                                : 'white',
+                            fontWeight:
+                              selectedItem === item ? 'bold' : 'normal',
+                          },
+                        })}
+                      >
+                        {item.Name}
+                      </li>
+                    ))
+                : null}
+            </ul>
+          </div>
+        )}
+      </Downshift>
+  }
+
   render() {
     return (
       <div className={styles.container}>
@@ -96,10 +195,16 @@ export default class Home extends React.Component {
         <main className={styles.main}>
           <h1>ACNH Villager Bingo</h1>
 
-          <h2>Exclude current villagers:</h2>
+          <h2 class="exclude">Exclude current villagers:</h2>
+          {this.renderVillagerSelector()}
           <div class="facesBox">
             {this.state.excludedVillagers.map((villager) => {
-              return <div class="faceWrap">
+              return <div class="faceWrap" onClick={(e) => {
+                e.preventDefault();
+                this.setState({
+                  excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
+                });
+              }}>
                 <div class="faceIcon">
                   <p class="faceNumber" style={{
                     backgroundColor: villager["Name Color"],
@@ -123,17 +228,19 @@ export default class Home extends React.Component {
           </div>
 
           <div class="buttons">
-          <button class="save" type="button" onClick={(e) => this.handleSaveClick(e)}>
-              Save picture
-            </button>
             
-            <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
-              Create board
-            </button>
+              <button class="save" type="button" onClick={(e) => this.handleSaveClick(e)}>
+                Save picture
+              </button>
+
+              <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
+                Create board
+              </button>
           </div>
 
           <div class="boardBox">
             <div class="boardTiles">
+              {/* <div class="tileBlank"></div> */}
               {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
                 return this.renderBoardTile(villager, index);
               })}
@@ -153,7 +260,7 @@ export default class Home extends React.Component {
           <div class="blotter">
             {ALL_COLORS.map((color) => {
               const style = color === this.state.selectedColor ? {
-                border: '8px solid pink',
+                outline: '8px solid pink',
               } : {};
               return <div class={color} style={style} onClick={(e) => {
                 e.preventDefault();
