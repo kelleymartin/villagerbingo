@@ -17,6 +17,9 @@ const filteredData = Object.values(AAAALL_DATA)
       bubbleColor: villager["bubble-color"],
       textColor: villager["text-color"],
     };
+  })
+  .sort((a, b) => {
+    return a.name.localeCompare(b.name);
   });
 
 console.log(filteredData);

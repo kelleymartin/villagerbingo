@@ -71,7 +71,7 @@ export default class Home extends React.Component {
       // transform: `rotate(${angle}deg)`,
     };
 
-    return <div class={`tile tile${index}`} onClick={(e) => {
+    return <a href="#" class={`tile tile${index}`} onClick={(e) => {
       e.preventDefault();
 
       const currentSelection = this.state.selectedVillagers;
@@ -91,7 +91,8 @@ export default class Home extends React.Component {
         });
       }
     }}>
-      <img src={villager.imageUrl} class="picture" crossorigin="anonymous" draggable="false"></img>
+      <img src={villager.imageUrl} class="picture" crossorigin="anonymous" draggable="false"
+      alt={`${villager.name}, the ${villager.personality} ${villager.species}`}/>
       <div class="nameTagWrap">
         <p class="nameTag" style={{
           backgroundColor: villager.bubbleColor,
@@ -99,7 +100,7 @@ export default class Home extends React.Component {
         }}>{villager.name}</p>
       </div>
       {isSelected ? <div class={`blot ${this.state.selectedColor}`} style={blotStyle}></div> : null}
-    </div>;
+    </a>;
   }
 
   renderVillagerSelector() {
@@ -265,8 +266,7 @@ export default class Home extends React.Component {
       <div class="free">
         <p class="overlap">Free plot</p>
         <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-          crossorigin="anonymous"
-          class="plot"></img>
+          crossorigin="anonymous" class="plot" alt=""/>
       </div>
     );
   }
@@ -310,9 +310,9 @@ export default class Home extends React.Component {
         <main className={styles.main}>
           <div class="container">
             <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
-              class="dodo"></img>
-            <h1>ACNH Villager Bing<img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f898874254903e3d2a623_Looking%20Glass%20Rounded.svg"
-              class="glass"></img></h1>
+              class="dodo" alt=""/>
+            <h1>ACNH Villager Bingo<img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f898874254903e3d2a623_Looking%20Glass%20Rounded.svg"
+              class="glass" alt=""/></h1>
 
 
             {this.renderVillagerSelector()}
@@ -325,14 +325,14 @@ export default class Home extends React.Component {
                   });
                 }}>
                   <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
-                    class="faceX"></img>
-                  <div class="faceIcon" style={{
+                    class="faceX" alt=""/>
+                  <a href="#" class="faceIcon" style={{
                     backgroundColor: villager.textColor,
                     backgroundImage: `url(${villager.iconUrl})`,
                     backgroundSize: 'contain',
                     border: `2px solid ${villager.bubbleColor}80`
                   }}>
-                  </div>
+                  </a>
                   <p class="faceName" style={{
                     backgroundColor: villager.bubbleColor,
                     color: villager.textColor,
@@ -361,7 +361,7 @@ export default class Home extends React.Component {
                 const style = color === this.state.selectedColor ? {
                   opacity: '1',
                 } : {};
-                return <div class={color} key={color} style={style} onClick={(e) => {
+                return <a href="#" class={color} key={color} style={style} onClick={(e) => {
                   e.preventDefault();
                   this.setState({
                     selectedColor: color,
@@ -369,9 +369,9 @@ export default class Home extends React.Component {
                 }}>
                   {color === this.state.selectedColor ?
                     <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png"
-                    class="cursor"></img>
+                    class="cursor" alt=""/>
                     : null}
-                </div>;
+                </a>;
               })}
             </div>
 
