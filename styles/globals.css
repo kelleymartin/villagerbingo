@@ -16,6 +16,12 @@ body{
   url("https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6c341704d3a88bad98cd52_Tickets.png"); */
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
 .container{
   width: 630px;
   margin-left: auto;
@@ -64,10 +70,9 @@ h2{
 }
 
 .copy{
-  background-color: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
+  background: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
   grid-area: bottom-right;
 }
-
 
 label{
   font-weight: 600;
@@ -79,30 +84,34 @@ label{
   justify-self: left;
 }
 
+.inputBox{
+  grid-area: bottom-left;
+  justify-self: left;
+  position: relative;
+}
+
 input{
-  position: absolute;
+  /* position: relative; */
   height: 40px;
-  width: 370px;
+  width: 360px;
+  font-family: proxima-soft, sans-serif;  
   font-size: 30px;
   border: 2px solid #C0AB72;
   border-radius: 20px;
   background-color: #FFFCE9;
   margin: 0;
-  padding: 0 20px;
-  grid-area: bottom-left;
-  justify-self: left;
+  padding: 0 10px;
 }
 
 .toggle{
   position: absolute;
-  height: 40px;
+  top: 0;
+  right: 0;
+  height: 100%;
   width: 40px;
   background-color: #FFFCE9;
   border: 2px solid #C0AB72;
   border-radius: 20px;
-  margin-left: 10px;
-  /* margin-right: 80px; */
-  grid-area: bottom-left;
   z-index: 2;
 }
 
@@ -114,9 +123,12 @@ ul{
 
 li{
   width: 200px;
+  font-family: proxima-soft, sans-serif;
+  font-size: 30px;
   list-style: none;
   margin-left: auto;
   margin-right: auto;
+  z-index: 100;
 }
 
 .facesBox{
@@ -162,7 +174,7 @@ li{
 
 .faceName{
   font-size: 14px;
-  margin-top: -5px;
+  margin-top: 5px;
   width: fit-content;
   height: 0 px;
   padding: 0 6px;
@@ -170,6 +182,7 @@ li{
   font-weight: 400;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 button{
@@ -348,11 +361,20 @@ button{
   margin-top: 30px;
   margin-left: 20px;
   z-index: 10;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 @media only screen and (max-width: 630px) {
-  .buttons{
+  body{
+    width: 100%;
+  }
+  
+  .container{
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* .buttons{
     width: 480px;
   }
   .boardBox{
@@ -371,5 +393,5 @@ button{
     width: 40px;
     border-radius: 20px;
     margin: 5px;
-  }
+  } */
 }

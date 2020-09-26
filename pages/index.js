@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import pickRandom from 'pick-random'
 import Downshift from 'downshift'
-import HTML2Canvas from 'html2canvas'
+import html2canvas from 'html2canvas'
 
 import villagers from '../data/villager-names.json'
 
@@ -132,62 +132,62 @@ export default class Home extends React.Component {
           <div class="exclusionBox">
             <label {...getLabelProps()}>Exclude a current villager:</label>
             <div class="inputBox">
-            <div
-              style={comboboxStyles}
-              {...getRootProps({}, { suppressRefError: true })}
-            >
-              <input {...getInputProps({ disabled })} ref={exclusionInput => {
-                this.exclusionInput = exclusionInput;
-              }}
-              placeholder="Type a name..."/>
-              <button class="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
-                &#8595;
+              <div
+                style={comboboxStyles}
+                {...getRootProps({}, { suppressRefError: true })}
+              >
+                <input {...getInputProps({ disabled })} ref={exclusionInput => {
+                  this.exclusionInput = exclusionInput;
+                }}
+                  placeholder="Type a name..." />
+                <button class="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
+                  &#8595;
               </button>
-            </div>
-            <ul {...getMenuProps()} style={menuStyles}>
-              {isOpen
-                ? items
-                  .map(
-                    item => {
-                      const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
-                      return { item, matchIndex };
-                    }
-                  )
-                  .filter(
-                    ({ item, matchIndex }) => {
-                      const matchesInput = matchIndex >= 0;
-                      const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
-                      return matchesInput && !isAlreadyExcluded;
-                    }
-                  )
-                  .sort((a, b) => {
-                    if (a.matchIndex === b.matchIndex) {
-                      return a.item.Name.localeCompare(b.item.Name);
-                    }
-                    return a.matchIndex - b.matchIndex;
-                  })
-                  .map(({ item }, index) => (
-                    <li
-                      {...getItemProps({
-                        
-                        key: item.Name,
-                        index,
-                        item,
-                        style: {
-                          backgroundColor:
-                            highlightedIndex === index
-                              ? 'aqua'
-                              : 'violet',
-                          fontWeight:
-                            selectedItem === item ? 'bold' : 'normal',
-                        },
-                      })}
-                    >
-                      {item.Name}
-                    </li>
-                  ))
-                : null}
-            </ul>
+              </div>
+              <ul {...getMenuProps()} style={menuStyles}>
+                {isOpen
+                  ? items
+                    .map(
+                      item => {
+                        const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
+                        return { item, matchIndex };
+                      }
+                    )
+                    .filter(
+                      ({ item, matchIndex }) => {
+                        const matchesInput = matchIndex >= 0;
+                        const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
+                        return matchesInput && !isAlreadyExcluded;
+                      }
+                    )
+                    .sort((a, b) => {
+                      if (a.matchIndex === b.matchIndex) {
+                        return a.item.Name.localeCompare(b.item.Name);
+                      }
+                      return a.matchIndex - b.matchIndex;
+                    })
+                    .map(({ item }, index) => (
+                      <li
+                        {...getItemProps({
+
+                          key: item.Name,
+                          index,
+                          item,
+                          style: {
+                            backgroundColor:
+                              highlightedIndex === index
+                                ? 'aqua'
+                                : 'violet',
+                            fontWeight:
+                              selectedItem === item ? 'bold' : 'normal',
+                          },
+                        })}
+                      >
+                        {item.Name}
+                      </li>
+                    ))
+                  : null}
+              </ul>
             </div>
             <button type="button" class="copy" onClick={(e) => {
               // Example value:
@@ -199,7 +199,7 @@ export default class Home extends React.Component {
                 .join(',');
               navigator.clipboard.writeText(shareData);
             }}>Copy Villagers</button>
-            <br/>
+            <br />
             <button type="button" class="import" onClick={async (e) => {
               e.preventDefault();
               const shareData = await navigator.clipboard.readText();
@@ -258,46 +258,46 @@ export default class Home extends React.Component {
       </div>
     );
   }
-  
-//   render downloadImage() {
-//     //var container = document.getElementById("image-wrap"); //specific element on page
-//     var container = document.getElementById("capture");; // full page 
-//     html2canvas(container, { allowTaint: true }).then(function (canvas) {
 
-//         var link = document.createElement("a");
-//         document.body.appendChild(link);
-//         link.download = "villagerbingo.jpg";
-//         link.href = canvas.toDataURL();
-//         link.target = '_blank';
-//         link.click();
-//     });
-// }
+  //   render downloadImage() {
+  //     //var container = document.getElementById("image-wrap"); //specific element on page
+  //     var container = document.getElementById("capture");; // full page 
+  //     html2canvas(container, { allowTaint: true }).then(function (canvas) {
 
-handleDownloadImage(event) {
-  event.preventDefault();
+  //         var link = document.createElement("a");
+  //         document.body.appendChild(link);
+  //         link.download = "villagerbingo.jpg";
+  //         link.href = canvas.toDataURL();
+  //         link.target = '_blank';
+  //         link.click();
+  //     });
+  // }
 
-  var container = document.getElementById("capture");
-  html2canvas(container, { allowTaint: true }).then(function (canvas) {
+  handleDownloadImage(event) {
+    event.preventDefault();
 
-     var link = document.createElement("a");
-     document.body.appendChild(link);
-     link.download = "villagerbingo.jpg";
-     link.href = canvas.toDataURL();
-     link.target = '_blank';
-     link.click();
+    var container = document.getElementById("capture");
+    html2canvas(container, { allowTaint: true }).then(function (canvas) {
+
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "villagerbingo.jpg";
+      link.href = canvas.toDataURL();
+      link.target = '_blank';
+      link.click();
     });
-}
+  }
 
 
-// function getRandomArbitrary(min, max) {
-//   return Math.random() * (max - min) + min;
-// }
+  // function getRandomArbitrary(min, max) {
+  //   return Math.random() * (max - min) + min;
+  // }
 
-// function Random(props) {
-//   var maxTopNumber = 25;
-//   var randomNumber = Math.floor((Math.random() * maxTopNumber) + 0);
-//   return <div>{randomTopNumber}</div>;
-// }
+  // function Random(props) {
+  //   var maxTopNumber = 25;
+  //   var randomNumber = Math.floor((Math.random() * maxTopNumber) + 0);
+  //   return <div>{randomTopNumber}</div>;
+  // }
 
   render() {
     return (
@@ -310,73 +310,74 @@ handleDownloadImage(event) {
 
         <main className={styles.main}>
           <div class="container">
-          <h1>ACNH Villager Bingo</h1>
+            <h1>ACNH Villager Bingo</h1>
 
-          {this.renderVillagerSelector()}
-          <div class="facesBox">
-            {this.state.excludedVillagers.map((villager) => {
-              return <div class="faceWrap" onClick={(e) => {
-                e.preventDefault();
-                this.setState({
-                  excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
-                });
-              }}>
-                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
-                class="faceX"></img>
-                <div class="faceIcon">
-                  <p class="faceNumber" style={{
-                    backgroundColor: villager["Name Color"],
-                    backgroundImage: `url(${villager.Icon})`,
-                    backgroundSize: 'contain',
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '25px',
-                    // borderWidth: '1px',
-                    // borderStyle: 'solid',
-                    // borderColor: villager["Name Color"],
-                  }}>
-                  </p>
-                </div>
-                <p class="faceName" style={{
-                  backgroundColor: villager["Bubble Color"],
-                  color: villager["Name Color"],
-                }}>{villager.Name}</p>
-              </div>;
-            })}
-          </div>
+            {this.renderVillagerSelector()}
+            <div class="facesBox">
+              {this.state.excludedVillagers.map((villager) => {
+                return <div class="faceWrap" onClick={(e) => {
+                  e.preventDefault();
+                  this.setState({
+                    excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
+                  });
+                }}>
+                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
+                    class="faceX"></img>
+                  <div class="faceIcon">
+                    <p class="faceNumber" style={{
+                      backgroundColor: villager["Name Color"],
+                      backgroundImage: `url(${villager.Icon})`,
+                      backgroundSize: 'contain',
+                      width: '54px',
+                      height: '54px',
+                      borderRadius: '27px',
+                      border: `2px solid ${villager["Bubble Color"]}80`
+                      // borderWidth: '1px',
+                      // borderStyle: 'solid',
+                      // borderColor: villager["Name Color"],
+                    }}>
+                    </p>
+                  </div>
+                  <p class="faceName" style={{
+                    backgroundColor: villager["Bubble Color"],
+                    color: villager["Name Color"],
+                  }}>{villager.Name}</p>
+                </div>;
+              })}
+            </div>
 
-          <div class="buttons">
+            <div class="buttons">
 
-            <button class="save" type="button" onclick={(e) => this.handleDownloadImage(e)}>
-              Save picture
+              <button class="save" type="button" onClick={(e) => this.handleDownloadImage(e)}>
+                Save picture
               </button>
 
-            <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
-              Create board
+              <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
+                Create board
               </button>
+            </div>
+
+            {this.renderBoard()}
+
+            <h2>Choose your marker color:</h2>
+
+            <div class="blotter">
+              {ALL_COLORS.map((color) => {
+                const style = color === this.state.selectedColor ? {
+                  opacity: '1',
+                } : {};
+                return <div class={color} key={color} style={style} onClick={(e) => {
+                  e.preventDefault();
+                  this.setState({
+                    selectedColor: color,
+                  });
+                }}>
+                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png" class="cursor"></img>
+                </div>;
+              })}
+            </div>
+
           </div>
-
-          {this.renderBoard()}
-
-          <h2>Choose your marker color:</h2>
-
-          <div class="blotter">
-            {ALL_COLORS.map((color) => {
-              const style = color === this.state.selectedColor ? {
-                opacity: '1',
-              } : {};
-              return <div class={color} key={color} style={style} onClick={(e) => {
-                e.preventDefault();
-                this.setState({
-                  selectedColor: color,
-                });
-              }}>
-                <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png" class="cursor"></img>
-              </div>;
-            })}
-          </div>
-          
-        </div>
         </main>
 
 
