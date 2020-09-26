@@ -129,6 +129,7 @@ export default class Home extends React.Component {
         );
       }}
       itemToString={item => (item ? item.name : '')}
+      defaultHighlightedIndex={0}
       ref={downshift => { this.exclusionDownshift = downshift; }}
     >
       {({
@@ -161,26 +162,21 @@ export default class Home extends React.Component {
               <ul {...getMenuProps()} style={menuStyles}>
                 {isOpen
                   ? items
-                    .map(
-                      item => {
-                        const matchIndex = item.name.toLowerCase().indexOf(inputValue.toLowerCase());
-                        return { item, matchIndex };
-                      }
-                    )
                     .filter(
-                      ({ item, matchIndex }) => {
-                        const matchesInput = matchIndex >= 0;
+                      ( item ) => {
+                        /**
+                         * @param {string} name 
+                         */
+                        function simplify(name) {
+                          return name.toLowerCase().replace(/[^a-z]+/g, '');
+                        }
+
+                        const matchesInput = simplify(item.name).startsWith(simplify(inputValue));
                         const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
                         return matchesInput && !isAlreadyExcluded;
                       }
                     )
-                    .sort((a, b) => {
-                      if (a.matchIndex === b.matchIndex) {
-                        return a.item.name.localeCompare(b.item.name);
-                      }
-                      return a.matchIndex - b.matchIndex;
-                    })
-                    .map(({ item }, index) => (
+                    .map(( item , index) => (
                       <li
                         {...getItemProps({
 
@@ -371,8 +367,10 @@ export default class Home extends React.Component {
                     selectedColor: color,
                   });
                 }}>
-                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png"
+                  {color === this.state.selectedColor ?
+                    <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png"
                     class="cursor"></img>
+                    : null}
                 </div>;
               })}
             </div>

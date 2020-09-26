@@ -155,11 +155,11 @@ li{
   display: none;
   position: absolute;
   margin-top: 2px;
-  margin-left: -25px;
+  margin-left: 10px;
   z-index: 2;
 }
 
-.faceIcon:hover + .faceX{
+.faceWrap:hover .faceX{
   display: block;
 }
 
