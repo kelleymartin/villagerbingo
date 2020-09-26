@@ -313,9 +313,10 @@ export default class Home extends React.Component {
 
         <main className={styles.main}>
           <div class="container">
-            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6ee18f50a6d081c1af37c4_Title%20Ticket.svg"
-            class="ticket"></img>
-            <h1>ACNH Villager Bingo</h1>
+            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
+            class="dodo"></img>
+            <h1>ACNH Villager Bing<img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f898874254903e3d2a623_Looking%20Glass%20Rounded.svg"
+            class="glass"></img></h1>
             
 
             {this.renderVillagerSelector()}
