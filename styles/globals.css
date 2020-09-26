@@ -57,15 +57,16 @@ h2{
   justify-self: end;
 }
 
-.copy{
-  background-color:  #78DD62;
-  grid-area: bottom-right;
-}
-
 .import{
   background-color: #C0AB72;
   grid-area: top-right;
 }
+
+.copy{
+  background-color: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
+  grid-area: bottom-right;
+}
+
 
 label{
   font-weight: 600;
@@ -79,7 +80,7 @@ label{
 
 input{
   height: 40px;
-  width: 300px;
+  width: 370px;
   font-size: 30px;
   border: 2px solid #C0AB72;
   border-radius: 20px;
