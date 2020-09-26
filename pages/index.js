@@ -21,9 +21,9 @@ const ALL_COLORS = [
 export default class Home extends React.Component {
   state = {
     excludedVillagers: [],
-    boardVillagers: [], // pickRandom(villagers, { count: 24 }),
+    boardVillagers: [], //villagers.slice(10, 10 + 24),
     selectedColor: this.props.randomBlotterColor,
-    selectedVillagers: [],
+    selectedVillagers: [], //villagers.slice(10, 10 + 24),
   };
 
   static getInitialProps() {
@@ -57,6 +57,20 @@ export default class Home extends React.Component {
     const isSelected =
       this.state.selectedVillagers.includes(villager);
 
+    const topMax = 15;
+    const top = ((index + 1) * 17) % topMax;
+    const leftMax = 30;
+    const left = ((index + 1) * 23) % leftMax;
+    // const angleRange = 60;
+    // // angle between -30 and 29
+    // const angle = -30 + ((index + 1) * 83) % angleRange;
+
+    const blotStyle = {
+      top: `${top}px`,
+      left: `${left}px`,
+      // transform: `rotate(${angle}deg)`,
+    };
+
     return <div class={`tile tile${index}`} onClick={(e) => {
       e.preventDefault();
 
@@ -84,7 +98,7 @@ export default class Home extends React.Component {
           color: villager.textColor,
         }}>{villager.name}</p>
       </div>
-      {isSelected ? <div class={`blot ${this.state.selectedColor}`}></div> : null}
+      {isSelected ? <div class={`blot ${this.state.selectedColor}`} style={blotStyle}></div> : null}
     </div>;
   }
 
