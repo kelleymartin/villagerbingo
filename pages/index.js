@@ -21,7 +21,7 @@ const ALL_COLORS = [
 export default class Home extends React.Component {
   state = {
     excludedVillagers: [],
-    boardVillagers: [],
+    boardVillagers: [], // pickRandom(villagers, { count: 24 }),
     selectedColor: this.props.randomBlotterColor,
     selectedVillagers: [],
   };
@@ -266,7 +266,10 @@ export default class Home extends React.Component {
     event.preventDefault();
 
     var container = document.getElementById("capture");
-    html2canvas(container, { allowTaint: false }).then((canvas) => {
+    html2canvas(container, {
+      allowTaint: false,
+      useCORS: true,
+    }).then((canvas) => {
       var link = document.createElement("a");
       document.body.appendChild(link);
       link.download = "villagerbingo.jpg";
@@ -331,6 +334,10 @@ export default class Home extends React.Component {
                   }}>{villager.name}</p>
                 </div>;
               })}
+            </div>
+
+            <div ref={echoBox => { this.echoBox = echoBox; }}>
+              <canvas height="200"></canvas>
             </div>
 
             <div class="buttons">
