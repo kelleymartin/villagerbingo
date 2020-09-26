@@ -336,10 +336,6 @@ export default class Home extends React.Component {
               })}
             </div>
 
-            <div ref={echoBox => { this.echoBox = echoBox; }}>
-              <canvas height="200"></canvas>
-            </div>
-
             <div class="buttons">
 
               <button class="save" type="button" onClick={(e) => this.handleDownloadImage(e)}>
