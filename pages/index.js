@@ -213,7 +213,6 @@ export default class Home extends React.Component {
                 .join(',');
               navigator.clipboard.writeText(shareData);
             }}>Copy Villagers</button>
-            <br />
             <button type="button" class="import" onClick={async (e) => {
               e.preventDefault();
               const shareData = await navigator.clipboard.readText();
@@ -314,7 +313,10 @@ export default class Home extends React.Component {
 
         <main className={styles.main}>
           <div class="container">
+            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6ee18f50a6d081c1af37c4_Title%20Ticket.svg"
+            class="ticket"></img>
             <h1>ACNH Villager Bingo</h1>
+            
 
             {this.renderVillagerSelector()}
             <div class="facesBox">
@@ -327,20 +329,12 @@ export default class Home extends React.Component {
                 }}>
                   <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
                     class="faceX"></img>
-                  <div class="faceIcon">
-                    <p class="faceNumber" style={{
-                      backgroundColor: villager.textColor,
-                      backgroundImage: `url(${villager.iconUrl})`,
-                      backgroundSize: 'contain',
-                      width: '54px',
-                      height: '54px',
-                      borderRadius: '27px',
-                      border: `2px solid ${villager.bubbleColor}80`
-                      // borderWidth: '1px',
-                      // borderStyle: 'solid',
-                      // borderColor: villager.textColor,
-                    }}>
-                    </p>
+                  <div class="faceIcon" style={{
+                    backgroundColor: villager.textColor,
+                    backgroundImage: `url(${villager.iconUrl})`,
+                    backgroundSize: 'contain',
+                    border: `2px solid ${villager.bubbleColor}80`
+                  }}>
                   </div>
                   <p class="faceName" style={{
                     backgroundColor: villager.bubbleColor,
