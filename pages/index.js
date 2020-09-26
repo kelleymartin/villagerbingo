@@ -4,7 +4,7 @@ import pickRandom from 'pick-random'
 import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
 
-import villagers from '../data/villager-names.json'
+import villagers from '../data/villagers.json'
 
 const ALL_COLORS = [
   "red",
@@ -77,12 +77,12 @@ export default class Home extends React.Component {
         });
       }
     }}>
-      <img src={villager.Photo} class="picture" draggable="false"></img>
+      <img src={villager.imageUrl} class="picture" crossorigin="anonymous" draggable="false"></img>
       <div class="nameTagWrap">
         <p class="nameTag" style={{
-          backgroundColor: villager["Bubble Color"],
-          color: villager["Name Color"],
-        }}>{villager.Name}</p>
+          backgroundColor: villager.bubbleColor,
+          color: villager.textColor,
+        }}>{villager.name}</p>
       </div>
       {isSelected ? <div class={`blot ${this.state.selectedColor}`}></div> : null}
     </div>;
@@ -114,7 +114,7 @@ export default class Home extends React.Component {
           }
         );
       }}
-      itemToString={item => (item ? item.Name : '')}
+      itemToString={item => (item ? item.name : '')}
       ref={downshift => { this.exclusionDownshift = downshift; }}
     >
       {({
@@ -149,7 +149,7 @@ export default class Home extends React.Component {
                   ? items
                     .map(
                       item => {
-                        const matchIndex = item.Name.toLowerCase().indexOf(inputValue.toLowerCase());
+                        const matchIndex = item.name.toLowerCase().indexOf(inputValue.toLowerCase());
                         return { item, matchIndex };
                       }
                     )
@@ -162,7 +162,7 @@ export default class Home extends React.Component {
                     )
                     .sort((a, b) => {
                       if (a.matchIndex === b.matchIndex) {
-                        return a.item.Name.localeCompare(b.item.Name);
+                        return a.item.name.localeCompare(b.item.name);
                       }
                       return a.matchIndex - b.matchIndex;
                     })
@@ -170,7 +170,7 @@ export default class Home extends React.Component {
                       <li
                         {...getItemProps({
 
-                          key: item.Name,
+                          key: item.name,
                           index,
                           item,
                           style: {
@@ -183,7 +183,7 @@ export default class Home extends React.Component {
                           },
                         })}
                       >
-                        {item.Name}
+                        {item.name}
                       </li>
                     ))
                   : null}
@@ -195,7 +195,7 @@ export default class Home extends React.Component {
               e.preventDefault();
               const excluded = this.state.excludedVillagers;
               const shareData = excluded
-                .map(villager => villager.Name)
+                .map(villager => villager.name)
                 .join(',');
               navigator.clipboard.writeText(shareData);
             }}>Copy Villagers</button>
@@ -205,7 +205,7 @@ export default class Home extends React.Component {
               const shareData = await navigator.clipboard.readText();
               const excluded = shareData
                 .split(',')
-                .map(name => villagers.find(v => v.Name === name))
+                .map(name => villagers.find(v => v.name === name))
                 .filter(v => v !== null)
                 .slice(0, 9);
               this.setState({
@@ -223,11 +223,7 @@ export default class Home extends React.Component {
         <div class="boardTiles">
           {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
 
-          <div class="free">
-            <p class="overlap">Free plot</p>
-            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-              class="plot"></img>
-          </div>
+          {this.renderFreePlot()}
 
           {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
         </div>
@@ -241,16 +237,12 @@ export default class Home extends React.Component {
       return this.renderBlank();
     }
     return (
-      <div class="boardBox">
+      <div class="boardBox" id="capture">
         <div class="boardTiles">
           {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
             return this.renderBoardTile(villager, index);
           })}
-          <div class="free">
-            <p class="overlap">Free plot</p>
-            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-              class="plot"></img>
-          </div>
+          {this.renderFreePlot()}
           {this.state.boardVillagers.slice(12).map((villager, index) => {
             return this.renderBoardTile(villager, index + 12);
           })}
@@ -259,26 +251,22 @@ export default class Home extends React.Component {
     );
   }
 
-  //   render downloadImage() {
-  //     //var container = document.getElementById("image-wrap"); //specific element on page
-  //     var container = document.getElementById("capture");; // full page 
-  //     html2canvas(container, { allowTaint: true }).then(function (canvas) {
-
-  //         var link = document.createElement("a");
-  //         document.body.appendChild(link);
-  //         link.download = "villagerbingo.jpg";
-  //         link.href = canvas.toDataURL();
-  //         link.target = '_blank';
-  //         link.click();
-  //     });
-  // }
+  renderFreePlot() {
+    return (
+      <div class="free">
+        <p class="overlap">Free plot</p>
+        <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+          crossorigin="anonymous"
+          class="plot"></img>
+      </div>
+    );
+  }
 
   handleDownloadImage(event) {
     event.preventDefault();
 
     var container = document.getElementById("capture");
-    html2canvas(container, { allowTaint: true }).then(function (canvas) {
-
+    html2canvas(container, { allowTaint: false }).then((canvas) => {
       var link = document.createElement("a");
       document.body.appendChild(link);
       link.download = "villagerbingo.jpg";
@@ -287,7 +275,6 @@ export default class Home extends React.Component {
       link.click();
     });
   }
-
 
   // function getRandomArbitrary(min, max) {
   //   return Math.random() * (max - min) + min;
@@ -325,23 +312,23 @@ export default class Home extends React.Component {
                     class="faceX"></img>
                   <div class="faceIcon">
                     <p class="faceNumber" style={{
-                      backgroundColor: villager["Name Color"],
-                      backgroundImage: `url(${villager.Icon})`,
+                      backgroundColor: villager.textColor,
+                      backgroundImage: `url(${villager.iconUrl})`,
                       backgroundSize: 'contain',
                       width: '54px',
                       height: '54px',
                       borderRadius: '27px',
-                      border: `2px solid ${villager["Bubble Color"]}80`
+                      border: `2px solid ${villager.bubbleColor}80`
                       // borderWidth: '1px',
                       // borderStyle: 'solid',
-                      // borderColor: villager["Name Color"],
+                      // borderColor: villager.textColor,
                     }}>
                     </p>
                   </div>
                   <p class="faceName" style={{
-                    backgroundColor: villager["Bubble Color"],
-                    color: villager["Name Color"],
-                  }}>{villager.Name}</p>
+                    backgroundColor: villager.bubbleColor,
+                    color: villager.textColor,
+                  }}>{villager.name}</p>
                 </div>;
               })}
             </div>
