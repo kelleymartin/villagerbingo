@@ -176,8 +176,8 @@ export default class Home extends React.Component {
                         style: {
                           backgroundColor:
                             highlightedIndex === index
-                              ? 'white'
-                              : 'green',
+                              ? 'aqua'
+                              : 'violet',
                           fontWeight:
                             selectedItem === item ? 'bold' : 'normal',
                         },

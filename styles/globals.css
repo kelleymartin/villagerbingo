@@ -9,6 +9,7 @@ body{
   text-align: center;
   font-family: proxima-soft, sans-serif;
   font-weight: 600, 500;
+  color: #333;
   /* line-height: 0px; */
   background: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
   /* background-image: linear-gradient(150deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%),
@@ -30,7 +31,7 @@ h1{
 
 h2{
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   height: 60px;
   margin: 0;
 }
@@ -79,11 +80,13 @@ label{
 }
 
 input{
+  position: absolute;
   height: 40px;
   width: 370px;
   font-size: 30px;
   border: 2px solid #C0AB72;
   border-radius: 20px;
+  background-color: #FFFCE9;
   margin: 0;
   padding: 0 20px;
   grid-area: bottom-left;
@@ -91,11 +94,16 @@ input{
 }
 
 .toggle{
+  position: absolute;
   height: 40px;
   width: 40px;
+  background-color: #FFFCE9;
+  border: 2px solid #C0AB72;
   border-radius: 20px;
   margin-left: 10px;
+  /* margin-right: 80px; */
   grid-area: bottom-left;
+  z-index: 2;
 }
 
 ul{
