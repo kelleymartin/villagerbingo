@@ -38,20 +38,23 @@ h2{
 .exclusionBox{
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 40px 40px;
   grid-template-areas:
   "top-left top-right"
   "bottom-left bottom-right";
+  align-items: center;
 }
 
 .copy, .import{
   height: 30px;
+  width: fit-content;
   border-radius: 15px;
   padding: 0 10px;
   border: none;
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 10px;
+  justify-self: end;
 }
 
 .copy{
@@ -66,20 +69,24 @@ h2{
 
 label{
   font-weight: 600;
-  font-size: 30px;
+  font-size: 36px;
   height: 60px;
   margin: 0;
+  padding: 0;
   grid-area: top-left;
+  justify-self: left;
 }
 
 input{
   height: 40px;
-  width: 100px;
+  width: 300px;
   font-size: 30px;
   border: 2px solid #C0AB72;
   border-radius: 20px;
+  margin: 0;
   padding: 0 20px;
   grid-area: bottom-left;
+  justify-self: left;
 }
 
 .toggle{
