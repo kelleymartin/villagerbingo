@@ -10,7 +10,7 @@ body{
   font-family: proxima-soft, sans-serif;
   font-weight: 600, 500;
   color: #333;
-  background: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
+  background-image: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
   }
 
 body, html {
@@ -47,11 +47,11 @@ h1{
 
 .exclusionBox{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 40px 40px;
   grid-template-areas:
-  "top-left top-right"
-  "bottom-left bottom-right";
+  "top top top"
+  "bottom-left bottom-center bottom-right";
   align-items: center;
 }
 
@@ -65,17 +65,18 @@ h1{
   font-size: 20px;
   font-weight: 500;
   margin: 0;
-  justify-self: end;
 }
 
 .import{
-  background: linear-gradient(to bottom,#A06FCE, #EC7EFC, #C0AB72);
-  grid-area: top-right;
+  background-image: linear-gradient(to bottom,#A06FCE, #EC7EFC, #C0AB72);
+  grid-area: bottom-right;
+  justify-self: end;
 }
 
 .copy{
-  background: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
-  grid-area: bottom-right;
+  background-image: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
+  grid-area: bottom-center;
+  justify-self: center;
 }
 
 label{
@@ -83,8 +84,7 @@ label{
   font-size: 36px;
   margin: 0;
   padding: 0;
-  grid-area: top-left;
-  justify-self: left;
+  grid-area: top;
 }
 
 .inputBox{
@@ -127,14 +127,16 @@ ul{
   margin-top: 0;
   position: absolute;
   z-index: 100;
+  padding: 0;
 }
 
 li{
-  width: 200px;
+  width: 100%;
   font-family: proxima-soft, sans-serif;
   font-size: 20px;
   list-style: none;
   text-align: left;
+  padding-left: 10px;
 }
 
 .facesBox{
@@ -148,7 +150,9 @@ li{
 }
 
 .faceWrap{
+  display: block;
   position: relative;
+  text-decoration: none;
 }
 
 .faceX{
@@ -164,7 +168,6 @@ li{
 }
 
 .faceIcon {
-  display: block;
   height: 54px;
   width: 54px;
   border-radius: 27px;
@@ -208,11 +211,11 @@ button{
 }
 
 .save{
-  background: linear-gradient(to bottom, #3FD8E0, #0961F6, #A06FCE);
+  background-image: linear-gradient(to bottom, #3FD8E0, #0961F6, #A06FCE);
 }
 
 .create{
-  background: linear-gradient(to top, #FF4040, #FF791F, #FFF80D);
+  background-image: linear-gradient(to top, #FF4040, #FF791F, #FFF80D);
 }
 
 .boardBox{
@@ -220,7 +223,7 @@ button{
   height: 630px;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(to left top, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
+  background-image: linear-gradient(to left top, #FF4040, #FF791F, #FFF80D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #EC7EFC, #C0AB72);
   padding: 5px;
 }
 

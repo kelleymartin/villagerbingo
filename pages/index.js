@@ -71,7 +71,9 @@ export default class Home extends React.Component {
       // transform: `rotate(${angle}deg)`,
     };
 
-    return <a href="#" class={`tile tile${index}`} onClick={(e) => {
+    const title = isSelected ? `Unmark ${villager.name}` : `Mark ${villager.name} as seen`;
+
+    return <a href="#" class={`tile tile${index}`} title={title} onClick={(e) => {
       e.preventDefault();
 
       const currentSelection = this.state.selectedVillagers;
@@ -278,6 +280,8 @@ export default class Home extends React.Component {
     html2canvas(container, {
       allowTaint: false,
       useCORS: true,
+      scrollX: 0,
+      scrollY: -window.scrollY,
     }).then((canvas) => {
       var link = document.createElement("a");
       document.body.appendChild(link);
@@ -318,7 +322,7 @@ export default class Home extends React.Component {
             {this.renderVillagerSelector()}
             <div class="facesBox">
               {this.state.excludedVillagers.map((villager) => {
-                return <div class="faceWrap" onClick={(e) => {
+                return <a href="#" title={`Deselect ${villager.name}`} class="faceWrap" onClick={(e) => {
                   e.preventDefault();
                   this.setState({
                     excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
@@ -326,18 +330,18 @@ export default class Home extends React.Component {
                 }}>
                   <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
                     class="faceX" alt=""/>
-                  <a href="#" class="faceIcon" style={{
+                  <div class="faceIcon" style={{
                     backgroundColor: villager.textColor,
                     backgroundImage: `url(${villager.iconUrl})`,
                     backgroundSize: 'contain',
                     border: `2px solid ${villager.bubbleColor}80`
                   }}>
-                  </a>
+                  </div>
                   <p class="faceName" style={{
                     backgroundColor: villager.bubbleColor,
                     color: villager.textColor,
                   }}>{villager.name}</p>
-                </div>;
+                </a>;
               })}
             </div>
 
