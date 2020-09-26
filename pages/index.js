@@ -314,10 +314,10 @@ export default class Home extends React.Component {
         <main className={styles.main}>
           <div class="container">
             <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
-            class="dodo"></img>
+              class="dodo"></img>
             <h1>ACNH Villager Bing<img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f898874254903e3d2a623_Looking%20Glass%20Rounded.svg"
-            class="glass"></img></h1>
-            
+              class="glass"></img></h1>
+
 
             {this.renderVillagerSelector()}
             <div class="facesBox">
@@ -371,7 +371,8 @@ export default class Home extends React.Component {
                     selectedColor: color,
                   });
                 }}>
-                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png" class="cursor"></img>
+                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png"
+                    class="cursor"></img>
                 </div>;
               })}
             </div>
