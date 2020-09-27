@@ -97,6 +97,10 @@ label{
   width: 100%;
 }
 
+::placeholder{
+  color: #333;
+}
+
 input{
   height: 30px;
   width: 100%;
@@ -111,6 +115,10 @@ input{
 
 input:disabled{
   background-color: #EBEBE4;
+  border: 2px solid #EBEBE4;
+}
+
+::placeholder:disabled{
 }
 
 .toggle{
@@ -124,6 +132,8 @@ input:disabled{
   border-radius: 15px;
   z-index: 2;
 }
+
+
 
 ul{
   margin-top: 0;
