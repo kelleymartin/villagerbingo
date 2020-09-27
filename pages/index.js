@@ -189,8 +189,8 @@ export default class Home extends React.Component {
                           style: {
                             backgroundColor:
                               highlightedIndex === index
-                                ? 'aqua'
-                                : 'violet',
+                                ? '#3FD8E0'
+                                : '#b0ecef',
                             fontWeight:
                               selectedItem === item ? 'bold' : 'normal',
                           },
@@ -280,7 +280,7 @@ export default class Home extends React.Component {
     html2canvas(container, {
       allowTaint: false,
       useCORS: true,
-      scrollX: 0,
+      scrollX: -window.scrollX,
       scrollY: -window.scrollY,
     }).then((canvas) => {
       var link = document.createElement("a");

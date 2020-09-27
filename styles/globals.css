@@ -47,11 +47,11 @@ h1{
 
 .exclusionBox{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 40px 40px;
   grid-template-areas:
-  "top top top"
-  "bottom-left bottom-center bottom-right";
+  "top top top top"
+  "bottom-left bottom-left bottom-center bottom-right";
   align-items: center;
 }
 
@@ -67,24 +67,27 @@ h1{
   margin: 0;
 }
 
-.import{
-  background-image: linear-gradient(to bottom,#A06FCE, #EC7EFC, #C0AB72);
-  grid-area: bottom-right;
-  justify-self: end;
-}
 
 .copy{
-  background-image: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
+  background-image: linear-gradient(to top, #FFF80D, #78DD62, #3FD8E0);
   grid-area: bottom-center;
   justify-self: center;
 }
 
+.import{
+  background-image: linear-gradient(to bottom, #FFF80D, #78DD62, #3FD8E0);
+  grid-area: bottom-right;
+  /* justify-self: end; */
+}
+
+
 label{
   font-weight: 600;
   font-size: 36px;
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0;
   grid-area: top;
+  /* justify-self: left; */
 }
 
 .inputBox{
@@ -99,9 +102,9 @@ input{
   width: 100%;
   font-family: proxima-soft, sans-serif;  
   font-size: 20px;
-  border: 2px solid #C0AB72;
+  border: 2px solid #78DD62;
   border-radius: 15px;
-  background-color: #FFF;
+  background-color: #C0EFB1;
   margin: 0;
   padding: 0 10px;
 }
@@ -116,18 +119,18 @@ input:disabled{
   right: 0;
   height: 100%;
   width: 30px;
-  background-color: #FFF;
-  border: 2px solid #C0AB72;
+  background-color: rgba(255,248,13,0.5);
+  border: 2px solid rgba(255,121,31,0.5);
   border-radius: 15px;
   z-index: 2;
 }
 
 ul{
-  border-radius: 20px;
   margin-top: 0;
   position: absolute;
   z-index: 100;
   padding: 0;
+  width: 100%;
 }
 
 li{
@@ -198,7 +201,7 @@ button{
   display: flex;
   width: 630px;
   height: 45px;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px auto 20px;
 }
 
@@ -211,6 +214,7 @@ button{
 }
 
 .save{
+  display: none;
   background-image: linear-gradient(to bottom, #3FD8E0, #0961F6, #A06FCE);
 }
 
@@ -377,10 +381,16 @@ h2{
   }
   
   .container{
-    width: 100%;
     overflow: hidden;
   }
   
+  .overlap{
+    position: absolute;
+    margin: -8px 0;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
   /* .buttons{
     width: 480px;
   }
