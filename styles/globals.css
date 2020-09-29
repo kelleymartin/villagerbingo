@@ -236,6 +236,7 @@ button{
 
 .boardTiles{
   display: grid;
+  grid-auto-flow: column;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-gap: 5px;

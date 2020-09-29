@@ -41,8 +41,12 @@ export default class Home extends React.Component {
     });
     const boardVillagers = pickRandom(possibleVillagers, { count: 24 });
 
+    const sortedVillagers = boardVillagers.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+
     this.setState({
-      boardVillagers,
+      boardVillagers: sortedVillagers,
       selectedVillagers: [],
     });
   }
@@ -252,13 +256,21 @@ export default class Home extends React.Component {
     return (
       <div class="boardBox" id="capture">
         <div class="boardTiles">
-          {this.state.boardVillagers.slice(0, 12).map((villager, index) => {
-            return this.renderBoardTile(villager, index);
-          })}
+          {
+            this.state.boardVillagers
+              .slice(0, 12)
+              .map((villager, index) => {
+                return this.renderBoardTile(villager, index);
+              })
+          }
           {this.renderFreePlot()}
-          {this.state.boardVillagers.slice(12).map((villager, index) => {
-            return this.renderBoardTile(villager, index + 12);
-          })}
+          {
+            this.state.boardVillagers
+              .slice(12)
+              .map((villager, index) => {
+                return this.renderBoardTile(villager, index + 12);
+              })
+          }
         </div>
       </div>
     );
