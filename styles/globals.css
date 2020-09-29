@@ -67,7 +67,6 @@ h1{
   margin: 0;
 }
 
-
 .copy{
   background-image: linear-gradient(to top, #FFF80D, #78DD62, #3FD8E0);
   grid-area: bottom-center;
@@ -79,7 +78,6 @@ h1{
   grid-area: bottom-right;
   /* justify-self: end; */
 }
-
 
 label{
   font-weight: 600;
@@ -118,9 +116,6 @@ input:disabled{
   border: 2px solid #EBEBE4;
 }
 
-::placeholder:disabled{
-}
-
 .toggle{
   position: absolute;
   top: 0;
@@ -132,8 +127,6 @@ input:disabled{
   border-radius: 15px;
   z-index: 2;
 }
-
-
 
 ul{
   margin-top: 0;
@@ -291,6 +284,8 @@ button{
 .free{
   width: 120px;
   height: 120px;
+  position: relative;
+  color: #333;
 }
 
 .overlap{

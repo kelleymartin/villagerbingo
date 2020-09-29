@@ -24,6 +24,7 @@ export default class Home extends React.Component {
     boardVillagers: [], //villagers.slice(10, 10 + 24),
     selectedColor: this.props.randomBlotterColor,
     selectedVillagers: [], //villagers.slice(10, 10 + 24),
+    selectedFreePlot: false,
   };
 
   static getInitialProps() {
@@ -264,12 +265,24 @@ export default class Home extends React.Component {
   }
 
   renderFreePlot() {
+    const selectedFreePlot = this.state.selectedFreePlot;
+      
     return (
-      <div class="free">
+      <a href="#" class="free" onClick={(e) => {
+        e.preventDefault();
+          this.setState({
+            selectedFreePlot: !this.state.selectedFreePlot,
+          });
+        }}>
         <p class="overlap">Free plot</p>
         <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
           crossorigin="anonymous" class="plot" alt=""/>
-      </div>
+        {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
+          position: 'absolute',
+          top: '25px',
+          left: '5px',
+        }}></div> : null}
+      </a>
     );
   }
 
