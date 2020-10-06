@@ -98,7 +98,7 @@ export default class Home extends React.Component {
         });
       }
     }}>
-      <img src={villager.imageUrl} class="picture" crossorigin="anonymous" draggable="false"
+      <img src={villager.imageUrl} class="picture" crossOrigin="anonymous" draggable="false"
       alt={`${villager.name}, the ${villager.personality} ${villager.species}`}/>
       <div class="nameTagWrap">
         <p class="nameTag" style={{
@@ -288,7 +288,7 @@ export default class Home extends React.Component {
         }}>
         <p class="overlap">Free plot</p>
         <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
-          crossorigin="anonymous" class="plot" alt="" draggable="false"/>
+          crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
         {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
           position: 'absolute',
           top: '25px',
@@ -332,7 +332,7 @@ export default class Home extends React.Component {
       <div className={styles.container}>
         <Head>
           <title>ACNH Villager Bingo</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/Favicon.png" />
           <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
         </Head>
 
