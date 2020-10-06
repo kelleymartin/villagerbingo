@@ -390,7 +390,7 @@ export default class Home extends React.Component {
                 const style = color === this.state.selectedColor ? {
                   opacity: '1',
                 } : {};
-                return <a href="#" class={color} key={color} style={style} onClick={(e) => {
+                return <a href="#" class={color} key={color} style={style} alt={`${color} marker`} onClick={(e) => {
                   e.preventDefault();
                   this.setState({
                     selectedColor: color,
