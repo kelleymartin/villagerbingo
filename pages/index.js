@@ -5,75 +5,29 @@ import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
 
 import villagers from '../data/villagers.json'
+import urlFormat from '../lib/url-encode'
 
-const ALL_COLORS = [
-  "red",
-  "orange",
-  "yellow",
-  "green",
-  "teal",
-  "blue",
-  "purple",
-  "pink",
-  "gold",
-];
-
-function extractVillagers(queryValue) {
-  if (!queryValue) {
-    return [];
-  }
-
-  return queryValue
-    .split(',')
-    .map(id => villagers.find(v => v.id === +id))
-    .filter(Boolean);
-}
+const ALL_COLORS = urlFormat.ALL_COLORS;
 
 /**
  * @param {import('next').GetServerSidePropsContext} context
  */
 export const getServerSideProps = (context) => {
-  const selectedColor =
-    ALL_COLORS.includes(context.query.color) ?
-      context.query.color : pickRandom(ALL_COLORS)[0];
   return {
     props: {
-      excludedVillagers: context.query.excl || '',
-      boardVillagers: context.query.board || '', //villagers.slice(10, 10 + 24),
-      selectedColor: selectedColor,
-      selectedVillagers: context.query.sel || '', //villagers.slice(10, 10 + 24),
-      selectedFreePlot: context.query.free === 'true',
+      initialURL: `https://villager.bingo${context.req.url}`,
+      randomColor: pickRandom(ALL_COLORS)[0],
     },
   };
 };
 
 export default class Home extends React.Component {
-  state = {
-    excludedVillagers: extractVillagers(this.props.excludedVillagers),
-    boardVillagers: extractVillagers(this.props.boardVillagers),
-    selectedColor: this.props.selectedColor,
-    selectedVillagers: extractVillagers(this.props.selectedVillagers),
-    selectedFreePlot: this.props.selectedFreePlot,
-  };
+  state =
+    urlFormat.decodeState(this.props.initialURL, this.props.randomColor);
 
   setGameState(updateState, onStateApplied) {
     this.setState(updateState, () => {
-      const excludeUrl = this.state.excludedVillagers
-        .map(villager => villager.id)
-        .join(',');
-      const boardUrl = this.state.boardVillagers
-        .map(villager => villager.id)
-        .join(',');
-      const selectionUrl = this.state.selectedVillagers
-        .map(villager => villager.id)
-        .join(',');
-
-      const url = new URL(location.href);
-      url.searchParams.set('excl', excludeUrl);
-      url.searchParams.set('board', boardUrl);
-      url.searchParams.set('sel', selectionUrl);
-      url.searchParams.set('color', this.state.selectedColor);
-      url.searchParams.set('free', this.state.selectedFreePlot);
+      const url = urlFormat.encodeState(location.href, this.state);
       history.pushState(this.state, null, url);
 
       if (typeof onStateApplied === 'function') {
