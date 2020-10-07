@@ -18,19 +18,75 @@ const ALL_COLORS = [
   "gold",
 ];
 
+function extractVillagers(queryValue) {
+  if (!queryValue) {
+    return [];
+  }
+
+  return queryValue
+    .split(',')
+    .map(id => villagers.find(v => v.id === +id))
+    .filter(Boolean);
+}
+
+/**
+ * @param {import('next').GetServerSidePropsContext} context
+ */
+export const getServerSideProps = (context) => {
+  const selectedColor =
+    ALL_COLORS.includes(context.query.color) ?
+      context.query.color : pickRandom(ALL_COLORS)[0];
+  return {
+    props: {
+      excludedVillagers: context.query.excl || '',
+      boardVillagers: context.query.board || '', //villagers.slice(10, 10 + 24),
+      selectedColor: selectedColor,
+      selectedVillagers: context.query.sel || '', //villagers.slice(10, 10 + 24),
+      selectedFreePlot: context.query.free === 'true',
+    },
+  };
+};
+
 export default class Home extends React.Component {
   state = {
-    excludedVillagers: [],
-    boardVillagers: [], //villagers.slice(10, 10 + 24),
-    selectedColor: this.props.randomBlotterColor,
-    selectedVillagers: [], //villagers.slice(10, 10 + 24),
-    selectedFreePlot: false,
+    excludedVillagers: extractVillagers(this.props.excludedVillagers),
+    boardVillagers: extractVillagers(this.props.boardVillagers),
+    selectedColor: this.props.selectedColor,
+    selectedVillagers: extractVillagers(this.props.selectedVillagers),
+    selectedFreePlot: this.props.selectedFreePlot,
   };
 
-  static getInitialProps() {
-    return {
-      randomBlotterColor: pickRandom(ALL_COLORS)[0],
-    };
+  setGameState(updateState, onStateApplied) {
+    this.setState(updateState, () => {
+      const excludeUrl = this.state.excludedVillagers
+        .map(villager => villager.id)
+        .join(',');
+      const boardUrl = this.state.boardVillagers
+        .map(villager => villager.id)
+        .join(',');
+      const selectionUrl = this.state.selectedVillagers
+        .map(villager => villager.id)
+        .join(',');
+
+      const url = new URL(location.href);
+      url.searchParams.set('excl', excludeUrl);
+      url.searchParams.set('board', boardUrl);
+      url.searchParams.set('sel', selectionUrl);
+      url.searchParams.set('color', this.state.selectedColor);
+      url.searchParams.set('free', this.state.selectedFreePlot);
+      history.pushState(this.state, null, url);
+
+      if (typeof onStateApplied === 'function') {
+        onStateApplied();
+      }
+    });
+  }
+
+  componentDidMount() {
+    history.replaceState(this.state, null);
+    window.addEventListener('popstate', (e) => {
+      this.setState(e.state);
+    });
   }
 
   handleCreateBoard(event) {
@@ -45,7 +101,7 @@ export default class Home extends React.Component {
       return a.name.localeCompare(b.name);
     });
 
-    this.setState({
+    this.setGameState({
       boardVillagers: sortedVillagers,
       selectedVillagers: [],
     });
@@ -86,14 +142,14 @@ export default class Home extends React.Component {
       // Is this villager already selected?
       if (isSelected) {
         // Remove from selection!
-        this.setState({
+        this.setGameState({
           selectedVillagers: currentSelection.filter((selected) => {
             return selected !== villager;
           }),
         });
       } else {
         // Not selected yet - select it now!
-        this.setState({
+        this.setGameState({
           selectedVillagers: currentSelection.concat([villager]),
         });
       }
@@ -123,7 +179,7 @@ export default class Home extends React.Component {
       onChange={selection => {
         if (disabled || !selection) { return; }
 
-        this.setState(
+        this.setGameState(
           prevState => {
             return {
               excludedVillagers: prevState.excludedVillagers.concat([selection]),
@@ -225,7 +281,7 @@ export default class Home extends React.Component {
                 .map(name => villagers.find(v => v.name === name))
                 .filter(v => v !== null)
                 .slice(0, 9);
-              this.setState({
+              this.setGameState({
                 excludedVillagers: excluded,
               });
             }}>Paste Villagers</button>
@@ -282,7 +338,7 @@ export default class Home extends React.Component {
     return (
       <a href="#" class="free" onClick={(e) => {
         e.preventDefault();
-          this.setState({
+          this.setGameState({
             selectedFreePlot: !this.state.selectedFreePlot,
           });
         }}>
@@ -349,7 +405,7 @@ export default class Home extends React.Component {
               {this.state.excludedVillagers.map((villager) => {
                 return <a href="#" title={`Deselect ${villager.name}`} class="faceWrap" onClick={(e) => {
                   e.preventDefault();
-                  this.setState({
+                  this.setGameState({
                     excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
                   });
                 }}>
@@ -392,7 +448,7 @@ export default class Home extends React.Component {
                 } : {};
                 return <a href="#" class={color} key={color} style={style} alt={`${color} marker`} onClick={(e) => {
                   e.preventDefault();
-                  this.setState({
+                  this.setGameState({
                     selectedColor: color,
                   });
                 }}>
