@@ -296,8 +296,14 @@ export default class Home extends React.Component {
             selectedFreePlot: !this.state.selectedFreePlot,
           });
         }}>
-        <input class="overlap" placeholder="Free plot"/>
-        <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
+        <input
+          class="overlap"
+          type="text"
+          value={this.state.boardLabel}
+          defaultValue="Free plot"
+          onChange={this.handleChange}
+        />
+        <img src="/FreePLot.png"
           crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
         {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
           position: 'absolute',
@@ -338,7 +344,7 @@ export default class Home extends React.Component {
 
         <main className={styles.main}>
           <div class="container">
-            <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
+            <img src="/Dodo.svg"
               class="dodo" alt=""/>
             <h1>
               <a class="logo" href="https://villager.bingo/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
@@ -356,7 +362,7 @@ export default class Home extends React.Component {
                     excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
                   });
                 }}>
-                  <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e7084a3319408e7ef23fa_FaceX.svg"
+                  <img src="/FaceX.svg"
                     class="faceX" alt=""/>
                   <div class="faceIcon" style={{
                     backgroundColor: villager.textColor,
@@ -400,7 +406,7 @@ export default class Home extends React.Component {
                   });
                 }}>
                   {color === this.state.selectedColor ?
-                    <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6e65e4b05a42da1f3da905_CursorCropped.png"
+                    <img src="/CursorCropped.png"
                     class="cursor" alt=""/>
                     : null}
                 </a>;
