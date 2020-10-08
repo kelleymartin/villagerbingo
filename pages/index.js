@@ -332,7 +332,7 @@ export default class Home extends React.Component {
       <div className={styles.container}>
         <Head>
           <title>ACNH Villager Bingo</title>
-          <link rel="icon" href="/Favicon.png" />
+          <link rel="icon" href={`/favicon${this.state.selectedColor}.png`} />
           <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
         </Head>
 
