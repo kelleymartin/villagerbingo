@@ -299,7 +299,7 @@ button{
 }
 
 .overlap{
-  position: absolute;
+  /* position: absolute; */
   width: 130px;
   margin: -13px -5px 0;
   font-family: proxima-soft, sans-serif;
@@ -312,14 +312,18 @@ button{
   z-index: 100;
 }
 
+
+
 /* [contenteditable]:hover {
   background: #fafafa;
   outline: 2px solid #eee;
 } */
 
 .plot{
+  position: absolute;
+  top: 39px;
+  left: 0;
   width: 120px;
-  height: 120px;
 }
 
 h2{

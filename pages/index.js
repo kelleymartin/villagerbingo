@@ -290,26 +290,32 @@ export default class Home extends React.Component {
     const selectedFreePlot = this.state.selectedFreePlot;
       
     return (
-      <a href="#" class="free" onClick={(e) => {
-        e.preventDefault();
-          this.setGameState({
-            selectedFreePlot: !this.state.selectedFreePlot,
-          });
-        }}>
+      <a href="#" class="free">
         <input
           class="overlap"
           type="text"
           value={this.state.boardLabel}
           defaultValue="Free plot"
           onChange={this.handleChange}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+          
         />
-        <img src="/FreePLot.png"
-          crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
-        {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
-          position: 'absolute',
-          top: '30px',
-          left: '5px',
-        }}></div> : null}
+        <div onClick={(e) => {
+        e.preventDefault();
+          this.setGameState({
+            selectedFreePlot: !this.state.selectedFreePlot,
+          });
+        }}>
+          <img src="/FreePlot.png"
+            crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
+          {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
+            position: 'absolute',
+            top: '30px',
+            left: '5px',
+          }}></div> : null}
+        </div>
       </a>
     );
   }
