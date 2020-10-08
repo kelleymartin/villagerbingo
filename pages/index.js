@@ -340,8 +340,11 @@ export default class Home extends React.Component {
           <div class="container">
             <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
               class="dodo" alt=""/>
-            <h1>ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
-              class="glass" alt=""/></h1>
+            <h1>
+              <a class="logo" href="https://villager.bingo/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
+              class="glass" alt=""/>
+              </a>
+            </h1>
 
 
             {this.renderVillagerSelector()}
