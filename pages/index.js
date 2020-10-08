@@ -169,7 +169,7 @@ export default class Home extends React.Component {
                 style={comboboxStyles}
                 {...getRootProps({}, { suppressRefError: true })}
               >
-                <input {...getInputProps({ disabled })} ref={exclusionInput => {
+                <input class="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
                   this.exclusionInput = exclusionInput;
                 }}
                   placeholder="Type a name..." />
@@ -296,12 +296,12 @@ export default class Home extends React.Component {
             selectedFreePlot: !this.state.selectedFreePlot,
           });
         }}>
-        <p class="overlap">Free plot</p>
+        <input class="overlap" placeholder="Free plot"/>
         <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6bafa4dc833eb1555aebef_BuildingIconWork%5Ez.png"
           crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
         {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
           position: 'absolute',
-          top: '25px',
+          top: '30px',
           left: '5px',
         }}></div> : null}
       </a>
@@ -315,7 +315,7 @@ export default class Home extends React.Component {
     html2canvas(container, {
       allowTaint: false,
       useCORS: true,
-      scrollX: -window.scrollX,
+      scrollX: -8,
       scrollY: -window.scrollY,
     }).then((canvas) => {
       var link = document.createElement("a");
@@ -326,16 +326,6 @@ export default class Home extends React.Component {
       link.click();
     });
   }
-
-  // function getRandomArbitrary(min, max) {
-  //   return Math.random() * (max - min) + min;
-  // }
-
-  // function Random(props) {
-  //   var maxTopNumber = 25;
-  //   var randomNumber = Math.floor((Math.random() * maxTopNumber) + 0);
-  //   return <div>{randomTopNumber}</div>;
-  // }
 
   render() {
     return (
@@ -350,7 +340,7 @@ export default class Home extends React.Component {
           <div class="container">
             <img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f9061b867031d7214be9c_Dodo.svg"
               class="dodo" alt=""/>
-            <h1>ACNH Villager Bingo<img src="https://uploads-ssl.webflow.com/5eec38013cb14bc83af8e976/5f6f898874254903e3d2a623_Looking%20Glass%20Rounded.svg"
+            <h1>ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
               class="glass" alt=""/></h1>
 
 
