@@ -288,20 +288,25 @@ export default class Home extends React.Component {
 
   renderFreePlot() {
     const selectedFreePlot = this.state.selectedFreePlot;
-      
+    const boardLabel = this.state.boardLabel;
+     
     return (
       <a href="#" class="free">
         <input
           class="overlap"
           type="text"
           value={this.state.boardLabel}
-          defaultValue="Free plot"
-          onChange={this.handleChange}
+          placeholder="Free plot"
+          // onChange={this.handleChange}
           onClick={(e) => {
             e.preventDefault();
           }}
-          
-        />
+          onChange={(e) => {
+            e.preventDefault();
+            this.setGameState({
+              boardLabel: e.target.value,
+            });
+          }}/>
         <div onClick={(e) => {
         e.preventDefault();
           this.setGameState({
@@ -353,7 +358,7 @@ export default class Home extends React.Component {
             <img src="/Dodo.svg"
               class="dodo" alt=""/>
             <h1>
-              <a class="logo" href="https://villager.bingo/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
+              <a class="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
               class="glass" alt=""/>
               </a>
             </h1>
