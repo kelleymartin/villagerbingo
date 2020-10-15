@@ -109,7 +109,7 @@ export default class Home extends React.Component {
       }
     }}>
       <img src={villager.imageUrl} class="picture" crossOrigin="anonymous" draggable="false"
-      alt={`${villager.name}, the ${villager.personality} ${villager.species}`}/>
+        alt={`${villager.name}, the ${villager.personality} ${villager.species}`} />
       <div class="nameTagWrap">
         <p class="nameTag" style={{
           backgroundColor: villager.bubbleColor,
@@ -181,7 +181,7 @@ export default class Home extends React.Component {
                 {isOpen
                   ? items
                     .filter(
-                      ( item ) => {
+                      (item) => {
                         /**
                          * @param {string} name 
                          */
@@ -194,7 +194,7 @@ export default class Home extends React.Component {
                         return matchesInput && !isAlreadyExcluded;
                       }
                     )
-                    .map(( item , index) => (
+                    .map((item, index) => (
                       <li
                         {...getItemProps({
 
@@ -289,7 +289,7 @@ export default class Home extends React.Component {
   renderFreePlot() {
     const selectedFreePlot = this.state.selectedFreePlot;
     const boardLabel = this.state.boardLabel;
-     
+
     return (
       <a href="#" class="free">
         <input
@@ -306,15 +306,15 @@ export default class Home extends React.Component {
             this.setGameState({
               boardLabel: e.target.value,
             });
-          }}/>
+          }} />
         <div onClick={(e) => {
-        e.preventDefault();
+          e.preventDefault();
           this.setGameState({
             selectedFreePlot: !this.state.selectedFreePlot,
           });
         }}>
           <img src="/FreePlot.png"
-            crossOrigin="anonymous" class="plot" alt="" draggable="false"/>
+            crossOrigin="anonymous" class="plot" alt="" draggable="false" />
           {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
             position: 'absolute',
             top: '30px',
@@ -348,6 +348,16 @@ export default class Home extends React.Component {
     return (
       <div className={styles.container}>
         <Head>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180657495-1"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-180657495-1');
+            </script>
+
           <title>ACNH Villager Bingo</title>
           <link rel="icon" href={`/favicon${this.state.selectedColor}.png`} />
           <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
@@ -356,10 +366,10 @@ export default class Home extends React.Component {
         <main className={styles.main}>
           <div class="container">
             <img src="/Dodo.svg"
-              class="dodo" alt=""/>
+              class="dodo" alt="" />
             <h1>
               <a class="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
-              class="glass" alt=""/>
+                class="glass" alt="" />
               </a>
             </h1>
 
@@ -374,7 +384,7 @@ export default class Home extends React.Component {
                   });
                 }}>
                   <img src="/FaceX.svg"
-                    class="faceX" alt=""/>
+                    class="faceX" alt="" />
                   <div class="faceIcon" style={{
                     backgroundColor: villager.textColor,
                     backgroundImage: `url(${villager.iconUrl})`,
@@ -418,7 +428,7 @@ export default class Home extends React.Component {
                 }}>
                   {color === this.state.selectedColor ?
                     <img src="/CursorCropped.png"
-                    class="cursor" alt=""/>
+                      class="cursor" alt="" />
                     : null}
                 </a>;
               })}
