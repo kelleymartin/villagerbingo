@@ -441,7 +441,7 @@ export default class Home extends React.Component {
               {/* <svg width="200px" height="5px" className="separator">
                 <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
               </svg> */}
-              <p className="credit">Special thanks to: Nathaniel, <a href="https://twitter.com/starrynite_acnh" className="footerLink">Savannah</a>, and <a href="https://discord.gg/acnhoasis" className="footerLink">The Oasis</a>.</p>
+              <p className="credit">Special thanks to: Jan, Nathaniel, <a href="https://twitter.com/starrynite_acnh" className="footerLink">Savannah</a>, and <a href="https://discord.gg/acnhoasis" className="footerLink">The Oasis</a>.</p>
               <p className="disclaimer">Villager Bingo is a fan-made website that claims no ownership of any intellectual property associated with Nintendo or Animal Crossing.</p>
             </div>
 
