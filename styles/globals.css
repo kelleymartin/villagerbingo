@@ -303,7 +303,7 @@ button{
   width: 130px;
   margin: -13px -5px 0;
   font-family: proxima-soft, sans-serif;
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 600;
   text-align: center;
   color: #333;
@@ -445,12 +445,11 @@ h2{
     overflow: hidden;
   }
   
-  .overlap{
-    /* position: absolute; */
+  /* .overlap{
     margin-top: -12px;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 600;
-  }
+  } */
 
   /* .buttons{
     width: 480px;
