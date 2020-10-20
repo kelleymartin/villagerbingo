@@ -297,7 +297,6 @@ export default class Home extends React.Component {
           type="text"
           value={this.state.boardLabel}
           placeholder="Free plot"
-          // onChange={this.handleChange}
           onClick={(e) => {
             e.preventDefault();
           }}

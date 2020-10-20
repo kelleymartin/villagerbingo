@@ -6,6 +6,7 @@ html {
 }
 
 body{
+  /* width: 100%; */
   text-align: center;
   font-family: proxima-soft, sans-serif;
   font-weight: 600, 500;
@@ -303,7 +304,7 @@ button{
   width: 130px;
   margin: -13px -5px 0;
   font-family: proxima-soft, sans-serif;
-  font-size: 1.875rem;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
   color: #333;
@@ -311,13 +312,6 @@ button{
   border: none;
   z-index: 100;
 }
-
-
-
-/* [contenteditable]:hover {
-  background: #fafafa;
-  outline: 2px solid #eee;
-} */
 
 .plot{
   position: absolute;
@@ -447,7 +441,6 @@ h2{
   
   /* .overlap{
     margin-top: -12px;
-    font-size: 1.625rem;
     font-weight: 600;
   } */
 
