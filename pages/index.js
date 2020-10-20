@@ -348,7 +348,7 @@ export default class Home extends React.Component {
     return (
       <div className={styles.container}>
         <Head>
-          <!-- Global site tag (gtag.js) - Google Analytics -->
+          {/* <!-- Global site tag (gtag.js) - Google Analytics -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180657495-1"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
@@ -356,7 +356,7 @@ export default class Home extends React.Component {
             gtag('js', new Date());
 
             gtag('config', 'UA-180657495-1');
-            </script>
+            </script> */}
 
           <title>ACNH Villager Bingo</title>
           <link rel="icon" href={`/favicon${this.state.selectedColor}.png`} />
@@ -434,10 +434,37 @@ export default class Home extends React.Component {
               })}
             </div>
 
+            <div className="footer">
+              <svg width="200px" height="5px" className="separator">
+                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
+              </svg>
+              <p className="credit"><b>Created by: <a href="https://twitter.com/fromLappice" className="footerLink">Kelley from Lappice</a></b></p>
+              {/* <svg width="200px" height="5px" className="separator">
+                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
+              </svg> */}
+              <p className="credit">Special thanks to: Nathaniel, <a href="https://twitter.com/starrynite_acnh" className="footerLink">Savannah</a>, and <a href="https://discord.gg/acnhoasis" className="footerLink">The Oasis</a>.</p>
+              <p className="disclaimer">Villager Bingo is a fan-made website that claims no ownership of any intellectual property associated with Nintendo or Animal Crossing.</p>
+            </div>
+
           </div>
+
+          <svg width="100%" height="5px" className="bottomBar">
+            <defs>
+              <linearGradient id="bottomGradient">
+                <stop offset="0%" stop-color="#FF4040" stop-opacity="0.3" />
+                <stop offset="12.5%" stop-color="#FF791F" stop-opacity="0.3" />
+                <stop offset="25%" stop-color="#FFF80D" stop-opacity="0.3" />
+                <stop offset="37.5%" stop-color="#78DD62" stop-opacity="0.3" />
+                <stop offset="50%" stop-color="#3FD8E0" stop-opacity="0.3" />
+                <stop offset="62.5%" stop-color="#0961F6" stop-opacity="0.3" />
+                <stop offset="75" stop-color="#A06FCE" stop-opacity="0.3" />
+                <stop offset="87.5%" stop-color="#EC7EFC" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#C0AB72" stop-opacity="0.3" />
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bottomGradient)" />
+          </svg>
         </main>
-
-
       </div>
     )
   }

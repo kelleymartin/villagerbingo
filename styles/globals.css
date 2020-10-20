@@ -406,6 +406,36 @@ h2{
   /* opacity: 0; */
 }
 
+.footer{
+  margin-top: 20px;
+  /* background-color: rgba(255,255,255,0.5);
+  background-image: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 34%, rgba(255,255,255,0.3) 66%, rgba(255,255,255,0) 100%) */
+}
+
+.separator{
+  display: block;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.credit{
+  font-size: 0.85rem;
+  line-height: 0.4rem;
+}
+
+.disclaimer{
+  font-size: 0.65rem;
+}
+
+.footerLink{
+  color: #333;
+}
+
+.bottomBar{
+  display: block;
+}
+
 @media only screen and (max-width: 630px) {
   body{
     width: 100%;
