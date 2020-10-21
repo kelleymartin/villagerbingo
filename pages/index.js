@@ -372,6 +372,20 @@ export default class Home extends React.Component {
               </a>
             </h1>
 
+            <div className="navbar">
+              <div className="howToButtonBorder"></div>
+              <button className="howToButton">
+                How to play
+              </button>
+              <div className="settingsButtonBorder"></div>
+              <button className="settingsButton">
+                Settings
+              </button>
+              <div className="howToBoxBorder"></div>
+              <div className="howToBox"></div>
+              <div className="settingsBoxBorder"></div>
+              <div className="settingsBox"></div>
+            </div>
 
             {this.renderVillagerSelector()}
             <div class="facesBox">
@@ -435,7 +449,7 @@ export default class Home extends React.Component {
 
             <div className="footer">
               <svg width="200px" height="5px" className="separator">
-                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
+                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)" />
               </svg>
               <p className="credit"><b>Created by: <a href="https://twitter.com/fromLappice" className="footerLink">Kelley from Lappice</a></b></p>
               {/* <svg width="200px" height="5px" className="separator">
