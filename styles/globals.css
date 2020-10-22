@@ -177,7 +177,7 @@ h1{
   z-index: 20;
 }
 
-.settingsBox legend, label {
+.settingsBox legend, .settingsBox label {
   text-align: left;
 }
 
