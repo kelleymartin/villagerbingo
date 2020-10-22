@@ -3,6 +3,8 @@ import styles from '../styles/Home.module.css'
 import pickRandom from 'pick-random'
 import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
+import { CheckTreePicker } from 'rsuite';
+import 'rsuite/styles/less/index.less';
 
 import villagers from '../data/villagers.json'
 import urlFormat from '../lib/url-encode'
@@ -343,6 +345,31 @@ export default class Home extends React.Component {
     });
   }
 
+  renderVillagerSetSelector() {
+    const villagerSets = [
+      {
+        value: 'easy',
+        label: 'Easy',
+      },
+      {
+        value: 'standard',
+        label: 'Standard',
+      },
+      {
+        value: 'hard',
+        label: 'Hard',
+      },
+    ];
+
+    return (
+      <CheckTreePicker 
+        defaultExpandAll
+        data={villagerSets}
+        cascade={false}
+      />
+    );
+  }
+
   render() {
     return (
       <div className={styles.container}>
@@ -382,9 +409,14 @@ export default class Home extends React.Component {
                 Settings
               </button>
               <div className="howToBoxBorder"></div>
-              <div className="howToBox"></div>
+              <div className="howToBox">
+                Coming soon!
+              </div>
               <div className="settingsBoxBorder"></div>
-              <div className="settingsBox"></div>
+              <div className="settingsBox">
+                <p className="settingLabel">Villager set:</p>
+                {this.renderVillagerSetSelector()}
+              </div>
             </div>
 
             {this.renderVillagerSelector()}
