@@ -43,13 +43,21 @@ export default class Home extends React.Component {
     });
   }
 
+  pickBoardVillagers(mode, possibleVillagers) {
+    if (mode === 'hard') {
+      return Array.from({ length: 24 }, () => possibleVillagers[0]);
+    }
+
+    return pickRandom(possibleVillagers, { count: 24 });
+  }
+
   handleCreateBoard(event) {
     event.preventDefault();
 
     const possibleVillagers = villagers.filter((villager) => {
       return !this.state.excludedVillagers.includes(villager);
     });
-    const boardVillagers = pickRandom(possibleVillagers, { count: 24 });
+    const boardVillagers = this.pickBoardVillagers(this.state.villagerSet, possibleVillagers);
 
     const sortedVillagers = boardVillagers.sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -88,7 +96,7 @@ export default class Home extends React.Component {
 
     const title = isSelected ? `Unmark ${villager.name}` : `Mark ${villager.name} as seen`;
 
-    return <a href="#" class={`tile tile${index}`} title={title} onClick={(e) => {
+    return <a href="#" key={villager.name} className={`tile tile${index}`} title={title} onClick={(e) => {
       e.preventDefault();
 
       const currentSelection = this.state.selectedVillagers;
@@ -108,15 +116,15 @@ export default class Home extends React.Component {
         });
       }
     }}>
-      <img src={villager.imageUrl} class="picture" crossOrigin="anonymous" draggable="false"
+      <img src={villager.imageUrl} className="picture" crossOrigin="anonymous" draggable="false"
         alt={`${villager.name}, the ${villager.personality} ${villager.species}`} />
-      <div class="nameTagWrap">
-        <p class="nameTag" style={{
+      <div className="nameTagWrap">
+        <p className="nameTag" style={{
           backgroundColor: villager.bubbleColor,
           color: villager.textColor,
         }}>{villager.name}</p>
       </div>
-      {isSelected ? <div class={`blot ${this.state.selectedColor}`} style={blotStyle}></div> : null}
+      {isSelected ? <div className={`blot ${this.state.selectedColor}`} style={blotStyle}></div> : null}
     </a>;
   }
 
@@ -149,6 +157,10 @@ export default class Home extends React.Component {
       itemToString={item => (item ? item.name : '')}
       defaultHighlightedIndex={0}
       ref={downshift => { this.exclusionDownshift = downshift; }}
+      id="excluded-villagers-autocomplete"
+      labelId="excluded-villagers-autocomplete-label"
+      inputId="excluded-villagers-autocomplete-input"
+      menuId="excluded-villagers-autocomplete-menu"
     >
       {({
         getInputProps,
@@ -162,18 +174,18 @@ export default class Home extends React.Component {
         selectedItem,
         getRootProps,
       }) => (
-          <div class="exclusionBox">
+          <div className="exclusionBox">
             <label {...getLabelProps()}>Exclude a current villager:</label>
-            <div class="inputBox">
+            <div className="inputBox">
               <div
                 style={comboboxStyles}
                 {...getRootProps({}, { suppressRefError: true })}
               >
-                <input class="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
+                <input className="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
                   this.exclusionInput = exclusionInput;
                 }}
                   placeholder="Type a name..." />
-                <button class="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
+                <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
                   &#8595;
               </button>
               </div>
@@ -217,7 +229,7 @@ export default class Home extends React.Component {
                   : null}
               </ul>
             </div>
-            <button type="button" class="copy" onClick={(e) => {
+            <button type="button" className="copy" onClick={(e) => {
               // Example value:
               // T-Bone,Camofrog,Biskit
               e.preventDefault();
@@ -227,7 +239,7 @@ export default class Home extends React.Component {
                 .join(',');
               navigator.clipboard.writeText(shareData);
             }}>Copy Villagers</button>
-            <button type="button" class="import" onClick={async (e) => {
+            <button type="button" className="import" onClick={async (e) => {
               e.preventDefault();
               const shareData = await navigator.clipboard.readText();
               const excluded = shareData
@@ -246,13 +258,13 @@ export default class Home extends React.Component {
 
   renderBlank() {
     return (
-      <div class="boardBox" id="capture">
-        <div class="boardTiles">
-          {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+      <div className="boardBox" id="capture">
+        <div className="boardTiles">
+          {Array.from({ length: 12 }, (value, idx) => <div key={idx} className="tileBlank"></div>)}
 
           {this.renderFreePlot()}
 
-          {Array.from({ length: 12 }, () => <div class="tileBlank"></div>)}
+          {Array.from({ length: 12 }, (value, idx) => <div key={idx} className="tileBlank"></div>)}
         </div>
       </div>
     );
@@ -264,8 +276,8 @@ export default class Home extends React.Component {
       return this.renderBlank();
     }
     return (
-      <div class="boardBox" id="capture">
-        <div class="boardTiles">
+      <div className="boardBox" id="capture">
+        <div className="boardTiles">
           {
             this.state.boardVillagers
               .slice(0, 12)
@@ -291,9 +303,9 @@ export default class Home extends React.Component {
     const boardLabel = this.state.boardLabel;
 
     return (
-      <a href="#" class="free">
+      <a href="#" className="free">
         <input
-          class="overlap"
+          className="overlap"
           type="text"
           value={this.state.boardLabel}
           placeholder="Free plot"
@@ -313,8 +325,8 @@ export default class Home extends React.Component {
           });
         }}>
           <img src="/FreePlot.png"
-            crossOrigin="anonymous" class="plot" alt="" draggable="false" />
-          {selectedFreePlot ? <div class={`blot ${this.state.selectedColor}`} style={{
+            crossOrigin="anonymous" className="plot" alt="" draggable="false" />
+          {selectedFreePlot ? <div className={`blot ${this.state.selectedColor}`} style={{
             position: 'absolute',
             top: '30px',
             left: '5px',
@@ -343,55 +355,111 @@ export default class Home extends React.Component {
     });
   }
 
+  renderVillagerSetSelector() {
+    const villagerSets = [
+      {
+        value: 'easy',
+        label: 'Easy',
+      },
+      {
+        value: 'standard',
+        label: 'Standard',
+      },
+      {
+        value: 'hard',
+        label: 'Hard',
+      },
+      {
+        value: 'species-only',
+        label: 'Species per Tile',
+      },
+      {
+        value: 'personality-species',
+        label: 'Species + Personality',
+      },
+    ];
+
+    return (
+      <fieldset>
+        <legend>Villager Set:</legend>
+
+        {villagerSets.map(set => (
+          <React.Fragment key={set.value}>
+            <label style={{ display: 'block' }}>
+              <input type="radio"
+                     name="villagerset"
+                     value={set.value}
+                     checked={set.value === this.state.villagerSet}
+                     onChange={e => {
+                       this.setGameState({
+                         villagerSet: set.value,
+                       });
+                     }} />
+              {' '}{set.label}
+            </label>
+          </React.Fragment>
+        ))}
+      </fieldset>
+    );
+  }
+
   render() {
     return (
       <div className={styles.container}>
         <Head>
-          {/* <!-- Global site tag (gtag.js) - Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180657495-1"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-180657495-1');
-            </script> */}
-
           <title>ACNH Villager Bingo</title>
           <link rel="icon" href={`/favicon${this.state.selectedColor}.png`} />
           <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
         </Head>
 
         <main className={styles.main}>
-          <div class="container">
+          <div className="container">
             <img src="/Dodo.svg"
-              class="dodo" alt="" />
+              className="dodo" alt="" />
             <h1>
-              <a class="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
-                class="glass" alt="" />
+              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
+                className="glass" alt="" />
               </a>
             </h1>
 
+            <div className="navbar">
+              <div className="howToButtonBorder"></div>
+              <button className="howToButton">
+                How to play
+              </button>
+              <div className="settingsButtonBorder"></div>
+              <button className="settingsButton">
+                Settings
+              </button>
+              <div className="howToBoxBorder"></div>
+              <div className="howToBox">
+                Coming soon!
+              </div>
+              <div className="settingsBoxBorder"></div>
+              <div className="settingsBox">
+                {this.renderVillagerSetSelector()}
+              </div>
+            </div>
 
             {this.renderVillagerSelector()}
-            <div class="facesBox">
+            <div className="facesBox">
               {this.state.excludedVillagers.map((villager) => {
-                return <a href="#" title={`Deselect ${villager.name}`} class="faceWrap" onClick={(e) => {
+                return <a href="#" key={villager.name} title={`Deselect ${villager.name}`} className="faceWrap" onClick={(e) => {
                   e.preventDefault();
                   this.setGameState({
                     excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
                   });
                 }}>
                   <img src="/FaceX.svg"
-                    class="faceX" alt="" />
-                  <div class="faceIcon" style={{
+                    className="faceX" alt="" />
+                  <div className="faceIcon" style={{
                     backgroundColor: villager.textColor,
                     backgroundImage: `url(${villager.iconUrl})`,
                     backgroundSize: 'contain',
                     border: `2px solid ${villager.bubbleColor}80`
                   }}>
                   </div>
-                  <p class="faceName" style={{
+                  <p className="faceName" style={{
                     backgroundColor: villager.bubbleColor,
                     color: villager.textColor,
                   }}>{villager.name}</p>
@@ -399,13 +467,13 @@ export default class Home extends React.Component {
               })}
             </div>
 
-            <div class="buttons">
+            <div className="buttons">
 
-              <button class="save" type="button" onClick={(e) => this.handleDownloadImage(e)}>
+              <button className="save" type="button" onClick={(e) => this.handleDownloadImage(e)}>
                 Save picture
               </button>
 
-              <button class="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
+              <button className="create" type="button" onClick={(e) => this.handleCreateBoard(e)}>
                 Create board
               </button>
             </div>
@@ -414,12 +482,12 @@ export default class Home extends React.Component {
 
             <h2>Choose your marker color:</h2>
 
-            <div class="blotter">
+            <div className="blotter">
               {ALL_COLORS.map((color) => {
                 const style = color === this.state.selectedColor ? {
                   opacity: '1',
                 } : {};
-                return <a href="#" class={color} key={color} style={style} alt={`${color} marker`} onClick={(e) => {
+                return <a href="#" className={color} key={color} style={style} alt={`${color} marker`} onClick={(e) => {
                   e.preventDefault();
                   this.setGameState({
                     selectedColor: color,
@@ -427,7 +495,7 @@ export default class Home extends React.Component {
                 }}>
                   {color === this.state.selectedColor ?
                     <img src="/CursorCropped.png"
-                      class="cursor" alt="" />
+                      className="cursor" alt="" />
                     : null}
                 </a>;
               })}
@@ -435,7 +503,7 @@ export default class Home extends React.Component {
 
             <div className="footer">
               <svg width="200px" height="5px" className="separator">
-                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
+                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)" />
               </svg>
               <p className="credit"><b>Created by: <a href="https://twitter.com/fromLappice" className="footerLink">Kelley from Lappice</a></b></p>
               {/* <svg width="200px" height="5px" className="separator">
@@ -447,18 +515,22 @@ export default class Home extends React.Component {
 
           </div>
 
+          {/* <div style={{
+            height: '20px',
+            backgroundImage: 'linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3)'
+          }}></div> */}
           <svg width="100%" height="5px" className="bottomBar">
             <defs>
               <linearGradient id="bottomGradient">
-                <stop offset="0%" stop-color="#FF4040" stop-opacity="0.3" />
-                <stop offset="12.5%" stop-color="#FF791F" stop-opacity="0.3" />
-                <stop offset="25%" stop-color="#FFF80D" stop-opacity="0.3" />
-                <stop offset="37.5%" stop-color="#78DD62" stop-opacity="0.3" />
-                <stop offset="50%" stop-color="#3FD8E0" stop-opacity="0.3" />
-                <stop offset="62.5%" stop-color="#0961F6" stop-opacity="0.3" />
-                <stop offset="75" stop-color="#A06FCE" stop-opacity="0.3" />
-                <stop offset="87.5%" stop-color="#EC7EFC" stop-opacity="0.3" />
-                <stop offset="100%" stop-color="#C0AB72" stop-opacity="0.3" />
+                <stop offset="0%" stopColor="#FF4040" stopOpacity="0.3" />
+                <stop offset="12.5%" stopColor="#FF791F" stopOpacity="0.3" />
+                <stop offset="25%" stopColor="#FFF80D" stopOpacity="0.3" />
+                <stop offset="37.5%" stopColor="#78DD62" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#3FD8E0" stopOpacity="0.3" />
+                <stop offset="62.5%" stopColor="#0961F6" stopOpacity="0.3" />
+                <stop offset="75" stopColor="#A06FCE" stopOpacity="0.3" />
+                <stop offset="87.5%" stopColor="#EC7EFC" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#C0AB72" stopOpacity="0.3" />
               </linearGradient>
             </defs>
             <rect width="100%" height="100%" fill="url(#bottomGradient)" />
