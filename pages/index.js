@@ -157,6 +157,10 @@ export default class Home extends React.Component {
       itemToString={item => (item ? item.name : '')}
       defaultHighlightedIndex={0}
       ref={downshift => { this.exclusionDownshift = downshift; }}
+      id="excluded-villagers-autocomplete"
+      labelId="excluded-villagers-autocomplete-label"
+      inputId="excluded-villagers-autocomplete-input"
+      menuId="excluded-villagers-autocomplete-menu"
     >
       {({
         getInputProps,
@@ -511,18 +515,22 @@ export default class Home extends React.Component {
 
           </div>
 
+          {/* <div style={{
+            height: '20px',
+            backgroundImage: 'linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3)'
+          }}></div> */}
           <svg width="100%" height="5px" className="bottomBar">
             <defs>
               <linearGradient id="bottomGradient">
-                <stop offset="0%" stop-color="#FF4040" stop-opacity="0.3" />
-                <stop offset="12.5%" stop-color="#FF791F" stop-opacity="0.3" />
-                <stop offset="25%" stop-color="#FFF80D" stop-opacity="0.3" />
-                <stop offset="37.5%" stop-color="#78DD62" stop-opacity="0.3" />
-                <stop offset="50%" stop-color="#3FD8E0" stop-opacity="0.3" />
-                <stop offset="62.5%" stop-color="#0961F6" stop-opacity="0.3" />
-                <stop offset="75" stop-color="#A06FCE" stop-opacity="0.3" />
-                <stop offset="87.5%" stop-color="#EC7EFC" stop-opacity="0.3" />
-                <stop offset="100%" stop-color="#C0AB72" stop-opacity="0.3" />
+                <stop offset="0%" stopColor="#FF4040" stopOpacity="0.3" />
+                <stop offset="12.5%" stopColor="#FF791F" stopOpacity="0.3" />
+                <stop offset="25%" stopColor="#FFF80D" stopOpacity="0.3" />
+                <stop offset="37.5%" stopColor="#78DD62" stopOpacity="0.3" />
+                <stop offset="50%" stopColor="#3FD8E0" stopOpacity="0.3" />
+                <stop offset="62.5%" stopColor="#0961F6" stopOpacity="0.3" />
+                <stop offset="75" stopColor="#A06FCE" stopOpacity="0.3" />
+                <stop offset="87.5%" stopColor="#EC7EFC" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#C0AB72" stopOpacity="0.3" />
               </linearGradient>
             </defs>
             <rect width="100%" height="100%" fill="url(#bottomGradient)" />
