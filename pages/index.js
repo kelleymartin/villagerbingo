@@ -5,7 +5,7 @@ import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
 
 import villagers from '../data/villagers.json'
-import urlFormat from '../lib/url-encode'
+import urlFormat, { encodeState } from '../lib/url-encode'
 
 const ALL_COLORS = urlFormat.ALL_COLORS;
 
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
     const isSelected =
       this.state.selectedVillagers.includes(villager);
 
-    const topMax = 15;
+    const topMax = 10;
     const top = ((index + 1) * 17) % topMax;
     const leftMax = 30;
     const left = ((index + 1) * 23) % leftMax;
@@ -184,9 +184,11 @@ export default class Home extends React.Component {
                 <input className="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
                   this.exclusionInput = exclusionInput;
                 }}
-                  placeholder="Type a name..." />
+                  placeholder="Type a name..." 
+                  // if disabled placeholder="Delete a villager"/>
+                  />
                 <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
-                  &#8595;
+                &#11015;
               </button>
               </div>
               <ul {...getMenuProps()} style={menuStyles}>
@@ -230,16 +232,20 @@ export default class Home extends React.Component {
               </ul>
             </div>
             <button type="button" className="copy" onClick={(e) => {
-              // Example value:
-              // T-Bone,Camofrog,Biskit
               e.preventDefault();
-              const excluded = this.state.excludedVillagers;
-              const shareData = excluded
-                .map(villager => villager.name)
-                .join(',');
+              const cleanedState = Object.assign({}, this.state, {
+                // Reset values we don't want in the shared URL:
+                boardLabel: '',
+                boardVillagers: [],
+                selectedVillagers: [],
+                selectedColor: null,
+                selectedFreePlot: '',
+                villagerSet: 'standard',
+              });
+              const shareData = encodeState(location.href, cleanedState);
               navigator.clipboard.writeText(shareData);
-            }}>Copy Villagers</button>
-            <button type="button" className="import" onClick={async (e) => {
+            }}>Copy as url</button>
+            {/* <button type="button" className="import" onClick={async (e) => {
               e.preventDefault();
               const shareData = await navigator.clipboard.readText();
               const excluded = shareData
@@ -250,7 +256,7 @@ export default class Home extends React.Component {
               this.setGameState({
                 excludedVillagers: excluded,
               });
-            }}>Paste Villagers</button>
+            }}>Paste Villagers</button> */}
           </div>
         )}
     </Downshift>
@@ -387,14 +393,14 @@ export default class Home extends React.Component {
           <React.Fragment key={set.value}>
             <label style={{ display: 'block' }}>
               <input type="radio"
-                     name="villagerset"
-                     value={set.value}
-                     checked={set.value === this.state.villagerSet}
-                     onChange={e => {
-                       this.setGameState({
-                         villagerSet: set.value,
-                       });
-                     }} />
+                name="villagerset"
+                value={set.value}
+                checked={set.value === this.state.villagerSet}
+                onChange={e => {
+                  this.setGameState({
+                    villagerSet: set.value,
+                  });
+                }} />
               {' '}{set.label}
             </label>
           </React.Fragment>
@@ -467,6 +473,20 @@ export default class Home extends React.Component {
               })}
             </div>
 
+            <div className="setSelection">
+              <label className="selectionLabel">Select a villager set:</label>
+              <div className="easyBorder"></div>
+              <button className="easyButton">Easy</button>
+              <div className="standardBorder"></div>
+              <button className="standardButton">Standard</button>
+              <div className="hardBorder"></div>
+              <button className="hardButton">Hard</button>
+              <div className="speciesBorder"></div>
+              <button className="speciesButton">Species</button>
+              <div className="personalitiesBorder"></div>
+              <button className="personalitiesButton">Personality</button>
+            </div>
+
             <div className="buttons">
 
               <button className="save" type="button" onClick={(e) => this.handleDownloadImage(e)}>
@@ -502,39 +522,16 @@ export default class Home extends React.Component {
             </div>
 
             <div className="footer">
-              <svg width="200px" height="5px" className="separator">
-                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)" />
-              </svg>
+              <div className="separator"></div>
               <p className="credit"><b>Created by: <a href="https://twitter.com/fromLappice" className="footerLink">Kelley from Lappice</a></b></p>
-              {/* <svg width="200px" height="5px" className="separator">
-                <rect width="100%" height="100%" fill="url(#bottomGradient)" transform="rotate(180,100,2.5)"/>
-              </svg> */}
               <p className="credit">Special thanks to: Jan, Nathaniel, <a href="https://twitter.com/starrynite_acnh" className="footerLink">Savannah</a>, and <a href="https://discord.gg/acnhoasis" className="footerLink">The Oasis</a>.</p>
               <p className="disclaimer">Villager Bingo is a fan-made website that claims no ownership of any intellectual property associated with Nintendo or Animal Crossing.</p>
             </div>
-
           </div>
-
-          {/* <div style={{
-            height: '20px',
+          <div className="bottomBar" style={{
+            height: '5px',
             backgroundImage: 'linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3)'
-          }}></div> */}
-          <svg width="100%" height="5px" className="bottomBar">
-            <defs>
-              <linearGradient id="bottomGradient">
-                <stop offset="0%" stopColor="#FF4040" stopOpacity="0.3" />
-                <stop offset="12.5%" stopColor="#FF791F" stopOpacity="0.3" />
-                <stop offset="25%" stopColor="#FFF80D" stopOpacity="0.3" />
-                <stop offset="37.5%" stopColor="#78DD62" stopOpacity="0.3" />
-                <stop offset="50%" stopColor="#3FD8E0" stopOpacity="0.3" />
-                <stop offset="62.5%" stopColor="#0961F6" stopOpacity="0.3" />
-                <stop offset="75" stopColor="#A06FCE" stopOpacity="0.3" />
-                <stop offset="87.5%" stopColor="#EC7EFC" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#C0AB72" stopOpacity="0.3" />
-              </linearGradient>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#bottomGradient)" />
-          </svg>
+          }}></div>
         </main>
       </div>
     )
