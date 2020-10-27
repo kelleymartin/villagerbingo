@@ -14,6 +14,13 @@ body{
   background-image: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
   }
 
+.dark-mode {
+  background: #1B170C;
+  background-image: linear-gradient(230deg, rgba(255,64,64,0.05) 20%, rgba(255,121,31,0.05) 25%, rgba(255,248,13,0.05) 30%, rgba(120,221,98,0.05) 35%, rgba(63,216,224,0.05) 40%, rgba(9,97,246,0.05) 45%, rgba(160,111,206,0.05) 50%, rgba(236,126,252,0.05) 55%, rgba(192,171,114,0.05) 60%);
+  color: #FFFCE9;
+  filter: brightness(.75);
+}  
+
 body, html {
   margin: 0;
   padding: 0;
@@ -44,6 +51,11 @@ h1{
   text-decoration: none;
 }
 
+.dark-mode .logo{
+  color: #FFFCE9;
+  font-weight: 600;
+}
+
 .glass{
   position: absolute;
   margin-top: 35px;
@@ -51,10 +63,21 @@ h1{
   z-index: 10;
 }
 
+.separatorBig{
+  height: 5px;
+  width: 630px;
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  background-image: linear-gradient(to left, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3));
+}
+
 .navbar{
-  display: none;
+  display: grid;
   grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
   grid-template-rows: 34px auto;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -115,6 +138,7 @@ h1{
 }
 
 .howToBoxBorder{
+  display: none;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -128,6 +152,7 @@ h1{
 }
 
 .howToBox{
+  display: none;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
@@ -145,6 +170,7 @@ h1{
 }
 
 .settingsBoxBorder{
+  display: none;
   grid-column-start: 3;
   grid-column-end: 7;
   grid-row-start: 2;
@@ -158,7 +184,8 @@ h1{
 }
 
 .settingsBox{
-  display: grid;
+  display: none;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   grid-column-start: 3;
   grid-column-end: 7;
@@ -205,6 +232,12 @@ h1{
   font-weight: 500;
 }
 
+.dark-mode .copy{
+  color: #FFFCE9;
+  background-color: #04307B;
+  background-image: none;
+}
+
 label{
   font-weight: 600;
   font-size: 36px;
@@ -229,6 +262,10 @@ label{
   color: #333;
 }
 
+.dark-mode ::placeholder{
+  color: #FFFCE9;
+}
+
 .typeAName{
   height: 34px;
   width: 100%;
@@ -240,6 +277,10 @@ label{
   background-color: #9FEBF0;
   margin: 0;
   padding: 0 10px;
+}
+
+.dark-mode .typeAName{
+  background-color: #04307B;
 }
 
 input:disabled{
@@ -258,6 +299,11 @@ input:disabled{
   border: 2px solid #0961F6;
   border-radius: 17px;
   z-index: 2;
+}
+
+.dark-mode .toggle{
+  background-color: #04307B;
+  color: #FFFCE9;
 }
 
 .toggle:disabled{
@@ -332,7 +378,7 @@ li{
 }
 
 .setSelection{
-  display: none;
+  display: grid;
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
   grid-template-rows: auto auto;
   gap: 5px;
@@ -345,74 +391,78 @@ li{
   grid-area: label;
 }
 
-.easyBorder, .standardBorder, .hardBorder, .speciesBorder, .personalitiesBorder{
+.easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
   height: 34px;
   width: 100%;
   border-radius: 17px;
-}
-
-.easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
-  margin: 2px;
-  border-radius: 15px;
-  border: none;
+  /* border: none; */
   color: #333;
   font-size: 20px;
   font-weight: 500;
 }
 
-.easyBorder{
-  grid-area: easy;
-  background-color: #78DD62;
-  /* background-image: linear-gradient(to bottom, #FFD00D, #78DD62); */
-}
-
-.standardBorder{
-  grid-area: standard;
-  background-color: #3FD8E0;
-  /* background-image: linear-gradient(to bottom, #FFD00D, #3FD8E0); */
-}
-
-.hardBorder{
-  grid-area: hard;
-  background-color: #A06FCE;
-  /* background-image: linear-gradient(to bottom, #FFD00D, #A06FCE); */
-}
-
-.speciesBorder{
-  grid-area: species;
-  background-color: #F993CE;
-  /* background-image: linear-gradient(to bottom, #FFD00D, #F993CE); */
-}
-
-.personalitiesBorder{
-  grid-area: personalities;
-  background-color: #C0AB72;
-  /* background-image: linear-gradient(to bottom, #FFD00D, #C0AB72); */
+.dark-mode .easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
+  font-weight: 400;
 }
 
 .easyButton{
   grid-area: easy;
   background-image: linear-gradient(to bottom, #FFE886, #BBEEB0);
+  border: 2px solid #78DD62;
+}
+
+.dark-mode .easyButton{
+  background-image: none;
+  background-color: #2F831C;
+  color: #FFFCE9;
 }
 
 .standardButton{
   grid-area: standard;
   background-image: linear-gradient(to bottom, #FFE886, #9FEBF0);
+  border: 2px solid #3FD8E0;
+}
+
+.dark-mode .standardButton{
+  background-image: none;
+  background-color: #14767C;
+  color: #FFFCE9;
 }
 
 .hardButton{
   grid-area: hard;
   background-image: linear-gradient(to bottom, #FFE886, #D0B7E6);
+  border: 2px solid #A06FCE;
+}
+
+.dark-mode .hardButton{
+  background-image: none;
+  background-color: #502876;
+  color: #FFFCE9;
 }
 
 .speciesButton{
   grid-area: species;
   background-image: linear-gradient(to bottom, #FFE886, #FCC9E6);
+  border: 2px solid #F993CE;
+}
+
+.dark-mode .speciesButton{
+  background-image: none;
+  background-color: #BC0A71;
+  color: #FFFCE9;
 }
 
 .personalitiesButton{
   grid-area: personalities;
   background-image: linear-gradient(to bottom, #FFE886, #E0D5B9);
+  border: 2px solid #C0AB72;
+}
+
+.dark-mode .personalitiesButton{
+  background-image: none;
+  background-color: #6A5A2F;
+  color: #FFFCE9;
 }
 
 button{
@@ -437,6 +487,11 @@ button{
   border-radius: 25px;
 }
 
+.dark-mode .save, .create{
+  color: #FFFCE9;
+  font-weight: 400;
+}
+
 .save{
   display: none;
   background-image: linear-gradient(to bottom, #3FD8E0, #0961F6, #A06FCE);
@@ -447,6 +502,11 @@ button{
   border: 2px solid #FF791F;
 }
 
+.dark-mode .create{
+  background-color: #8F3900;
+  background-image: none;
+}
+
 .boardBox{
   width: 630px;
   height: 630px;
@@ -455,6 +515,10 @@ button{
   background-image: linear-gradient(to left top, #FF4040, #FF791F, #FFD00D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #F993CE, #C0AB72);
   padding: 5px;
   border-radius: 15px;
+}
+
+.dark-mode .boardBox{
+  background-image: linear-gradient(to left top, #A00000, #8F3900, #866C00, #2F831C, #14767C, #04307B, #502876, #BC0A71, #6A5A2F);
 }
 
 .boardTiles{
@@ -473,6 +537,10 @@ button{
   width: 120px;
   height: 120px;
   border-radius: 10px;
+}
+
+.dark-mode .tileBlank{
+  background-color: #000;
 }
 
 .tile {
@@ -529,6 +597,11 @@ button{
   z-index: 100;
 }
 
+.dark-mode .overlap{
+  color: #FFFCE9;
+  font-weight: 500;
+}
+
 .plot{
   position: absolute;
   top: 39px;
@@ -570,6 +643,10 @@ h2{
   margin: 10px;
   opacity: 0.3;
   transition: opacity 0.25s;
+}
+
+.dark-mode .blotter > a {
+  opacity: 0.5;
 }
 
 .red {
@@ -624,7 +701,8 @@ h2{
 
 .separator{
   height: 5px;
-  width: 190px;
+  width: 370px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 3px;
@@ -642,6 +720,10 @@ h2{
 
 .footerLink{
   color: #333;
+}
+
+.dark-mode .footerLink{
+  color: #FFFCE9;
 }
 
 /* .footerLink:hover{

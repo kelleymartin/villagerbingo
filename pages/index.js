@@ -41,6 +41,11 @@ export default class Home extends React.Component {
     window.addEventListener('popstate', (e) => {
       this.setState(e.state);
     });
+
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme == "dark") {
+      document.body.classList.add("dark-mode");
+    }
   }
 
   pickBoardVillagers(mode, possibleVillagers) {
@@ -184,11 +189,9 @@ export default class Home extends React.Component {
                 <input className="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
                   this.exclusionInput = exclusionInput;
                 }}
-                  placeholder="Type a name..." 
-                  // if disabled placeholder="Delete a villager"/>
-                  />
+                  placeholder={disabled ? "" : "Type a name..."}/>
                 <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
-                &#11015;
+                  &#11015;
               </button>
               </div>
               <ul {...getMenuProps()} style={menuStyles}>
@@ -408,6 +411,15 @@ export default class Home extends React.Component {
       </fieldset>
     );
   }
+  
+  renderModeSelection() {
+    return (
+    <button type="button" className="dark" onClick={(e) => {
+      e.preventDefault();
+      const theme = document.body.classList.toggle("dark-mode") ? "dark" : "light";
+      localStorage.setItem("theme", theme);
+    } }>Toggle Dark Mode</button>)
+  }
 
   render() {
     return (
@@ -428,6 +440,8 @@ export default class Home extends React.Component {
               </a>
             </h1>
 
+            <div className="separatorBig"></div>
+
             <div className="navbar">
               <div className="howToButtonBorder"></div>
               <button className="howToButton">
@@ -446,7 +460,7 @@ export default class Home extends React.Component {
                 {this.renderVillagerSetSelector()}
               </div>
             </div>
-
+            {this.renderModeSelection()}
             {this.renderVillagerSelector()}
             <div className="facesBox">
               {this.state.excludedVillagers.map((villager) => {
@@ -473,19 +487,23 @@ export default class Home extends React.Component {
               })}
             </div>
 
+            <div className="separator"></div>
+
             <div className="setSelection">
               <label className="selectionLabel">Select a villager set:</label>
               <div className="easyBorder"></div>
-              <button className="easyButton">Easy</button>
+              <button className="easyButton">{'<14 villagers'}</button>
               <div className="standardBorder"></div>
-              <button className="standardButton">Standard</button>
+              <button className="standardButton">All villagers</button>
               <div className="hardBorder"></div>
               <button className="hardButton">Hard</button>
               <div className="speciesBorder"></div>
-              <button className="speciesButton">Species</button>
+              <button className="speciesButton">Per species</button>
               <div className="personalitiesBorder"></div>
               <button className="personalitiesButton">Personality</button>
             </div>
+
+            <div className="separator"></div>
 
             <div className="buttons">
 

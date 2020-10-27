@@ -1,0 +1,70 @@
+
+.easyBorder, .standardBorder, .hardBorder, .speciesBorder, .personalitiesBorder{
+  height: 34px;
+  width: 100%;
+  border-radius: 17px;
+}
+
+.easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
+  margin: 2px;
+  border-radius: 15px;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.easyBorder{
+  grid-area: easy;
+  background-color: #78DD62;
+  /* background-image: linear-gradient(to bottom, #FFD00D, #78DD62); */
+}
+
+.standardBorder{
+  grid-area: standard;
+  background-color: #3FD8E0;
+  /* background-image: linear-gradient(to bottom, #FFD00D, #3FD8E0); */
+}
+
+.hardBorder{
+  grid-area: hard;
+  background-color: #A06FCE;
+  /* background-image: linear-gradient(to bottom, #FFD00D, #A06FCE); */
+}
+
+.speciesBorder{
+  grid-area: species;
+  background-color: #F993CE;
+  /* background-image: linear-gradient(to bottom, #FFD00D, #F993CE); */
+}
+
+.personalitiesBorder{
+  grid-area: personalities;
+  background-color: #C0AB72;
+  /* background-image: linear-gradient(to bottom, #FFD00D, #C0AB72); */
+}
+
+.easyButton{
+  grid-area: easy;
+  background-image: linear-gradient(to bottom, #FFE886, #BBEEB0);
+}
+
+.standardButton{
+  grid-area: standard;
+  background-image: linear-gradient(to bottom, #FFE886, #9FEBF0);
+}
+
+.hardButton{
+  grid-area: hard;
+  background-image: linear-gradient(to bottom, #FFE886, #D0B7E6);
+}
+
+.speciesButton{
+  grid-area: species;
+  background-image: linear-gradient(to bottom, #FFE886, #FCC9E6);
+}
+
+.personalitiesButton{
+  grid-area: personalities;
+  background-image: linear-gradient(to bottom, #FFE886, #E0D5B9);
+}
