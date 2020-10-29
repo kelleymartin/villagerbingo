@@ -42,10 +42,7 @@ export default class Home extends React.Component {
       this.setState(e.state);
     });
 
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme == "dark") {
-      document.body.classList.add("dark-mode");
-    }
+    this.setTheme(localStorage.getItem('theme') || 'light');
   }
 
   pickBoardVillagers(mode, possibleVillagers) {
@@ -411,14 +408,35 @@ export default class Home extends React.Component {
       </fieldset>
     );
   }
+
+  /**
+   * @param {'dark'|'gray'|'light'} theme
+   */
+  setTheme(theme = 'light') {
+    document.body.classList.remove("dark-mode", "gray-mode");
+    if (theme !== 'light') {
+      document.body.classList.add(`${theme}-mode`);
+    }
+    localStorage.setItem("theme", theme);
+  }
   
   renderModeSelection() {
     return (
-    <button type="button" className="dark" onClick={(e) => {
-      e.preventDefault();
-      const theme = document.body.classList.toggle("dark-mode") ? "dark" : "light";
-      localStorage.setItem("theme", theme);
-    } }>Toggle Dark Mode</button>)
+      <>
+        <button type="button" className="light" onClick={(e) => {
+          e.preventDefault();
+          this.setTheme('light');
+        }}>Light</button>
+        <button type="button" className="dark" onClick={(e) => {
+          e.preventDefault();
+          this.setTheme('dark');
+        }}>Dark</button>
+        <button type="button" className="gray" onClick={(e) => {
+          e.preventDefault();
+          this.setTheme('gray');
+        }}>Gray</button>
+      </>
+    )
   }
 
   render() {
