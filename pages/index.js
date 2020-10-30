@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import pickRandom from 'pick-random'
 import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
@@ -8,6 +7,21 @@ import villagers from '../data/villagers.json'
 import urlFormat, { encodeState } from '../lib/url-encode'
 
 const ALL_COLORS = urlFormat.ALL_COLORS;
+
+const ALL_THEMES = [
+  {
+    id: 'light',
+    label: 'Light',
+  },
+  {
+    id: 'dark',
+    label: 'Dark',
+  },
+  {
+    id: 'gray',
+    label: 'Gray',
+  },
+];
 
 /**
  * @param {import('next').GetServerSidePropsContext} context
@@ -22,13 +36,41 @@ export const getServerSideProps = (context) => {
 };
 
 export default class Home extends React.Component {
-  state =
-    urlFormat.decodeState(this.props.initialURL, this.props.randomColor);
+  state = {
+    gameState: urlFormat.decodeState(this.props.initialURL, this.props.randomColor),
+    settingsExpanded: false,
+    howToExpanded: false,
+    settings: {
+      theme: 'light',
+    },
+  };
 
-  setGameState(updateState, onStateApplied) {
-    this.setState(updateState, () => {
-      const url = urlFormat.encodeState(location.href, this.state);
-      history.pushState(this.state, null, url);
+  setSettings(newSettings) {
+    this.setState(prevState => {
+      return {
+        settings: Object.assign(prevState.settings, newSettings),
+      };
+    }, () => {
+      for (const [key, value] of Object.entries(newSettings)) {
+        localStorage.setItem(key, value);
+      }
+    });
+  }
+
+  setGameState(updateGameState, onStateApplied) {
+    this.setState(prevState => {
+      const newGameState = Object.assign({}, prevState.gameState);
+      if (typeof updateGameState === 'function') {
+        Object.assign(newGameState, updateGameState(prevState.gameState));
+      } else {
+        Object.assign(newGameState, updateGameState);
+      }
+      return {
+        gameState: newGameState,
+      };
+    }, () => {
+      const url = urlFormat.encodeState(location.href, this.gameState);
+      history.pushState(this.gameState, null, url);
 
       if (typeof onStateApplied === 'function') {
         onStateApplied();
@@ -36,13 +78,21 @@ export default class Home extends React.Component {
     });
   }
 
+  get gameState() {
+    return this.state.gameState;
+  }
+
   componentDidMount() {
-    history.replaceState(this.state, null);
+    history.replaceState(this.gameState, null);
     window.addEventListener('popstate', (e) => {
-      this.setState(e.state);
+      this.setState({ gameState: e.state });
     });
 
-    this.setTheme(localStorage.getItem('theme') || 'light');
+    this.setState({
+      settings: {
+        theme: localStorage.getItem('theme') || 'light',
+      },
+    });
   }
 
   pickBoardVillagers(mode, possibleVillagers) {
@@ -57,9 +107,9 @@ export default class Home extends React.Component {
     event.preventDefault();
 
     const possibleVillagers = villagers.filter((villager) => {
-      return !this.state.excludedVillagers.includes(villager);
+      return !this.gameState.excludedVillagers.includes(villager);
     });
-    const boardVillagers = this.pickBoardVillagers(this.state.villagerSet, possibleVillagers);
+    const boardVillagers = this.pickBoardVillagers(this.gameState.villagerSet, possibleVillagers);
 
     const sortedVillagers = boardVillagers.sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -80,7 +130,7 @@ export default class Home extends React.Component {
 
   renderBoardTile(villager, index) {
     const isSelected =
-      this.state.selectedVillagers.includes(villager);
+      this.gameState.selectedVillagers.includes(villager);
 
     const topMax = 10;
     const top = ((index + 1) * 17) % topMax;
@@ -101,7 +151,7 @@ export default class Home extends React.Component {
     return <a href="#" key={villager.name} className={`tile tile${index}`} title={title} onClick={(e) => {
       e.preventDefault();
 
-      const currentSelection = this.state.selectedVillagers;
+      const currentSelection = this.gameState.selectedVillagers;
 
       // Is this villager already selected?
       if (isSelected) {
@@ -126,7 +176,7 @@ export default class Home extends React.Component {
           color: villager.textColor,
         }}>{villager.name}</p>
       </div>
-      {isSelected ? <div className={`blot ${this.state.selectedColor}`} style={blotStyle}></div> : null}
+      {isSelected ? <div className={`blot ${this.gameState.selectedColor}`} style={blotStyle}></div> : null}
     </a>;
   }
 
@@ -134,10 +184,10 @@ export default class Home extends React.Component {
     const comboboxStyles = {};
     const menuStyles = {};
     const items = villagers.filter(villager => {
-      return !this.state.excludedVillagers.includes(villager);
+      return !this.gameState.excludedVillagers.includes(villager);
     });
 
-    const disabled = this.state.excludedVillagers.length === 9;
+    const disabled = this.gameState.excludedVillagers.length === 9;
 
     return <Downshift
       onChange={selection => {
@@ -191,7 +241,7 @@ export default class Home extends React.Component {
                   &#11015;
               </button>
               </div>
-              <ul {...getMenuProps()} style={menuStyles}>
+              <ul {...getMenuProps()} style={menuStyles} className="downshift-options">
                 {isOpen
                   ? items
                     .filter(
@@ -204,30 +254,31 @@ export default class Home extends React.Component {
                         }
 
                         const matchesInput = simplify(item.name).startsWith(simplify(inputValue));
-                        const isAlreadyExcluded = this.state.excludedVillagers.includes(item);
+                        const isAlreadyExcluded = this.gameState.excludedVillagers.includes(item);
                         return matchesInput && !isAlreadyExcluded;
                       }
                     )
-                    .map((item, index) => (
-                      <li
+                    .map((item, index) => {
+                      const classNames = [];
+                      if (highlightedIndex === index) {
+                        classNames.push('downshift-highlight');
+                      }
+                      if (selectedItem === item) {
+                        classNames.push('downshift-selected');
+                      }
+
+                      return <li
                         {...getItemProps({
 
                           key: item.name,
                           index,
                           item,
-                          style: {
-                            backgroundColor:
-                              highlightedIndex === index
-                                ? '#3FD8E0'
-                                : '#b0ecef',
-                            fontWeight:
-                              selectedItem === item ? 'bold' : 'normal',
-                          },
+                          className: classNames.join(' '),
                         })}
                       >
                         {item.name}
-                      </li>
-                    ))
+                      </li>;
+                    })
                   : null}
               </ul>
             </div>
@@ -277,7 +328,7 @@ export default class Home extends React.Component {
   }
 
   renderBoard() {
-    const empty = this.state.boardVillagers.length === 0;
+    const empty = this.gameState.boardVillagers.length === 0;
     if (empty) {
       return this.renderBlank();
     }
@@ -285,7 +336,7 @@ export default class Home extends React.Component {
       <div className="boardBox" id="capture">
         <div className="boardTiles">
           {
-            this.state.boardVillagers
+            this.gameState.boardVillagers
               .slice(0, 12)
               .map((villager, index) => {
                 return this.renderBoardTile(villager, index);
@@ -293,7 +344,7 @@ export default class Home extends React.Component {
           }
           {this.renderFreePlot()}
           {
-            this.state.boardVillagers
+            this.gameState.boardVillagers
               .slice(12)
               .map((villager, index) => {
                 return this.renderBoardTile(villager, index + 12);
@@ -305,15 +356,15 @@ export default class Home extends React.Component {
   }
 
   renderFreePlot() {
-    const selectedFreePlot = this.state.selectedFreePlot;
-    const boardLabel = this.state.boardLabel;
+    const selectedFreePlot = this.gameState.selectedFreePlot;
+    const boardLabel = this.gameState.boardLabel;
 
     return (
       <a href="#" className="free">
         <input
           className="overlap"
           type="text"
-          value={this.state.boardLabel}
+          value={this.gameState.boardLabel}
           placeholder="Free plot"
           onClick={(e) => {
             e.preventDefault();
@@ -327,12 +378,12 @@ export default class Home extends React.Component {
         <div onClick={(e) => {
           e.preventDefault();
           this.setGameState({
-            selectedFreePlot: !this.state.selectedFreePlot,
+            selectedFreePlot: !this.gameState.selectedFreePlot,
           });
         }}>
           <img src="/FreePlot.png"
             crossOrigin="anonymous" className="plot" alt="" draggable="false" />
-          {selectedFreePlot ? <div className={`blot ${this.state.selectedColor}`} style={{
+          {selectedFreePlot ? <div className={`blot ${this.gameState.selectedColor}`} style={{
             position: 'absolute',
             top: '30px',
             left: '5px',
@@ -395,7 +446,7 @@ export default class Home extends React.Component {
               <input type="radio"
                 name="villagerset"
                 value={set.value}
-                checked={set.value === this.state.villagerSet}
+                checked={set.value === this.gameState.villagerSet}
                 onChange={e => {
                   this.setGameState({
                     villagerSet: set.value,
@@ -417,30 +468,19 @@ export default class Home extends React.Component {
     if (theme !== 'light') {
       document.body.classList.add(`${theme}-mode`);
     }
-    localStorage.setItem("theme", theme);
+    this.setSettings({ theme });
   }
 
   renderModeSelection() {
-    return (
-      <>
-        <button type="button" className="light" onClick={(e) => {
-          e.preventDefault();
-          this.setTheme('light');
-        }}
-        style={{
-          border: '2px solid #3FD8E0'
-        }}>Light</button>
-        <button type="button" className="dark" onClick={(e) => {
-          e.preventDefault();
-          this.setTheme('dark');
-        }}>Dark</button>
-        <button type="button" className="gray" onClick={(e) => {
-          e.preventDefault();
-          this.setTheme('gray');
-          // theme = 'gray' ? {backgroundColor: '#ffffff'} : {};
-        }}>Gray</button>
-      </>
-    )
+    return ALL_THEMES.map(theme => {
+      const isSelected = this.state.settings.theme === theme.id;
+      const marker = isSelected ? '✓' : '';
+      const markerClass = isSelected ? 'selected-theme' : '';
+      return <button type="button" key={theme.id} className={`${theme.id} ${markerClass}`} onClick={(e) => {
+        e.preventDefault();
+        this.setTheme(theme.id);
+      }}>{marker} {theme.label}</button>
+    });
   }
 
   renderHowTo() {
@@ -486,20 +526,20 @@ export default class Home extends React.Component {
     }
 
     return (
-      <div className={styles.container}>
+      <div className={`${this.state.settings.theme}-mode`}>
         <Head>
           <title>ACNH Villager Bingo</title>
-          <link rel="icon" href={`/favicon${this.state.selectedColor}.png`} />
+          <link rel="icon" href={`/favicon${this.gameState.selectedColor}.png`} />
           <link rel="stylesheet" href="https://use.typekit.net/pmt6aez.css"></link>
         </Head>
 
-        <main className={styles.main}>
+        <main>
           <div className="container">
             <img src="/Dodo.svg"
               className="dodo" alt="" />
             <h1>
-              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.selectedColor}.svg`}
-                className="glass" alt="" />
+              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.gameState.selectedColor}.svg`}
+                className={`glass ${this.gameState.selectedColor}`} alt="" />
               </a>
             </h1>
 
@@ -534,11 +574,11 @@ export default class Home extends React.Component {
             </div>
             {this.renderVillagerSelector()}
             <div className="facesBox">
-              {this.state.excludedVillagers.map((villager) => {
+              {this.gameState.excludedVillagers.map((villager) => {
                 return <a href="#" key={villager.name} title={`Deselect ${villager.name}`} className="faceWrap" onClick={(e) => {
                   e.preventDefault();
                   this.setGameState({
-                    excludedVillagers: this.state.excludedVillagers.filter(v => v !== villager),
+                    excludedVillagers: this.gameState.excludedVillagers.filter(v => v !== villager),
                   });
                 }}>
                   <img src="/FaceX.svg"
@@ -593,7 +633,7 @@ export default class Home extends React.Component {
 
             <div className="blotter">
               {ALL_COLORS.map((color) => {
-                const style = color === this.state.selectedColor ? {
+                const style = color === this.gameState.selectedColor ? {
                   opacity: '1',
                 } : {};
                 return <a href="#" className={color} key={color} style={style} alt={`${color} marker`} onClick={(e) => {
@@ -602,7 +642,7 @@ export default class Home extends React.Component {
                     selectedColor: color,
                   });
                 }}>
-                  {color === this.state.selectedColor ?
+                  {color === this.gameState.selectedColor ?
                     <img src="/CursorCropped.png"
                       className="cursor" alt="" />
                     : null}
