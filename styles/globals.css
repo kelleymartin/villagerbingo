@@ -95,10 +95,17 @@ h1{
 
 .navbar{
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
   grid-template-rows: 34px auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.dark-mode .navbar > button{
+  color: #FFFCE9;
+  background-image: none;
+  background-color: #866C00;
 }
 
 .howToButtonBorder{
@@ -109,8 +116,19 @@ h1{
   width: 100%;
   height: 34px;
   border-radius: 17px;
-  background-image: linear-gradient(to bottom, #C0AB72 , #A06FCE);
+  /* background-image: linear-gradient(to bottom, #C0AB72 , #A06FCE); */
+  background-color: #A06FCE;
   z-index: -10;
+}
+
+.dark-mode .howToButtonBorder, .dark-mode .settingsButtonBorder{
+  background-image: none;
+  background-color: #FFD00D;
+}
+
+.gray-mode .howToButtonBorder, .gray-mode .settingsButtonBorder{
+  background-image: none;
+  background-color: #B3B3B3;
 }
 
 .howToButton{
@@ -124,9 +142,14 @@ h1{
   margin-left: 2px;
   border-radius: 15px;
   border: none;
-  background-image: linear-gradient(to bottom, #E0D5B9, #D0B7E6);
+  background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
   font-size: 20px;
   font-weight: 500;
+  z-index: 20;
+}
+
+.gray-mode .howToButton{
+  border: none;
 }
 
 .settingsButtonBorder{
@@ -137,7 +160,8 @@ h1{
   width: 100%;
   height: 34px;
   border-radius: 17px;
-  background-image: linear-gradient(to bottom, #C0AB72 , #0961F6);
+  /* background-image: linear-gradient(to bottom, #C0AB72 , #0961F6); */
+  background-color: #A06FCE;
   z-index: -10;
 }
 
@@ -152,76 +176,153 @@ h1{
   margin-left: 2px;
   border-radius: 15px;
   border: none;
-  background-image: linear-gradient(to bottom, #E0D5B9, #84B0FB);
+  background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
   font-size: 20px;
   font-weight: 500;
+  z-index: 20;
+}
+
+.how-to-expanded .howToButton, .how-to-expanded .howToButtonBorder {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.settings-expanded .settingsButton, .settings-expanded .settingsButtonBorder {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.gray-mode .settingsButton{
+  border: none;
 }
 
 .howToBoxBorder{
   display: none;
+  position: absolute;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
   margin-top: -4px;
-  margin-right: 3px;
-  width: 100%;
+  width: 378px;
+  height: 100%;
   border-radius: 0 17px 17px 17px;
   background-image: linear-gradient(to bottom, #A06FCE, #C0AB72);
+  background-color: #A06FCE;
   z-index: -10;
 }
 
 .howToBox{
-  display: none;
+  position: absolute;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin-top: -2px;
-  margin-left: 2px;
+  margin-top: -4px;
   margin-bottom: 2px;
-  width: 374px;
+  width: 100%;
+  border: 2px solid #A06FCE;
   border-radius: 0 15px 15px 15px;
-  border: none;
-  background-image: linear-gradient(to bottom, #E7DBF3, #EFEADC);
+  /* border: none; */
+  background-image: linear-gradient(to bottom, #E7DBF3, #FEE4F3);
   font-size: 20px;
   font-weight: 500;
   padding: 10px;
+  z-index: 10;
 }
 
 .settingsBoxBorder{
-  /* display: none; */
+  display: none;
   grid-column-start: 3;
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 3;
   margin-top: -4px;
-  margin-left: 3px;
   width: 100%;
   border-radius: 17px 0  17px 17px;
-  background-image: linear-gradient(to bottom , #0961F6, #C0AB72);
+  /* background-image: linear-gradient(to bottom , #0961F6, #C0AB72); */
+  background-color: #A06FCE;
   z-index: -20;
 }
 
 .settingsBox{
-  /* display: none; */
+  position: absolute;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-column-start: 3;
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin-left: 5px;
-  margin-top: -2px;
-  margin-bottom: 2px;
-  width: 374px;
+  margin-top: -4px;
+  width: 100%;
   border-radius: 15px 0 15px 15px;
-  border: none;
-  background-image: linear-gradient(to bottom, #C1D7FD, #EFEADC);
+  border: 2px solid #A06FCE;
+  background-image: linear-gradient(to bottom, #E7DBF3, #FEE4F3);
   font-size: 20px;
   font-weight: 500;
   padding: 10px;
-  z-index: 20;
+  z-index: 10;
+}
+
+.dark-mode .settingsBox, .dark-mode .howToBox{
+  background-image: none;
+  background-color: #866C00;
+  border: 2px solid #FFD00D;
+}
+
+.gray-mode .settingsBox, .gray-mode .howToBox{
+  background-image: none;
+  background-color: #4D4D4D;
+  border: 2px solid #B3B3B3;
+}
+
+.settingsBox > label{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+}
+
+.gray-mode .settingsBox > label{
+  color: #E6E6E6;
+  font-weight: 500;
+}
+
+.themeLabel{
+  justify-self: start;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.flexButtons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+.light, .dark, .gray{
+  height: 24px;
+  width: 65px;
+  border-radius: 12px;
+  font-size: 14px;
+  /* margin-left: 5px; */
+  background-image: linear-gradient(#BBEEB0, #9FEBF0);
+  /* border: 2px solid #A06FCE; */
+  border: none;
+}
+
+.languageLabel{
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.alphabetLabel{
+  grid-row-start: 5;
+  grid-row-end: 6; 
 }
 
 .settingsBox legend, .settingsBox label {
@@ -330,6 +431,11 @@ input:disabled{
   border: 2px solid #EFEADC;
 }
 
+.dark-mode input:disabled, .dark-mode .toggle:disabled{
+  background-color: #84B0FB;
+  border: 2px solid #0961F6;
+}
+
 .toggle{
   position: absolute;
   top: 0;
@@ -379,7 +485,7 @@ li{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
+  margin-top: 10px;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
 }
@@ -816,6 +922,32 @@ h2{
   background-image: linear-gradient(to left, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3));
 }
 
+.gray-mode .separator{
+  background-image: none;
+  background-color: #808080;
+}
+
+.divider{
+  height: 2px;
+  width: 100%;
+  margin: 5px 0px 5px;
+  border-radius: 1px;
+  background-image: linear-gradient(to left, rgba(255, 64, 64, 0.5), rgba(255, 121, 31, 0.5), rgba(255, 208, 13, 0.5), rgba(120, 221, 98, 0.5), rgba(63, 216, 224, 0.5), rgba(9, 97, 246, 0.5), rgba(160, 111, 206, 0.5), rgba(249, 147, 206, 0.5), rgba(192, 171, 114, 0.5));
+  /* background-color: #A06FCE; */
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.dark-mode .divider{
+  background-image: none;
+  background-color: #FFD00D;
+}
+
+.gray-mode .divider{
+  background-image: none;
+  background-color: #B3B3B3;
+}
+
 .credit{
   font-size: 0.85rem;
   line-height: 0.4rem;
@@ -860,6 +992,12 @@ h2{
 
 .bottomBar{
   display: block;
+  height: 5px;
+  background-image: linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3));
+}
+
+.gray-mode .bottomBar{
+  display: none;
 }
 
 @media only screen and (max-width: 630px) {

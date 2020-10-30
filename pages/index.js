@@ -186,7 +186,7 @@ export default class Home extends React.Component {
                 <input className="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
                   this.exclusionInput = exclusionInput;
                 }}
-                  placeholder={disabled ? "" : "Type a name..."}/>
+                  placeholder={disabled ? "" : "Type a name..."} />
                 <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
                   &#11015;
               </button>
@@ -419,13 +419,16 @@ export default class Home extends React.Component {
     }
     localStorage.setItem("theme", theme);
   }
-  
+
   renderModeSelection() {
     return (
       <>
         <button type="button" className="light" onClick={(e) => {
           e.preventDefault();
           this.setTheme('light');
+        }}
+        style={{
+          border: '2px solid #3FD8E0'
         }}>Light</button>
         <button type="button" className="dark" onClick={(e) => {
           e.preventDefault();
@@ -434,12 +437,54 @@ export default class Home extends React.Component {
         <button type="button" className="gray" onClick={(e) => {
           e.preventDefault();
           this.setTheme('gray');
+          // theme = 'gray' ? {backgroundColor: '#ffffff'} : {};
         }}>Gray</button>
       </>
     )
   }
 
+  renderHowTo() {
+    if (!this.state.howToExpanded) {
+      return <></>;
+    }
+
+    return <>
+      <div className="howToBoxBorder"></div>
+      <div className="howToBox">
+        Coming soon!
+      </div>
+    </>;
+  }
+
+  renderSettings() {
+    if (!this.state.settingsExpanded) {
+      return <></>;
+    }
+
+    return <>
+      <div className="settingsBoxBorder"></div>
+      <div className="settingsBox">
+        <label className="themeLabel">Mode:</label>
+        <div className="flexButtons">
+          {this.renderModeSelection()}
+        </div>
+        <div className="divider"></div>
+        <label className="languageLabel">Villager names:</label>
+        <div className="divider"></div>
+        <label className="alphabetLabel">Alphabetize:</label>
+        {this.renderVillagerSetSelector()}
+      </div>
+    </>;
+  }
+
   render() {
+    const navbarClasses = ['navbar'];
+    if (this.state.howToExpanded) {
+      navbarClasses.push('how-to-expanded');
+    } else if (this.state.settingsExpanded) {
+      navbarClasses.push('settings-expanded');
+    }
+
     return (
       <div className={styles.container}>
         <Head>
@@ -460,25 +505,33 @@ export default class Home extends React.Component {
 
             <div className="separatorBig"></div>
 
-            <div className="navbar">
+            <div className={navbarClasses.join(' ')}>
               <div className="howToButtonBorder"></div>
-              <button className="howToButton">
+              <button className="howToButton"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    this.setState((prevState) => ({
+                      howToExpanded: !prevState.howToExpanded,
+                      settingsExpanded: false,
+                    }));
+                  }}>
                 How to play
               </button>
+              
               <div className="settingsButtonBorder"></div>
-              <button className="settingsButton">
+              <button className="settingsButton"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    this.setState((prevState) => ({
+                      howToExpanded: false,
+                      settingsExpanded: !prevState.settingsExpanded,
+                    }));
+                  }}>
                 Settings
               </button>
-              <div className="howToBoxBorder"></div>
-              <div className="howToBox">
-                Coming soon!
-              </div>
-              <div className="settingsBoxBorder"></div>
-              <div className="settingsBox">
-                {this.renderVillagerSetSelector()}
-              </div>
+              {this.renderHowTo()}
+              {this.renderSettings()}
             </div>
-            {this.renderModeSelection()}
             {this.renderVillagerSelector()}
             <div className="facesBox">
               {this.state.excludedVillagers.map((villager) => {
@@ -510,7 +563,7 @@ export default class Home extends React.Component {
             <div className="setSelection">
               <label className="selectionLabel">Select a villager set:</label>
               <div className="easyBorder"></div>
-              <button className="easyButton">{'<14 villagers'}</button>
+              <button className="easyButton">{'<14 species'}</button>
               <div className="standardBorder"></div>
               <button className="standardButton">All villagers</button>
               <div className="hardBorder"></div>
@@ -564,10 +617,7 @@ export default class Home extends React.Component {
               <p className="disclaimer">Villager Bingo is a fan-made website that claims no ownership of any intellectual property associated with Nintendo or Animal Crossing.</p>
             </div>
           </div>
-          <div className="bottomBar" style={{
-            height: '5px',
-            backgroundImage: 'linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3)'
-          }}></div>
+          <div className="bottomBar"></div>
         </main>
       </div>
     )
