@@ -1119,10 +1119,6 @@ h2{
     grid-column-end: 7;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
-  .themeLabel{
-
-  }
 
   .flexButtons{
     grid-column-start: 2;
