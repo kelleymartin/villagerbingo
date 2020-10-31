@@ -508,11 +508,11 @@ export default class Home extends React.Component {
         <div className="flexButtons">
           {this.renderModeSelection()}
         </div>
-        <div className="divider"></div>
+        {/* <div className="divider"></div>
         <label className="languageLabel">Villager names:</label>
         <div className="divider"></div>
         <label className="alphabetLabel">Alphabetize:</label>
-        {this.renderVillagerSetSelector()}
+        {this.renderVillagerSetSelector()} */}
       </div>
     </>;
   }
@@ -538,12 +538,12 @@ export default class Home extends React.Component {
             <img src="/Dodo.svg"
               className="dodo" alt="" />
             <h1>
-              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.gameState.selectedColor}.svg`}
+              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.settings.theme}.svg`}
                 className={`glass ${this.gameState.selectedColor}`} alt="" />
               </a>
             </h1>
 
-            <div className="separatorBig"></div>
+            {/* <div className="separatorBig"></div> */}
 
             <div className={navbarClasses.join(' ')}>
               <div className="howToButtonBorder"></div>
@@ -598,7 +598,7 @@ export default class Home extends React.Component {
               })}
             </div>
 
-            <div className="separator"></div>
+            {/* <div className="separator"></div>
 
             <div className="setSelection">
               <label className="selectionLabel">Select a villager set:</label>
@@ -614,7 +614,7 @@ export default class Home extends React.Component {
               <button className="personalitiesButton">Personality</button>
             </div>
 
-            <div className="separator"></div>
+            <div className="separator"></div> */}
 
             <div className="buttons">
 
