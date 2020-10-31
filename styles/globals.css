@@ -1112,7 +1112,28 @@ h2{
   .container{
     overflow: hidden;
   }
+
+  .settingsBox{
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
   
+  .themeLabel{
+
+  }
+
+  .flexButtons{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: space-around;
+  }
+  
+  .light, .dark, .gray{
+    width: 100px;
+  }
   /* .overlap{
     margin-top: -12px;
     font-weight: 600;
