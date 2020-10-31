@@ -546,7 +546,7 @@ export default class Home extends React.Component {
             {/* <div className="separatorBig"></div> */}
 
             <div className={navbarClasses.join(' ')}>
-              <div className="howToButtonBorder"></div>
+              <div className="howToButtonBorder">How to play</div>
               <button className="howToButton"
                   onClick={(e) => {
                     e.preventDefault();
