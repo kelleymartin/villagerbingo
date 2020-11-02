@@ -11,19 +11,22 @@ body{
   font-family: proxima-soft, sans-serif;
   font-weight: 600, 500;
   color: #333;
-  background-image: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%);
-  }
+  /* background-image: linear-gradient(230deg, rgba(255,64,64,0.1) 20%, rgba(255,121,31,0.1) 25%, rgba(255,248,13,0.1) 30%, rgba(120,221,98,0.1) 35%, rgba(63,216,224,0.1) 40%, rgba(9,97,246,0.1) 45%, rgba(160,111,206,0.1) 50%, rgba(236,126,252,0.1) 55%, rgba(192,171,114,0.1) 60%); */
+  background-color: #F9F7F1;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .dark-mode {
-  background: #1B170C;
-  background-image: linear-gradient(230deg, rgba(255,64,64,0.05) 20%, rgba(255,121,31,0.05) 25%, rgba(255,248,13,0.05) 30%, rgba(120,221,98,0.05) 35%, rgba(63,216,224,0.05) 40%, rgba(9,97,246,0.05) 45%, rgba(160,111,206,0.05) 50%, rgba(236,126,252,0.05) 55%, rgba(192,171,114,0.05) 60%);
+  background-color: #231E11;
+  /* background-image: linear-gradient(230deg, rgba(255,64,64,0.05) 20%, rgba(255,121,31,0.05) 25%, rgba(255,248,13,0.05) 30%, rgba(120,221,98,0.05) 35%, rgba(63,216,224,0.05) 40%, rgba(9,97,246,0.05) 45%, rgba(160,111,206,0.05) 50%, rgba(236,126,252,0.05) 55%, rgba(192,171,114,0.05) 60%); */
   color: #FFFCE9;
   filter: brightness(.9);
 }  
 
 .gray-mode {
   background-color: #1A1A1A;
-  background-image: none;
   color: #E6E6E6;
   filter: grayscale(1);
 }
@@ -50,6 +53,7 @@ body, html {
   width: 630px;
   margin-left: auto;
   margin-right: auto;  
+  z-index: -100;
 }
 
 .dodo{
@@ -122,7 +126,7 @@ h1{
   border-radius: 17px;
   /* background-image: linear-gradient(to bottom, #C0AB72 , #A06FCE); */
   background-color: #A06FCE;
-  z-index: -10;
+  /* z-index: -10; */
 }
 
 .dark-mode .howToButtonBorder, .dark-mode .settingsButtonBorder{
@@ -167,7 +171,7 @@ h1{
   border-radius: 17px;
   /* background-image: linear-gradient(to bottom, #C0AB72 , #0961F6); */
   background-color: #A06FCE;
-  z-index: -10;
+  /* z-index: -10; */
 }
 
 .settingsButton{
@@ -1112,6 +1116,17 @@ h2{
   
   .container{
     overflow: hidden;
+    background-color: #F9F7F1;
+  }
+
+  .dark-mode .container{
+    overflow: hidden;
+    background-color: #231E11;
+  }
+
+  .gray-mode .container{
+    overflow: hidden;
+    background-color: #1A1A1A;
   }
 
   .settingsBox{
