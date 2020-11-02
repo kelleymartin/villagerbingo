@@ -284,7 +284,7 @@ export default class Home extends React.Component {
             </div>
             <button type="button" className="copy" onClick={(e) => {
               e.preventDefault();
-              const cleanedState = Object.assign({}, this.state, {
+              const cleanedState = Object.assign({}, this.gameState, {
                 // Reset values we don't want in the shared URL:
                 boardLabel: '',
                 boardVillagers: [],
