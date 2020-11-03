@@ -264,7 +264,7 @@ h1{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-column-start: 3;
+  grid-column-start: 4;
   grid-column-end: 7;
   grid-row-start: 2;
   grid-row-end: 3;
@@ -526,6 +526,7 @@ input:disabled{
 }
 
 .toggle:disabled{
+  color: #BFD4FF;
   background-color: #EFEADC;
   border: 2px solid #EFEADC;  
 }
@@ -1141,16 +1142,22 @@ h2{
   }
 
   .howToButtonBorder{
-    grid-column-end: 3;
+    grid-column-end: 4;
     height: 50px;
+    width: 100%;
     border-radius: 25px;
   }
 
   .howToButton{
-    grid-column-end: 3;
-    width: 248px;
+    grid-column-end: 4;
+    width: 241px;
     height: 46px;
     border-radius: 23px;
+    font-size: 30px;
+  }
+
+  .howToBox{
+    grid-column-start: 2;
     font-size: 30px;
   }
 
@@ -1162,7 +1169,7 @@ h2{
 
   .settingsButton{
     grid-column-start: 5;
-    width: 248px;
+    width: 241px;
     height: 46px;
     border-radius: 23px;
     font-size: 30px;
@@ -1170,6 +1177,7 @@ h2{
 
   .settingsBox{
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 4;
   }
 
   .settingsBox > label{
@@ -1204,7 +1212,7 @@ h2{
 
   .typeAName{
     margin-right: 5px;
-    width: 350px;
+    width: 365px;
   }
 
   .toggle{
@@ -1310,6 +1318,10 @@ h2{
 
   .gold{
     order: 4;
+  }
+
+  .bottomBar{
+    width: 630px;
   }
 
   /* .overlap{
