@@ -581,13 +581,11 @@ export default class Home extends React.Component {
                     excludedVillagers: this.gameState.excludedVillagers.filter(v => v !== villager),
                   });
                 }}>
-                  <img src="/FaceX.svg"
-                    className="faceX" alt="" />
                   <div className="faceIcon" style={{
                     backgroundColor: villager.textColor,
                     backgroundImage: `url(${villager.iconUrl})`,
                     backgroundSize: 'contain',
-                    border: `2px solid ${villager.bubbleColor}80`
+                    border: `2px solid ${villager.bubbleColor}`
                   }}>
                   </div>
                   <p className="faceName" style={{

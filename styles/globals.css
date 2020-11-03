@@ -104,8 +104,9 @@ h1{
 .navbar{
   display: grid;
   position: relative;
-  grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr;
+  grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
   grid-template-rows: auto;
+  gap: 5px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
@@ -117,15 +118,19 @@ h1{
 }
 
 .howToButtonBorder{
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 100%;
+  width: fit-content;
   height: 34px;
   border-radius: 17px;
+  padding: 1px 8px;
+  font-size: 20px;
+  font-weight: 500;
   /* background-image: linear-gradient(to bottom, #C0AB72 , #A06FCE); */
   background-color: #A06FCE;
+  justify-self: start;
   /* z-index: -10; */
 }
 
@@ -141,11 +146,11 @@ h1{
 
 .howToButton{
   /* display: none; */
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 122px;
+  width: fit-content;
   height: 30px;
   margin-top: 2px;
   margin-left: 2px;
@@ -154,6 +159,7 @@ h1{
   background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
   font-size: 20px;
   font-weight: 500;
+  justify-self: start;
   z-index: 20;
 }
 
@@ -179,10 +185,9 @@ h1{
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 122px;
+  width: 116px;
   height: 30px;
-  margin-top: 2px;
-  margin-left: 2px;
+  margin: 2px;
   border-radius: 15px;
   border: none;
   background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
@@ -388,17 +393,17 @@ fieldset {
   gap: 5px;
   grid-template-areas:
   "top top top top top top top"
-  "left left input input button right right";
+  "left left input input button button right";
   align-items: center;
 }
 
 .copy{
   background-image: linear-gradient(to bottom, #9FEBF0, #84B0FB);
   grid-area: button;
-  justify-self: right;
+  justify-self: left;
   height: 34px;
   color: #333;
-  width: 100%;
+  width: fit-content;
   border-radius: 17px;
   border: 2px solid #0961F6;
   font-size: 20px;
@@ -581,44 +586,23 @@ ul.downshift-options > li.downshift-selected{
   font-weight: 600;
 }
 
-/* .facesBox{
+.facesBox{
   display: grid;
-  width: 100%;
+  /* width: 100%; */
+  width: 630px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
-} */
-
-.facesBox{
-  display: flex;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  justify-content: space-between;
 }
+
 
 .faceWrap{
   display: block;
+  width: fit-content;
   position: relative;
   text-decoration: none;
-}
-
-.faceX{
-  display: none;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  margin-top: 2px;
-  margin-left: 12px;
-  /* margin: 2px auto 0px; */
-  z-index: 2;
-}
-
-.faceWrap:hover .faceX{
-  display: block;
 }
 
 .faceIcon {
@@ -627,6 +611,10 @@ ul.downshift-options > li.downshift-selected{
   border-radius: 27px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.faceIcon:hover{
+  background-image: url("/FaceX.svg") !important;
 }
 
 .faceName{
@@ -1114,6 +1102,7 @@ h2{
 
 .bottomBar{
   display: block;
+  width: 100%;
   height: 5px;
   background-image: linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3));
 }
@@ -1219,7 +1208,12 @@ h2{
   }
 
   .toggle{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    font-size: 30px;
     margin-right: 5px;
+    padding-top: 4px;
   }
 
   .copy{
@@ -1227,48 +1221,30 @@ h2{
     width: 240px;
   }
 
-  .toggle{
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    font-size: 30px;
-  }
-
   ul.downshift-options > li{
     font-size: 30px;
     padding: 10px;
   }
 
-  /* .facesBox{
-    grid-template-columns: repeat(5, 1fr);
-  } */
-
   .facesBox{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 30px;
   }
 
   .faceWrap{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 12px;
   }
 
   .faceIcon{
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50px;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 
   .faceName{
     font-size: 20px;
-  }
-
-  .faceX{
-    margin-left: 12px;
-    width: 96px;
   }
 
   .buttons{
