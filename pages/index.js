@@ -238,7 +238,7 @@ export default class Home extends React.Component {
                 }}
                   placeholder={disabled ? "" : "Type a name..."} />
                 <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
-                  &#11015;
+                &#9660;
               </button>
               </div>
               <ul {...getMenuProps()} style={menuStyles} className="downshift-options">
@@ -629,7 +629,7 @@ export default class Home extends React.Component {
 
             {this.renderBoard()}
 
-            <h2>Choose your marker color:</h2>
+            <h2>Choose your marker:</h2>
 
             <div className="blotter">
               {ALL_COLORS.map((color) => {
