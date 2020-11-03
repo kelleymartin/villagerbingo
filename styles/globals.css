@@ -154,6 +154,8 @@ h1{
   height: 30px;
   margin-top: 2px;
   margin-left: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
   border-radius: 15px;
   border: none;
   background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
@@ -404,6 +406,8 @@ fieldset {
   height: 34px;
   color: #333;
   width: fit-content;
+  padding-left: 6px;
+  padding-right: 6px;
   border-radius: 17px;
   border: 2px solid #0961F6;
   font-size: 20px;
