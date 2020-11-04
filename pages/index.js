@@ -538,7 +538,7 @@ export default class Home extends React.Component {
             <img src="/Dodo.svg"
               className="dodo" alt="" />
             <h1>
-              <a className="logo" href="/">ACNH Villager Bingo<img src={`/titleglass${this.state.settings.theme}.svg`}
+              <a className="logo" href="/">ACNH Villager Bing<a className="logo-o" href="/">o</a><img src={`/titleglass${this.state.settings.theme}.svg`}
                 className={`glass ${this.gameState.selectedColor}`} alt="" />
               </a>
             </h1>

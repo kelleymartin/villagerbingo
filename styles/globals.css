@@ -74,6 +74,11 @@ h1{
   text-decoration: none;
 }
 
+.logo-o{
+  color: transparent;
+  text-decoration: none;
+}
+
 .dark-mode .logo{
   color: #FFFCE9;
   font-weight: 600;
@@ -89,7 +94,11 @@ h1{
   margin-top: 35px;
   margin-left: -33px;
   z-index: 10;
+  /* outline: 4px solid red; */
+  outline-offset: -4px;
 }
+
+
 
 .separatorBig{
   height: 5px;
