@@ -1,0 +1,15 @@
+{
+  "bugs": {
+    "name": "Bugs",
+    "items": {
+      "bugs00": {
+        "name": "Scorpion",
+        "icon": "http://acnhapi.com/v1/icons/bugs/80"
+      },
+      "bugs01": {
+        "name": "Goliath beetle",
+        "icon": "http://acnhapi.com/v1/icons/bugs/54"
+      }
+    }
+  }
+}

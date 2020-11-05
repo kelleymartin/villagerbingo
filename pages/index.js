@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import pickRandom from 'pick-random'
-import Downshift from 'downshift'
 import html2canvas from 'html2canvas'
 
 import villagers from '../data/villagers.json'
 import urlFormat, { encodeState } from '../lib/url-encode'
+import {VillagerDropdown} from '../components/villager-dropdown';
 
 const ALL_COLORS = urlFormat.ALL_COLORS;
 
@@ -170,6 +170,7 @@ export default class Home extends React.Component {
     }}>
       <img src={villager.imageUrl} className="picture" crossOrigin="anonymous" draggable="false"
         alt={`${villager.name}, the ${villager.personality} ${villager.species}`} />
+      <img class="starIndicator" src="/StarPieceRareCropped.png"></img>
       <div className="nameTagWrap">
         <p className="nameTag" style={{
           backgroundColor: villager.bubbleColor,
@@ -177,140 +178,60 @@ export default class Home extends React.Component {
         }}>{villager.name}</p>
       </div>
       {isSelected ? <div className={`blot ${this.gameState.selectedColor}`} style={blotStyle}></div> : null}
+      
     </a>;
   }
 
   renderVillagerSelector() {
-    const comboboxStyles = {};
-    const menuStyles = {};
-    const items = villagers.filter(villager => {
-      return !this.gameState.excludedVillagers.includes(villager);
-    });
-
-    const disabled = this.gameState.excludedVillagers.length === 9;
-
-    return <Downshift
-      onChange={selection => {
-        if (disabled || !selection) { return; }
-
+    return <VillagerDropdown
+      labelText="Exclude a current villager:"
+      disabled={this.gameState.excludedVillagers.length === 9}
+      excludedVillagers={this.gameState.excludedVillagers}
+      onSelection={(selection, afterSelectionApplied) => {
         this.setGameState(
           prevState => {
             return {
               excludedVillagers: prevState.excludedVillagers.concat([selection]),
             };
           },
-          () => {
-            // Reset the input to an empty string
-            this.exclusionInput.value = '';
-            this.exclusionDownshift.clearSelection();
-          }
+          afterSelectionApplied
         );
       }}
-      itemToString={item => (item ? item.name : '')}
-      defaultHighlightedIndex={0}
-      ref={downshift => { this.exclusionDownshift = downshift; }}
-      id="excluded-villagers-autocomplete"
-      labelId="excluded-villagers-autocomplete-label"
-      inputId="excluded-villagers-autocomplete-input"
-      menuId="excluded-villagers-autocomplete-menu"
-    >
-      {({
-        getInputProps,
-        getItemProps,
-        getLabelProps,
-        getMenuProps,
-        getToggleButtonProps,
-        isOpen,
-        inputValue,
-        highlightedIndex,
-        selectedItem,
-        getRootProps,
-      }) => (
-          <div className="exclusionBox">
-            <label {...getLabelProps()}>Exclude a current villager:</label>
-            <div className="inputBox">
-              <div
-                style={comboboxStyles}
-                {...getRootProps({}, { suppressRefError: true })}
-              >
-                <input className="typeAName" {...getInputProps({ disabled })} ref={exclusionInput => {
-                  this.exclusionInput = exclusionInput;
-                }}
-                  placeholder={disabled ? "" : "Type a name..."} />
-                <button className="toggle" {...getToggleButtonProps({ disabled })} aria-label={'toggle menu'}>
-                &#9660;
-              </button>
-              </div>
-              <ul {...getMenuProps()} style={menuStyles} className="downshift-options">
-                {isOpen
-                  ? items
-                    .filter(
-                      (item) => {
-                        /**
-                         * @param {string} name 
-                         */
-                        function simplify(name) {
-                          return name.toLowerCase().replace(/[^a-z]+/g, '');
-                        }
+      onCopyClick={(e) => {
+        e.preventDefault();
+        const cleanedState = Object.assign({}, this.gameState, {
+          // Reset values we don't want in the shared URL:
+          boardLabel: '',
+          boardVillagers: [],
+          selectedVillagers: [],
+          selectedColor: null,
+          selectedFreePlot: '',
+          villagerSet: 'standard',
+        });
+        const shareData = encodeState(location.href, cleanedState);
+        navigator.clipboard.writeText(shareData);
+      }}
+      />
+  }
 
-                        const matchesInput = simplify(item.name).startsWith(simplify(inputValue));
-                        const isAlreadyExcluded = this.gameState.excludedVillagers.includes(item);
-                        return matchesInput && !isAlreadyExcluded;
-                      }
-                    )
-                    .map((item, index) => {
-                      const classNames = [];
-                      if (highlightedIndex === index) {
-                        classNames.push('downshift-highlight');
-                      }
-                      if (selectedItem === item) {
-                        classNames.push('downshift-selected');
-                      }
+  renderVillagerPreselector() {
+    const excluded = this.gameState.excludedVillagers
+      .concat(this.gameState.preselectedVillagers);
 
-                      return <li
-                        {...getItemProps({
-
-                          key: item.name,
-                          index,
-                          item,
-                          className: classNames.join(' '),
-                        })}
-                      >
-                        {item.name}
-                      </li>;
-                    })
-                  : null}
-              </ul>
-            </div>
-            <button type="button" className="copy" onClick={(e) => {
-              e.preventDefault();
-              const cleanedState = Object.assign({}, this.gameState, {
-                // Reset values we don't want in the shared URL:
-                boardLabel: '',
-                boardVillagers: [],
-                selectedVillagers: [],
-                selectedColor: null,
-                selectedFreePlot: '',
-                villagerSet: 'standard',
-              });
-              const shareData = encodeState(location.href, cleanedState);
-              navigator.clipboard.writeText(shareData);
-            }}>Copy as url</button>
-            {/* <button type="button" className="import" onClick={async (e) => {
-              e.preventDefault();
-              const shareData = await navigator.clipboard.readText();
-              const excluded = shareData
-                .split(',')
-                .map(name => villagers.find(v => v.name === name))
-                .filter(v => v !== null)
-                .slice(0, 9);
-              this.setGameState({
-                excludedVillagers: excluded,
-              });
-            }}>Paste Villagers</button> */}
-          </div>
-        )}
-    </Downshift>
+    return <VillagerDropdown
+        labelText="Preselect villagers:"
+        excludedVillagers={excluded}
+        onSelection={(selection, afterSelectionApplied) => {
+          this.setGameState(
+            prevState => {
+              return {
+                preselectedVillagers: prevState.preselectedVillagers.concat([selection]),
+              };
+            },
+            afterSelectionApplied
+          );
+        }}
+      />
   }
 
   renderBlank() {
@@ -593,6 +514,25 @@ export default class Home extends React.Component {
                     color: villager.textColor,
                   }}>{villager.name}</p>
                 </a>;
+              })}
+            </div>
+
+            <div className="separator"></div>
+
+            {this.renderVillagerPreselector()}
+
+            <div className="namesBox">
+              {this.gameState.preselectedVillagers.map((villager) => {
+                return <a href="#" key={villager.name} title={`Remove ${villager.name}`} className="namesName" onClick={(e) => {
+                  e.preventDefault();
+                  this.setGameState({
+                    preselectedVillagers: this.gameState.preselectedVillagers.filter(v => v !== villager),
+                  });
+                }} style={{
+                    backgroundColor: villager.bubbleColor,
+                    color: villager.textColor,
+                    border: `2px solid ${this.gameState.selectedColor}`,
+                  }}>{villager.name} X</a>;
               })}
             </div>
 
