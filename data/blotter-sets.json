@@ -9,6 +9,526 @@
       "bugs01": {
         "name": "Goliath beetle",
         "icon": "http://acnhapi.com/v1/icons/bugs/54"
+      },
+      "bugs02": {
+        "name": "Tarantula",
+        "icon": "http://acnhapi.com/v1/icons/bugs/79"
+      },
+      "bugs03": {
+        "name": "Atlas moth",
+        "icon": "http://acnhapi.com/v1/icons/bugs/14"
+      },
+      "bugs04": {
+        "name": "Wasp",
+        "icon": "http://acnhapi.com/v1/icons/bugs/25"
+      },
+      "bugs05": {
+        "name": "Cicada shell",
+        "icon": "http://acnhapi.com/v1/icons/bugs/31"
+      },
+      "bugs06": {
+        "name": "Orchid mantis",
+        "icon": "http://acnhapi.com/v1/icons/bugs/23"
+      },
+      "bugs07": {
+        "name": "Queen Alexandra's birdwing",
+        "icon": "http://acnhapi.com/v1/icons/bugs/12"
+      },
+      "bugs08": {
+        "name": "Emperor butterfly",
+        "icon": "http://acnhapi.com/v1/icons/bugs/9"
+      }
+    }
+  },
+  "celebrate": {
+    "name": "",
+    "items": {
+      "celebrate00": {
+        "name": "Balloon",
+        "icon": ""
+      },
+      "celebrate01": {
+        "name": "Pinwheel",
+        "icon": ""
+      },
+      "celebrate02": {
+        "name": "Party popper",
+        "icon": ""
+      },
+      "celebrate03": {
+        "name": "Pennant",
+        "icon": ""
+      },
+      "celebrate04": {
+        "name": "Music note",
+        "icon": ""
+      },
+      "celebrate05": {
+        "name": "Cupcake",
+        "icon": ""
+      },
+      "celebrate06": {
+        "name": "Bubbles",
+        "icon": ""
+      },
+      "celebrate07": {
+        "name": "Tweeter",
+        "icon": ""
+      },
+      "celebrate08": {
+        "name": "Tambourine",
+        "icon": ""
+      }
+    }
+  },
+  "fall": {
+    "name": "",
+    "items": {
+      "fall00": {
+        "name": "Maple leaf",
+        "icon": ""
+      },
+      "fall01": {
+        "name": "Pumpkin",
+        "icon": ""
+      },
+      "fall02": {
+        "name": "Skinny mushroom",
+        "icon": ""
+      },
+      "fall03": {
+        "name": "Flat mushroom",
+        "icon": ""
+      },
+      "fall04": {
+        "name": "Acorn",
+        "icon": ""
+      },
+      "fall05": {
+        "name": "Elegant mushroom",
+        "icon": ""
+      },
+      "fall06": {
+        "name": "Pinecone",
+        "icon": ""
+      },
+      "fall07": {
+        "name": "Rare mushroom",
+        "icon": ""
+      },
+      "fall08": {
+        "name": "Round mushroom",
+        "icon": ""
+      }
+    }
+  },
+  "fish": {
+    "name": "Fish",
+    "items": {
+      "fish00": {
+        "name": "Oarfish",
+        "icon": "https://acnhapi.com/v1/icons/fish/78"
+      },
+      "fish01": {
+        "name": "Puffer fish",
+        "icon": "https://acnhapi.com/v1/icons/fish/55"
+      },
+      "fish02": {
+        "name": "Dorado",
+        "icon": "https://acnhapi.com/v1/icons/fish/42"
+      },
+      "fish03": {
+        "name": "Mahi-mahi",
+        "icon": "https://acnhapi.com/v1/icons/fish/69"
+      },
+      "fish04": {
+        "name": "Napoleonfish",
+        "icon": "https://acnhapi.com/v1/icons/fish/52"
+      },
+      "fish05": {
+        "name": "Coelacanth",
+        "icon": "https://acnhapi.com/v1/icons/fish/80"
+      },
+      "fish06": {
+        "name": "Ocean sunfish",
+        "icon": "https://acnhapi.com/v1/icons/fish/70"
+      },
+      "fish07": {
+        "name": "Sea bass",
+        "icon": "https://acnhapi.com/v1/icons/fish/59"
+      },
+      "fish08": {
+        "name": "Hammerhead shark",
+        "icon": "https://acnhapi.com/v1/icons/fish/73"
+      }
+    }
+  },
+  "flowers": {
+    "name": "Flowers",
+    "items": {
+      "flowers00": {
+        "name": "Red pansy",
+        "icon": ""
+      },
+      "flowers01": {
+        "name": "Orange hyacinth",
+        "icon": ""
+      },
+      "flowers02": {
+        "name": "Yellow lily",
+        "icon": ""
+      },
+      "flowers03": {
+        "name": "Green mum",
+        "icon": ""
+      },
+      "flowers04": {
+        "name": "Blue rose",
+        "icon": ""
+      },
+      "flowers05": {
+        "name": "Purple windflower",
+        "icon": ""
+      },
+      "flowers06": {
+        "name": "Pink cosmo",
+        "icon": ""
+      },
+      "flowers07": {
+        "name": "Black tulip",
+        "icon": ""
+      },
+      "flowers08": {
+        "name": "Lily of the Valley",
+        "icon": ""
+      }
+    }
+  },
+  "fruit": {
+    "name": "Fruit & veggies",
+    "items": {
+      "fruit00": {
+        "name": "Cherries",
+        "icon": ""
+      },
+      "fruit01": {
+        "name": "Apple",
+        "icon": ""
+      },
+      "fruit02": {
+        "name": "Pumpkin",
+        "icon": ""
+      },
+      "fruit03": {
+        "name": "Orange",
+        "icon": ""
+      },
+      "fruit04": {
+        "name": "Peach",
+        "icon": ""
+      },
+      "fruit05": {
+        "name": "Coconut",
+        "icon": ""
+      },
+      "fruit06": {
+        "name": "Pear",
+        "icon": ""
+      },
+      "fruit07": {
+        "name": "Rotten turnip",
+        "icon": ""
+      },
+      "fruit08": {
+        "name": "Fresh turnip",
+        "icon": ""
+      }
+    }
+  },
+  "materials": {
+    "name": "Materials",
+    "items": {
+      "materials00": {
+        "name": "Bamboo",
+        "icon": ""
+      },
+      "materials01": {
+        "name": "Gold nugget",
+        "icon": ""
+      },
+      "materials02": {
+        "name": "Softwood",
+        "icon": ""
+      },
+      "materials03": {
+        "name": "Clay",
+        "icon": ""
+      },
+      "materials04": {
+        "name": "Wood",
+        "icon": ""
+      },
+      "materials05": {
+        "name": "Tree branch",
+        "icon": ""
+      },
+      "materials06": {
+        "name": "Hardwood",
+        "icon": ""
+      },
+      "materials07": {
+        "name": "Iron",
+        "icon": ""
+      },
+      "materials08": {
+        "name": "Stone",
+        "icon": ""
+      }
+    }
+  },
+  "reactions": {
+    "name": "Reactions",
+    "items": {
+      "reactions00": {
+        "name": "Love",
+        "icon": ""
+      },
+      "reactions01": {
+        "name": "Joy",
+        "icon": ""
+      },
+      "reactions02": {
+        "name": "Encouraging",
+        "icon": ""
+      },
+      "reactions03": {
+        "name": "Shocked",
+        "icon": ""
+      },
+      "reactions04": {
+        "name": "Flourish",
+        "icon": ""
+      },
+      "reactions05": {
+        "name": "Delight",
+        "icon": ""
+      },
+      "reactions06": {
+        "name": "Greetings",
+        "icon": ""
+      },
+      "reactions07": {
+        "name": "Distress",
+        "icon": ""
+      },
+      "reactions08": {
+        "name": "Glee",
+        "icon": ""
+      }
+    }
+  },
+  "stars": {
+    "name": "Star fragments",
+    "items": {
+      "stars00": {
+        "name": "Capricorn fragment",
+        "icon": ""
+      },
+      "stars01": {
+        "name": "Scorpio fragment",
+        "icon": ""
+      },
+      "stars02": {
+        "name": "Star fragment",
+        "icon": ""
+      },
+      "stars03": {
+        "name": "Taurus fragment",
+        "icon": ""
+      },
+      "stars04": {
+        "name": "Sagittarius fragment",
+        "icon": ""
+      },
+      "stars05": {
+        "name": "Gemini fragment",
+        "icon": ""
+      },
+      "stars06": {
+        "name": "Virgo fragment",
+        "icon": ""
+      },
+      "stars07": {
+        "name": "Aquarius fragment",
+        "icon": ""
+      },
+      "stars08": {
+        "name": "Aries fragment",
+        "icon": ""
+      }
+    }
+  },
+  "sea": {
+    "name": "Sea creatures",
+    "items": {
+      "sea00": {
+        "name": "Sea star",
+        "icon": "https://acnhapi.com/v1/icons/sea/5"
+      },
+      "sea01": {
+        "name": "Spider crab",
+        "icon": "https://acnhapi.com/v1/icons/sea/29"
+      },
+      "sea02": {
+        "name": "Scallop",
+        "icon": "https://acnhapi.com/v1/icons/sea/14"
+      },
+      "sea03": {
+        "name": "Sea grapes",
+        "icon": "https://acnhapi.com/v1/icons/sea/2"
+      },
+      "sea04": {
+        "name": "Horseshoe crab",
+        "icon": "https://acnhapi.com/v1/icons/sea/36"
+      },
+      "sea05": {
+        "name": "Sea anemone",
+        "icon": "https://acnhapi.com/v1/icons/sea/8"
+      },
+      "sea06": {
+        "name": "Sea urchin",
+        "icon": "https://acnhapi.com/v1/icons/sea/6"
+      },
+      "sea07": {
+        "name": "Gigas giant clam",
+        "icon": "https://acnhapi.com/v1/icons/sea/18"
+      },
+      "sea08": {
+        "name": "Moon jellyfish",
+        "icon": "https://acnhapi.com/v1/icons/sea/9"
+      }
+    }
+  },
+  "tools": {
+    "name": "Tools",
+    "items": {
+      "tools00": {
+        "name": "Axe",
+        "icon": ""
+      },
+      "tools01": {
+        "name": "Fishing rod",
+        "icon": ""
+      },
+      "tools02": {
+        "name": "Ladder",
+        "icon": ""
+      },
+      "tools03": {
+        "name": "Net",
+        "icon": ""
+      },
+      "tools04": {
+        "name": "Shovel",
+        "icon": ""
+      },
+      "tools05": {
+        "name": "Slingshot",
+        "icon": ""
+      },
+      "tools06": {
+        "name": "Stone axe",
+        "icon": ""
+      },
+      "tools07": {
+        "name": "Vaulting pole",
+        "icon": ""
+      },
+      "tools08": {
+        "name": "Watering can",
+        "icon": ""
+      }
+    }
+  },
+  "trees": {
+    "name": "Trees",
+    "items": {
+      "trees00": {
+        "name": "Cherry tree",
+        "icon": ""
+      },
+      "trees01": {
+        "name": "Apple tree",
+        "icon": ""
+      },
+      "trees02": {
+        "name": "Orange tree",
+        "icon": ""
+      },
+      "trees03": {
+        "name": "Peach tree",
+        "icon": ""
+      },
+      "trees04": {
+        "name": "Money tree",
+        "icon": ""
+      },
+      "trees05": {
+        "name": "Palm tree",
+        "icon": ""
+      },
+      "trees06": {
+        "name": "Pear tree",
+        "icon": ""
+      },
+      "trees07": {
+        "name": "Bamboo tree",
+        "icon": ""
+      },
+      "trees08": {
+        "name": "Pine tree",
+        "icon": ""
+      }
+    }
+  },
+  "wrapped": {
+    "name": "Wrapped presents",
+    "items": {
+      "wrapped00": {
+        "name": "Red present",
+        "icon": ""
+      },
+      "wrapped01": {
+        "name": "Orange present",
+        "icon": ""
+      },
+      "wrapped02": {
+        "name": "Yellow present",
+        "icon": ""
+      },
+      "wrapped03": {
+        "name": "Green present",
+        "icon": ""
+      },
+      "wrapped04": {
+        "name": "Blue present",
+        "icon": ""
+      },
+      "wrapped05": {
+        "name": "Purple present",
+        "icon": ""
+      },
+      "wrapped06": {
+        "name": "Pink present",
+        "icon": ""
+      },
+      "wrapped07": {
+        "name": "Gold present",
+        "icon": ""
+      },
+      "wrapped08": {
+        "name": "Black present",
+        "icon": ""
       }
     }
   }
