@@ -687,7 +687,7 @@ export default class Home extends React.Component {
             </div>
 
             <h2>
-              Yxaj's Mitzi or bust hunt
+              Yxaj's #MitziOrBustHunt
             </h2>
 
             {/* {this.renderVillagerSelector()}
