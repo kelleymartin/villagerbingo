@@ -168,39 +168,39 @@
     "items": {
       "flowers00": {
         "name": "Red pansy",
-        "icon": ""
+        "icon": "/RedPansy.svg"
       },
       "flowers01": {
         "name": "Orange hyacinth",
-        "icon": ""
+        "icon": "/OrangeHyacinth.svg"
       },
       "flowers02": {
         "name": "Yellow lily",
-        "icon": ""
+        "icon": "/YellowLily.svg"
       },
       "flowers03": {
         "name": "Green mum",
-        "icon": ""
+        "icon": "/GreenMum.svg"
       },
       "flowers04": {
         "name": "Blue rose",
-        "icon": ""
+        "icon": "/BlueRose.svg"
       },
       "flowers05": {
         "name": "Purple windflower",
-        "icon": ""
+        "icon": "/PurpleWindflower.svg"
       },
       "flowers06": {
         "name": "Pink cosmo",
-        "icon": ""
+        "icon": "/PinkCosmo.svg"
       },
       "flowers07": {
         "name": "Black tulip",
-        "icon": ""
+        "icon": "/BlackTulip.svg"
       },
       "flowers08": {
         "name": "Lily of the Valley",
-        "icon": ""
+        "icon": "/LilyoftheValley.svg"
       }
     }
   },

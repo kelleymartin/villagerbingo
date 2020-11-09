@@ -5,6 +5,7 @@ import villagers from "../data/villagers.json";
 
 export function VillagerDropdown(props) {
   const {
+    id,
     excludedVillagers,
     disabled,
     onSelection,
@@ -40,10 +41,10 @@ export function VillagerDropdown(props) {
       itemToString={(item) => (item ? item.name : "")}
       defaultHighlightedIndex={0}
       ref={exclusionDownshift}
-      id="excluded-villagers-autocomplete"
-      labelId="excluded-villagers-autocomplete-label"
-      inputId="excluded-villagers-autocomplete-input"
-      menuId="excluded-villagers-autocomplete-menu"
+      id={id}
+      labelId={`${id}-label`}
+      inputId={`${id}-input`}
+      menuId={`${id}-menu`}
     >
       {({
         getInputProps,
