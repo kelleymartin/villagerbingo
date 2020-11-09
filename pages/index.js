@@ -151,28 +151,40 @@ export default class Home extends React.Component {
     event.preventDefault();
   }
 
-  renderBoardTile(villager, index) {
-    const isSelected = this.gameState.selectedVillagers.includes(villager);
-
+  renderBlotter(index) {
     const topMax = 10;
-    const top = ((index + 1) * 17) % topMax;
+    let top = ((index + 1) * 17) % topMax;
     const leftMax = 30;
-    const left = ((index + 1) * 23) % leftMax;
-    // const angleRange = 60;
-    // // angle between -30 and 29
-    // const angle = -30 + ((index + 1) * 83) % angleRange;
+    let left = ((index + 1) * 23) % leftMax;
+
+    if (index === 12) {
+      // Free plot (position 13 / index 12):
+      top = 30;
+      left = 10;
+    }
 
     const blotStyle = {
       top: `${top}px`,
       left: `${left}px`,
       // transform: `rotate(${angle}deg)`,
     };
-    if (isSelected) {
-      const blotterType = BLOTTER_BY_ID.get(this.state.settings.blotter);
-      if (blotterType.icon) {
-        blotStyle.backgroundImage = `url(${blotterType.icon})`;
-      }
+
+    const blotterId = this.state.settings.blotter;
+    const blotter = BLOTTER_BY_ID.get(blotterId);
+    if (blotter.icon) {
+      blotStyle.backgroundImage = `url(${blotter.icon})`;
     }
+
+    return (
+      <div
+        className={`blot ${blotterId} blot-${blotter.setId}`}
+        style={blotStyle}
+      ></div>
+    );
+  }
+
+  renderBoardTile(villager, index) {
+    const isSelected = this.gameState.selectedVillagers.includes(villager);
 
     const title = isSelected
       ? `Unmark ${villager.name}`
@@ -224,12 +236,7 @@ export default class Home extends React.Component {
             {villager.name}
           </p>
         </div>
-        {isSelected ? (
-          <div
-            className={`blot ${this.state.settings.blotter}`}
-            style={blotStyle}
-          ></div>
-        ) : null}
+        {isSelected ? this.renderBlotter(index) : null}
       </a>
     );
   }
@@ -262,7 +269,7 @@ export default class Home extends React.Component {
             villagerSet: "standard",
           });
           const shareData = encodeState(location.href, cleanedState);
-          navigator.clipboard.writeText(shareData);
+          navigator.clipboard.writeText(`${shareData}&cs=copyasurl`);
         }}
       />
     );
@@ -322,7 +329,7 @@ export default class Home extends React.Component {
           })}
           {this.renderFreePlot()}
           {this.gameState.boardVillagers.slice(12).map((villager, index) => {
-            return this.renderBoardTile(villager, index + 12);
+            return this.renderBoardTile(villager, index + 13);
           })}
         </div>
       </div>
@@ -364,16 +371,7 @@ export default class Home extends React.Component {
             alt=""
             draggable="false"
           />
-          {selectedFreePlot ? (
-            <div
-              className={`blot ${this.state.settings.blotter}`}
-              style={{
-                position: "absolute",
-                top: "30px",
-                left: "5px",
-              }}
-            ></div>
-          ) : null}
+          {selectedFreePlot ? this.renderBlotter(12) : null}
         </div>
       </a>
     );
@@ -554,7 +552,7 @@ export default class Home extends React.Component {
             return (
               <a
                 href="#"
-                className={blotter.className}
+                className={`${blotter.id} blotter-${blotter.setId}`}
                 key={blotter.id}
                 style={style}
                 title={`${blotter.name} marker`}
@@ -576,6 +574,14 @@ export default class Home extends React.Component {
     );
   }
 
+  getLogoColor() {
+    const blotter = BLOTTER_BY_ID.get(this.state.settings.blotter);
+    if (blotter.setId !== "color") {
+      return "red";
+    }
+    return blotter.id;
+  }
+
   render() {
     const navbarClasses = ["navbar"];
     if (this.state.howToExpanded) {
@@ -588,10 +594,7 @@ export default class Home extends React.Component {
       <div className={`${this.state.settings.theme}-mode`}>
         <Head>
           <title>ACNH Villager Bingo</title>
-          <link
-            rel="icon"
-            href={`/favicon${this.state.settings.blotter}.png`}
-          />
+          <link rel="icon" href={`/favicon${this.getLogoColor()}.png`} />
           <link
             rel="stylesheet"
             href="https://use.typekit.net/pmt6aez.css"
@@ -609,7 +612,7 @@ export default class Home extends React.Component {
                 </span>
                 <img
                   src={`/titleglass${this.state.settings.theme}.svg`}
-                  className={`glass ${this.state.settings.blotter}`}
+                  className={`glass ${this.getLogoColor()}`}
                   alt=""
                 />
               </a>

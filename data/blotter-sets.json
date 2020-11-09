@@ -41,84 +41,84 @@
     }
   },
   "celebrate": {
-    "name": "",
+    "name": "Celebration",
     "items": {
       "celebrate00": {
         "name": "Balloon",
-        "icon": ""
+        "icon": "/Blotters/BalloonCropped.png"
       },
       "celebrate01": {
         "name": "Pinwheel",
-        "icon": ""
+        "icon": "/Blotters/WindmillCropped.png"
       },
       "celebrate02": {
         "name": "Party popper",
-        "icon": ""
+        "icon": "/Blotters/CrackerCropped.png"
       },
       "celebrate03": {
         "name": "Pennant",
-        "icon": ""
+        "icon": "/Blotters/ToolPennantRcmCropped.png"
       },
       "celebrate04": {
         "name": "Music note",
-        "icon": ""
+        "icon": "/Blotters/MusicCropped.png"
       },
       "celebrate05": {
         "name": "Cupcake",
-        "icon": ""
+        "icon": "/Blotters/BdayCupcakeCropped.png"
       },
       "celebrate06": {
         "name": "Bubbles",
-        "icon": ""
+        "icon": "/Blotters/SyabonCropped.png"
       },
       "celebrate07": {
         "name": "Tweeter",
-        "icon": ""
+        "icon": "/Blotters/BlowRollItemCropped.png"
       },
       "celebrate08": {
         "name": "Tambourine",
-        "icon": ""
+        "icon": "/Blotters/TambourineCropped.png"
       }
     }
   },
   "fall": {
-    "name": "",
+    "name": "Fall",
     "items": {
       "fall00": {
         "name": "Maple leaf",
-        "icon": ""
+        "icon": "/Blotters/AutumnLeafCropped.png"
       },
       "fall01": {
         "name": "Pumpkin",
-        "icon": ""
+        "icon": "/Blotters/SquashOrangeCropped.png"
       },
       "fall02": {
         "name": "Skinny mushroom",
-        "icon": ""
+        "icon": "/Blotters/Mush2Cropped.png"
       },
       "fall03": {
         "name": "Flat mushroom",
-        "icon": ""
+        "icon": "/Blotters/Mush3Cropped.png"
       },
       "fall04": {
         "name": "Acorn",
-        "icon": ""
+        "icon": "/Blotters/DIYAcornCropped.png"
       },
       "fall05": {
         "name": "Elegant mushroom",
-        "icon": ""
+        "icon": "/Blotters/Mush0Cropped.png"
       },
       "fall06": {
         "name": "Pinecone",
-        "icon": ""
+        "icon": "/Blotters/DIYPineconeCropped.png"
       },
       "fall07": {
         "name": "Rare mushroom",
-        "icon": ""
+        "icon": "/Blotters/Mush4Cropped.png"
       },
       "fall08": {
         "name": "Round mushroom",
-        "icon": ""
+        "icon": "/Blotters/Mush1Cropped.png"
       }
     }
   },
@@ -168,39 +168,39 @@
     "items": {
       "flowers00": {
         "name": "Red pansy",
-        "icon": "/RedPansy.svg"
+        "icon": "/Blotters/RedPansy.svg"
       },
       "flowers01": {
         "name": "Orange hyacinth",
-        "icon": "/OrangeHyacinth.svg"
+        "icon": "/Blotters/OrangeHyacinth.svg"
       },
       "flowers02": {
         "name": "Yellow lily",
-        "icon": "/YellowLily.svg"
+        "icon": "/Blotters/YellowLily.svg"
       },
       "flowers03": {
         "name": "Green mum",
-        "icon": "/GreenMum.svg"
+        "icon": "/Blotters/GreenMum.svg"
       },
       "flowers04": {
         "name": "Blue rose",
-        "icon": "/BlueRose.svg"
+        "icon": "/Blotters/BlueRose.svg"
       },
       "flowers05": {
         "name": "Purple windflower",
-        "icon": "/PurpleWindflower.svg"
+        "icon": "/Blotters/PurpleWindflower.svg"
       },
       "flowers06": {
         "name": "Pink cosmo",
-        "icon": "/PinkCosmo.svg"
+        "icon": "/Blotters/PinkCosmo.svg"
       },
       "flowers07": {
         "name": "Black tulip",
-        "icon": "/BlackTulip.svg"
+        "icon": "/Blotters/BlackTulip.svg"
       },
       "flowers08": {
         "name": "Lily of the Valley",
-        "icon": "/LilyoftheValley.svg"
+        "icon": "/Blotters/LilyoftheValley.svg"
       }
     }
   },
@@ -209,39 +209,39 @@
     "items": {
       "fruit00": {
         "name": "Cherries",
-        "icon": ""
+        "icon": "/Blotters/CherryCropped.png"
       },
       "fruit01": {
         "name": "Apple",
-        "icon": ""
+        "icon": "/Blotters/AppleCropped.png"
       },
       "fruit02": {
         "name": "Pumpkin",
-        "icon": ""
+        "icon": "/Blotters/SquashOrangeCropped.png"
       },
       "fruit03": {
         "name": "Orange",
-        "icon": ""
+        "icon": "/Blotters/OrangeCropped.png"
       },
       "fruit04": {
         "name": "Peach",
-        "icon": ""
+        "icon": "/Blotters/PeachCropped.png"
       },
       "fruit05": {
         "name": "Coconut",
-        "icon": ""
+        "icon": "/Blotters/CoconutCropped.png"
       },
       "fruit06": {
         "name": "Pear",
-        "icon": ""
+        "icon": "/Blotters/PearCropped.png"
       },
       "fruit07": {
         "name": "Rotten turnip",
-        "icon": ""
+        "icon": "/Blotters/BadKabuCropped.png"
       },
       "fruit08": {
         "name": "Fresh turnip",
-        "icon": ""
+        "icon": "/Blotters/KabuCropped.png"
       }
     }
   },
@@ -250,39 +250,39 @@
     "items": {
       "materials00": {
         "name": "Bamboo",
-        "icon": ""
+        "icon": "/Blotters/DIYBambooCropped.png"
       },
       "materials01": {
         "name": "Gold nugget",
-        "icon": ""
+        "icon": "/Blotters/Gold_OreCropped.png"
       },
       "materials02": {
         "name": "Softwood",
-        "icon": ""
+        "icon": "/Blotters/DIYWoodSoftCropped.png"
       },
       "materials03": {
         "name": "Clay",
-        "icon": ""
+        "icon": "/Blotters/OreClayCropped.png"
       },
       "materials04": {
         "name": "Wood",
-        "icon": ""
+        "icon": "/Blotters/DIYWoodNormalCropped.png"
       },
       "materials05": {
         "name": "Tree branch",
-        "icon": ""
+        "icon": "/Blotters/DIYBranchCropped.png"
       },
       "materials06": {
         "name": "Hardwood",
-        "icon": ""
+        "icon": "/Blotters/DIYWoodHardCropped.png"
       },
       "materials07": {
         "name": "Iron",
-        "icon": ""
+        "icon": "/Blotters/OreIronCropped.png"
       },
       "materials08": {
         "name": "Stone",
-        "icon": ""
+        "icon": "/Blotters/OreStoneCropped.png"
       }
     }
   },
@@ -290,40 +290,40 @@
     "name": "Reactions",
     "items": {
       "reactions00": {
-        "name": "Love",
-        "icon": ""
+        "name": "Bashfulness",
+        "icon": "/Blotters/BlushingCropped.png"
       },
       "reactions01": {
         "name": "Joy",
-        "icon": ""
+        "icon": "/Blotters/HappyFlowerCropped.png"
       },
       "reactions02": {
-        "name": "Encouraging",
-        "icon": ""
+        "name": "Shocked",
+        "icon": "/Blotters/SurprisedCropped.png"
       },
       "reactions03": {
-        "name": "Shocked",
-        "icon": ""
+        "name": "Flourish",
+        "icon": "/Blotters/DanceCropped.png"
       },
       "reactions04": {
-        "name": "Flourish",
-        "icon": ""
+        "name": "Delight",
+        "icon": "/Blotters/ClappingCropped.png"
       },
       "reactions05": {
-        "name": "Delight",
-        "icon": ""
+        "name": "Distress",
+        "icon": "/Blotters/FranticCropped.png"
       },
       "reactions06": {
-        "name": "Greetings",
-        "icon": ""
+        "name": "Mischief",
+        "icon": "/Blotters/SchemingCropped.png"
       },
       "reactions07": {
-        "name": "Distress",
-        "icon": ""
+        "name": "Haunt",
+        "icon": "/Blotters/AddScaringCropped.png"
       },
       "reactions08": {
-        "name": "Glee",
-        "icon": ""
+        "name": "Greetings",
+        "icon": "/Blotters/GreetingCropped.png"
       }
     }
   },
@@ -332,39 +332,39 @@
     "items": {
       "stars00": {
         "name": "Capricorn fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceCapricornusCropped.png"
       },
       "stars01": {
         "name": "Scorpio fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceScorpioCropped.png"
       },
       "stars02": {
         "name": "Star fragment",
-        "icon": ""
+        "icon": "/Blotters/StarPieceCropped.png"
       },
       "stars03": {
         "name": "Taurus fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceTaurusCropped.png"
       },
       "stars04": {
         "name": "Sagittarius fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceSagittariusCropped.png"
       },
       "stars05": {
         "name": "Gemini fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceGeminiCropped.png"
       },
       "stars06": {
         "name": "Virgo fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceVirgoCropped.png"
       },
       "stars07": {
         "name": "Aquarius fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceAquariusCropped.png"
       },
       "stars08": {
         "name": "Aries fragment",
-        "icon": ""
+        "icon": "/Blotters/StarpieceAriesCropped.png"
       }
     }
   },
@@ -414,39 +414,39 @@
     "items": {
       "tools00": {
         "name": "Axe",
-        "icon": ""
+        "icon": "/Blotters/AxeCropped.png"
       },
       "tools01": {
         "name": "Fishing rod",
-        "icon": ""
+        "icon": "/Blotters/FishingrodCropped.png"
       },
       "tools02": {
         "name": "Ladder",
-        "icon": ""
+        "icon": "/Blotters/ToolLadderCropped.png"
       },
       "tools03": {
         "name": "Net",
-        "icon": ""
+        "icon": "/Blotters/NetCropped.png"
       },
       "tools04": {
         "name": "Shovel",
-        "icon": ""
+        "icon": "/Blotters/ScoopCropped.png"
       },
       "tools05": {
         "name": "Slingshot",
-        "icon": ""
+        "icon": "/Blotters/PachinkoCropped.png"
       },
       "tools06": {
         "name": "Stone axe",
-        "icon": ""
+        "icon": "/Blotters/AxeDullCropped.png"
       },
       "tools07": {
         "name": "Vaulting pole",
-        "icon": ""
+        "icon": "/Blotters/ToolRiverJumpCropped.png"
       },
       "tools08": {
         "name": "Watering can",
-        "icon": ""
+        "icon": "/Blotters/WateringCropped.png"
       }
     }
   },
@@ -455,39 +455,39 @@
     "items": {
       "trees00": {
         "name": "Cherry tree",
-        "icon": ""
+        "icon": "/Blotters/PltCherryCropped.png"
       },
       "trees01": {
         "name": "Apple tree",
-        "icon": ""
+        "icon": "/Blotters/PltAppleCropped.png"
       },
       "trees02": {
         "name": "Orange tree",
-        "icon": ""
+        "icon": "/Blotters/PltOrangeCropped.png"
       },
       "trees03": {
         "name": "Peach tree",
-        "icon": ""
+        "icon": "/Blotters/PltPeachCropped.png"
       },
       "trees04": {
         "name": "Money tree",
-        "icon": ""
+        "icon": "/Blotters/PltMoneyCropped.png"
       },
       "trees05": {
         "name": "Palm tree",
-        "icon": ""
+        "icon": "/Blotters/PltPalmCropped.png"
       },
       "trees06": {
         "name": "Pear tree",
-        "icon": ""
+        "icon": "/Blotters/PltPearCropped.png"
       },
       "trees07": {
         "name": "Bamboo tree",
-        "icon": ""
+        "icon": "/Blotters/PltBambooCropped.png"
       },
       "trees08": {
         "name": "Pine tree",
-        "icon": ""
+        "icon": "/Blotters/PltConiferCropped.png"
       }
     }
   },
@@ -496,39 +496,39 @@
     "items": {
       "wrapped00": {
         "name": "Red present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingRedCropped.png"
       },
       "wrapped01": {
         "name": "Orange present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingOrangeCropped.png"
       },
       "wrapped02": {
         "name": "Yellow present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingYellowCropped.png"
       },
       "wrapped03": {
         "name": "Green present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingGreenCropped.png"
       },
       "wrapped04": {
         "name": "Blue present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingBlueCropped.png"
       },
       "wrapped05": {
         "name": "Purple present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingPurpleCropped.png"
       },
       "wrapped06": {
         "name": "Pink present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingPinkCropped.png"
       },
       "wrapped07": {
         "name": "Gold present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingGoldCropped.png"
       },
       "wrapped08": {
         "name": "Black present",
-        "icon": ""
+        "icon": "/Blotters/DummyWrappingBlackCropped.png"
       }
     }
   }
