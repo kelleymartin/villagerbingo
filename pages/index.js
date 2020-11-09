@@ -163,10 +163,16 @@ export default class Home extends React.Component {
       left = 10;
     }
 
+    const angleRange = 90;
+    // angle between -45 and 44
+    const angle = -45 + (Math.random() * 83) % angleRange;
+
     const blotStyle = {
       top: `${top}px`,
       left: `${left}px`,
+      transform: `rotate(${angle}deg)`,
       // transform: `rotate(${angle}deg)`,
+      angle
     };
 
     const blotterId = this.state.settings.blotter;
@@ -520,7 +526,6 @@ export default class Home extends React.Component {
         <h2>Choose your marker:</h2>
 
         <select
-          labelText="Set:"
           value={this.state.blotterSetId}
           onChange={(e) => {
             e.preventDefault();
@@ -536,13 +541,6 @@ export default class Home extends React.Component {
               </option>
             );
           })}
-        </select>
-
-        <select
-        labelText="Opacity"
-
-        >
-          
         </select>
 
         <div className="blotter">

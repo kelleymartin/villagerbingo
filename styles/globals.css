@@ -1020,10 +1020,13 @@ select {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  filter: drop-shadow(2px 2px 0 #FFF) drop-shadow(-2px -2px 0 #FFF) drop-shadow(2px -2px 0 #FFF) drop-shadow(-2px 2px 0 #FFF);
 }
 
 .blot.blot-color {
   border-radius: 45px;
+  filter: none;
+  border: 4px solid white;
 }
 
 .blotter > a {
