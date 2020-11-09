@@ -22,6 +22,11 @@ const ALL_THEMES = [
   },
 ];
 
+function pickRandomColor() {
+  const colors = Array.from(BLOTTER_SETS.get("color").items.keys());
+  return pickRandom(colors)[0];
+}
+
 /**
  * @param {import('next').GetServerSidePropsContext} context
  */
@@ -29,25 +34,19 @@ export const getServerSideProps = (context) => {
   return {
     props: {
       initialURL: `https://villager.bingo${context.req.url}`,
-      randomColor: pickRandom(
-        Array.from(BLOTTER_SETS.get("color").items.keys())
-      )[0],
     },
   };
 };
 
 export default class Home extends React.Component {
   state = {
-    gameState: urlFormat.decodeState(
-      this.props.initialURL,
-      this.props.randomColor
-    ),
+    gameState: urlFormat.decodeState(this.props.initialURL),
     settingsExpanded: false,
     howToExpanded: false,
     settings: {
       theme: "light",
+      blotter: "red",
     },
-    // TODO: Select the set that matches gameState.selectedColor.
     blotterSetId: "color",
   };
 
@@ -100,9 +99,18 @@ export default class Home extends React.Component {
       this.setState({ gameState: e.state });
     });
 
+    let blotterId = localStorage.getItem("blotter");
+    if (!BLOTTER_BY_ID.has(blotterId)) {
+      blotterId = pickRandomColor();
+      localStorage.setItem("blotter", blotterId);
+    }
+    const blotter = BLOTTER_BY_ID.get(blotterId);
+
     this.setState({
+      blotterSetId: blotter.setId,
       settings: {
         theme: localStorage.getItem("theme") || "light",
+        blotter: blotterId,
       },
     });
   }
@@ -160,7 +168,7 @@ export default class Home extends React.Component {
       // transform: `rotate(${angle}deg)`,
     };
     if (isSelected) {
-      const blotterType = BLOTTER_BY_ID.get(this.gameState.selectedColor);
+      const blotterType = BLOTTER_BY_ID.get(this.state.settings.blotter);
       if (blotterType.icon) {
         blotStyle.backgroundImage = `url(${blotterType.icon})`;
       }
@@ -218,7 +226,7 @@ export default class Home extends React.Component {
         </div>
         {isSelected ? (
           <div
-            className={`blot ${this.gameState.selectedColor}`}
+            className={`blot ${this.state.settings.blotter}`}
             style={blotStyle}
           ></div>
         ) : null}
@@ -358,7 +366,7 @@ export default class Home extends React.Component {
           />
           {selectedFreePlot ? (
             <div
-              className={`blot ${this.gameState.selectedColor}`}
+              className={`blot ${this.state.settings.blotter}`}
               style={{
                 position: "absolute",
                 top: "30px",
@@ -534,7 +542,7 @@ export default class Home extends React.Component {
         <div className="blotter">
           {Array.from(blotterSet.items.values(), (blotter) => {
             const style =
-              blotter.id === this.gameState.selectedColor
+              blotter.id === this.state.settings.blotter
                 ? {
                     opacity: "1",
                   }
@@ -552,12 +560,12 @@ export default class Home extends React.Component {
                 title={`${blotter.name} marker`}
                 onClick={(e) => {
                   e.preventDefault();
-                  this.setGameState({
-                    selectedColor: blotter.id,
+                  this.setSettings({
+                    blotter: blotter.id,
                   });
                 }}
               >
-                {blotter.id === this.gameState.selectedColor ? (
+                {blotter.id === this.state.settings.blotter ? (
                   <img src="/CursorCropped.png" className="cursor" alt="" />
                 ) : null}
               </a>
@@ -582,7 +590,7 @@ export default class Home extends React.Component {
           <title>ACNH Villager Bingo</title>
           <link
             rel="icon"
-            href={`/favicon${this.gameState.selectedColor}.png`}
+            href={`/favicon${this.state.settings.blotter}.png`}
           />
           <link
             rel="stylesheet"
@@ -601,7 +609,7 @@ export default class Home extends React.Component {
                 </span>
                 <img
                   src={`/titleglass${this.state.settings.theme}.svg`}
-                  className={`glass ${this.gameState.selectedColor}`}
+                  className={`glass ${this.state.settings.blotter}`}
                   alt=""
                 />
               </a>
@@ -704,7 +712,7 @@ export default class Home extends React.Component {
                     style={{
                       backgroundColor: villager.bubbleColor,
                       color: villager.textColor,
-                      border: `2px solid ${this.gameState.selectedColor}`,
+                      border: `2px solid ${this.state.settings.blotter}`,
                     }}
                   >
                     {villager.name} X
