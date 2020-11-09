@@ -988,6 +988,18 @@ h2 {
   margin: 0;
 }
 
+select {
+  height: 34px;
+  font-family: proxima-soft, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid #78DD62;
+  border-radius: 17px;
+  background-color: #FFE886;
+  margin: 0;
+  padding: 0 10px;
+}
+
 .blotter {
   display: flex;
   width: 630px;
@@ -1007,7 +1019,7 @@ h2 {
   left: 0px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .blot.blot-color {
@@ -1016,17 +1028,20 @@ h2 {
 
 .blotter > a {
   /* display: block; */
-  /* height: 50px; */
-  width: 50px;
-  margin: 10px;
-  opacity: 0.3;
+  height: 80px;
+  width: 60px;
+  margin: 5px;
+  opacity: 0.5;
   transition: opacity 0.25s;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .blotter > a.blotter-color {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
   border-radius: 25px;
 }
 

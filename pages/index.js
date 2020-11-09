@@ -159,7 +159,7 @@ export default class Home extends React.Component {
 
     if (index === 12) {
       // Free plot (position 13 / index 12):
-      top = 30;
+      top = 25;
       left = 10;
     }
 
@@ -520,6 +520,7 @@ export default class Home extends React.Component {
         <h2>Choose your marker:</h2>
 
         <select
+          labelText="Set:"
           value={this.state.blotterSetId}
           onChange={(e) => {
             e.preventDefault();
@@ -535,6 +536,13 @@ export default class Home extends React.Component {
               </option>
             );
           })}
+        </select>
+
+        <select
+        labelText="Opacity"
+
+        >
+          
         </select>
 
         <div className="blotter">

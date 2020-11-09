@@ -4,39 +4,39 @@
     "items": {
       "bugs00": {
         "name": "Scorpion",
-        "icon": "http://acnhapi.com/v1/icons/bugs/80"
+        "icon": "/Blotters/Ins63Cropped.png"
       },
       "bugs01": {
         "name": "Goliath beetle",
-        "icon": "http://acnhapi.com/v1/icons/bugs/54"
+        "icon": "/Blotters/Ins55Cropped.png"
       },
       "bugs02": {
         "name": "Tarantula",
-        "icon": "http://acnhapi.com/v1/icons/bugs/79"
+        "icon": "/Blotters/Ins62Cropped.png"
       },
       "bugs03": {
         "name": "Atlas moth",
-        "icon": "http://acnhapi.com/v1/icons/bugs/14"
+        "icon": "/Blotters/Ins10Cropped.png"
       },
       "bugs04": {
         "name": "Wasp",
-        "icon": "http://acnhapi.com/v1/icons/bugs/25"
+        "icon": "/Blotters/Ins12Cropped.png"
       },
       "bugs05": {
         "name": "Cicada shell",
-        "icon": "http://acnhapi.com/v1/icons/bugs/31"
+        "icon": "/Blotters/Ins69Cropped.png"
       },
       "bugs06": {
         "name": "Orchid mantis",
-        "icon": "http://acnhapi.com/v1/icons/bugs/23"
+        "icon": "/Blotters/Ins16Cropped.png"
       },
       "bugs07": {
         "name": "Queen Alexandra's birdwing",
-        "icon": "http://acnhapi.com/v1/icons/bugs/12"
+        "icon": "/Blotters/Ins8Cropped.png"
       },
       "bugs08": {
         "name": "Emperor butterfly",
-        "icon": "http://acnhapi.com/v1/icons/bugs/9"
+        "icon": "/Blotters/Ins5Cropped.png"
       }
     }
   },
@@ -127,39 +127,39 @@
     "items": {
       "fish00": {
         "name": "Oarfish",
-        "icon": "https://acnhapi.com/v1/icons/fish/78"
+        "icon": "/Blotters/Fish69Cropped.png"
       },
       "fish01": {
         "name": "Puffer fish",
-        "icon": "https://acnhapi.com/v1/icons/fish/55"
+        "icon": "/Blotters/Fish45Cropped.png"
       },
       "fish02": {
         "name": "Dorado",
-        "icon": "https://acnhapi.com/v1/icons/fish/42"
+        "icon": "/Blotters/Fish34Cropped.png"
       },
       "fish03": {
         "name": "Mahi-mahi",
-        "icon": "https://acnhapi.com/v1/icons/fish/69"
+        "icon": "/Blotters/Fish82Cropped.png"
       },
       "fish04": {
         "name": "Napoleonfish",
-        "icon": "https://acnhapi.com/v1/icons/fish/52"
+        "icon": "/Blotters/Fish43Cropped.png"
       },
       "fish05": {
         "name": "Coelacanth",
-        "icon": "https://acnhapi.com/v1/icons/fish/80"
+        "icon": "/Blotters/Fish63Cropped.png"
       },
       "fish06": {
         "name": "Ocean sunfish",
-        "icon": "https://acnhapi.com/v1/icons/fish/70"
+        "icon": "/Blotters/Fish60Cropped.png"
       },
       "fish07": {
         "name": "Sea bass",
-        "icon": "https://acnhapi.com/v1/icons/fish/59"
+        "icon": "/Blotters/Fish48Cropped.png"
       },
       "fish08": {
         "name": "Hammerhead shark",
-        "icon": "https://acnhapi.com/v1/icons/fish/73"
+        "icon": "/Blotters/Fish61Cropped.png"
       }
     }
   },
@@ -373,39 +373,39 @@
     "items": {
       "sea00": {
         "name": "Sea star",
-        "icon": "https://acnhapi.com/v1/icons/sea/5"
+        "icon": "/Blotters/HitodeCropped.png"
       },
       "sea01": {
         "name": "Spider crab",
-        "icon": "https://acnhapi.com/v1/icons/sea/29"
+        "icon": "/Blotters/TakaashiganiCropped.png"
       },
       "sea02": {
         "name": "Scallop",
-        "icon": "https://acnhapi.com/v1/icons/sea/14"
+        "icon": "/Blotters/HotateCropped.png"
       },
       "sea03": {
         "name": "Sea grapes",
-        "icon": "https://acnhapi.com/v1/icons/sea/2"
+        "icon": "/Blotters/UmibudouCropped.png"
       },
       "sea04": {
         "name": "Horseshoe crab",
-        "icon": "https://acnhapi.com/v1/icons/sea/36"
+        "icon": "/Blotters/KabutoganiCropped.png"
       },
       "sea05": {
         "name": "Sea anemone",
-        "icon": "https://acnhapi.com/v1/icons/sea/8"
+        "icon": "/Blotters/IsogintyakuCropped.png"
       },
       "sea06": {
         "name": "Sea urchin",
-        "icon": "https://acnhapi.com/v1/icons/sea/6"
+        "icon": "/Blotters/UniCropped.png"
       },
       "sea07": {
         "name": "Gigas giant clam",
-        "icon": "https://acnhapi.com/v1/icons/sea/18"
+        "icon": "/Blotters/ShakogaiCropped.png"
       },
       "sea08": {
         "name": "Moon jellyfish",
-        "icon": "https://acnhapi.com/v1/icons/sea/9"
+        "icon": "/Blotters/MizukurageCropped.png"
       }
     }
   },
@@ -492,7 +492,7 @@
     }
   },
   "wrapped": {
-    "name": "Wrapped presents",
+    "name": "Wrapped gifts",
     "items": {
       "wrapped00": {
         "name": "Red present",
