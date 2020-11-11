@@ -156,13 +156,15 @@ h1 {
 }
 
 .dark-mode .howToButtonBorder,
-.dark-mode .settingsButtonBorder {
+.dark-mode .settingsButtonBorder,
+.dark-mode .optionsButtonBorder {
   background-image: none;
   background-color: #ffd00d;
 }
 
 .gray-mode .howToButtonBorder,
-.gray-mode .settingsButtonBorder {
+.gray-mode .settingsButtonBorder,
+.gray-mode .optionsButtonBorder {
   background-image: none;
   background-color: #b3b3b3;
 }
@@ -188,7 +190,9 @@ h1 {
   z-index: 20;
 }
 
-.gray-mode .howToButton {
+.gray-mode .howToButton,
+.gray-mode .settingsButton,
+.gray-mode .optionsButton {
   border: none;
 }
 
@@ -231,10 +235,6 @@ h1 {
 .settings-expanded .settingsButtonBorder {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.gray-mode .settingsButton {
-  border: none;
 }
 
 .howToBoxBorder {
@@ -307,14 +307,16 @@ h1 {
 }
 
 .dark-mode .settingsBox,
-.dark-mode .howToBox {
+.dark-mode .howToBox,
+.dark-mode .optionsBox {
   background-image: none;
   background-color: #866c00;
   border: 2px solid #ffd00d;
 }
 
 .gray-mode .settingsBox,
-.gray-mode .howToBox {
+.gray-mode .howToBox,
+.gray-mode .optionsBox {
   background-image: none;
   background-color: #4d4d4d;
   border: 2px solid #b3b3b3;
@@ -328,7 +330,8 @@ h1 {
   margin: 0;
 }
 
-.gray-mode .settingsBox > label {
+.gray-mode .settingsBox > label,
+.gray-mode .optionsBox > label {
   color: #e6e6e6;
   font-weight: 500;
 }
@@ -909,6 +912,12 @@ button {
   height: 120px;
   position: relative;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.tile:nth-of-type(3n) > img {
+  filter: blur(2.5px)
+  /* brightness(.8); */
 }
 
 .picture {
@@ -921,6 +930,7 @@ button {
   width: 120px;
   position: absolute;
   top: 80px;
+  z-index: 20;
 }
 
 .nameTag {
@@ -988,16 +998,140 @@ h2 {
   margin: 0;
 }
 
+.blotterSelectorBox {
+  display: grid;
+  position: relative;
+  grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
+  grid-template-rows: auto;
+  gap: 5px;
+  margin: 10px 0;
+}
+
 select {
   height: 34px;
   font-family: proxima-soft, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  border: 2px solid #78DD62;
+  border: 2px solid #A06FCE;
   border-radius: 17px;
-  background-color: #FFE886;
-  margin: 0;
+  background-color: #FCC9E6;
   padding: 0 10px;
+}
+
+.dark-mode select {
+  background-color: #866C00;
+  color: #fffce9;
+  border: 2px solid #FFD00D;
+}
+
+.gray-mode select {
+  background-color: #4d4d4d;
+  border: 2px solid #b3b3b3;
+  color: #e6e6e6;
+  font-weight: 400;
+}
+
+.setDropdown {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.optionsButtonBorder {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #A06FCE;
+}
+
+.optionsButton {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 116px;
+  height: 30px;
+  margin: 2px;
+  border-radius: 15px;
+  border: none;
+  background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 20;
+
+}
+
+.dark-mode .optionsButton {
+  color: #fffce9;
+  background-image: none;
+  background-color: #866c00;}
+.optionsBox {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin-top: -4px;
+  width: 100%;
+  border-radius: 0 15px 15px 15px;
+  border: 2px solid #a06fce;
+  background-image: linear-gradient(to bottom, #e7dbf3, #fee4f3);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  z-index: 10;
+  grid-template-areas:
+    "opla opdr"
+    /* "divider divider" */
+    "rola roto"
+    /* "divider divider" */
+    "oula outo"
+    /* "divider divider" */
+    "blla blto"
+    /* "divider divider" */
+    "rala rato";
+}
+
+.optionsBox > label {
+  text-align: left;
+  font-size: 20px;
+  margin: 0;
+}
+
+.options-expanded .optionsButton,
+.options-expanded .optionsButtonBorder {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.opacityLabel {
+  grid-area: opla;
+}
+
+.opacityDropdown {
+  grid-area: opdr;
+}
+
+.rotationLabel {
+  grid-area: rola;
+}
+
+.outlineLabel {
+  grid-area: oula;
+}
+
+.blurLabel {
+  grid-area: blla;
+}
+
+.randomLabel {
+  grid-area: rala;
 }
 
 .blotter {
@@ -1049,7 +1183,7 @@ select {
 }
 
 .dark-mode .blotter > a {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .red {
@@ -1138,7 +1272,6 @@ select {
   margin-top: 30px;
   margin-left: 20px;
   z-index: 10;
-  /* opacity: 0; */
 }
 
 .footer {
@@ -1267,247 +1400,4 @@ select {
 
 .gray-mode .bottomBar {
   display: none;
-}
-
-@media only screen and (max-width: 630px) {
-  body {
-    width: 100%;
-  }
-
-  .container {
-    overflow: hidden;
-    background-color: #f9f7f1;
-  }
-
-  .dark-mode .container {
-    overflow: hidden;
-    background-color: #231e11;
-  }
-
-  .gray-mode .container {
-    overflow: hidden;
-    background-color: #1a1a1a;
-  }
-
-  .navbar {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  label,
-  h2 {
-    font-size: 50px;
-  }
-
-  .howToButtonBorder {
-    grid-column-end: 4;
-    height: 50px;
-    width: 100%;
-    border-radius: 25px;
-  }
-
-  .howToButton {
-    grid-column-end: 4;
-    width: 241px;
-    height: 46px;
-    border-radius: 23px;
-    font-size: 30px;
-  }
-
-  .howToBox {
-    grid-column-start: 2;
-    font-size: 30px;
-  }
-
-  .settingsButtonBorder {
-    grid-column-start: 5;
-    height: 50px;
-    border-radius: 25px;
-  }
-
-  .settingsButton {
-    grid-column-start: 5;
-    width: 241px;
-    height: 46px;
-    border-radius: 23px;
-    font-size: 30px;
-  }
-
-  .settingsBox {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-start: 4;
-  }
-
-  .settingsBox > label {
-    font-size: 30px;
-  }
-  .flexButtons {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-content: space-between;
-  }
-
-  .light,
-  .dark,
-  .gray {
-    width: 110px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: 20px;
-  }
-
-  .exclusionBox {
-    grid-template-areas:
-      "top top top top top top top"
-      "left input input input button button right";
-  }
-
-  .typeAName,
-  .copy {
-    height: 50px;
-    border-radius: 25px;
-    font-size: 30px;
-  }
-
-  .typeAName {
-    margin-right: 5px;
-    width: 365px;
-  }
-
-  .toggle {
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    font-size: 30px;
-    margin-right: 5px;
-    padding-top: 4px;
-  }
-
-  .copy {
-    margin-left: 5px;
-    width: 240px;
-  }
-
-  ul.downshift-options > li {
-    font-size: 30px;
-    padding: 10px;
-  }
-
-  .facesBox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  .faceWrap {
-    margin: 10px 12px;
-  }
-
-  .faceIcon {
-    height: 90px;
-    width: 90px;
-    border-radius: 50px;
-  }
-
-  .faceName {
-    font-size: 20px;
-  }
-
-  .buttons {
-    height: 60px;
-    margin: 30px auto 40px;
-  }
-
-  .create {
-    border-radius: 30px;
-    font-size: 40px;
-    /* border: 3px solid #FF791F; */
-  }
-
-  .blotter {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .blotter > a {
-    width: 90px;
-    height: 90px;
-    border-radius: 45px;
-    margin: 10px 18px;
-  }
-
-  .cursor {
-    width: 60px;
-    margin-top: 50px;
-    margin-left: 40px;
-  }
-
-  .red {
-    order: 0;
-  }
-
-  .orange {
-    order: 5;
-  }
-
-  .yellow {
-    order: 1;
-  }
-
-  .green {
-    order: 6;
-  }
-
-  .teal {
-    order: 2;
-  }
-
-  .blue {
-    order: 7;
-  }
-
-  .purple {
-    order: 3;
-  }
-
-  .pink {
-    order: 8;
-  }
-
-  .gold {
-    order: 4;
-  }
-
-  .bottomBar {
-    width: 630px;
-  }
-
-  /* .overlap{
-    margin-top: -12px;
-    font-weight: 600;
-  } */
-
-  /* .buttons{
-    width: 480px;
-  }
-  .boardBox{
-    width: 480px;
-    height: 480px;
-  }
-  .boardTiles{
-    width: 470px;
-    height: 470px;
-  }
-  .blotter{
-    width: 480px;
-  }
-  .blotter > div {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    margin: 5px;
-  } */
 }

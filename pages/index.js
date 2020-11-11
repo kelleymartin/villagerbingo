@@ -4,7 +4,7 @@ import html2canvas from "html2canvas";
 
 import villagers from "../data/villagers.json";
 import urlFormat, { encodeState } from "../lib/url-encode";
-import { BLOTTER_BY_ID, BLOTTER_SETS } from "../lib/blotters";
+import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
 import { VillagerDropdown } from "../components/villager-dropdown";
 
 const ALL_THEMES = [
@@ -43,9 +43,11 @@ export default class Home extends React.Component {
     gameState: urlFormat.decodeState(this.props.initialURL),
     settingsExpanded: false,
     howToExpanded: false,
+    optionsExpanded: false,
     settings: {
       theme: "light",
       blotter: "red",
+      opacity: "100%",
     },
     blotterSetId: "color",
   };
@@ -106,11 +108,14 @@ export default class Home extends React.Component {
     }
     const blotter = BLOTTER_BY_ID.get(blotterId);
 
+    const blotOpacity = OPACITIES;
+
     this.setState({
       blotterSetId: blotter.setId,
       settings: {
         theme: localStorage.getItem("theme") || "light",
         blotter: blotterId,
+        opacity: blotOpacity,
       },
     });
   }
@@ -165,12 +170,13 @@ export default class Home extends React.Component {
 
     const angleRange = 90;
     // angle between -45 and 44
-    const angle = -45 + (Math.random() * 83) % angleRange;
+    const angle = -45 + Math.floor((Math.random() * 83)) % angleRange;
 
     const blotStyle = {
       top: `${top}px`,
       left: `${left}px`,
       transform: `rotate(${angle}deg)`,
+      opacity: `100%`,
       // transform: `rotate(${angle}deg)`,
       angle
     };
@@ -230,7 +236,7 @@ export default class Home extends React.Component {
           draggable="false"
           alt={`${villager.name}, the ${villager.personality} ${villager.species}`}
         />
-        <img className="starIndicator" src="/StarPieceRareCropped.png"></img>
+        {/* <img className="starIndicator" src="/StarPieceRareCropped.png"></img> */}
         <div className="nameTagWrap">
           <p
             className="nameTag"
@@ -301,6 +307,56 @@ export default class Home extends React.Component {
           }, afterSelectionApplied);
         }}
       />
+    );
+  }
+
+  renderVillagerSetSelector() {
+    const villagerSets = [
+      {
+        value: "easy",
+        label: "Easy",
+      },
+      {
+        value: "standard",
+        label: "Standard",
+      },
+      {
+        value: "hard",
+        label: "Hard",
+      },
+      {
+        value: "species-only",
+        label: "Species per Tile",
+      },
+      {
+        value: "personality-species",
+        label: "Species + Personality",
+      },
+    ];
+
+    return (
+      <fieldset>
+        <legend>Villager Set:</legend>
+
+        {villagerSets.map((set) => (
+          <React.Fragment key={set.value}>
+            <label style={{ display: "block" }}>
+              <input
+                type="radio"
+                name="villagerset"
+                value={set.value}
+                checked={set.value === this.gameState.villagerSet}
+                onChange={(e) => {
+                  this.setGameState({
+                    villagerSet: set.value,
+                  });
+                }}
+              />{" "}
+              {set.label}
+            </label>
+          </React.Fragment>
+        ))}
+      </fieldset>
     );
   }
 
@@ -402,56 +458,6 @@ export default class Home extends React.Component {
     });
   }
 
-  renderVillagerSetSelector() {
-    const villagerSets = [
-      {
-        value: "easy",
-        label: "Easy",
-      },
-      {
-        value: "standard",
-        label: "Standard",
-      },
-      {
-        value: "hard",
-        label: "Hard",
-      },
-      {
-        value: "species-only",
-        label: "Species per Tile",
-      },
-      {
-        value: "personality-species",
-        label: "Species + Personality",
-      },
-    ];
-
-    return (
-      <fieldset>
-        <legend>Villager Set:</legend>
-
-        {villagerSets.map((set) => (
-          <React.Fragment key={set.value}>
-            <label style={{ display: "block" }}>
-              <input
-                type="radio"
-                name="villagerset"
-                value={set.value}
-                checked={set.value === this.gameState.villagerSet}
-                onChange={(e) => {
-                  this.setGameState({
-                    villagerSet: set.value,
-                  });
-                }}
-              />{" "}
-              {set.label}
-            </label>
-          </React.Fragment>
-        ))}
-      </fieldset>
-    );
-  }
-
   /**
    * @param {'dark'|'gray'|'light'} theme
    */
@@ -518,14 +524,49 @@ export default class Home extends React.Component {
     );
   }
 
+  renderOptions() {
+    if (!this.state.optionsExpanded) {
+      return <></>;
+    }
+
+    return (
+      <div className="optionsBox">
+          <label className="opacityLabel">Opacity:</label>
+          <select classname="opacityDropdown"></select>
+          <div className="divider"></div>
+          <label className="rotationLabel">Rotation:</label>
+          <div className="divider"></div>
+          <label className="outlineLabel">Outline:</label>
+          <div className="divider"></div>
+          <label className="blurLabel">Blur tile:</label>
+          <div className="divider"></div>
+          <label className="randomLabel">Random:</label>
+        </div>
+    );
+  }
+
   renderBlotterSelector() {
     const blotterSet = BLOTTER_SETS.get(this.state.blotterSetId);
+    // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
+
+  // renderOnOffSwitch() {
+  //   return (
+  //     <div class="onoffswitch">
+  //       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"></input>
+  //       <label class="onoffswitch-label" for="myonoffswitch">
+  //         <span class="onoffswitch-inner"></span>
+  //         <span class="onoffswitch-switch"></span>
+  //       </label>
+  //     </div>
+  //   );
+  // }
 
     return (
       <>
         <h2>Choose your marker:</h2>
-
+        <div className="blotterSelectorBox">
         <select
+          className="setDropdown"
           value={this.state.blotterSetId}
           onChange={(e) => {
             e.preventDefault();
@@ -542,6 +583,31 @@ export default class Home extends React.Component {
             );
           })}
         </select>
+
+        <div className="optionsButtonBorder"></div>
+        <button
+        className="optionsButton"
+        onClick={(e) => {
+          e.preventDefault();
+          this.setState((prevState) => ({
+            optionsExpanded: !prevState.optionsExpanded,
+          }));
+        }}>
+          Options
+        </button>
+        {this.renderOptions()}
+
+        {/* <select
+        value={this.state.settings.opacity}>
+
+        {Array.from(OPACITIES.values(), => {
+          return (
+            <option value={OPACITIES} ></option>
+          );
+        })}
+        
+        </select> */}
+        </div>
 
         <div className="blotter">
           {Array.from(blotterSet.items.values(), (blotter) => {
@@ -583,7 +649,7 @@ export default class Home extends React.Component {
   getLogoColor() {
     const blotter = BLOTTER_BY_ID.get(this.state.settings.blotter);
     if (blotter.setId !== "color") {
-      return "red";
+      return "teal";
     }
     return blotter.id;
   }
@@ -594,6 +660,11 @@ export default class Home extends React.Component {
       navbarClasses.push("how-to-expanded");
     } else if (this.state.settingsExpanded) {
       navbarClasses.push("settings-expanded");
+    }
+
+    const optionsClass = ["blotterSelectorBox"];
+    if (this.state.optionsExpanded) {
+      optionsClass.push("options-expanded");
     }
 
     return (
@@ -698,7 +769,7 @@ export default class Home extends React.Component {
               })}
             </div>
 
-            <div className="separator"></div>
+            {/* <div className="separator"></div>
 
             {this.renderVillagerPreselector()}
 
@@ -728,7 +799,7 @@ export default class Home extends React.Component {
                   </a>
                 );
               })}
-            </div>
+            </div> */}
 
             {/* <div className="separator"></div>
 

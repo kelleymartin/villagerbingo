@@ -474,12 +474,12 @@
         "icon": "/Blotters/PltMoneyCropped.png"
       },
       "trees05": {
-        "name": "Palm tree",
-        "icon": "/Blotters/PltPalmCropped.png"
-      },
-      "trees06": {
         "name": "Pear tree",
         "icon": "/Blotters/PltPearCropped.png"
+      },
+      "trees06": {
+        "name": "Palm tree",
+        "icon": "/Blotters/PltPalmCropped.png"
       },
       "trees07": {
         "name": "Bamboo tree",
