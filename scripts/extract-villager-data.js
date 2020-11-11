@@ -16,6 +16,7 @@ const filteredData = Object.values(AAAALL_DATA)
       imageUrl: villager.image_uri,
       bubbleColor: villager["bubble-color"],
       textColor: villager["text-color"],
+      contrastColor: villager["contrast-color"],
     };
   })
   .sort((a, b) => {
