@@ -289,7 +289,7 @@ h1 {
 .settingsBox {
   position: absolute;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   grid-column-start: 4;
   grid-column-end: 7;
@@ -324,7 +324,7 @@ h1 {
 
 .settingsBox > label {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 2;
   text-align: left;
   font-size: 20px;
   margin: 0;
@@ -346,13 +346,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  grid-column-start: 3;
-  grid-column-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .light {
   height: 24px;
-  width: 65px;
+  width: 70px;
   border-radius: 12px;
   font-size: 14px;
   /* margin-left: 5px; */
@@ -364,7 +364,7 @@ h1 {
 .dark,
 .gray {
   height: 24px;
-  width: 65px;
+  width: 70px;
   border-radius: 12px;
   font-size: 14px;
   /* margin-left: 5px; */
