@@ -547,6 +547,12 @@ export default class Home extends React.Component {
 
   renderBlotterSelector() {
     const blotterSet = BLOTTER_SETS.get(this.state.blotterSetId);
+
+    const optionsClass = ["blotterSelectorBox"];
+    if (this.state.optionsExpanded) {
+      optionsClass.push("options-expanded");
+    }
+
     // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
 
     // renderOnOffSwitch() {
@@ -564,7 +570,7 @@ export default class Home extends React.Component {
     return (
       <>
         <h2>Choose your marker:</h2>
-        <div className="blotterSelectorBox">
+        <div className={optionsClass.join(" ")}>
           <select
             className="setDropdown"
             value={this.state.blotterSetId}
@@ -661,11 +667,6 @@ export default class Home extends React.Component {
       navbarClasses.push("how-to-expanded");
     } else if (this.state.settingsExpanded) {
       navbarClasses.push("settings-expanded");
-    }
-
-    const optionsClass = ["blotterSelectorBox"];
-    if (this.state.optionsExpanded) {
-      optionsClass.push("options-expanded");
     }
 
     return (
