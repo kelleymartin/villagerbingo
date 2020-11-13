@@ -22,6 +22,39 @@ const ALL_THEMES = [
   },
 ];
 
+const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
+const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
+const SETTING_TILE_BLUR = "tileBlurEnabled";
+
+// "Random" angles between -50 and 49
+const ANGLES_BY_INDEX = [
+  19,
+  -12,
+  -43,
+  26,
+  -5,
+  -36,
+  33,
+  2,
+  -29,
+  40,
+  9,
+  -22,
+  47,
+  16,
+  -15,
+  -46,
+  23,
+  -8,
+  -39,
+  30,
+  -1,
+  -32,
+  37,
+  6,
+  -25,
+];
+
 function pickRandomColor() {
   const colors = Array.from(BLOTTER_SETS.get("color").items.keys());
   return pickRandom(colors)[0];
@@ -48,6 +81,9 @@ export default class Home extends React.Component {
       theme: "light",
       blotter: "red",
       opacity: "100%",
+      [SETTING_BLOTTER_ROTATION]: false,
+      [SETTING_BLOTTER_OUTLINE]: false,
+      [SETTING_TILE_BLUR]: false,
     },
     blotterSetId: "color",
   };
@@ -116,6 +152,12 @@ export default class Home extends React.Component {
         theme: localStorage.getItem("theme") || "light",
         blotter: blotterId,
         opacity: blotOpacity,
+        [SETTING_BLOTTER_ROTATION]:
+          localStorage.getItem(SETTING_BLOTTER_ROTATION) === "true",
+        [SETTING_BLOTTER_OUTLINE]:
+          localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
+        [SETTING_TILE_BLUR]:
+        localStorage.getItem(SETTING_TILE_BLUR) === "true",
       },
     });
   }
@@ -168,18 +210,25 @@ export default class Home extends React.Component {
       left = 10;
     }
 
-    const angleRange = 90;
-    // angle between -45 and 44
-    const angle = -45 + (Math.floor(Math.random() * 83) % angleRange);
-
     const blotStyle = {
       top: `${top}px`,
       left: `${left}px`,
-      transform: `rotate(${angle}deg)`,
       opacity: `100%`,
-      // transform: `rotate(${angle}deg)`,
-      angle,
     };
+
+    if (this.state.settings.blotterRotationEnabled) {
+      const angle = ANGLES_BY_INDEX[index];
+      blotStyle.transform = `rotate(${angle}deg)`;
+    }
+
+    if (this.state.settings.blotterOutlineEnabled) {
+      // if (blotter.SetId = "color") {
+      //   blotStyle.border = `4px solid white`;
+      // }
+      // else {
+      blotStyle.filter = `drop-shadow(2px 2px 0 #FFF) drop-shadow(-2px -2px 0 #FFF) drop-shadow(2px -2px 0 #FFF) drop-shadow(-2px 2px 0 #FFF)`;
+      // }
+    }
 
     const blotterId = this.state.settings.blotter;
     const blotter = BLOTTER_BY_ID.get(blotterId);
@@ -201,6 +250,14 @@ export default class Home extends React.Component {
     const title = isSelected
       ? `Unmark ${villager.name}`
       : `Mark ${villager.name} as seen`;
+
+      const tileStyle = {
+        filter: `blur(0px)`
+      }
+
+      if (this.state.settings.tileBlurEnabled) {
+        tileStyle.filter = `blur(3px)`;
+      }
 
     return (
       <a
@@ -231,6 +288,7 @@ export default class Home extends React.Component {
       >
         <img
           src={villager.imageUrl}
+          style={tileStyle}
           className="picture"
           crossOrigin="anonymous"
           draggable="false"
@@ -532,15 +590,46 @@ export default class Home extends React.Component {
     return (
       <div className="optionsBox">
         <label className="opacityLabel">Opacity:</label>
-        <select classname="opacityDropdown"></select>
+        <select className="opacityDropdown">
+          <option>100%</option>
+        </select>
         <div className="divider"></div>
         <label className="rotationLabel">Rotation:</label>
+        {this.renderOnOffSwitch({ id: SETTING_BLOTTER_ROTATION })}
         <div className="divider"></div>
         <label className="outlineLabel">Outline:</label>
+        {this.renderOnOffSwitch({ id: SETTING_BLOTTER_OUTLINE })}
         <div className="divider"></div>
         <label className="blurLabel">Blur tile:</label>
+        {this.renderOnOffSwitch({ id: SETTING_TILE_BLUR })}
         <div className="divider"></div>
         <label className="randomLabel">Random:</label>
+      </div>
+    );
+  }
+
+  // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
+
+  renderOnOffSwitch({ id, settingsKey = id, name = id }) {
+    return (
+      <div className="onoffswitch">
+        <input
+          type="checkbox"
+          name={name}
+          className="onoffswitch-checkbox"
+          id={id}
+          tabIndex="0"
+          checked={!!this.state.settings[settingsKey]}
+          onChange={(e) => {
+            this.setSettings({
+              [settingsKey]: e.currentTarget.checked,
+            });
+          }}
+        ></input>
+        <label className="onoffswitch-label" htmlFor={id}>
+          <span className="onoffswitch-inner"></span>
+          <span className="onoffswitch-switch"></span>
+        </label>
       </div>
     );
   }
@@ -552,20 +641,6 @@ export default class Home extends React.Component {
     if (this.state.optionsExpanded) {
       optionsClass.push("options-expanded");
     }
-
-    // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
-
-    // renderOnOffSwitch() {
-    //   return (
-    //     <div class="onoffswitch">
-    //       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"></input>
-    //       <label class="onoffswitch-label" for="myonoffswitch">
-    //         <span class="onoffswitch-inner"></span>
-    //         <span class="onoffswitch-switch"></span>
-    //       </label>
-    //     </div>
-    //   );
-    // }
 
     return (
       <>

@@ -1,6 +1,6 @@
 .onoffswitch {
   position: relative;
-  width: 95px;
+  width: 80px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -16,6 +16,7 @@
   cursor: pointer;
   border: 2px solid #78dd62;
   border-radius: 20px;
+  margin: 0;
 }
 .onoffswitch-inner {
   display: block;
@@ -28,11 +29,10 @@
   display: block;
   float: left;
   width: 50%;
-  height: 34px;
+  height: 20px;
   padding: 0;
-  line-height: 34px;
-  font-size: 25px;
-  color: white;
+  line-height: 20px;
+  font-size: 20px;
   font-family: proxima-soft, sans-serif;
   font-weight: bold;
   box-sizing: border-box;
@@ -42,24 +42,26 @@
   padding-left: 6px;
   background-color: #e6e6e6;
   color: #2f831c;
+  text-align: left;
+  
 }
 .onoffswitch-inner:after {
   content: "OFF";
   padding-right: 6px;
-  background-color: #e6e6e6;
+  background-color: transparent;
   color: #4d4d4d;
   text-align: right;
 }
 .onoffswitch-switch {
   display: block;
-  width: 26px;
-  margin: 4px;
+  width: 18px;
+  height: 18px;
+  margin: 3px;
   background: #4d4d4d;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 57px;
-  border: 2px solid #78dd62;
+  right: 55px;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
 }
