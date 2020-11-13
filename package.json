@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "extract-villagers": "node scripts/extract-villager-data.js",
     "test": "mocha"
   },
   "dependencies": {

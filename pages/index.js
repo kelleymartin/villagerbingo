@@ -170,7 +170,7 @@ export default class Home extends React.Component {
 
     const angleRange = 90;
     // angle between -45 and 44
-    const angle = -45 + Math.floor((Math.random() * 83)) % angleRange;
+    const angle = -45 + (Math.floor(Math.random() * 83) % angleRange);
 
     const blotStyle = {
       top: `${top}px`,
@@ -178,7 +178,7 @@ export default class Home extends React.Component {
       transform: `rotate(${angle}deg)`,
       opacity: `100%`,
       // transform: `rotate(${angle}deg)`,
-      angle
+      angle,
     };
 
     const blotterId = this.state.settings.blotter;
@@ -242,7 +242,7 @@ export default class Home extends React.Component {
             className="nameTag"
             style={{
               backgroundColor: villager.bubbleColor,
-              color: villager.textColor,
+              color: villager.contrastColor,
             }}
           >
             {villager.name}
@@ -531,17 +531,17 @@ export default class Home extends React.Component {
 
     return (
       <div className="optionsBox">
-          <label className="opacityLabel">Opacity:</label>
-          <select classname="opacityDropdown"></select>
-          <div className="divider"></div>
-          <label className="rotationLabel">Rotation:</label>
-          <div className="divider"></div>
-          <label className="outlineLabel">Outline:</label>
-          <div className="divider"></div>
-          <label className="blurLabel">Blur tile:</label>
-          <div className="divider"></div>
-          <label className="randomLabel">Random:</label>
-        </div>
+        <label className="opacityLabel">Opacity:</label>
+        <select classname="opacityDropdown"></select>
+        <div className="divider"></div>
+        <label className="rotationLabel">Rotation:</label>
+        <div className="divider"></div>
+        <label className="outlineLabel">Outline:</label>
+        <div className="divider"></div>
+        <label className="blurLabel">Blur tile:</label>
+        <div className="divider"></div>
+        <label className="randomLabel">Random:</label>
+      </div>
     );
   }
 
@@ -549,55 +549,56 @@ export default class Home extends React.Component {
     const blotterSet = BLOTTER_SETS.get(this.state.blotterSetId);
     // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
 
-  // renderOnOffSwitch() {
-  //   return (
-  //     <div class="onoffswitch">
-  //       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"></input>
-  //       <label class="onoffswitch-label" for="myonoffswitch">
-  //         <span class="onoffswitch-inner"></span>
-  //         <span class="onoffswitch-switch"></span>
-  //       </label>
-  //     </div>
-  //   );
-  // }
+    // renderOnOffSwitch() {
+    //   return (
+    //     <div class="onoffswitch">
+    //       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"></input>
+    //       <label class="onoffswitch-label" for="myonoffswitch">
+    //         <span class="onoffswitch-inner"></span>
+    //         <span class="onoffswitch-switch"></span>
+    //       </label>
+    //     </div>
+    //   );
+    // }
 
     return (
       <>
         <h2>Choose your marker:</h2>
         <div className="blotterSelectorBox">
-        <select
-          className="setDropdown"
-          value={this.state.blotterSetId}
-          onChange={(e) => {
-            e.preventDefault();
-            this.setState({
-              blotterSetId: e.currentTarget.value,
-            });
-          }}
-        >
-          {Array.from(BLOTTER_SETS.values(), (blotterSet) => {
-            return (
-              <option value={blotterSet.id} key={blotterSet.id}>
-                {blotterSet.name}
-              </option>
-            );
-          })}
-        </select>
+          <select
+            className="setDropdown"
+            value={this.state.blotterSetId}
+            onChange={(e) => {
+              e.preventDefault();
+              this.setState({
+                blotterSetId: e.currentTarget.value,
+              });
+            }}
+          >
+            {Array.from(BLOTTER_SETS.values(), (blotterSet) => {
+              return (
+                <option value={blotterSet.id} key={blotterSet.id}>
+                  {blotterSet.name}
+                </option>
+              );
+            })}
+          </select>
 
-        <div className="optionsButtonBorder"></div>
-        <button
-        className="optionsButton"
-        onClick={(e) => {
-          e.preventDefault();
-          this.setState((prevState) => ({
-            optionsExpanded: !prevState.optionsExpanded,
-          }));
-        }}>
-          Options
-        </button>
-        {this.renderOptions()}
+          <div className="optionsButtonBorder"></div>
+          <button
+            className="optionsButton"
+            onClick={(e) => {
+              e.preventDefault();
+              this.setState((prevState) => ({
+                optionsExpanded: !prevState.optionsExpanded,
+              }));
+            }}
+          >
+            Options
+          </button>
+          {this.renderOptions()}
 
-        {/* <select
+          {/* <select
         value={this.state.settings.opacity}>
 
         {Array.from(OPACITIES.values(), => {
