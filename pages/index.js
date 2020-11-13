@@ -156,8 +156,7 @@ export default class Home extends React.Component {
           localStorage.getItem(SETTING_BLOTTER_ROTATION) === "true",
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
-        [SETTING_TILE_BLUR]:
-        localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
       },
     });
   }
@@ -251,14 +250,14 @@ export default class Home extends React.Component {
       ? `Unmark ${villager.name}`
       : `Mark ${villager.name} as seen`;
 
-      const tileStyle = {
-        filter: `blur(0px)`
-      }
+    const tileStyle = {
+      filter: `blur(0px)`,
+    };
 
-      if (this.state.settings.tileBlurEnabled) {
-        tileStyle.filter = `blur(3px)`;
-      }
-
+    if (this.state.settings.tileBlurEnabled && isSelected) {
+      tileStyle.filter = `blur(3px)`;
+    }
+//djhnghvewbnref
     return (
       <a
         href="#"
