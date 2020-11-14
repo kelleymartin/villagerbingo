@@ -25,6 +25,7 @@ const ALL_THEMES = [
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
 const SETTING_TILE_BLUR = "tileBlurEnabled";
+const SETTING_SET_RANDOM = "setRandomEnabled";
 
 // "Random" angles between -50 and 49
 const ANGLES_BY_INDEX = [
@@ -84,6 +85,7 @@ export default class Home extends React.Component {
       [SETTING_BLOTTER_ROTATION]: false,
       [SETTING_BLOTTER_OUTLINE]: false,
       [SETTING_TILE_BLUR]: false,
+      [SETTING_SET_RANDOM]: false,
     },
     blotterSetId: "color",
   };
@@ -156,7 +158,10 @@ export default class Home extends React.Component {
           localStorage.getItem(SETTING_BLOTTER_ROTATION) === "true",
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
-        [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_TILE_BLUR]:
+          localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_SET_RANDOM]:
+          localStorage.getItem(SETTING_SET_RANDOM) === "true",
       },
     });
   }
@@ -592,17 +597,18 @@ export default class Home extends React.Component {
         <select className="opacityDropdown">
           <option>100%</option>
         </select>
-        <div className="divider"></div>
+        <div className="box-divider"></div>
         <label className="rotationLabel">Rotation:</label>
         {this.renderOnOffSwitch({ id: SETTING_BLOTTER_ROTATION })}
-        <div className="divider"></div>
-        <label className="outlineLabel">Outline:</label>
+        <div className="box-divider"></div>
+        <label className="outlineLabel">White outline:</label>
         {this.renderOnOffSwitch({ id: SETTING_BLOTTER_OUTLINE })}
-        <div className="divider"></div>
-        <label className="blurLabel">Blur tile:</label>
+        <div className="box-divider"></div>
+        <label className="blurLabel">Blur selected tile:</label>
         {this.renderOnOffSwitch({ id: SETTING_TILE_BLUR })}
-        <div className="divider"></div>
-        <label className="randomLabel">Random:</label>
+        <div className="box-divider"></div>
+        <label className="randomLabel">Random within set:</label>
+        {this.renderOnOffSwitch({ id: SETTING_SET_RANDOM })}
       </div>
     );
   }

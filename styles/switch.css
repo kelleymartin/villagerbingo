@@ -4,6 +4,7 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  justify-self: end;
 }
 .onoffswitch-checkbox {
   position: absolute;

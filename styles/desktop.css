@@ -461,7 +461,7 @@ fieldset {
   border: 2px solid #b3b3b3;
 }
 
-label {
+.exclusionBox > label {
   font-weight: 600;
   font-size: 36px;
   margin: 0 0 10px;
@@ -1070,50 +1070,67 @@ select {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-column-start: 5;
-  grid-column-end: 7;
+  grid-column-start: 3;
+  grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 3;
   align-items: center;
   margin-top: -4px;
   width: 100%;
-  border-radius: 0 15px 15px 15px;
+  border-radius: 15px 0 15px 15px;
   border: 2px solid #a06fce;
   background-image: linear-gradient(to bottom, #e7dbf3, #fee4f3);
   font-size: 20px;
   font-weight: 500;
-  padding: 10px;
+  padding: 5px 10px;
   z-index: 10;
-  grid-template-areas:
-    "opla opdr"
-    /* "divider divider" */
-    "rola roto"
-    /* "divider divider" */
-    "oula outo"
-    /* "divider divider" */
-    "blla blto"
-    /* "divider divider" */
-    "rala rato";
 }
 
 .optionsBox > label {
   text-align: left;
   font-size: 20px;
   margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.onoffswitch {
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .options-expanded .optionsButton,
 .options-expanded .optionsButtonBorder {
+  height: 39px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.opacityLabel {
-  grid-area: opla;
+.box-divider {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 2px;
+  width: 100%;
+  margin: 3px 0;
+  border-radius: 1px;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 64, 64, 0.5),
+    rgba(255, 121, 31, 0.5),
+    rgba(255, 208, 13, 0.5),
+    rgba(120, 221, 98, 0.5),
+    rgba(63, 216, 224, 0.5),
+    rgba(9, 97, 246, 0.5),
+    rgba(160, 111, 206, 0.5),
+    rgba(249, 147, 206, 0.5),
+    rgba(192, 171, 114, 0.5)
+  );
 }
 
 .opacityDropdown {
-  grid-area: opdr;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* grid-area: opdr; */
   height: 24px;
   font-size: 16px;
   width: 80px;
@@ -1123,34 +1140,6 @@ select {
 /* .opacityDropdown > option {
   padding: 0;
 } */
-
-.rotationLabel {
-  grid-area: rola;
-}
-
-#SETTING_BLOTTER_ROTATION {
-  grid-area: roto;
-}
-
-.outlineLabel {
-  grid-area: oula;
-}
-
-#SETTING_BLOTTER_OUTLINE {
-  grid-area: outo;
-}
-
-.blurLabel {
-  grid-area: blla;
-}
-
-#SETTING_TILE_BLUR {
-  grid-area: blto;
-}
-
-.randomLabel {
-  grid-area: rala;
-}
 
 .blotter {
   display: flex;
@@ -1286,7 +1275,8 @@ select {
 
 .cursor {
   width: 40px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  justify-self: end;
   margin-left: 20px;
   z-index: 10;
 }
