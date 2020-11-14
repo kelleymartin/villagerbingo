@@ -304,7 +304,7 @@ export default class Home extends React.Component {
             className="nameTag"
             style={{
               backgroundColor: villager.bubbleColor,
-              color: villager.contrastColor,
+              color: villager.textColor,
             }}
           >
             {villager.name}
