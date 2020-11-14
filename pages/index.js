@@ -24,6 +24,7 @@ const ALL_THEMES = [
 
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
+const SETTING_BLOTTER_OPACITY = "blotterOpacity";
 const SETTING_TILE_BLUR = "tileBlurEnabled";
 const SETTING_SET_RANDOM = "setRandomEnabled";
 
@@ -81,7 +82,7 @@ export default class Home extends React.Component {
     settings: {
       theme: "light",
       blotter: "red",
-      opacity: "100%",
+      [SETTING_BLOTTER_OPACITY]: "100%",
       [SETTING_BLOTTER_ROTATION]: false,
       [SETTING_BLOTTER_OUTLINE]: false,
       [SETTING_TILE_BLUR]: false,
@@ -146,20 +147,22 @@ export default class Home extends React.Component {
     }
     const blotter = BLOTTER_BY_ID.get(blotterId);
 
-    const blotOpacity = OPACITIES;
+    const storedOpacity = localStorage.getItem(SETTING_BLOTTER_OPACITY);
+    const blotterOpacity = OPACITIES.includes(storedOpacity)
+      ? storedOpacity
+      : "100%";
 
     this.setState({
       blotterSetId: blotter.setId,
       settings: {
         theme: localStorage.getItem("theme") || "light",
         blotter: blotterId,
-        opacity: blotOpacity,
+        [SETTING_BLOTTER_OPACITY]: blotterOpacity,
         [SETTING_BLOTTER_ROTATION]:
           localStorage.getItem(SETTING_BLOTTER_ROTATION) === "true",
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
-        [SETTING_TILE_BLUR]:
-          localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
         [SETTING_SET_RANDOM]:
           localStorage.getItem(SETTING_SET_RANDOM) === "true",
       },
@@ -217,7 +220,7 @@ export default class Home extends React.Component {
     const blotStyle = {
       top: `${top}px`,
       left: `${left}px`,
-      opacity: `100%`,
+      opacity: this.state.settings[SETTING_BLOTTER_OPACITY],
     };
 
     if (this.state.settings.blotterRotationEnabled) {
@@ -262,7 +265,7 @@ export default class Home extends React.Component {
     if (this.state.settings.tileBlurEnabled && isSelected) {
       tileStyle.filter = `blur(3px)`;
     }
-//djhnghvewbnref
+    //djhnghvewbnref
     return (
       <a
         href="#"
@@ -613,8 +616,6 @@ export default class Home extends React.Component {
     );
   }
 
-  // const blotOpacity = OPACITIES.get(this.state.settings.opacity);
-
   renderOnOffSwitch({ id, settingsKey = id, name = id }) {
     return (
       <div className="onoffswitch">
@@ -684,16 +685,23 @@ export default class Home extends React.Component {
           </button>
           {this.renderOptions()}
 
-          {/* <select
-        value={this.state.settings.opacity}>
-
-        {Array.from(OPACITIES.values(), => {
-          return (
-            <option value={OPACITIES} ></option>
-          );
-        })}
-        
-        </select> */}
+          <select
+            value={this.state.settings[SETTING_BLOTTER_OPACITY]}
+            onChange={(e) => {
+              e.preventDefault();
+              this.setSettings({
+                [SETTING_BLOTTER_OPACITY]: e.currentTarget.value,
+              });
+            }}
+          >
+            {Array.from(OPACITIES, (opacityPct) => {
+              return (
+                <option key={opacityPct} value={opacityPct}>
+                  {opacityPct}
+                </option>
+              );
+            })}
+          </select>
         </div>
 
         <div className="blotter">
