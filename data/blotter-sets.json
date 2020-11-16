@@ -1,0 +1,557 @@
+{
+  "celebrate": {
+    "name": "Celebration",
+    "items": {
+      "celebrate00": {
+        "name": "Balloon",
+        "icon": "/Blotters/BalloonCropped.png"
+      },
+      "celebrate01": {
+        "name": "Pinwheel",
+        "icon": "/Blotters/WindmillCropped.png"
+      },
+      "celebrate02": {
+        "name": "Party popper",
+        "icon": "/Blotters/CrackerCropped.png"
+      },
+      "celebrate03": {
+        "name": "Music note",
+        "icon": "/Blotters/MusicCropped.png"
+      },
+      "celebrate04": {
+        "name": "Cupcake",
+        "icon": "/Blotters/BdayCupcakeCropped.png"
+      },
+      "celebrate05": {
+        "name": "Bubbles",
+        "icon": "/Blotters/SyabonCropped.png"
+      },
+      "celebrate06": {
+        "name": "Tweeter",
+        "icon": "/Blotters/BlowRollItemCropped.png"
+      },
+      "celebrate07": {
+        "name": "Tambourine",
+        "icon": "/Blotters/TambourineCropped.png"
+      }
+    }
+  },
+  "closet": {
+    "name": "Closet items",
+    "items": {
+      "closet00": {
+        "name": "Tops",
+        "icon": "/Blotters/TopsCropped.png"
+      },
+      "closet01": {
+        "name": "Bottoms",
+        "icon": "/Blotters/BottomsCropped.png"
+      },
+      "closet2": {
+        "name": "Dress-up",
+        "icon": "/Blotters/OnepieceCropped.png"
+      },
+      "closet03": {
+        "name": "Headwear",
+        "icon": "/Blotters/CapCropped.png"
+      },
+      "closet04": {
+        "name": "Accessoires",
+        "icon": "/Blotters/GlassesCropped.png"
+      },
+      "closet05": {
+        "name": "Socks",
+        "icon": "/Blotters/SocksCropped.png"
+      },
+      "closet06": {
+        "name": "Shoes",
+        "icon": "/Blotters/ShoesCropped.png"
+      },
+      "closet07": {
+        "name": "Bags",
+        "icon": "/Blotters/BagCropped.png"
+      }
+    }
+  },
+  "fall": {
+    "name": "Fall",
+    "items": {
+      "fall00": {
+        "name": "Maple leaf",
+        "icon": "/Blotters/AutumnLeafCropped.png"
+      },
+      "fall01": {
+        "name": "Skinny mushroom",
+        "icon": "/Blotters/Mush2Cropped.png"
+      },
+      "fall02": {
+        "name": "Flat mushroom",
+        "icon": "/Blotters/Mush3Cropped.png"
+      },
+      "fall03": {
+        "name": "Acorn",
+        "icon": "/Blotters/DIYAcornCropped.png"
+      },
+      "fall04": {
+        "name": "Elegant mushroom",
+        "icon": "/Blotters/Mush0Cropped.png"
+      },
+      "fall05": {
+        "name": "Pinecone",
+        "icon": "/Blotters/DIYPineconeCropped.png"
+      },
+      "fall06": {
+        "name": "Rare mushroom",
+        "icon": "/Blotters/Mush4Cropped.png"
+      },
+      "fall07": {
+        "name": "Round mushroom",
+        "icon": "/Blotters/Mush1Cropped.png"
+      }
+    }
+  },
+  "fish": {
+    "name": "Fish",
+    "items": {
+      "fish00": {
+        "name": "Oarfish",
+        "icon": "/Blotters/Fish69Cropped.png"
+      },
+      "fish01": {
+        "name": "Puffer fish",
+        "icon": "/Blotters/Fish45Cropped.png"
+      },
+      "fish02": {
+        "name": "Mahi-mahi",
+        "icon": "/Blotters/Fish82Cropped.png"
+      },
+      "fish03": {
+        "name": "Sea bass",
+        "icon": "/Blotters/Fish48Cropped.png"
+      },
+      "fish04": {
+        "name": "Coelacanth",
+        "icon": "/Blotters/Fish63Cropped.png"
+      },
+      "fish05": {
+        "name": "Great white shark",
+        "icon": "/Blotters/Fish62Cropped.png"
+      },
+      "fish06": {
+        "name": "Ocean sunfish",
+        "icon": "/Blotters/Fish60Cropped.png"
+      },
+      "fish07": {
+        "name": "Betta",
+        "icon": "/Blotters/Fish77Cropped.png"
+      }
+    }
+  },
+  "flowers": {
+    "name": "Flowers",
+    "items": {
+      "flowers00": {
+        "name": "Red pansy",
+        "icon": "/Blotters/RedPansy.svg"
+      },
+      "flowers01": {
+        "name": "Orange hyacinth",
+        "icon": "/Blotters/OrangeHyacinth.svg"
+      },
+      "flowers02": {
+        "name": "Yellow lily",
+        "icon": "/Blotters/YellowLily.svg"
+      },
+      "flowers03": {
+        "name": "Green mum",
+        "icon": "/Blotters/GreenMum@2x.png"
+      },
+      "flowers04": {
+        "name": "Blue rose",
+        "icon": "/Blotters/BlueRose.svg"
+      },
+      "flowers05": {
+        "name": "Purple windflower",
+        "icon": "/Blotters/PurpleWindflower.svg"
+      },
+      "flowers06": {
+        "name": "Pink cosmo",
+        "icon": "/Blotters/PinkCosmo.svg"
+      },
+      "flowers07": {
+        "name": "Black tulip",
+        "icon": "/Blotters/BlackTulip.svg"
+      }
+    }
+  },
+  "fruit": {
+    "name": "Fruits & veggies",
+    "items": {
+      "fruit00": {
+        "name": "Cherries",
+        "icon": "/Blotters/CherryCropped.png"
+      },
+      "fruit01": {
+        "name": "Apple",
+        "icon": "/Blotters/AppleCropped.png"
+      },
+      "fruit02": {
+        "name": "Pumpkin",
+        "icon": "/Blotters/SquashOrangeCropped.png"
+      },
+      "fruit03": {
+        "name": "Orange",
+        "icon": "/Blotters/OrangeCropped.png"
+      },
+      "fruit04": {
+        "name": "Peach",
+        "icon": "/Blotters/PeachCropped.png"
+      },
+      "fruit05": {
+        "name": "Coconut",
+        "icon": "/Blotters/CoconutCropped.png"
+      },
+      "fruit06": {
+        "name": "Pear",
+        "icon": "/Blotters/PearCropped.png"
+      },
+      "fruit07": {
+        "name": "Turnip",
+        "icon": "/Blotters/KabuCropped.png"
+      }
+    }
+  },
+  "insects": {
+    "name": "Insects",
+    "items": {
+      "insect00": {
+        "name": "Scorpion",
+        "icon": "/Blotters/Ins63Cropped.png"
+      },
+      "insect01": {
+        "name": "Goliath beetle",
+        "icon": "/Blotters/Ins55Cropped.png"
+      },
+      "insect02": {
+        "name": "Tarantula",
+        "icon": "/Blotters/Ins62Cropped.png"
+      },
+      "insect03": {
+        "name": "Wasp",
+        "icon": "/Blotters/Ins12Cropped.png"
+      },
+      "insect04": {
+        "name": "Cicada shell",
+        "icon": "/Blotters/Ins69Cropped.png"
+      },
+      "insect05": {
+        "name": "Orchid mantis",
+        "icon": "/Blotters/Ins16Cropped.png"
+      },
+      "insect06": {
+        "name": "Banded dragonfly",
+        "icon": "/Blotters/Ins24Cropped.png"
+      },
+      "insect07": {
+        "name": "Queen Alexandra's birdwing",
+        "icon": "/Blotters/Ins8Cropped.png"
+      }
+    }
+  },
+  "materials": {
+    "name": "Materials",
+    "items": {
+      "materials00": {
+        "name": "Bamboo",
+        "icon": "/Blotters/DIYBambooCropped.png"
+      },
+      "materials01": {
+        "name": "Weeds",
+        "icon": "/Blotters/WeedCropped.png"
+      },
+      "materials02": {
+        "name": "Gold nugget",
+        "icon": "/Blotters/Gold_OreCropped.png"
+      },
+      "materials03": {
+        "name": "Clay",
+        "icon": "/Blotters/OreClayCropped.png"
+      },
+      "materials04": {
+        "name": "Wood",
+        "icon": "/Blotters/DIYWoodNormalCropped.png"
+      },
+      "materials05": {
+        "name": "Tree branch",
+        "icon": "/Blotters/DIYBranchCropped.png"
+      },
+      "materials06": {
+        "name": "Iron",
+        "icon": "/Blotters/OreIronCropped.png"
+      },
+      "materials07": {
+        "name": "Stone",
+        "icon": "/Blotters/OreStoneCropped.png"
+      }
+    }
+  },
+  "reactions": {
+    "name": "Reactions",
+    "items": {
+      "reactions00": {
+        "name": "Bashfulness",
+        "icon": "/Blotters/BlushingCropped.png"
+      },
+      "reactions01": {
+        "name": "Joy",
+        "icon": "/Blotters/HappyFlowerCropped.png"
+      },
+      "reactions02": {
+        "name": "Shocked",
+        "icon": "/Blotters/SurprisedCropped.png"
+      },
+      "reactions03": {
+        "name": "Flourish",
+        "icon": "/Blotters/DanceCropped.png"
+      },
+      "reactions04": {
+        "name": "Distress",
+        "icon": "/Blotters/FranticCropped.png"
+      },
+      "reactions05": {
+        "name": "Mischief",
+        "icon": "/Blotters/SchemingCropped.png"
+      },
+      "reactions06": {
+        "name": "Haunt",
+        "icon": "/Blotters/AddScaringCropped.png"
+      },
+      "reactions07": {
+        "name": "Greetings",
+        "icon": "/Blotters/GreetingCropped.png"
+      }
+    }
+  },
+  "stars": {
+    "name": "Star fragments",
+    "items": {
+      "stars00": {
+        "name": "Capricorn fragment",
+        "icon": "/Blotters/StarpieceCapricornusCropped.png"
+      },
+      "stars01": {
+        "name": "Scorpio fragment",
+        "icon": "/Blotters/StarpieceScorpioCropped.png"
+      },
+      "stars02": {
+        "name": "Star fragment",
+        "icon": "/Blotters/StarPieceCropped.png"
+      },
+      "stars03": {
+        "name": "Taurus fragment",
+        "icon": "/Blotters/StarpieceTaurusCropped.png"
+      },
+      "stars04": {
+        "name": "Sagittarius fragment",
+        "icon": "/Blotters/StarpieceSagittariusCropped.png"
+      },
+      "stars05": {
+        "name": "Gemini fragment",
+        "icon": "/Blotters/StarpieceGeminiCropped.png"
+      },
+      "stars06": {
+        "name": "Aquarius fragment",
+        "icon": "/Blotters/StarpieceAquariusCropped.png"
+      },
+      "stars07": {
+        "name": "Aries fragment",
+        "icon": "/Blotters/StarpieceAriesCropped.png"
+      }
+    }
+  },
+  "creatures": {
+    "name": "Sea creatures",
+    "items": {
+      "creature00": {
+        "name": "Vampire squid",
+        "icon": "/Blotters/KoumoridakoCropped.png"
+      },
+      "creature01": {
+        "name": "Sea star",
+        "icon": "/Blotters/HitodeCropped.png"
+      },
+      "creature02": {
+        "name": "Spider crab",
+        "icon": "/Blotters/TakaashiganiCropped.png"
+      },
+      "creature03": {
+        "name": "Scallop",
+        "icon": "/Blotters/HotateCropped.png"
+      },
+      "creature04": {
+        "name": "Sea anemone",
+        "icon": "/Blotters/IsogintyakuCropped.png"
+      },
+      "creature05": {
+        "name": "Sea urchin",
+        "icon": "/Blotters/UniCropped.png"
+      },
+      "creature06": {
+        "name": "Gigas giant clam",
+        "icon": "/Blotters/ShakogaiCropped.png"
+      },
+      "creature07": {
+        "name": "Moon jellyfish",
+        "icon": "/Blotters/MizukurageCropped.png"
+      }
+    }
+  },
+  "shells": {
+    "name": "Sea shells",
+    "items": {
+      "shell00": {
+        "name": "Coral",
+        "icon": "/Blotters/Shell3Cropped.png"
+      },
+      "shell01": {
+        "name": "Sea snail",
+        "icon": "/Blotters/Shell6Cropped.png"
+      },
+      "shell02": {
+        "name": "Cowrie",
+        "icon": "/Blotters/Shell7Cropped.png"
+      },
+      "shell03": {
+        "name": "Conch",
+        "icon": "/Blotters/Shell1Cropped.png"
+      },
+      "shell04": {
+        "name": "Venus comb",
+        "icon": "/Blotters/Shell4Cropped.png"
+      },
+      "shell05": {
+        "name": "Sand dollar",
+        "icon": "/Blotters/Shell8Cropped.png"
+      },
+      "shell06": {
+        "name": "Giant clam",
+        "icon": "/Blotters/Shell2Cropped.png"
+      },
+      "shell07": {
+        "name": "Summer shell",
+        "icon": "/Blotters/ShellSummerCropped.png"
+      }
+    }
+  },
+  "tools": {
+    "name": "Tools",
+    "items": {
+      "tools00": {
+        "name": "Axe",
+        "icon": "/Blotters/AxeCropped.png"
+      },
+      "tools01": {
+        "name": "Fishing rod",
+        "icon": "/Blotters/FishingrodCropped.png"
+      },
+      "tools02": {
+        "name": "Ladder",
+        "icon": "/Blotters/ToolLadderCropped.png"
+      },
+      "tools03": {
+        "name": "Net",
+        "icon": "/Blotters/NetCropped.png"
+      },
+      "tools04": {
+        "name": "Shovel",
+        "icon": "/Blotters/ScoopCropped.png"
+      },
+      "tools05": {
+        "name": "Slingshot",
+        "icon": "/Blotters/PachinkoCropped.png"
+      },
+      "tools06": {
+        "name": "Vaulting pole",
+        "icon": "/Blotters/ToolRiverJumpCropped.png"
+      },
+      "tools07": {
+        "name": "Watering can",
+        "icon": "/Blotters/WateringCropped.png"
+      }
+    }
+  },
+  "trees": {
+    "name": "Trees",
+    "items": {
+      "trees00": {
+        "name": "Cherry tree",
+        "icon": "/Blotters/PltCherryCropped.png"
+      },
+      "trees01": {
+        "name": "Apple tree",
+        "icon": "/Blotters/PltAppleCropped.png"
+      },
+      "trees02": {
+        "name": "Orange tree",
+        "icon": "/Blotters/PltOrangeCropped.png"
+      },
+      "trees03": {
+        "name": "Peach tree",
+        "icon": "/Blotters/PltPeachCropped.png"
+      },
+      "trees04": {
+        "name": "Money tree",
+        "icon": "/Blotters/PltMoneyCropped.png"
+      },
+      "trees05": {
+        "name": "Pear tree",
+        "icon": "/Blotters/PltPearCropped.png"
+      },
+      "trees06": {
+        "name": "Palm tree",
+        "icon": "/Blotters/PltPalmCropped.png"
+      },
+      "trees07": {
+        "name": "Pine tree",
+        "icon": "/Blotters/PltConiferCropped.png"
+      }
+    }
+  },
+  "wrapped": {
+    "name": "Wrapped gifts",
+    "items": {
+      "wrapped00": {
+        "name": "Red gift",
+        "icon": "/Blotters/WBagRedCropped.png"
+      },
+      "wrapped01": {
+        "name": "Orange gift",
+        "icon": "/Blotters/WBagOrangeCropped.png"
+      },
+      "wrapped02": {
+        "name": "Yellow gift",
+        "icon": "/Blotters/WBagYellowCropped.png"
+      },
+      "wrapped03": {
+        "name": "Green gift",
+        "icon": "/Blotters/WBagGreenCropped.png"
+      },
+      "wrapped04": {
+        "name": "Blue gift",
+        "icon": "/Blotters/WBagBlueCropped.png"
+      },
+      "wrapped05": {
+        "name": "Purple gift",
+        "icon": "/Blotters/WBagPurpleCropped.png"
+      },
+      "wrapped06": {
+        "name": "Pink gift",
+        "icon": "/Blotters/WBagPinkCropped.png"
+      },
+      "wrapped07": {
+        "name": "Black gift",
+        "icon": "/Blotters/WBagBlackCropped.png"
+      }
+    }
+  }
+}
