@@ -139,7 +139,7 @@ h1 {
 }
 
 .howToButtonBorder {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -171,7 +171,7 @@ h1 {
 
 .howToButton {
   /* display: none; */
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -198,7 +198,7 @@ h1 {
 
 .settingsButtonBorder {
   grid-column-start: 6;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 2;
   width: 100%;
@@ -211,10 +211,10 @@ h1 {
 
 .settingsButton {
   grid-column-start: 6;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 116px;
+  width: 121px;
   height: 30px;
   margin: 2px;
   border-radius: 15px;
@@ -255,7 +255,7 @@ h1 {
 
 .howToBox {
   position: absolute;
-  grid-column-start: 2;
+  grid-column-start: 1;
   /* previous on main: */
   /* grid-column-start: 1; */
   grid-column-end: 5;
@@ -294,7 +294,7 @@ h1 {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   grid-column-start: 4;
-  grid-column-end: 7;
+  grid-column-end: 8;
   grid-row-start: 2;
   grid-row-end: 3;
   margin-top: -4px;

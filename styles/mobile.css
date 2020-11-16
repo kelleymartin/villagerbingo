@@ -41,14 +41,14 @@
 
   .howToButton {
     grid-column-end: 4;
-    width: 241px;
+    width: 246px;
     height: 46px;
     border-radius: 23px;
     font-size: 30px;
   }
 
   .howToBox {
-    grid-column-start: 2;
+    grid-column-start: 1;
     font-size: 30px;
   }
 
@@ -60,7 +60,7 @@
 
   .settingsButton {
     grid-column-start: 5;
-    width: 241px;
+    width: 246px;
     height: 46px;
     border-radius: 23px;
     font-size: 30px;
