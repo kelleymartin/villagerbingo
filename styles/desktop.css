@@ -1278,7 +1278,7 @@ select {
 
 .cursor {
   width: 40px;
-  margin-top: 80%;
+  margin-top: 70%;
   /* justify-self: end; */
   margin-left: 20px;
   z-index: 10;
