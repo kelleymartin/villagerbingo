@@ -228,19 +228,20 @@ export default class Home extends React.Component {
       blotStyle.transform = `rotate(${angle}deg)`;
     }
 
-    if (this.state.settings.blotterOutlineEnabled) {
-      // if (blotter.SetId = "color") {
-      //   blotStyle.border = `4px solid white`;
-      // }
-      // else {
-      blotStyle.filter = `drop-shadow(2px 2px 0 #FFF) drop-shadow(-2px -2px 0 #FFF) drop-shadow(2px -2px 0 #FFF) drop-shadow(-2px 2px 0 #FFF)`;
-      // }
-    }
-
-    const blotterId = this.state.settings.blotter;
-    const blotter = BLOTTER_BY_ID.get(blotterId);
+    const blotter = BLOTTER_BY_ID.get(this.state.settings.blotter).forIndex(
+      index
+    );
+    const blotterId = blotter.id;
     if (blotter.icon) {
       blotStyle.backgroundImage = `url(${blotter.icon})`;
+    }
+
+    if (this.state.settings.blotterOutlineEnabled) {
+      if (blotter.setId === "color") {
+        blotStyle.border = `4px solid white`;
+      } else if (blotter.setId !== "reactions") {
+        blotStyle.filter = `drop-shadow(2px 2px 0 #FFF) drop-shadow(-2px -2px 0 #FFF) drop-shadow(2px -2px 0 #FFF) drop-shadow(-2px 2px 0 #FFF)`;
+      }
     }
 
     return (
@@ -598,23 +599,23 @@ export default class Home extends React.Component {
       <div className="optionsBox">
         <label className="opacityLabel">Opacity:</label>
         <select
-            className="opacityDropdown"
-            value={this.state.settings[SETTING_BLOTTER_OPACITY]}
-            onChange={(e) => {
-              e.preventDefault();
-              this.setSettings({
-                [SETTING_BLOTTER_OPACITY]: e.currentTarget.value,
-              });
-            }}
-          >
-            {Array.from(OPACITIES, (opacityPct) => {
-              return (
-                <option key={opacityPct} value={opacityPct}>
-                  {opacityPct}
-                </option>
-              );
-            })}
-          </select>
+          className="opacityDropdown"
+          value={this.state.settings[SETTING_BLOTTER_OPACITY]}
+          onChange={(e) => {
+            e.preventDefault();
+            this.setSettings({
+              [SETTING_BLOTTER_OPACITY]: e.currentTarget.value,
+            });
+          }}
+        >
+          {Array.from(OPACITIES, (opacityPct) => {
+            return (
+              <option key={opacityPct} value={opacityPct}>
+                {opacityPct}
+              </option>
+            );
+          })}
+        </select>
         <div className="box-divider"></div>
         <label className="rotationLabel">Rotation:</label>
         {this.renderOnOffSwitch({ id: SETTING_BLOTTER_ROTATION })}
