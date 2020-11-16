@@ -623,7 +623,7 @@ export default class Home extends React.Component {
         <label className="outlineLabel">White outline:</label>
         {this.renderOnOffSwitch({ id: SETTING_BLOTTER_OUTLINE })}
         <div className="box-divider"></div>
-        <label className="blurLabel">Blur selected tile:</label>
+        <label className="blurLabel">Blur marked tiles:</label>
         {this.renderOnOffSwitch({ id: SETTING_TILE_BLUR })}
         {/* <div className="box-divider"></div>
         <label className="randomLabel">Random within set:</label>
