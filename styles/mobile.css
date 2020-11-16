@@ -25,7 +25,11 @@
 
   label,
   h2 {
-    font-size: 50px;
+    font-size: 45px;
+  }
+
+  .exclusionBox > label {
+    font-size: 45px;
   }
 
   .howToButtonBorder {
@@ -70,6 +74,8 @@
   .settingsBox > label,
   .optionsBox > label {
     font-size: 30px;
+    font-weight: 600;
+
   }
 
   .flexButtons {
@@ -193,6 +199,7 @@
     grid-column-start: 3;
     grid-column-end: 8;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
   }
 
   .optionsBox > label {
@@ -208,6 +215,7 @@
   .box-divider {
     grid-column-start: 1;
     grid-column-end: 5;
+    margin: 10px 0;
   }
 
   .options-expanded .optionsButton,
@@ -236,6 +244,9 @@
   }
 
   .blotter > a.blotter-color {
+    width: 90px;
+    height: 90px;
+    margin: 10px 18px;
     border-radius: 45px;
   }
 
