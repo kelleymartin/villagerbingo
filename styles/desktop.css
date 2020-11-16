@@ -333,7 +333,12 @@ h1 {
 .gray-mode .settingsBox > label,
 .gray-mode .optionsBox > label {
   color: #e6e6e6;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.dark-mode .settingsBox > label,
+.dark-mode .optionsBox > label {
+  font-weight: 400;
 }
 
 .themeLabel {
@@ -400,7 +405,7 @@ h1 {
   border: 2px solid #fff;
   background-color: #e6e6e6;
   color: #4d4d4d;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .languageLabel {
@@ -999,7 +1004,7 @@ h2 {
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
   grid-template-rows: auto;
   gap: 5px;
-  
+
   margin: 10px 0;
 }
 
@@ -1008,19 +1013,21 @@ select {
   font-family: proxima-soft, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  border: 2px solid #A06FCE;
+  border: 2px solid #a06fce;
   border-radius: 17px;
-  background-color: #FCC9E6;
+  background-color: #fcc9e6;
   padding: 0 10px;
 }
 
 .dark-mode select {
-  background-color: #866C00;
+  background-image: none;
+  background-color: #866c00;
   color: #fffce9;
-  border: 2px solid #FFD00D;
+  border: 2px solid #ffd00d;
 }
 
 .gray-mode select {
+  background-image: none;
   background-color: #4d4d4d;
   border: 2px solid #b3b3b3;
   color: #e6e6e6;
@@ -1040,7 +1047,7 @@ select {
   width: 100%;
   height: 34px;
   border-radius: 17px;
-  background-color: #A06FCE;
+  background-color: #a06fce;
 }
 
 .optionsButton {
@@ -1053,7 +1060,7 @@ select {
   margin: 2px;
   border-radius: 15px;
   border: none;
-  background-image: linear-gradient(to bottom, #FCC9E6, #D0B7E6);
+  background-image: linear-gradient(to bottom, #fcc9e6, #d0b7e6);
   font-size: 20px;
   font-weight: 500;
   z-index: 20;
@@ -1135,9 +1142,23 @@ select {
   line-height: 0;
   width: 80px;
   justify-self: end;
-  border: 2px solid #0961F6;
-  /* background-color: #D0B7E6; */
+  border: 2px solid #0961f6;
+  /* background-color: #FCC9E6; */
   background-image: linear-gradient(#d0b7e6, #84b0fb);
+}
+
+.dark-mode .opacityDropdown {
+  background-image: none;
+  background-color: #FFE886;
+  color: #333;
+  border: 2px solid #ffd00d;
+}
+
+.gray-mode .opacityDropdown {
+  background-image: none;
+  background-color: #e6e6e6;
+  border: 2px solid #e6e6e6;
+  color: #4d4d4d;
 }
 
 /* .opacityDropdown > option {
@@ -1149,6 +1170,7 @@ select {
   width: 630px;
   margin-left: auto;
   margin-right: auto;
+  align-items: center;
   /* grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 70px; */
 }
@@ -1185,13 +1207,18 @@ select {
 }
 
 .blotter > a.blotter-color {
-  height: 50px;
-  width: 50px;
-  margin: 10px;
-  border-radius: 25px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
 }
 
-.dark-mode .blotter > a {
+.blotter > a.colorRandom {
+  width: 60px;
+  height: 80px;
+}
+
+.dark-mode .blotter > a,
+.gray-mode .blotter > a {
   opacity: 1;
 }
 
@@ -1338,12 +1365,14 @@ select {
   grid-column-end: 6;
 }
 
-.dark-mode .divider {
+.dark-mode .divider,
+.dark-mode .box-divider {
   background-image: none;
   background-color: #ffd00d;
 }
 
-.gray-mode .divider {
+.gray-mode .divider,
+.gray-mode .box-divider {
   background-image: none;
   background-color: #b3b3b3;
 }
