@@ -347,7 +347,7 @@ export default class Home extends React.Component {
             villagerSet: "standard",
           });
           const shareData = encodeState(location.href, cleanedState);
-          navigator.clipboard.writeText(`${shareData}&cs=copyasurl`);
+          navigator.clipboard.writeText(`${shareData}&cs=cau`);
         }}
       />
     );
