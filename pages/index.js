@@ -263,7 +263,7 @@ export default class Home extends React.Component {
     };
 
     if (this.state.settings.tileBlurEnabled && isSelected) {
-      tileStyle.filter = `blur(3px)`;
+      tileStyle.filter = `blur(4px)`;
     }
     //djhnghvewbnref
     return (
@@ -597,9 +597,24 @@ export default class Home extends React.Component {
     return (
       <div className="optionsBox">
         <label className="opacityLabel">Opacity:</label>
-        <select className="opacityDropdown">
-          <option>100%</option>
-        </select>
+        <select
+            className="opacityDropdown"
+            value={this.state.settings[SETTING_BLOTTER_OPACITY]}
+            onChange={(e) => {
+              e.preventDefault();
+              this.setSettings({
+                [SETTING_BLOTTER_OPACITY]: e.currentTarget.value,
+              });
+            }}
+          >
+            {Array.from(OPACITIES, (opacityPct) => {
+              return (
+                <option key={opacityPct} value={opacityPct}>
+                  {opacityPct}
+                </option>
+              );
+            })}
+          </select>
         <div className="box-divider"></div>
         <label className="rotationLabel">Rotation:</label>
         {this.renderOnOffSwitch({ id: SETTING_BLOTTER_ROTATION })}
@@ -609,9 +624,9 @@ export default class Home extends React.Component {
         <div className="box-divider"></div>
         <label className="blurLabel">Blur selected tile:</label>
         {this.renderOnOffSwitch({ id: SETTING_TILE_BLUR })}
-        <div className="box-divider"></div>
+        {/* <div className="box-divider"></div>
         <label className="randomLabel">Random within set:</label>
-        {this.renderOnOffSwitch({ id: SETTING_SET_RANDOM })}
+        {this.renderOnOffSwitch({ id: SETTING_SET_RANDOM })} */}
       </div>
     );
   }
@@ -684,24 +699,6 @@ export default class Home extends React.Component {
             Options
           </button>
           {this.renderOptions()}
-
-          <select
-            value={this.state.settings[SETTING_BLOTTER_OPACITY]}
-            onChange={(e) => {
-              e.preventDefault();
-              this.setSettings({
-                [SETTING_BLOTTER_OPACITY]: e.currentTarget.value,
-              });
-            }}
-          >
-            {Array.from(OPACITIES, (opacityPct) => {
-              return (
-                <option key={opacityPct} value={opacityPct}>
-                  {opacityPct}
-                </option>
-              );
-            })}
-          </select>
         </div>
 
         <div className="blotter">
