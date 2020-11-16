@@ -463,6 +463,14 @@ export default class Home extends React.Component {
   renderFreePlot() {
     const selectedFreePlot = this.gameState.selectedFreePlot;
 
+    const tileStyle = {
+      filter: `blur(0px)`,
+    };
+
+    if (this.state.settings.tileBlurEnabled && selectedFreePlot) {
+      tileStyle.filter = `blur(4px)`;
+    }
+
     return (
       <a href="#" className="free">
         <input
@@ -490,6 +498,7 @@ export default class Home extends React.Component {
         >
           <img
             src="/FreePlot.png"
+            style={tileStyle}
             crossOrigin="anonymous"
             className="plot"
             alt=""
