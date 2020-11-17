@@ -328,6 +328,7 @@ h1 {
   grid-column-start: 1;
   grid-column-end: 2;
   text-align: left;
+  justify-self: start;
   font-size: 20px;
   margin: 0;
 }
@@ -343,10 +344,10 @@ h1 {
   font-weight: 400;
 }
 
-.themeLabel {
+h3 {
+  margin: 0;
+  text-align: left;
   justify-self: start;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
 
 .flexButtons {
@@ -410,16 +411,6 @@ h1 {
   background-color: #e6e6e6;
   color: #4d4d4d;
   font-weight: 500;
-}
-
-.languageLabel {
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.alphabetLabel {
-  grid-row-start: 5;
-  grid-row-end: 6;
 }
 
 .settingsBox legend,
@@ -684,6 +675,15 @@ ul.downshift-options > li.downshift-selected {
 .gray-mode .faceName {
   background-color: #b3b3b3 !important;
   color: #1a1a1a !important;
+}
+
+.includeTotal {
+  grid-area: button;
+  justify-self: left;
+  height: 34px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .namesBox {
