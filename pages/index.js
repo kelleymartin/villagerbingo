@@ -399,8 +399,8 @@ export default class Home extends React.Component {
           {this.gameState.preselectedVillagers.length} total
         </p> */}
         <button
-        type="button"
-        className="copy"
+          type="button"
+          className="clear"
           onClick={(e) => {
             e.preventDefault();
             this.setGameState({
@@ -911,10 +911,9 @@ export default class Home extends React.Component {
               {this.gameState.preselectedVillagers.map((villager) => {
                 return (
                   <a
+                    className="includeWrap"
                     href="#"
-                    key={villager.name}
                     title={`Remove ${villager.name}`}
-                    className="namesName"
                     onClick={(e) => {
                       e.preventDefault();
                       this.setGameState({
@@ -923,13 +922,22 @@ export default class Home extends React.Component {
                         ),
                       });
                     }}
-                    style={{
-                      backgroundColor: villager.bubbleColor,
-                      color: villager.textColor,
-                      // border: `2px solid ${this.state.settings.blotter}`,
-                    }}
                   >
-                    {villager.name} X
+                    <img
+                      src={`/Halves/GrayPlain${villager.species}.png`}
+                      className="faceHalf"
+                    />
+                    <p
+                      className="namesName"
+                      key={villager.name}
+                      style={{
+                        backgroundColor: villager.bubbleColor,
+                        color: villager.textColor,
+                        // border: `2px solid ${this.state.settings.blotter}`,
+                      }}
+                    >
+                      {villager.name}
+                    </p>
                   </a>
                 );
               })}
@@ -952,6 +960,9 @@ export default class Home extends React.Component {
             </div>
 
             <div className="separator"></div> */}
+
+            {/* <img className="test" src="/Blotters/RedPansy.svg"></img> */}
+            <div className="test"></div>
 
             <div className="buttons">
               <button

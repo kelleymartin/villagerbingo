@@ -433,19 +433,28 @@ fieldset {
   align-items: center;
 }
 
-.copy {
+.copy,
+.clear {
   background-image: linear-gradient(to bottom, #9febf0, #84b0fb);
   grid-area: button;
   justify-self: left;
   height: 34px;
   color: #333;
-  width: fit-content;
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 17px;
   border: 2px solid #0961f6;
   font-size: 20px;
   font-weight: 500;
+}
+
+.copy {
+  min-width: 120px;
+  width: fit-content;
+}
+
+.clear {
+  width: 120px;
 }
 
 .dark-mode .copy {
@@ -713,13 +722,22 @@ ul.downshift-options > li.downshift-selected {
   margin-top: 10px;
 }
 
+.includeWrap {
+  display: block;
+}
+
+.faceHalf {
+  margin-bottom: -8px;
+}
+
 .namesName {
   font-size: 14px;
-  width: fit-content;
+  /* width: fit-content; */
+  width: 90px;
   padding: 0 6px;
   border-radius: 20px;
   font-weight: 400;
-  margin: 5px;
+  margin: 0 5px 5px;
   text-decoration: none;
   border: 2px solid #333;
 }
@@ -1459,4 +1477,13 @@ select {
 
 .gray-mode .bottomBar {
   display: none;
+}
+
+.test {
+/* filter: drop-shadow(2px 2px 0 green) drop-shadow(-2px -2px 0 green) drop-shadow(2px -2px 0 green) drop-shadow(-2px 2px 0 green); */
+background-image: url(/Blotters/RedPansy.svg);
+background-color: teal;
+background-clip: content-box;
+height: 72px;
+width: 72px;
 }
