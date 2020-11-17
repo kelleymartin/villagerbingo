@@ -395,9 +395,21 @@ export default class Home extends React.Component {
           }, afterSelectionApplied);
         }}
       >
-        <p className="includeTotal">
+        {/* <p className="includeTotal">
           {this.gameState.preselectedVillagers.length} total
-        </p>
+        </p> */}
+        <button
+        type="button"
+        className="copy"
+          onClick={(e) => {
+            e.preventDefault();
+            this.setGameState({
+              preselectedVillagers: [],
+            });
+          }}
+        >
+          Clear all
+        </button>
       </VillagerDropdown>
     );
   }
@@ -914,7 +926,7 @@ export default class Home extends React.Component {
                     style={{
                       backgroundColor: villager.bubbleColor,
                       color: villager.textColor,
-                      border: `2px solid ${this.state.settings.blotter}`,
+                      // border: `2px solid ${this.state.settings.blotter}`,
                     }}
                   >
                     {villager.name} X

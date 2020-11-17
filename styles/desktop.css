@@ -629,15 +629,25 @@ ul.downshift-options > li.downshift-selected {
   font-weight: 600;
 }
 
-.facesBox {
+/* .facesBox {
   display: grid;
-  /* width: 100%; */
   width: 630px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 1fr;
+  justify-items: center;
+} */
+
+.facesBox {
+  display: flex;
+  /* width: 100%; */
+  width: 630px;
+  margin-left: auto;
+  margin-right: 50%;
+  margin-top: 10px;
+  justify-content: center;
 }
 
 .faceWrap {
@@ -645,6 +655,7 @@ ul.downshift-options > li.downshift-selected {
   width: fit-content;
   position: relative;
   text-decoration: none;
+  margin: 0 5px;
 }
 
 .faceIcon {
@@ -684,6 +695,11 @@ ul.downshift-options > li.downshift-selected {
   color: #333;
   font-size: 20px;
   font-weight: 500;
+  margin: 0;
+  line-height: 35px;
+  border-radius: 20px;
+  padding: 0 10px;
+  background-color: #9FEBF0;
 }
 
 .namesBox {
@@ -701,10 +717,11 @@ ul.downshift-options > li.downshift-selected {
   font-size: 14px;
   width: fit-content;
   padding: 0 6px;
-  border-radius: 15px;
+  border-radius: 20px;
   font-weight: 400;
   margin: 5px;
   text-decoration: none;
+  border: 2px solid #333;
 }
 
 .setSelection {
