@@ -907,12 +907,13 @@ export default class Home extends React.Component {
 
             {this.renderVillagerPreselector()}
 
-            <div className="namesBox">
+            <div className="facesBox inclusionBox">
               {this.gameState.preselectedVillagers.map((villager) => {
                 return (
                   <a
-                    className="includeWrap"
+                    className="faceWrap"
                     href="#"
+                    key={villager.name}
                     title={`Remove ${villager.name}`}
                     onClick={(e) => {
                       e.preventDefault();
@@ -923,17 +924,20 @@ export default class Home extends React.Component {
                       });
                     }}
                   >
-                    <img
-                      src={`/Halves/GrayPlain${villager.species}.png`}
-                      className="faceHalf"
-                    />
+                    <div
+                      className="faceIcon"
+                      style={{
+                        backgroundColor: villager.textColor,
+                        backgroundImage: `url(${villager.iconUrl})`,
+                        backgroundSize: "contain",
+                        border: `2px solid ${villager.bubbleColor}`,
+                      }}
+                    ></div>
                     <p
-                      className="namesName"
-                      key={villager.name}
+                      className="faceName"
                       style={{
                         backgroundColor: villager.bubbleColor,
                         color: villager.textColor,
-                        // border: `2px solid ${this.state.settings.blotter}`,
                       }}
                     >
                       {villager.name}
@@ -960,9 +964,6 @@ export default class Home extends React.Component {
             </div>
 
             <div className="separator"></div> */}
-
-            {/* <img className="test" src="/Blotters/RedPansy.svg"></img> */}
-            <div className="test"></div>
 
             <div className="buttons">
               <button

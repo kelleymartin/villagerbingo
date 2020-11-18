@@ -659,12 +659,16 @@ ul.downshift-options > li.downshift-selected {
   justify-content: center;
 }
 
+.inclusionBox {
+  flex-wrap: wrap;
+}
+
 .faceWrap {
   display: block;
   width: fit-content;
   position: relative;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 5px 10px;
 }
 
 .faceIcon {
@@ -709,37 +713,6 @@ ul.downshift-options > li.downshift-selected {
   border-radius: 20px;
   padding: 0 10px;
   background-color: #9FEBF0;
-}
-
-.namesBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* width: 100%; */
-  width: 630px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-}
-
-.includeWrap {
-  display: block;
-}
-
-.faceHalf {
-  margin-bottom: -8px;
-}
-
-.namesName {
-  font-size: 14px;
-  /* width: fit-content; */
-  width: 90px;
-  padding: 0 6px;
-  border-radius: 20px;
-  font-weight: 400;
-  margin: 0 5px 5px;
-  text-decoration: none;
-  border: 2px solid #333;
 }
 
 .setSelection {
@@ -1358,7 +1331,7 @@ select {
 .separator {
   height: 5px;
   width: 370px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 3px;
@@ -1477,13 +1450,4 @@ select {
 
 .gray-mode .bottomBar {
   display: none;
-}
-
-.test {
-/* filter: drop-shadow(2px 2px 0 green) drop-shadow(-2px -2px 0 green) drop-shadow(2px -2px 0 green) drop-shadow(-2px 2px 0 green); */
-background-image: url(/Blotters/RedPansy.svg);
-background-color: teal;
-background-clip: content-box;
-height: 72px;
-width: 72px;
 }
