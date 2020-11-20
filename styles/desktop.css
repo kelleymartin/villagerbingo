@@ -422,7 +422,7 @@ fieldset {
   display: none;
 }
 
-.exclusionBox {
+.excluded-villagers-autocomplete-box {
   display: grid;
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
   grid-template-rows: auto auto;
@@ -430,6 +430,16 @@ fieldset {
   grid-template-areas:
     "top top top top top top top"
     "left left input input button button right";
+  align-items: center;
+}
+
+.preselected-villagers-autocomplete-box {
+  display: grid;
+  grid-template-columns: 1fr 250px 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "top top top"
+    "left input right";
   align-items: center;
 }
 
@@ -470,13 +480,18 @@ fieldset {
   border: 2px solid #b3b3b3;
 }
 
-.exclusionBox > label {
+.excluded-villagers-autocomplete-box > label,
+.preselected-villagers-autocomplete-box > label {
   font-weight: 600;
   font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
   grid-area: top;
   /* justify-self: left; */
+}
+
+.inclusionBox > .inputBox {
+  grid-area: input button; 
 }
 
 .dark-mode label,
@@ -560,8 +575,8 @@ input:disabled {
   right: 0;
   height: 34px;
   width: 34px;
-  background-color: #84b0fb;
-  border: 2px solid #0961f6;
+  background-color: transparent;
+  border: none;
   border-radius: 17px;
   z-index: 2;
 }
@@ -702,9 +717,11 @@ ul.downshift-options > li.downshift-selected {
 }
 
 .includeTotal {
+  display: none;
   grid-area: button;
   justify-self: left;
   height: 34px;
+  width: 120px;
   color: #333;
   font-size: 20px;
   font-weight: 500;
@@ -827,6 +844,7 @@ button {
 
 .save,
 .create {
+  width: 250px;
   font-size: 30px;
   color: #333;
   padding: 0 20px;

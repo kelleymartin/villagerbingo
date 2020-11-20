@@ -204,6 +204,7 @@ export default class Home extends React.Component {
     this.setGameState({
       boardVillagers: sortedVillagers,
       selectedVillagers: [],
+      changedSettings: false,
     });
   }
 
@@ -340,6 +341,7 @@ export default class Home extends React.Component {
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
+              changedSettings: true,
               excludedVillagers: prevState.excludedVillagers.concat([
                 selection,
               ]),
@@ -382,12 +384,13 @@ export default class Home extends React.Component {
     return (
       <VillagerDropdown
         id="preselected-villagers-autocomplete"
-        labelText="Include villagers:"
+        labelText="Include target villagers:"
         excludedVillagers={excluded}
         disabled={this.gameState.preselectedVillagers.length >= 24}
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
+              changedSettings: true,
               preselectedVillagers: prevState.preselectedVillagers
                 .concat([selection])
                 .slice(0, 24),
@@ -395,10 +398,10 @@ export default class Home extends React.Component {
           }, afterSelectionApplied);
         }}
       >
-        {/* <p className="includeTotal">
+        <p className="includeTotal">
           {this.gameState.preselectedVillagers.length} total
-        </p> */}
-        <button
+        </p>
+        {/* <button
           type="button"
           className="clear"
           onClick={(e) => {
@@ -409,7 +412,7 @@ export default class Home extends React.Component {
           }}
         >
           Clear all
-        </button>
+        </button> */}
       </VillagerDropdown>
     );
   }
@@ -452,6 +455,7 @@ export default class Home extends React.Component {
                 checked={set.value === this.gameState.villagerSet}
                 onChange={(e) => {
                   this.setGameState({
+                    changedSettings: true,
                     villagerSet: set.value,
                   });
                 }}
@@ -874,6 +878,7 @@ export default class Home extends React.Component {
                     onClick={(e) => {
                       e.preventDefault();
                       this.setGameState({
+                        changedSettings: true,
                         excludedVillagers: this.gameState.excludedVillagers.filter(
                           (v) => v !== villager
                         ),
@@ -918,6 +923,7 @@ export default class Home extends React.Component {
                     onClick={(e) => {
                       e.preventDefault();
                       this.setGameState({
+                        changedSettings: true,
                         preselectedVillagers: this.gameState.preselectedVillagers.filter(
                           (v) => v !== villager
                         ),
@@ -980,6 +986,7 @@ export default class Home extends React.Component {
                 onClick={(e) => this.handleCreateBoard(e)}
               >
                 Create board
+                {this.gameState.changedSettings && "*"}
               </button>
             </div>
 

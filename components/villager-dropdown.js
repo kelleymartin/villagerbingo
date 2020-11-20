@@ -58,7 +58,7 @@ export function VillagerDropdown(props) {
         selectedItem,
         getRootProps,
       }) => (
-        <div className="exclusionBox inclusionBox">
+        <div className={`${id}-box`}>
           <label {...getLabelProps()}>{labelText}</label>
           <div className="inputBox">
             <div
