@@ -1,0 +1,4502 @@
+{
+  "001": {
+    "name": "Isabelle",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "002": {
+    "name": "Tom Nook",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "003": {
+    "name": "DJ KK",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "004": {
+    "name": "Sable",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "005": {
+    "name": "Kapp'n",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "006": {
+    "name": "Resetti",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "007": {
+    "name": "Joan",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "008": {
+    "name": "Timmy",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "009": {
+    "name": "Digby",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "010": {
+    "name": "Pascal",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "011": {
+    "name": "Harriet",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "012": {
+    "name": "Redd",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "013": {
+    "name": "Saharah",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "014": {
+    "name": "Luna",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "015": {
+    "name": "Tortimer",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "016": {
+    "name": "Lyle",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "017": {
+    "name": "Lottie",
+    "type": "NPC",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "018": {
+    "name": "Bob",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "019": {
+    "name": "Fauna",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "020": {
+    "name": "Curt",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "021": {
+    "name": "Portia",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "022": {
+    "name": "Leonardo",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "023": {
+    "name": "Cheri",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "024": {
+    "name": "Kyle",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "025": {
+    "name": "Al",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "026": {
+    "name": "Renée",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "027": {
+    "name": "Lopez",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "028": {
+    "name": "Jambette",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "029": {
+    "name": "Rasher",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "030": {
+    "name": "Tiffany",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "031": {
+    "name": "Sheldon",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "032": {
+    "name": "Bluebear",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "033": {
+    "name": "Bill",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "034": {
+    "name": "Kiki",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "035": {
+    "name": "Deli",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "036": {
+    "name": "Alli",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "037": {
+    "name": "Kabuki",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "038": {
+    "name": "Patty",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "039": {
+    "name": "Jitters",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "040": {
+    "name": "Gigi",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "041": {
+    "name": "Quillson",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "042": {
+    "name": "Marcie",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "043": {
+    "name": "Puck",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "044": {
+    "name": "Shari",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "045": {
+    "name": "Octavian",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "046": {
+    "name": "Winnie",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "047": {
+    "name": "Knox",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "048": {
+    "name": "Sterling",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "049": {
+    "name": "Bonbon",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "050": {
+    "name": "Punchy",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "051": {
+    "name": "Opal",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "052": {
+    "name": "Poppy",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "053": {
+    "name": "Limberg",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "054": {
+    "name": "Deena",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "055": {
+    "name": "Snake",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "056": {
+    "name": "Bangle",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "057": {
+    "name": "Phil",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "058": {
+    "name": "Monique",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "059": {
+    "name": "Nate",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "060": {
+    "name": "Samson",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "061": {
+    "name": "Tutu",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "062": {
+    "name": "T-Bone",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "063": {
+    "name": "Mint",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "064": {
+    "name": "Pudge",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "065": {
+    "name": "Midge",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "066": {
+    "name": "Gruff",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "067": {
+    "name": "Flurry",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "068": {
+    "name": "Clyde",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "069": {
+    "name": "Bella",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "070": {
+    "name": "Biff",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "071": {
+    "name": "Yuka",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "072": {
+    "name": "Lionel",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "073": {
+    "name": "Flo",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "074": {
+    "name": "Cobb",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "075": {
+    "name": "Amelia",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "076": {
+    "name": "Jeremiah",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "077": {
+    "name": "Cherry",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "078": {
+    "name": "Roscoe",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "079": {
+    "name": "Truffles",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "080": {
+    "name": "Eugene",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "081": {
+    "name": "Eunice",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "082": {
+    "name": "Goose",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "083": {
+    "name": "Annalisa",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "084": {
+    "name": "Benjamin",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "085": {
+    "name": "Pancetti",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "086": {
+    "name": "Chief",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "087": {
+    "name": "Bunnie",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "088": {
+    "name": "Clay",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "089": {
+    "name": "Diana",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "090": {
+    "name": "Axel",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "091": {
+    "name": "Muffy",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "092": {
+    "name": "Henry",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "093": {
+    "name": "Bertha",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "094": {
+    "name": "Cyrano",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "095": {
+    "name": "Peanut",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "096": {
+    "name": "Cole",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "097": {
+    "name": "Willow",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "098": {
+    "name": "Roald",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "099": {
+    "name": "Molly",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "100": {
+    "name": "Walker",
+    "type": "Villager",
+    "series": 1,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "101": {
+    "name": "K.K.",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "102": {
+    "name": "Reese",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "103": {
+    "name": "Kicks",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "104": {
+    "name": "Labelle",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "105": {
+    "name": "Copper",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "106": {
+    "name": "Booker",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "107": {
+    "name": "Katie",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "108": {
+    "name": "Tommy",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "109": {
+    "name": "Porter",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "110": {
+    "name": "Leila",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "111": {
+    "name": "Shrunk",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "112": {
+    "name": "Don",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "113": {
+    "name": "Isabelle",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "114": {
+    "name": "Blanca",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "115": {
+    "name": "Nat",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "116": {
+    "name": "Chip",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "117": {
+    "name": "Jack",
+    "type": "NPC",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "118": {
+    "name": "Poncho",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "119": {
+    "name": "Felicity",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "120": {
+    "name": "Ozzie",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "121": {
+    "name": "Tia",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "122": {
+    "name": "Lucha",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "123": {
+    "name": "Fuchsia",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "124": {
+    "name": "Harry",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "125": {
+    "name": "Gwen",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "126": {
+    "name": "Coach",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "127": {
+    "name": "Kitt",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "128": {
+    "name": "Tom",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "129": {
+    "name": "Tipper",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "130": {
+    "name": "Prince",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "131": {
+    "name": "Pate",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "132": {
+    "name": "Vladimir",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "133": {
+    "name": "Savannah",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "134": {
+    "name": "Kidd",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "135": {
+    "name": "Phoebe",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "136": {
+    "name": "Egbert",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "137": {
+    "name": "Cookie",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "138": {
+    "name": "Sly",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "139": {
+    "name": "Blaire",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "140": {
+    "name": "Avery",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "141": {
+    "name": "Nana",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "142": {
+    "name": "Peck",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "143": {
+    "name": "Olivia",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "144": {
+    "name": "Cesar",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "145": {
+    "name": "Carmen",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "146": {
+    "name": "Rodney",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "147": {
+    "name": "Scoot",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "148": {
+    "name": "Whitney",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "149": {
+    "name": "Broccolo",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "150": {
+    "name": "Coco",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "151": {
+    "name": "Groucho",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "152": {
+    "name": "Wendy",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "153": {
+    "name": "Alfonso",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "154": {
+    "name": "Rhonda",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "155": {
+    "name": "Butch",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "156": {
+    "name": "Gabi",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "157": {
+    "name": "Moose",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "158": {
+    "name": "Timbra",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "159": {
+    "name": "Zell",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "160": {
+    "name": "Pekoe",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "161": {
+    "name": "Teddy",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "162": {
+    "name": "Mathilda",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "163": {
+    "name": "Ed",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "164": {
+    "name": "Bianca",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "165": {
+    "name": "Filbert",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "166": {
+    "name": "Kitty",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "167": {
+    "name": "Beau",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "168": {
+    "name": "Nan",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "169": {
+    "name": "Bud",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "170": {
+    "name": "Ruby",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "171": {
+    "name": "Benedict",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "172": {
+    "name": "Agnes",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "173": {
+    "name": "Julian",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "174": {
+    "name": "Bettina",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "175": {
+    "name": "Jay",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "176": {
+    "name": "Sprinkle",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "177": {
+    "name": "Flip",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "178": {
+    "name": "Hugh",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "179": {
+    "name": "Hopper",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "180": {
+    "name": "Pecan",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "181": {
+    "name": "Drake",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "182": {
+    "name": "Alice",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "183": {
+    "name": "Camofrog",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "184": {
+    "name": "Anicotti",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "185": {
+    "name": "Chops",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "186": {
+    "name": "Charlise",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "187": {
+    "name": "Vic",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "188": {
+    "name": "Ankha",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "189": {
+    "name": "Drift",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "190": {
+    "name": "Vesta",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "191": {
+    "name": "Marcel",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "192": {
+    "name": "Pango",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "193": {
+    "name": "Keaton",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "194": {
+    "name": "Gladys",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "195": {
+    "name": "Hamphrey",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "196": {
+    "name": "Freya",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "197": {
+    "name": "Kid Cat",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "198": {
+    "name": "Agent S",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "199": {
+    "name": "Big Top",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "200": {
+    "name": "Rocket",
+    "type": "Villager",
+    "series": 2,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "201": {
+    "name": "Rover",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "202": {
+    "name": "Blathers",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "203": {
+    "name": "Tom Nook",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "204": {
+    "name": "Pelly",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "205": {
+    "name": "Phyllis",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "206": {
+    "name": "Pete",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "207": {
+    "name": "Mabel",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "208": {
+    "name": "Leif",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "209": {
+    "name": "Wendell",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "210": {
+    "name": "Cyrus",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "211": {
+    "name": "Grams",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "212": {
+    "name": "Timmy",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "213": {
+    "name": "Digby",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "214": {
+    "name": "Don",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "215": {
+    "name": "Isabelle",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "216": {
+    "name": "Franklin",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "217": {
+    "name": "Jingle",
+    "type": "NPC",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "218": {
+    "name": "Lily",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "219": {
+    "name": "Anchovy",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "220": {
+    "name": "Tabby",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "221": {
+    "name": "Kody",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "222": {
+    "name": "Miranda",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "223": {
+    "name": "Del",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "224": {
+    "name": "Paula",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "225": {
+    "name": "Ken",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "226": {
+    "name": "Mitzi",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "227": {
+    "name": "Rodeo",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "228": {
+    "name": "Bubbles",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "229": {
+    "name": "Cousteau",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "230": {
+    "name": "Velma",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "231": {
+    "name": "Elvis",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "232": {
+    "name": "Canberra",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "233": {
+    "name": "Colton",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "234": {
+    "name": "Marina",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "235": {
+    "name": "Spork",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "236": {
+    "name": "Freckles",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "237": {
+    "name": "Bam",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "238": {
+    "name": "Friga",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "239": {
+    "name": "Jitters",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "240": {
+    "name": "Deirdre",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "241": {
+    "name": "Hans",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "242": {
+    "name": "Chevre",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "243": {
+    "name": "Drago",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "244": {
+    "name": "Tangy",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "245": {
+    "name": "Mac",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "246": {
+    "name": "Eloise",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "247": {
+    "name": "Wart Jr.",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "248": {
+    "name": "Hazel",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "249": {
+    "name": "Beardo",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "250": {
+    "name": "Ava",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "251": {
+    "name": "Chester",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "252": {
+    "name": "Merry",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "253": {
+    "name": "Genji",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "254": {
+    "name": "Greta",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "255": {
+    "name": "Wolfgang",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "256": {
+    "name": "Diva",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "257": {
+    "name": "Klaus",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "258": {
+    "name": "Daisy",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "259": {
+    "name": "Stinky",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "260": {
+    "name": "Tammi",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "261": {
+    "name": "Tucker",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "262": {
+    "name": "Blanche",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "263": {
+    "name": "Gaston",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "264": {
+    "name": "Marshal",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "265": {
+    "name": "Gala",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "266": {
+    "name": "Joey",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "267": {
+    "name": "Pippy",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "268": {
+    "name": "Buck",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "269": {
+    "name": "Bree",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "270": {
+    "name": "Rooney",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "271": {
+    "name": "Curlos",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "272": {
+    "name": "Monty",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "273": {
+    "name": "Moe",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "274": {
+    "name": "Flora",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "275": {
+    "name": "Hamlet",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "276": {
+    "name": "Astrid",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "277": {
+    "name": "Monty",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "278": {
+    "name": "Dora",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "279": {
+    "name": "Biskit",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "280": {
+    "name": "Victoria",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "281": {
+    "name": "Lyman",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "282": {
+    "name": "Violet",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "283": {
+    "name": "Frank",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "284": {
+    "name": "Chadder",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "285": {
+    "name": "Merengue",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "286": {
+    "name": "Cube",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "287": {
+    "name": "Claudia",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "288": {
+    "name": "Curly",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "289": {
+    "name": "Boomer",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "290": {
+    "name": "Caroline",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "291": {
+    "name": "Sparro",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "292": {
+    "name": "Baabara",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "293": {
+    "name": "Rolf",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "294": {
+    "name": "Maple",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "295": {
+    "name": "Antonio",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "296": {
+    "name": "Soleil",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "297": {
+    "name": "Apollo",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "298": {
+    "name": "Derwin",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "299": {
+    "name": "Francine",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "300": {
+    "name": "Chrissy",
+    "type": "Villager",
+    "series": 3,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "301": {
+    "name": "Isabelle",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "302": {
+    "name": "Brewster",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "303": {
+    "name": "Katrina",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "304": {
+    "name": "Phineas",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "305": {
+    "name": "Celeste",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "306": {
+    "name": "Tommy",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "307": {
+    "name": "Gracie",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "308": {
+    "name": "Leilani",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "309": {
+    "name": "Resetti",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "310": {
+    "name": "Timmy",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "311": {
+    "name": "Lottie",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "312": {
+    "name": "Shrunk",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "313": {
+    "name": "Pavé",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "314": {
+    "name": "Gulliver",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "315": {
+    "name": "Redd",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "316": {
+    "name": "Zipper",
+    "type": "NPC",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "317": {
+    "name": "Goldie",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "318": {
+    "name": "Stitches",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "319": {
+    "name": "Pinky",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "320": {
+    "name": "Mott",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "321": {
+    "name": "Mallary",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "322": {
+    "name": "Rocco",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "323": {
+    "name": "Katt",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "324": {
+    "name": "Graham",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "325": {
+    "name": "Peaches",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "326": {
+    "name": "Dizzy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "327": {
+    "name": "Penelope",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "328": {
+    "name": "Boone",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "329": {
+    "name": "Broffina",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "330": {
+    "name": "Croque",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "331": {
+    "name": "Pashmina",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "332": {
+    "name": "Shep",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "333": {
+    "name": "Lolly",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "334": {
+    "name": "Erik",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "335": {
+    "name": "Dotty",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "336": {
+    "name": "Pierce",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "337": {
+    "name": "Queenie",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "338": {
+    "name": "Fang",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "339": {
+    "name": "Frita",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "340": {
+    "name": "Tex",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "341": {
+    "name": "Melba",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "342": {
+    "name": "Bones",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "343": {
+    "name": "Anabelle",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "344": {
+    "name": "Rudy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "345": {
+    "name": "Naomi",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "346": {
+    "name": "Peewee",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "347": {
+    "name": "Tammy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "348": {
+    "name": "Olaf",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "349": {
+    "name": "Lucy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "350": {
+    "name": "Elmer",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "351": {
+    "name": "Puddles",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "352": {
+    "name": "Rory",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "353": {
+    "name": "Elise",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "354": {
+    "name": "Walt",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "355": {
+    "name": "Mira",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "356": {
+    "name": "Pietro",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "357": {
+    "name": "Aurora",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "358": {
+    "name": "Papi",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "359": {
+    "name": "Apple",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "360": {
+    "name": "Rod",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "361": {
+    "name": "Purrl",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "362": {
+    "name": "Static",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "363": {
+    "name": "Celia",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "364": {
+    "name": "Zucker",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "365": {
+    "name": "Peggy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "366": {
+    "name": "Ribbot",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "367": {
+    "name": "Annalise",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "368": {
+    "name": "Chow",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "369": {
+    "name": "Sylvia",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "370": {
+    "name": "Jacques",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "371": {
+    "name": "Sally",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "372": {
+    "name": "Doc",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "373": {
+    "name": "Pompom",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "374": {
+    "name": "Tank",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "375": {
+    "name": "Becky",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "376": {
+    "name": "Rizzo",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "377": {
+    "name": "Sydney",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "378": {
+    "name": "Barold",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "379": {
+    "name": "Nibbles",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "380": {
+    "name": "Kevin",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "381": {
+    "name": "Gloria",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "382": {
+    "name": "Lobo",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "383": {
+    "name": "Hippeux",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "384": {
+    "name": "Margie",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "385": {
+    "name": "Lucky",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "386": {
+    "name": "Rosie",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "387": {
+    "name": "Rowan",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "388": {
+    "name": "Maelle",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "389": {
+    "name": "Bruce",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "390": {
+    "name": "O'Hare",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "391": {
+    "name": "Gayle",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "392": {
+    "name": "Cranston",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "393": {
+    "name": "Frobert",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "394": {
+    "name": "Grizzly",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "395": {
+    "name": "Cally",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "396": {
+    "name": "Simon",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "397": {
+    "name": "Iggly",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "398": {
+    "name": "Angus",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "399": {
+    "name": "Twiggy",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "400": {
+    "name": "Robin",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "401": {
+    "name": "Vivian",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "402": {
+    "name": "Hopkins",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "403": {
+    "name": "June",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "404": {
+    "name": "Piper",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "405": {
+    "name": "Paolo",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "406": {
+    "name": "Hornsby",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "407": {
+    "name": "Stella",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "408": {
+    "name": "Tybalt",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "409": {
+    "name": "Huck",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "410": {
+    "name": "Sylvana",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "411": {
+    "name": "Boris",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "412": {
+    "name": "Wade",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "413": {
+    "name": "Carrie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "414": {
+    "name": "Ketchup",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "415": {
+    "name": "Rex",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "416": {
+    "name": "Stu",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "417": {
+    "name": "Ursala",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "418": {
+    "name": "Jacob",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "419": {
+    "name": "Maddie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "420": {
+    "name": "Billy",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "421": {
+    "name": "Boyd",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "422": {
+    "name": "Bitty",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "423": {
+    "name": "Maggie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "424": {
+    "name": "Murphy",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "425": {
+    "name": "Plucky",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "426": {
+    "name": "Sandy",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "427": {
+    "name": "Claude",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "428": {
+    "name": "Raddle",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "429": {
+    "name": "Julia",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "430": {
+    "name": "Louie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "431": {
+    "name": "Bea",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "432": {
+    "name": "Admiral",
+    "type": "Villager",
+    "series": 4,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "433": {
+    "name": "Ellie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "434": {
+    "name": "Boots",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "435": {
+    "name": "Weber",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "436": {
+    "name": "Candi",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "437": {
+    "name": "Leopold",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "438": {
+    "name": "Spike",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "439": {
+    "name": "Cashmere",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "440": {
+    "name": "Tad",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "441": {
+    "name": "Norma",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "442": {
+    "name": "Gonzo",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "443": {
+    "name": "Sprocket",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "444": {
+    "name": "Snooty",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "445": {
+    "name": "Olive",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "446": {
+    "name": "Dobie",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "447": {
+    "name": "Buzz",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "448": {
+    "name": "Cleo",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "449": {
+    "name": "Ike",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  },
+  "450": {
+    "name": "Tasha",
+    "type": "Villager",
+    "series": 5,
+    "lighter-color": "",
+    "light-color": "",
+    "dark-color": "",
+    "darker-color": "",
+    "image": ""
+  }
+}
