@@ -188,12 +188,17 @@ export default class Home extends React.Component {
     });
   }
 
-  pickBoardVillagers(mode, possibleVillagers) {
-    if (mode === "hard") {
-      return Array.from({ length: 24 }, () => possibleVillagers[0]);
-    }
-
-    return pickRandom(possibleVillagers, { count: 24 });
+  pickBoardVillagers(possibleVillagers, npcCount) {
+    return [
+      ...pickRandom(
+        possibleVillagers.filter((villager) => villager.type === "NPC"),
+        { count: npcCount }
+      ),
+      ...pickRandom(
+        possibleVillagers.filter((villager) => villager.type === "Villager"),
+        { count: 24 - npcCount }
+      ),
+    ];
   }
 
   handleCreateBoard(event) {
@@ -207,10 +212,9 @@ export default class Home extends React.Component {
         villager.series === selectedSeriesId
       );
     });
-    const boardVillagers = this.pickBoardVillagers(
-      this.gameState.villagerSet,
-      possibleVillagers
-    );
+    const npcFraction = this.gameState.amiiboNPCFraction;
+    const npcCount = selectedSeriesId === 5 ? 0 : 24 / npcFraction; // a third is NPCs
+    const boardVillagers = this.pickBoardVillagers(possibleVillagers, npcCount);
 
     const sortedVillagers = boardVillagers.sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -336,6 +340,9 @@ export default class Home extends React.Component {
             }}
           >
             {villager.name}
+            <span style={{ color: "red", fontWeight: "bold" }}>
+              {villager.type}
+            </span>
           </p>
         </div>
         {isSelected ? this.renderBlotter(index) : null}
@@ -798,6 +805,41 @@ export default class Home extends React.Component {
                   </button>
                 );
               })}
+            </div>
+
+            <div className="fractionSelection">
+              <label>
+                <input
+                  type="radio"
+                  disabled={this.state.gameState.amiiboSeriesId === 5}
+                  checked={
+                    this.state.gameState.amiiboSeriesId !== 5 &&
+                    this.state.gameState.amiiboNPCFraction === 3
+                  }
+                  onClick={(e) => {
+                    this.setGameState({
+                      amiiboNPCFraction: 3,
+                    });
+                  }}
+                />
+                One in three are NPCs
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  disabled={this.state.gameState.amiiboSeriesId === 5}
+                  checked={
+                    this.state.gameState.amiiboSeriesId !== 5 &&
+                    this.state.gameState.amiiboNPCFraction === 6
+                  }
+                  onClick={(e) => {
+                    this.setGameState({
+                      amiiboNPCFraction: 6,
+                    });
+                  }}
+                />
+                One in six are NPCs
+              </label>
             </div>
 
             {/* <div className="separator"></div> */}
