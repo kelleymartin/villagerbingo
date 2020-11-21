@@ -325,7 +325,7 @@ export default class Home extends React.Component {
         <img
           src={villager.imageUrl}
           style={tileStyle}
-          className="amiibo"
+          className={`amiibo amiibo-${villager.series}`}
           crossOrigin="anonymous"
           draggable="false"
           alt={villager.name}
@@ -336,67 +336,14 @@ export default class Home extends React.Component {
             className="nameTag"
             style={{
               backgroundColor: villager.bubbleColor,
-              color: villager.textColor,
+              color: `#ffffff`,
             }}
           >
             {villager.name}
-            <span style={{ color: "red", fontWeight: "bold" }}>
-              {villager.type}
-            </span>
           </p>
         </div>
         {isSelected ? this.renderBlotter(index) : null}
       </a>
-    );
-  }
-
-  renderVillagerSetSelector() {
-    const villagerSets = [
-      {
-        value: "easy",
-        label: "Easy",
-      },
-      {
-        value: "standard",
-        label: "Standard",
-      },
-      {
-        value: "hard",
-        label: "Hard",
-      },
-      {
-        value: "species-only",
-        label: "Species per Tile",
-      },
-      {
-        value: "personality-species",
-        label: "Species + Personality",
-      },
-    ];
-
-    return (
-      <fieldset>
-        <legend>Villager Set:</legend>
-
-        {villagerSets.map((set) => (
-          <React.Fragment key={set.value}>
-            <label style={{ display: "block" }}>
-              <input
-                type="radio"
-                name="villagerset"
-                value={set.value}
-                checked={set.value === this.gameState.villagerSet}
-                onChange={(e) => {
-                  this.setGameState({
-                    villagerSet: set.value,
-                  });
-                }}
-              />{" "}
-              {set.label}
-            </label>
-          </React.Fragment>
-        ))}
-      </fieldset>
     );
   }
 

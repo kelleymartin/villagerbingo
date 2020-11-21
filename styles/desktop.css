@@ -1452,3 +1452,8 @@ select {
   width: 135px;
   object-position: -8px -16px;
 }
+
+.amiibo-5 {
+  width: auto;
+  object-position: -19px -22px;
+}
