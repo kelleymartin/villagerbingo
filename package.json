@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "extract-villagers": "node scripts/extract-villager-data.js",
+    "fix-image-url": "node scripts/fix-image-url.js",
     "test": "mocha"
   },
   "dependencies": {
