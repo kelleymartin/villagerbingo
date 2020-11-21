@@ -74,7 +74,7 @@ export const getServerSideProps = (context) => {
 
 export default class Home extends React.Component {
   state = {
-    gameState: urlFormat.decodeState(this.props.initialURL),
+    gameState: urlFormat.decodeState(this.props.initialURL, villagers),
     settingsExpanded: false,
     howToExpanded: false,
     optionsExpanded: false,

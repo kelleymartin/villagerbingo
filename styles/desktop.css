@@ -470,13 +470,17 @@ fieldset {
   border: 2px solid #b3b3b3;
 }
 
-.exclusionBox > label {
+.exclusionBox > label,
+.setSelection > label {
   font-weight: 600;
   font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
-  grid-area: top;
   /* justify-self: left; */
+}
+
+.exclusionBox > label {
+  grid-area: top;
 }
 
 .dark-mode label,
@@ -758,6 +762,12 @@ ul.downshift-options > li.downshift-selected {
   border: 2px solid #3fd8e0;
 }
 
+.amiibo-series-active {
+  font-size: 2em;
+  color: red;
+  background-color: greenyellow;
+}
+
 .dark-mode .standardButton {
   background-image: none;
   background-color: #14767c;
@@ -922,12 +932,6 @@ button {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.picture {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
 }
 
 .nameTagWrap {
@@ -1152,7 +1156,7 @@ select {
 
 .dark-mode .opacityDropdown {
   background-image: none;
-  background-color: #FFE886;
+  background-color: #ffe886;
   color: #333;
   border: 2px solid #ffd00d;
 }
@@ -1442,4 +1446,9 @@ select {
 
 .gray-mode .bottomBar {
   display: none;
+}
+
+.amiibo {
+  width: 135px;
+  object-position: -8px -9px;
 }

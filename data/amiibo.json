@@ -1,5 +1,6 @@
-{
-  "001": {
+[
+  {
+    "id": 1,
     "name": "Isabelle",
     "type": "NPC",
     "series": 1,
@@ -7,9 +8,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "002": {
+  {
+    "id": 2,
     "name": "Tom Nook",
     "type": "NPC",
     "series": 1,
@@ -17,9 +19,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "003": {
+  {
+    "id": 3,
     "name": "DJ KK",
     "type": "NPC",
     "series": 1,
@@ -27,9 +30,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "004": {
+  {
+    "id": 4,
     "name": "Sable",
     "type": "NPC",
     "series": 1,
@@ -37,9 +41,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "005": {
+  {
+    "id": 5,
     "name": "Kapp'n",
     "type": "NPC",
     "series": 1,
@@ -47,9 +52,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "006": {
+  {
+    "id": 6,
     "name": "Resetti",
     "type": "NPC",
     "series": 1,
@@ -57,9 +63,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "007": {
+  {
+    "id": 7,
     "name": "Joan",
     "type": "NPC",
     "series": 1,
@@ -67,9 +74,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "008": {
+  {
+    "id": 8,
     "name": "Timmy",
     "type": "NPC",
     "series": 1,
@@ -77,9 +85,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "009": {
+  {
+    "id": 9,
     "name": "Digby",
     "type": "NPC",
     "series": 1,
@@ -87,9 +96,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "010": {
+  {
+    "id": 10,
     "name": "Pascal",
     "type": "NPC",
     "series": 1,
@@ -97,9 +107,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "011": {
+  {
+    "id": 11,
     "name": "Harriet",
     "type": "NPC",
     "series": 1,
@@ -107,9 +118,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "012": {
+  {
+    "id": 12,
     "name": "Redd",
     "type": "NPC",
     "series": 1,
@@ -117,9 +129,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "013": {
+  {
+    "id": 13,
     "name": "Saharah",
     "type": "NPC",
     "series": 1,
@@ -127,9 +140,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "014": {
+  {
+    "id": 14,
     "name": "Luna",
     "type": "NPC",
     "series": 1,
@@ -137,9 +151,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "015": {
+  {
+    "id": 15,
     "name": "Tortimer",
     "type": "NPC",
     "series": 1,
@@ -147,9 +162,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "016": {
+  {
+    "id": 16,
     "name": "Lyle",
     "type": "NPC",
     "series": 1,
@@ -157,9 +173,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "017": {
+  {
+    "id": 17,
     "name": "Lottie",
     "type": "NPC",
     "series": 1,
@@ -167,9 +184,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "018": {
+  {
+    "id": 18,
     "name": "Bob",
     "type": "Villager",
     "series": 1,
@@ -177,9 +195,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "019": {
+  {
+    "id": 19,
     "name": "Fauna",
     "type": "Villager",
     "series": 1,
@@ -187,9 +206,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "020": {
+  {
+    "id": 20,
     "name": "Curt",
     "type": "Villager",
     "series": 1,
@@ -197,9 +217,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "021": {
+  {
+    "id": 21,
     "name": "Portia",
     "type": "Villager",
     "series": 1,
@@ -207,9 +228,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "022": {
+  {
+    "id": 22,
     "name": "Leonardo",
     "type": "Villager",
     "series": 1,
@@ -217,9 +239,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "023": {
+  {
+    "id": 23,
     "name": "Cheri",
     "type": "Villager",
     "series": 1,
@@ -227,9 +250,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "024": {
+  {
+    "id": 24,
     "name": "Kyle",
     "type": "Villager",
     "series": 1,
@@ -237,9 +261,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "025": {
+  {
+    "id": 25,
     "name": "Al",
     "type": "Villager",
     "series": 1,
@@ -247,9 +272,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "026": {
+  {
+    "id": 26,
     "name": "Renée",
     "type": "Villager",
     "series": 1,
@@ -257,9 +283,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "027": {
+  {
+    "id": 27,
     "name": "Lopez",
     "type": "Villager",
     "series": 1,
@@ -267,9 +294,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "028": {
+  {
+    "id": 28,
     "name": "Jambette",
     "type": "Villager",
     "series": 1,
@@ -277,9 +305,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "029": {
+  {
+    "id": 29,
     "name": "Rasher",
     "type": "Villager",
     "series": 1,
@@ -287,9 +316,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "030": {
+  {
+    "id": 30,
     "name": "Tiffany",
     "type": "Villager",
     "series": 1,
@@ -297,9 +327,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "031": {
+  {
+    "id": 31,
     "name": "Sheldon",
     "type": "Villager",
     "series": 1,
@@ -307,9 +338,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "032": {
+  {
+    "id": 32,
     "name": "Bluebear",
     "type": "Villager",
     "series": 1,
@@ -317,9 +349,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "033": {
+  {
+    "id": 33,
     "name": "Bill",
     "type": "Villager",
     "series": 1,
@@ -327,9 +360,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "034": {
+  {
+    "id": 34,
     "name": "Kiki",
     "type": "Villager",
     "series": 1,
@@ -337,9 +371,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "035": {
+  {
+    "id": 35,
     "name": "Deli",
     "type": "Villager",
     "series": 1,
@@ -347,9 +382,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "036": {
+  {
+    "id": 36,
     "name": "Alli",
     "type": "Villager",
     "series": 1,
@@ -357,9 +393,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "037": {
+  {
+    "id": 37,
     "name": "Kabuki",
     "type": "Villager",
     "series": 1,
@@ -367,9 +404,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "038": {
+  {
+    "id": 38,
     "name": "Patty",
     "type": "Villager",
     "series": 1,
@@ -377,9 +415,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "039": {
+  {
+    "id": 39,
     "name": "Jitters",
     "type": "Villager",
     "series": 1,
@@ -387,9 +426,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "040": {
+  {
+    "id": 40,
     "name": "Gigi",
     "type": "Villager",
     "series": 1,
@@ -397,9 +437,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "041": {
+  {
+    "id": 41,
     "name": "Quillson",
     "type": "Villager",
     "series": 1,
@@ -407,9 +448,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "042": {
+  {
+    "id": 42,
     "name": "Marcie",
     "type": "Villager",
     "series": 1,
@@ -417,9 +459,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "043": {
+  {
+    "id": 43,
     "name": "Puck",
     "type": "Villager",
     "series": 1,
@@ -427,9 +470,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "044": {
+  {
+    "id": 44,
     "name": "Shari",
     "type": "Villager",
     "series": 1,
@@ -437,9 +481,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "045": {
+  {
+    "id": 45,
     "name": "Octavian",
     "type": "Villager",
     "series": 1,
@@ -447,9 +492,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "046": {
+  {
+    "id": 46,
     "name": "Winnie",
     "type": "Villager",
     "series": 1,
@@ -457,9 +503,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "047": {
+  {
+    "id": 47,
     "name": "Knox",
     "type": "Villager",
     "series": 1,
@@ -467,9 +514,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "048": {
+  {
+    "id": 48,
     "name": "Sterling",
     "type": "Villager",
     "series": 1,
@@ -477,9 +525,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "049": {
+  {
+    "id": 49,
     "name": "Bonbon",
     "type": "Villager",
     "series": 1,
@@ -487,9 +536,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "050": {
+  {
+    "id": 50,
     "name": "Punchy",
     "type": "Villager",
     "series": 1,
@@ -497,9 +547,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "051": {
+  {
+    "id": 51,
     "name": "Opal",
     "type": "Villager",
     "series": 1,
@@ -507,9 +558,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "052": {
+  {
+    "id": 52,
     "name": "Poppy",
     "type": "Villager",
     "series": 1,
@@ -517,9 +569,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "053": {
+  {
+    "id": 53,
     "name": "Limberg",
     "type": "Villager",
     "series": 1,
@@ -527,9 +580,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "054": {
+  {
+    "id": 54,
     "name": "Deena",
     "type": "Villager",
     "series": 1,
@@ -537,9 +591,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "055": {
+  {
+    "id": 55,
     "name": "Snake",
     "type": "Villager",
     "series": 1,
@@ -547,9 +602,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "056": {
+  {
+    "id": 56,
     "name": "Bangle",
     "type": "Villager",
     "series": 1,
@@ -557,9 +613,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "057": {
+  {
+    "id": 57,
     "name": "Phil",
     "type": "Villager",
     "series": 1,
@@ -567,9 +624,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "058": {
+  {
+    "id": 58,
     "name": "Monique",
     "type": "Villager",
     "series": 1,
@@ -577,9 +635,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "059": {
+  {
+    "id": 59,
     "name": "Nate",
     "type": "Villager",
     "series": 1,
@@ -587,9 +646,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "060": {
+  {
+    "id": 60,
     "name": "Samson",
     "type": "Villager",
     "series": 1,
@@ -597,9 +657,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "061": {
+  {
+    "id": 61,
     "name": "Tutu",
     "type": "Villager",
     "series": 1,
@@ -607,9 +668,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "062": {
+  {
+    "id": 62,
     "name": "T-Bone",
     "type": "Villager",
     "series": 1,
@@ -617,9 +679,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "063": {
+  {
+    "id": 63,
     "name": "Mint",
     "type": "Villager",
     "series": 1,
@@ -627,9 +690,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "064": {
+  {
+    "id": 64,
     "name": "Pudge",
     "type": "Villager",
     "series": 1,
@@ -637,9 +701,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "065": {
+  {
+    "id": 65,
     "name": "Midge",
     "type": "Villager",
     "series": 1,
@@ -647,9 +712,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "066": {
+  {
+    "id": 66,
     "name": "Gruff",
     "type": "Villager",
     "series": 1,
@@ -657,9 +723,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "067": {
+  {
+    "id": 67,
     "name": "Flurry",
     "type": "Villager",
     "series": 1,
@@ -667,9 +734,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "068": {
+  {
+    "id": 68,
     "name": "Clyde",
     "type": "Villager",
     "series": 1,
@@ -677,9 +745,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "069": {
+  {
+    "id": 69,
     "name": "Bella",
     "type": "Villager",
     "series": 1,
@@ -687,9 +756,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "070": {
+  {
+    "id": 70,
     "name": "Biff",
     "type": "Villager",
     "series": 1,
@@ -697,9 +767,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "071": {
+  {
+    "id": 71,
     "name": "Yuka",
     "type": "Villager",
     "series": 1,
@@ -707,9 +778,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "072": {
+  {
+    "id": 72,
     "name": "Lionel",
     "type": "Villager",
     "series": 1,
@@ -717,9 +789,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "073": {
+  {
+    "id": 73,
     "name": "Flo",
     "type": "Villager",
     "series": 1,
@@ -727,9 +800,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "074": {
+  {
+    "id": 74,
     "name": "Cobb",
     "type": "Villager",
     "series": 1,
@@ -737,9 +811,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "075": {
+  {
+    "id": 75,
     "name": "Amelia",
     "type": "Villager",
     "series": 1,
@@ -747,9 +822,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "076": {
+  {
+    "id": 76,
     "name": "Jeremiah",
     "type": "Villager",
     "series": 1,
@@ -757,9 +833,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "077": {
+  {
+    "id": 77,
     "name": "Cherry",
     "type": "Villager",
     "series": 1,
@@ -767,9 +844,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "078": {
+  {
+    "id": 78,
     "name": "Roscoe",
     "type": "Villager",
     "series": 1,
@@ -777,9 +855,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "079": {
+  {
+    "id": 79,
     "name": "Truffles",
     "type": "Villager",
     "series": 1,
@@ -787,9 +866,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "080": {
+  {
+    "id": 80,
     "name": "Eugene",
     "type": "Villager",
     "series": 1,
@@ -797,9 +877,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "081": {
+  {
+    "id": 81,
     "name": "Eunice",
     "type": "Villager",
     "series": 1,
@@ -807,9 +888,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "082": {
+  {
+    "id": 82,
     "name": "Goose",
     "type": "Villager",
     "series": 1,
@@ -817,9 +899,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "083": {
+  {
+    "id": 83,
     "name": "Annalisa",
     "type": "Villager",
     "series": 1,
@@ -827,9 +910,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "084": {
+  {
+    "id": 84,
     "name": "Benjamin",
     "type": "Villager",
     "series": 1,
@@ -837,9 +921,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "085": {
+  {
+    "id": 85,
     "name": "Pancetti",
     "type": "Villager",
     "series": 1,
@@ -847,9 +932,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "086": {
+  {
+    "id": 86,
     "name": "Chief",
     "type": "Villager",
     "series": 1,
@@ -857,9 +943,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "087": {
+  {
+    "id": 87,
     "name": "Bunnie",
     "type": "Villager",
     "series": 1,
@@ -867,9 +954,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "088": {
+  {
+    "id": 88,
     "name": "Clay",
     "type": "Villager",
     "series": 1,
@@ -877,9 +965,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "089": {
+  {
+    "id": 89,
     "name": "Diana",
     "type": "Villager",
     "series": 1,
@@ -887,9 +976,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "090": {
+  {
+    "id": 90,
     "name": "Axel",
     "type": "Villager",
     "series": 1,
@@ -897,9 +987,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "091": {
+  {
+    "id": 91,
     "name": "Muffy",
     "type": "Villager",
     "series": 1,
@@ -907,9 +998,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "092": {
+  {
+    "id": 92,
     "name": "Henry",
     "type": "Villager",
     "series": 1,
@@ -917,9 +1009,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "093": {
+  {
+    "id": 93,
     "name": "Bertha",
     "type": "Villager",
     "series": 1,
@@ -927,9 +1020,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "094": {
+  {
+    "id": 94,
     "name": "Cyrano",
     "type": "Villager",
     "series": 1,
@@ -937,9 +1031,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "095": {
+  {
+    "id": 95,
     "name": "Peanut",
     "type": "Villager",
     "series": 1,
@@ -947,9 +1042,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "096": {
+  {
+    "id": 96,
     "name": "Cole",
     "type": "Villager",
     "series": 1,
@@ -957,9 +1053,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "097": {
+  {
+    "id": 97,
     "name": "Willow",
     "type": "Villager",
     "series": 1,
@@ -967,9 +1064,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "098": {
+  {
+    "id": 98,
     "name": "Roald",
     "type": "Villager",
     "series": 1,
@@ -977,9 +1075,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "099": {
+  {
+    "id": 99,
     "name": "Molly",
     "type": "Villager",
     "series": 1,
@@ -987,9 +1086,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "100": {
+  {
+    "id": 100,
     "name": "Walker",
     "type": "Villager",
     "series": 1,
@@ -997,9 +1097,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "101": {
+  {
+    "id": 101,
     "name": "K.K.",
     "type": "NPC",
     "series": 2,
@@ -1007,9 +1108,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "102": {
+  {
+    "id": 102,
     "name": "Reese",
     "type": "NPC",
     "series": 2,
@@ -1017,9 +1119,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "103": {
+  {
+    "id": 103,
     "name": "Kicks",
     "type": "NPC",
     "series": 2,
@@ -1027,9 +1130,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "104": {
+  {
+    "id": 104,
     "name": "Labelle",
     "type": "NPC",
     "series": 2,
@@ -1037,9 +1141,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "105": {
+  {
+    "id": 105,
     "name": "Copper",
     "type": "NPC",
     "series": 2,
@@ -1047,9 +1152,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "106": {
+  {
+    "id": 106,
     "name": "Booker",
     "type": "NPC",
     "series": 2,
@@ -1057,9 +1163,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "107": {
+  {
+    "id": 107,
     "name": "Katie",
     "type": "NPC",
     "series": 2,
@@ -1067,9 +1174,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "108": {
+  {
+    "id": 108,
     "name": "Tommy",
     "type": "NPC",
     "series": 2,
@@ -1077,9 +1185,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "109": {
+  {
+    "id": 109,
     "name": "Porter",
     "type": "NPC",
     "series": 2,
@@ -1087,9 +1196,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "110": {
+  {
+    "id": 110,
     "name": "Leila",
     "type": "NPC",
     "series": 2,
@@ -1097,9 +1207,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "111": {
+  {
+    "id": 111,
     "name": "Shrunk",
     "type": "NPC",
     "series": 2,
@@ -1107,9 +1218,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "112": {
+  {
+    "id": 112,
     "name": "Don",
     "type": "NPC",
     "series": 2,
@@ -1117,9 +1229,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "113": {
+  {
+    "id": 113,
     "name": "Isabelle",
     "type": "NPC",
     "series": 2,
@@ -1127,9 +1240,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "114": {
+  {
+    "id": 114,
     "name": "Blanca",
     "type": "NPC",
     "series": 2,
@@ -1137,9 +1251,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "115": {
+  {
+    "id": 115,
     "name": "Nat",
     "type": "NPC",
     "series": 2,
@@ -1147,9 +1262,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "116": {
+  {
+    "id": 116,
     "name": "Chip",
     "type": "NPC",
     "series": 2,
@@ -1157,9 +1273,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "117": {
+  {
+    "id": 117,
     "name": "Jack",
     "type": "NPC",
     "series": 2,
@@ -1167,9 +1284,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "118": {
+  {
+    "id": 118,
     "name": "Poncho",
     "type": "Villager",
     "series": 2,
@@ -1177,9 +1295,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "119": {
+  {
+    "id": 119,
     "name": "Felicity",
     "type": "Villager",
     "series": 2,
@@ -1187,9 +1306,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "120": {
+  {
+    "id": 120,
     "name": "Ozzie",
     "type": "Villager",
     "series": 2,
@@ -1197,9 +1317,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "121": {
+  {
+    "id": 121,
     "name": "Tia",
     "type": "Villager",
     "series": 2,
@@ -1207,9 +1328,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "122": {
+  {
+    "id": 122,
     "name": "Lucha",
     "type": "Villager",
     "series": 2,
@@ -1217,9 +1339,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "123": {
+  {
+    "id": 123,
     "name": "Fuchsia",
     "type": "Villager",
     "series": 2,
@@ -1227,9 +1350,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "124": {
+  {
+    "id": 124,
     "name": "Harry",
     "type": "Villager",
     "series": 2,
@@ -1237,9 +1361,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "125": {
+  {
+    "id": 125,
     "name": "Gwen",
     "type": "Villager",
     "series": 2,
@@ -1247,9 +1372,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "126": {
+  {
+    "id": 126,
     "name": "Coach",
     "type": "Villager",
     "series": 2,
@@ -1257,9 +1383,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "127": {
+  {
+    "id": 127,
     "name": "Kitt",
     "type": "Villager",
     "series": 2,
@@ -1267,9 +1394,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "128": {
+  {
+    "id": 128,
     "name": "Tom",
     "type": "Villager",
     "series": 2,
@@ -1277,9 +1405,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "129": {
+  {
+    "id": 129,
     "name": "Tipper",
     "type": "Villager",
     "series": 2,
@@ -1287,9 +1416,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "130": {
+  {
+    "id": 130,
     "name": "Prince",
     "type": "Villager",
     "series": 2,
@@ -1297,9 +1427,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "131": {
+  {
+    "id": 131,
     "name": "Pate",
     "type": "Villager",
     "series": 2,
@@ -1307,9 +1438,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "132": {
+  {
+    "id": 132,
     "name": "Vladimir",
     "type": "Villager",
     "series": 2,
@@ -1317,9 +1449,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "133": {
+  {
+    "id": 133,
     "name": "Savannah",
     "type": "Villager",
     "series": 2,
@@ -1327,9 +1460,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "134": {
+  {
+    "id": 134,
     "name": "Kidd",
     "type": "Villager",
     "series": 2,
@@ -1337,9 +1471,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "135": {
+  {
+    "id": 135,
     "name": "Phoebe",
     "type": "Villager",
     "series": 2,
@@ -1347,9 +1482,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "136": {
+  {
+    "id": 136,
     "name": "Egbert",
     "type": "Villager",
     "series": 2,
@@ -1357,9 +1493,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "137": {
+  {
+    "id": 137,
     "name": "Cookie",
     "type": "Villager",
     "series": 2,
@@ -1367,9 +1504,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "138": {
+  {
+    "id": 138,
     "name": "Sly",
     "type": "Villager",
     "series": 2,
@@ -1377,9 +1515,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "139": {
+  {
+    "id": 139,
     "name": "Blaire",
     "type": "Villager",
     "series": 2,
@@ -1387,9 +1526,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "140": {
+  {
+    "id": 140,
     "name": "Avery",
     "type": "Villager",
     "series": 2,
@@ -1397,9 +1537,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "141": {
+  {
+    "id": 141,
     "name": "Nana",
     "type": "Villager",
     "series": 2,
@@ -1407,9 +1548,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "142": {
+  {
+    "id": 142,
     "name": "Peck",
     "type": "Villager",
     "series": 2,
@@ -1417,9 +1559,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "143": {
+  {
+    "id": 143,
     "name": "Olivia",
     "type": "Villager",
     "series": 2,
@@ -1427,9 +1570,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "144": {
+  {
+    "id": 144,
     "name": "Cesar",
     "type": "Villager",
     "series": 2,
@@ -1437,9 +1581,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "145": {
+  {
+    "id": 145,
     "name": "Carmen",
     "type": "Villager",
     "series": 2,
@@ -1447,9 +1592,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "146": {
+  {
+    "id": 146,
     "name": "Rodney",
     "type": "Villager",
     "series": 2,
@@ -1457,9 +1603,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "147": {
+  {
+    "id": 147,
     "name": "Scoot",
     "type": "Villager",
     "series": 2,
@@ -1467,9 +1614,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "148": {
+  {
+    "id": 148,
     "name": "Whitney",
     "type": "Villager",
     "series": 2,
@@ -1477,9 +1625,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "149": {
+  {
+    "id": 149,
     "name": "Broccolo",
     "type": "Villager",
     "series": 2,
@@ -1487,9 +1636,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "150": {
+  {
+    "id": 150,
     "name": "Coco",
     "type": "Villager",
     "series": 2,
@@ -1497,9 +1647,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "151": {
+  {
+    "id": 151,
     "name": "Groucho",
     "type": "Villager",
     "series": 2,
@@ -1507,9 +1658,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "152": {
+  {
+    "id": 152,
     "name": "Wendy",
     "type": "Villager",
     "series": 2,
@@ -1517,9 +1669,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "153": {
+  {
+    "id": 153,
     "name": "Alfonso",
     "type": "Villager",
     "series": 2,
@@ -1527,9 +1680,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "154": {
+  {
+    "id": 154,
     "name": "Rhonda",
     "type": "Villager",
     "series": 2,
@@ -1537,9 +1691,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "155": {
+  {
+    "id": 155,
     "name": "Butch",
     "type": "Villager",
     "series": 2,
@@ -1547,9 +1702,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "156": {
+  {
+    "id": 156,
     "name": "Gabi",
     "type": "Villager",
     "series": 2,
@@ -1557,9 +1713,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "157": {
+  {
+    "id": 157,
     "name": "Moose",
     "type": "Villager",
     "series": 2,
@@ -1567,9 +1724,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "158": {
+  {
+    "id": 158,
     "name": "Timbra",
     "type": "Villager",
     "series": 2,
@@ -1577,9 +1735,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "159": {
+  {
+    "id": 159,
     "name": "Zell",
     "type": "Villager",
     "series": 2,
@@ -1587,9 +1746,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "160": {
+  {
+    "id": 160,
     "name": "Pekoe",
     "type": "Villager",
     "series": 2,
@@ -1597,9 +1757,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "161": {
+  {
+    "id": 161,
     "name": "Teddy",
     "type": "Villager",
     "series": 2,
@@ -1607,9 +1768,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "162": {
+  {
+    "id": 162,
     "name": "Mathilda",
     "type": "Villager",
     "series": 2,
@@ -1617,9 +1779,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "163": {
+  {
+    "id": 163,
     "name": "Ed",
     "type": "Villager",
     "series": 2,
@@ -1627,9 +1790,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "164": {
+  {
+    "id": 164,
     "name": "Bianca",
     "type": "Villager",
     "series": 2,
@@ -1637,9 +1801,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "165": {
+  {
+    "id": 165,
     "name": "Filbert",
     "type": "Villager",
     "series": 2,
@@ -1647,9 +1812,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "166": {
+  {
+    "id": 166,
     "name": "Kitty",
     "type": "Villager",
     "series": 2,
@@ -1657,9 +1823,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "167": {
+  {
+    "id": 167,
     "name": "Beau",
     "type": "Villager",
     "series": 2,
@@ -1667,9 +1834,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "168": {
+  {
+    "id": 168,
     "name": "Nan",
     "type": "Villager",
     "series": 2,
@@ -1677,9 +1845,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "169": {
+  {
+    "id": 169,
     "name": "Bud",
     "type": "Villager",
     "series": 2,
@@ -1687,9 +1856,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "170": {
+  {
+    "id": 170,
     "name": "Ruby",
     "type": "Villager",
     "series": 2,
@@ -1697,9 +1867,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "171": {
+  {
+    "id": 171,
     "name": "Benedict",
     "type": "Villager",
     "series": 2,
@@ -1707,9 +1878,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "172": {
+  {
+    "id": 172,
     "name": "Agnes",
     "type": "Villager",
     "series": 2,
@@ -1717,9 +1889,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "173": {
+  {
+    "id": 173,
     "name": "Julian",
     "type": "Villager",
     "series": 2,
@@ -1727,9 +1900,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "174": {
+  {
+    "id": 174,
     "name": "Bettina",
     "type": "Villager",
     "series": 2,
@@ -1737,9 +1911,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "175": {
+  {
+    "id": 175,
     "name": "Jay",
     "type": "Villager",
     "series": 2,
@@ -1747,9 +1922,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "176": {
+  {
+    "id": 176,
     "name": "Sprinkle",
     "type": "Villager",
     "series": 2,
@@ -1757,9 +1933,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "177": {
+  {
+    "id": 177,
     "name": "Flip",
     "type": "Villager",
     "series": 2,
@@ -1767,9 +1944,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "178": {
+  {
+    "id": 178,
     "name": "Hugh",
     "type": "Villager",
     "series": 2,
@@ -1777,9 +1955,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "179": {
+  {
+    "id": 179,
     "name": "Hopper",
     "type": "Villager",
     "series": 2,
@@ -1787,9 +1966,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "180": {
+  {
+    "id": 180,
     "name": "Pecan",
     "type": "Villager",
     "series": 2,
@@ -1797,9 +1977,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "181": {
+  {
+    "id": 181,
     "name": "Drake",
     "type": "Villager",
     "series": 2,
@@ -1807,9 +1988,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "182": {
+  {
+    "id": 182,
     "name": "Alice",
     "type": "Villager",
     "series": 2,
@@ -1817,9 +1999,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "183": {
+  {
+    "id": 183,
     "name": "Camofrog",
     "type": "Villager",
     "series": 2,
@@ -1827,9 +2010,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "184": {
+  {
+    "id": 184,
     "name": "Anicotti",
     "type": "Villager",
     "series": 2,
@@ -1837,9 +2021,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "185": {
+  {
+    "id": 185,
     "name": "Chops",
     "type": "Villager",
     "series": 2,
@@ -1847,9 +2032,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "186": {
+  {
+    "id": 186,
     "name": "Charlise",
     "type": "Villager",
     "series": 2,
@@ -1857,9 +2043,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "187": {
+  {
+    "id": 187,
     "name": "Vic",
     "type": "Villager",
     "series": 2,
@@ -1867,9 +2054,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "188": {
+  {
+    "id": 188,
     "name": "Ankha",
     "type": "Villager",
     "series": 2,
@@ -1877,9 +2065,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "189": {
+  {
+    "id": 189,
     "name": "Drift",
     "type": "Villager",
     "series": 2,
@@ -1887,9 +2076,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "190": {
+  {
+    "id": 190,
     "name": "Vesta",
     "type": "Villager",
     "series": 2,
@@ -1897,9 +2087,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "191": {
+  {
+    "id": 191,
     "name": "Marcel",
     "type": "Villager",
     "series": 2,
@@ -1907,9 +2098,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "192": {
+  {
+    "id": 192,
     "name": "Pango",
     "type": "Villager",
     "series": 2,
@@ -1917,9 +2109,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "193": {
+  {
+    "id": 193,
     "name": "Keaton",
     "type": "Villager",
     "series": 2,
@@ -1927,9 +2120,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "194": {
+  {
+    "id": 194,
     "name": "Gladys",
     "type": "Villager",
     "series": 2,
@@ -1937,9 +2131,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "195": {
+  {
+    "id": 195,
     "name": "Hamphrey",
     "type": "Villager",
     "series": 2,
@@ -1947,9 +2142,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "196": {
+  {
+    "id": 196,
     "name": "Freya",
     "type": "Villager",
     "series": 2,
@@ -1957,9 +2153,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "197": {
+  {
+    "id": 197,
     "name": "Kid Cat",
     "type": "Villager",
     "series": 2,
@@ -1967,9 +2164,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "198": {
+  {
+    "id": 198,
     "name": "Agent S",
     "type": "Villager",
     "series": 2,
@@ -1977,9 +2175,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "199": {
+  {
+    "id": 199,
     "name": "Big Top",
     "type": "Villager",
     "series": 2,
@@ -1987,9 +2186,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "200": {
+  {
+    "id": 200,
     "name": "Rocket",
     "type": "Villager",
     "series": 2,
@@ -1997,9 +2197,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "201": {
+  {
+    "id": 201,
     "name": "Rover",
     "type": "NPC",
     "series": 3,
@@ -2007,9 +2208,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "202": {
+  {
+    "id": 202,
     "name": "Blathers",
     "type": "NPC",
     "series": 3,
@@ -2017,9 +2219,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "203": {
+  {
+    "id": 203,
     "name": "Tom Nook",
     "type": "NPC",
     "series": 3,
@@ -2027,9 +2230,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "204": {
+  {
+    "id": 204,
     "name": "Pelly",
     "type": "NPC",
     "series": 3,
@@ -2037,9 +2241,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "205": {
+  {
+    "id": 205,
     "name": "Phyllis",
     "type": "NPC",
     "series": 3,
@@ -2047,9 +2252,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "206": {
+  {
+    "id": 206,
     "name": "Pete",
     "type": "NPC",
     "series": 3,
@@ -2057,9 +2263,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "207": {
+  {
+    "id": 207,
     "name": "Mabel",
     "type": "NPC",
     "series": 3,
@@ -2067,9 +2274,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "208": {
+  {
+    "id": 208,
     "name": "Leif",
     "type": "NPC",
     "series": 3,
@@ -2077,9 +2285,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "209": {
+  {
+    "id": 209,
     "name": "Wendell",
     "type": "NPC",
     "series": 3,
@@ -2087,9 +2296,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "210": {
+  {
+    "id": 210,
     "name": "Cyrus",
     "type": "NPC",
     "series": 3,
@@ -2097,9 +2307,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "211": {
+  {
+    "id": 211,
     "name": "Grams",
     "type": "NPC",
     "series": 3,
@@ -2107,9 +2318,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "212": {
+  {
+    "id": 212,
     "name": "Timmy",
     "type": "NPC",
     "series": 3,
@@ -2117,9 +2329,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "213": {
+  {
+    "id": 213,
     "name": "Digby",
     "type": "NPC",
     "series": 3,
@@ -2127,9 +2340,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "214": {
+  {
+    "id": 214,
     "name": "Don",
     "type": "NPC",
     "series": 3,
@@ -2137,9 +2351,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "215": {
+  {
+    "id": 215,
     "name": "Isabelle",
     "type": "NPC",
     "series": 3,
@@ -2147,9 +2362,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "216": {
+  {
+    "id": 216,
     "name": "Franklin",
     "type": "NPC",
     "series": 3,
@@ -2157,9 +2373,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "217": {
+  {
+    "id": 217,
     "name": "Jingle",
     "type": "NPC",
     "series": 3,
@@ -2167,9 +2384,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "218": {
+  {
+    "id": 218,
     "name": "Lily",
     "type": "Villager",
     "series": 3,
@@ -2177,9 +2395,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "219": {
+  {
+    "id": 219,
     "name": "Anchovy",
     "type": "Villager",
     "series": 3,
@@ -2187,9 +2406,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "220": {
+  {
+    "id": 220,
     "name": "Tabby",
     "type": "Villager",
     "series": 3,
@@ -2197,9 +2417,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "221": {
+  {
+    "id": 221,
     "name": "Kody",
     "type": "Villager",
     "series": 3,
@@ -2207,9 +2428,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "222": {
+  {
+    "id": 222,
     "name": "Miranda",
     "type": "Villager",
     "series": 3,
@@ -2217,9 +2439,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "223": {
+  {
+    "id": 223,
     "name": "Del",
     "type": "Villager",
     "series": 3,
@@ -2227,9 +2450,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "224": {
+  {
+    "id": 224,
     "name": "Paula",
     "type": "Villager",
     "series": 3,
@@ -2237,9 +2461,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "225": {
+  {
+    "id": 225,
     "name": "Ken",
     "type": "Villager",
     "series": 3,
@@ -2247,9 +2472,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "226": {
+  {
+    "id": 226,
     "name": "Mitzi",
     "type": "Villager",
     "series": 3,
@@ -2257,9 +2483,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "227": {
+  {
+    "id": 227,
     "name": "Rodeo",
     "type": "Villager",
     "series": 3,
@@ -2267,9 +2494,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "228": {
+  {
+    "id": 228,
     "name": "Bubbles",
     "type": "Villager",
     "series": 3,
@@ -2277,9 +2505,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "229": {
+  {
+    "id": 229,
     "name": "Cousteau",
     "type": "Villager",
     "series": 3,
@@ -2287,9 +2516,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "230": {
+  {
+    "id": 230,
     "name": "Velma",
     "type": "Villager",
     "series": 3,
@@ -2297,9 +2527,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "231": {
+  {
+    "id": 231,
     "name": "Elvis",
     "type": "Villager",
     "series": 3,
@@ -2307,9 +2538,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "232": {
+  {
+    "id": 232,
     "name": "Canberra",
     "type": "Villager",
     "series": 3,
@@ -2317,9 +2549,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "233": {
+  {
+    "id": 233,
     "name": "Colton",
     "type": "Villager",
     "series": 3,
@@ -2327,9 +2560,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "234": {
+  {
+    "id": 234,
     "name": "Marina",
     "type": "Villager",
     "series": 3,
@@ -2337,9 +2571,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "235": {
+  {
+    "id": 235,
     "name": "Spork",
     "type": "Villager",
     "series": 3,
@@ -2347,9 +2582,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "236": {
+  {
+    "id": 236,
     "name": "Freckles",
     "type": "Villager",
     "series": 3,
@@ -2357,9 +2593,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "237": {
+  {
+    "id": 237,
     "name": "Bam",
     "type": "Villager",
     "series": 3,
@@ -2367,9 +2604,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "238": {
+  {
+    "id": 238,
     "name": "Friga",
     "type": "Villager",
     "series": 3,
@@ -2377,9 +2615,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "239": {
+  {
+    "id": 239,
     "name": "Jitters",
     "type": "Villager",
     "series": 3,
@@ -2387,9 +2626,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "240": {
+  {
+    "id": 240,
     "name": "Deirdre",
     "type": "Villager",
     "series": 3,
@@ -2397,9 +2637,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "241": {
+  {
+    "id": 241,
     "name": "Hans",
     "type": "Villager",
     "series": 3,
@@ -2407,9 +2648,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "242": {
+  {
+    "id": 242,
     "name": "Chevre",
     "type": "Villager",
     "series": 3,
@@ -2417,9 +2659,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "243": {
+  {
+    "id": 243,
     "name": "Drago",
     "type": "Villager",
     "series": 3,
@@ -2427,9 +2670,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "244": {
+  {
+    "id": 244,
     "name": "Tangy",
     "type": "Villager",
     "series": 3,
@@ -2437,9 +2681,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "245": {
+  {
+    "id": 245,
     "name": "Mac",
     "type": "Villager",
     "series": 3,
@@ -2447,9 +2692,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "246": {
+  {
+    "id": 246,
     "name": "Eloise",
     "type": "Villager",
     "series": 3,
@@ -2457,9 +2703,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "247": {
+  {
+    "id": 247,
     "name": "Wart Jr.",
     "type": "Villager",
     "series": 3,
@@ -2467,9 +2714,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "248": {
+  {
+    "id": 248,
     "name": "Hazel",
     "type": "Villager",
     "series": 3,
@@ -2477,9 +2725,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "249": {
+  {
+    "id": 249,
     "name": "Beardo",
     "type": "Villager",
     "series": 3,
@@ -2487,9 +2736,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "250": {
+  {
+    "id": 250,
     "name": "Ava",
     "type": "Villager",
     "series": 3,
@@ -2497,9 +2747,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "251": {
+  {
+    "id": 251,
     "name": "Chester",
     "type": "Villager",
     "series": 3,
@@ -2507,9 +2758,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "252": {
+  {
+    "id": 252,
     "name": "Merry",
     "type": "Villager",
     "series": 3,
@@ -2517,9 +2769,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "253": {
+  {
+    "id": 253,
     "name": "Genji",
     "type": "Villager",
     "series": 3,
@@ -2527,9 +2780,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "254": {
+  {
+    "id": 254,
     "name": "Greta",
     "type": "Villager",
     "series": 3,
@@ -2537,9 +2791,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "255": {
+  {
+    "id": 255,
     "name": "Wolfgang",
     "type": "Villager",
     "series": 3,
@@ -2547,9 +2802,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "256": {
+  {
+    "id": 256,
     "name": "Diva",
     "type": "Villager",
     "series": 3,
@@ -2557,9 +2813,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "257": {
+  {
+    "id": 257,
     "name": "Klaus",
     "type": "Villager",
     "series": 3,
@@ -2567,9 +2824,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "258": {
+  {
+    "id": 258,
     "name": "Daisy",
     "type": "Villager",
     "series": 3,
@@ -2577,9 +2835,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "259": {
+  {
+    "id": 259,
     "name": "Stinky",
     "type": "Villager",
     "series": 3,
@@ -2587,9 +2846,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "260": {
+  {
+    "id": 260,
     "name": "Tammi",
     "type": "Villager",
     "series": 3,
@@ -2597,9 +2857,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "261": {
+  {
+    "id": 261,
     "name": "Tucker",
     "type": "Villager",
     "series": 3,
@@ -2607,9 +2868,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "262": {
+  {
+    "id": 262,
     "name": "Blanche",
     "type": "Villager",
     "series": 3,
@@ -2617,9 +2879,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "263": {
+  {
+    "id": 263,
     "name": "Gaston",
     "type": "Villager",
     "series": 3,
@@ -2627,9 +2890,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "264": {
+  {
+    "id": 264,
     "name": "Marshal",
     "type": "Villager",
     "series": 3,
@@ -2637,9 +2901,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "265": {
+  {
+    "id": 265,
     "name": "Gala",
     "type": "Villager",
     "series": 3,
@@ -2647,9 +2912,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "266": {
+  {
+    "id": 266,
     "name": "Joey",
     "type": "Villager",
     "series": 3,
@@ -2657,9 +2923,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "267": {
+  {
+    "id": 267,
     "name": "Pippy",
     "type": "Villager",
     "series": 3,
@@ -2667,9 +2934,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "268": {
+  {
+    "id": 268,
     "name": "Buck",
     "type": "Villager",
     "series": 3,
@@ -2677,9 +2945,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "269": {
+  {
+    "id": 269,
     "name": "Bree",
     "type": "Villager",
     "series": 3,
@@ -2687,9 +2956,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "270": {
+  {
+    "id": 270,
     "name": "Rooney",
     "type": "Villager",
     "series": 3,
@@ -2697,9 +2967,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "271": {
+  {
+    "id": 271,
     "name": "Curlos",
     "type": "Villager",
     "series": 3,
@@ -2707,9 +2978,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "272": {
+  {
+    "id": 272,
     "name": "Monty",
     "type": "Villager",
     "series": 3,
@@ -2717,9 +2989,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "273": {
+  {
+    "id": 273,
     "name": "Moe",
     "type": "Villager",
     "series": 3,
@@ -2727,9 +3000,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "274": {
+  {
+    "id": 274,
     "name": "Flora",
     "type": "Villager",
     "series": 3,
@@ -2737,9 +3011,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "275": {
+  {
+    "id": 275,
     "name": "Hamlet",
     "type": "Villager",
     "series": 3,
@@ -2747,9 +3022,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "276": {
+  {
+    "id": 276,
     "name": "Astrid",
     "type": "Villager",
     "series": 3,
@@ -2757,9 +3033,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "277": {
+  {
+    "id": 277,
     "name": "Monty",
     "type": "Villager",
     "series": 3,
@@ -2767,9 +3044,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "278": {
+  {
+    "id": 278,
     "name": "Dora",
     "type": "Villager",
     "series": 3,
@@ -2777,9 +3055,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "279": {
+  {
+    "id": 279,
     "name": "Biskit",
     "type": "Villager",
     "series": 3,
@@ -2787,9 +3066,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "280": {
+  {
+    "id": 280,
     "name": "Victoria",
     "type": "Villager",
     "series": 3,
@@ -2797,9 +3077,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "281": {
+  {
+    "id": 281,
     "name": "Lyman",
     "type": "Villager",
     "series": 3,
@@ -2807,9 +3088,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "282": {
+  {
+    "id": 282,
     "name": "Violet",
     "type": "Villager",
     "series": 3,
@@ -2817,9 +3099,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "283": {
+  {
+    "id": 283,
     "name": "Frank",
     "type": "Villager",
     "series": 3,
@@ -2827,9 +3110,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "284": {
+  {
+    "id": 284,
     "name": "Chadder",
     "type": "Villager",
     "series": 3,
@@ -2837,9 +3121,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "285": {
+  {
+    "id": 285,
     "name": "Merengue",
     "type": "Villager",
     "series": 3,
@@ -2847,9 +3132,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "286": {
+  {
+    "id": 286,
     "name": "Cube",
     "type": "Villager",
     "series": 3,
@@ -2857,9 +3143,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "287": {
+  {
+    "id": 287,
     "name": "Claudia",
     "type": "Villager",
     "series": 3,
@@ -2867,9 +3154,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "288": {
+  {
+    "id": 288,
     "name": "Curly",
     "type": "Villager",
     "series": 3,
@@ -2877,9 +3165,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "289": {
+  {
+    "id": 289,
     "name": "Boomer",
     "type": "Villager",
     "series": 3,
@@ -2887,9 +3176,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "290": {
+  {
+    "id": 290,
     "name": "Caroline",
     "type": "Villager",
     "series": 3,
@@ -2897,9 +3187,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "291": {
+  {
+    "id": 291,
     "name": "Sparro",
     "type": "Villager",
     "series": 3,
@@ -2907,9 +3198,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "292": {
+  {
+    "id": 292,
     "name": "Baabara",
     "type": "Villager",
     "series": 3,
@@ -2917,9 +3209,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "293": {
+  {
+    "id": 293,
     "name": "Rolf",
     "type": "Villager",
     "series": 3,
@@ -2927,9 +3220,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "294": {
+  {
+    "id": 294,
     "name": "Maple",
     "type": "Villager",
     "series": 3,
@@ -2937,9 +3231,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "295": {
+  {
+    "id": 295,
     "name": "Antonio",
     "type": "Villager",
     "series": 3,
@@ -2947,9 +3242,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "296": {
+  {
+    "id": 296,
     "name": "Soleil",
     "type": "Villager",
     "series": 3,
@@ -2957,9 +3253,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "297": {
+  {
+    "id": 297,
     "name": "Apollo",
     "type": "Villager",
     "series": 3,
@@ -2967,9 +3264,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "298": {
+  {
+    "id": 298,
     "name": "Derwin",
     "type": "Villager",
     "series": 3,
@@ -2977,9 +3275,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "299": {
+  {
+    "id": 299,
     "name": "Francine",
     "type": "Villager",
     "series": 3,
@@ -2987,9 +3286,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "300": {
+  {
+    "id": 300,
     "name": "Chrissy",
     "type": "Villager",
     "series": 3,
@@ -2997,9 +3297,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "301": {
+  {
+    "id": 301,
     "name": "Isabelle",
     "type": "NPC",
     "series": 4,
@@ -3007,9 +3308,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "302": {
+  {
+    "id": 302,
     "name": "Brewster",
     "type": "NPC",
     "series": 4,
@@ -3017,9 +3319,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "303": {
+  {
+    "id": 303,
     "name": "Katrina",
     "type": "NPC",
     "series": 4,
@@ -3027,9 +3330,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "304": {
+  {
+    "id": 304,
     "name": "Phineas",
     "type": "NPC",
     "series": 4,
@@ -3037,9 +3341,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "305": {
+  {
+    "id": 305,
     "name": "Celeste",
     "type": "NPC",
     "series": 4,
@@ -3047,9 +3352,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "306": {
+  {
+    "id": 306,
     "name": "Tommy",
     "type": "NPC",
     "series": 4,
@@ -3057,9 +3363,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "307": {
+  {
+    "id": 307,
     "name": "Gracie",
     "type": "NPC",
     "series": 4,
@@ -3067,9 +3374,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "308": {
+  {
+    "id": 308,
     "name": "Leilani",
     "type": "NPC",
     "series": 4,
@@ -3077,9 +3385,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "309": {
+  {
+    "id": 309,
     "name": "Resetti",
     "type": "NPC",
     "series": 4,
@@ -3087,9 +3396,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "310": {
+  {
+    "id": 310,
     "name": "Timmy",
     "type": "NPC",
     "series": 4,
@@ -3097,9 +3407,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "311": {
+  {
+    "id": 311,
     "name": "Lottie",
     "type": "NPC",
     "series": 4,
@@ -3107,9 +3418,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "312": {
+  {
+    "id": 312,
     "name": "Shrunk",
     "type": "NPC",
     "series": 4,
@@ -3117,9 +3429,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "313": {
+  {
+    "id": 313,
     "name": "Pavé",
     "type": "NPC",
     "series": 4,
@@ -3127,9 +3440,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "314": {
+  {
+    "id": 314,
     "name": "Gulliver",
     "type": "NPC",
     "series": 4,
@@ -3137,9 +3451,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "315": {
+  {
+    "id": 315,
     "name": "Redd",
     "type": "NPC",
     "series": 4,
@@ -3147,9 +3462,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "316": {
+  {
+    "id": 316,
     "name": "Zipper",
     "type": "NPC",
     "series": 4,
@@ -3157,9 +3473,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "317": {
+  {
+    "id": 317,
     "name": "Goldie",
     "type": "Villager",
     "series": 4,
@@ -3167,9 +3484,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "318": {
+  {
+    "id": 318,
     "name": "Stitches",
     "type": "Villager",
     "series": 4,
@@ -3177,9 +3495,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "319": {
+  {
+    "id": 319,
     "name": "Pinky",
     "type": "Villager",
     "series": 4,
@@ -3187,9 +3506,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "320": {
+  {
+    "id": 320,
     "name": "Mott",
     "type": "Villager",
     "series": 4,
@@ -3197,9 +3517,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "321": {
+  {
+    "id": 321,
     "name": "Mallary",
     "type": "Villager",
     "series": 4,
@@ -3207,9 +3528,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "322": {
+  {
+    "id": 322,
     "name": "Rocco",
     "type": "Villager",
     "series": 4,
@@ -3217,9 +3539,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "323": {
+  {
+    "id": 323,
     "name": "Katt",
     "type": "Villager",
     "series": 4,
@@ -3227,9 +3550,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "324": {
+  {
+    "id": 324,
     "name": "Graham",
     "type": "Villager",
     "series": 4,
@@ -3237,9 +3561,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "325": {
+  {
+    "id": 325,
     "name": "Peaches",
     "type": "Villager",
     "series": 4,
@@ -3247,9 +3572,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "326": {
+  {
+    "id": 326,
     "name": "Dizzy",
     "type": "Villager",
     "series": 4,
@@ -3257,9 +3583,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "327": {
+  {
+    "id": 327,
     "name": "Penelope",
     "type": "Villager",
     "series": 4,
@@ -3267,9 +3594,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "328": {
+  {
+    "id": 328,
     "name": "Boone",
     "type": "Villager",
     "series": 4,
@@ -3277,9 +3605,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "329": {
+  {
+    "id": 329,
     "name": "Broffina",
     "type": "Villager",
     "series": 4,
@@ -3287,9 +3616,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "330": {
+  {
+    "id": 330,
     "name": "Croque",
     "type": "Villager",
     "series": 4,
@@ -3297,9 +3627,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "331": {
+  {
+    "id": 331,
     "name": "Pashmina",
     "type": "Villager",
     "series": 4,
@@ -3307,9 +3638,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "332": {
+  {
+    "id": 332,
     "name": "Shep",
     "type": "Villager",
     "series": 4,
@@ -3317,9 +3649,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "333": {
+  {
+    "id": 333,
     "name": "Lolly",
     "type": "Villager",
     "series": 4,
@@ -3327,9 +3660,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "334": {
+  {
+    "id": 334,
     "name": "Erik",
     "type": "Villager",
     "series": 4,
@@ -3337,9 +3671,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "335": {
+  {
+    "id": 335,
     "name": "Dotty",
     "type": "Villager",
     "series": 4,
@@ -3347,9 +3682,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "336": {
+  {
+    "id": 336,
     "name": "Pierce",
     "type": "Villager",
     "series": 4,
@@ -3357,9 +3693,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "337": {
+  {
+    "id": 337,
     "name": "Queenie",
     "type": "Villager",
     "series": 4,
@@ -3367,9 +3704,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "338": {
+  {
+    "id": 338,
     "name": "Fang",
     "type": "Villager",
     "series": 4,
@@ -3377,9 +3715,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "339": {
+  {
+    "id": 339,
     "name": "Frita",
     "type": "Villager",
     "series": 4,
@@ -3387,9 +3726,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "340": {
+  {
+    "id": 340,
     "name": "Tex",
     "type": "Villager",
     "series": 4,
@@ -3397,9 +3737,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "341": {
+  {
+    "id": 341,
     "name": "Melba",
     "type": "Villager",
     "series": 4,
@@ -3407,9 +3748,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "342": {
+  {
+    "id": 342,
     "name": "Bones",
     "type": "Villager",
     "series": 4,
@@ -3417,9 +3759,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "343": {
+  {
+    "id": 343,
     "name": "Anabelle",
     "type": "Villager",
     "series": 4,
@@ -3427,9 +3770,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "344": {
+  {
+    "id": 344,
     "name": "Rudy",
     "type": "Villager",
     "series": 4,
@@ -3437,9 +3781,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "345": {
+  {
+    "id": 345,
     "name": "Naomi",
     "type": "Villager",
     "series": 4,
@@ -3447,9 +3792,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "346": {
+  {
+    "id": 346,
     "name": "Peewee",
     "type": "Villager",
     "series": 4,
@@ -3457,9 +3803,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "347": {
+  {
+    "id": 347,
     "name": "Tammy",
     "type": "Villager",
     "series": 4,
@@ -3467,9 +3814,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "348": {
+  {
+    "id": 348,
     "name": "Olaf",
     "type": "Villager",
     "series": 4,
@@ -3477,9 +3825,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "349": {
+  {
+    "id": 349,
     "name": "Lucy",
     "type": "Villager",
     "series": 4,
@@ -3487,9 +3836,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "350": {
+  {
+    "id": 350,
     "name": "Elmer",
     "type": "Villager",
     "series": 4,
@@ -3497,9 +3847,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "351": {
+  {
+    "id": 351,
     "name": "Puddles",
     "type": "Villager",
     "series": 4,
@@ -3507,9 +3858,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "352": {
+  {
+    "id": 352,
     "name": "Rory",
     "type": "Villager",
     "series": 4,
@@ -3517,9 +3869,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "353": {
+  {
+    "id": 353,
     "name": "Elise",
     "type": "Villager",
     "series": 4,
@@ -3527,9 +3880,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "354": {
+  {
+    "id": 354,
     "name": "Walt",
     "type": "Villager",
     "series": 4,
@@ -3537,9 +3891,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "355": {
+  {
+    "id": 355,
     "name": "Mira",
     "type": "Villager",
     "series": 4,
@@ -3547,9 +3902,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "356": {
+  {
+    "id": 356,
     "name": "Pietro",
     "type": "Villager",
     "series": 4,
@@ -3557,9 +3913,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "357": {
+  {
+    "id": 357,
     "name": "Aurora",
     "type": "Villager",
     "series": 4,
@@ -3567,9 +3924,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "358": {
+  {
+    "id": 358,
     "name": "Papi",
     "type": "Villager",
     "series": 4,
@@ -3577,9 +3935,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "359": {
+  {
+    "id": 359,
     "name": "Apple",
     "type": "Villager",
     "series": 4,
@@ -3587,9 +3946,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "360": {
+  {
+    "id": 360,
     "name": "Rod",
     "type": "Villager",
     "series": 4,
@@ -3597,9 +3957,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "361": {
+  {
+    "id": 361,
     "name": "Purrl",
     "type": "Villager",
     "series": 4,
@@ -3607,9 +3968,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "362": {
+  {
+    "id": 362,
     "name": "Static",
     "type": "Villager",
     "series": 4,
@@ -3617,9 +3979,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "363": {
+  {
+    "id": 363,
     "name": "Celia",
     "type": "Villager",
     "series": 4,
@@ -3627,9 +3990,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "364": {
+  {
+    "id": 364,
     "name": "Zucker",
     "type": "Villager",
     "series": 4,
@@ -3637,9 +4001,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "365": {
+  {
+    "id": 365,
     "name": "Peggy",
     "type": "Villager",
     "series": 4,
@@ -3647,9 +4012,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "366": {
+  {
+    "id": 366,
     "name": "Ribbot",
     "type": "Villager",
     "series": 4,
@@ -3657,9 +4023,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "367": {
+  {
+    "id": 367,
     "name": "Annalise",
     "type": "Villager",
     "series": 4,
@@ -3667,9 +4034,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "368": {
+  {
+    "id": 368,
     "name": "Chow",
     "type": "Villager",
     "series": 4,
@@ -3677,9 +4045,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "369": {
+  {
+    "id": 369,
     "name": "Sylvia",
     "type": "Villager",
     "series": 4,
@@ -3687,9 +4056,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "370": {
+  {
+    "id": 370,
     "name": "Jacques",
     "type": "Villager",
     "series": 4,
@@ -3697,9 +4067,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "371": {
+  {
+    "id": 371,
     "name": "Sally",
     "type": "Villager",
     "series": 4,
@@ -3707,9 +4078,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "372": {
+  {
+    "id": 372,
     "name": "Doc",
     "type": "Villager",
     "series": 4,
@@ -3717,9 +4089,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "373": {
+  {
+    "id": 373,
     "name": "Pompom",
     "type": "Villager",
     "series": 4,
@@ -3727,9 +4100,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "374": {
+  {
+    "id": 374,
     "name": "Tank",
     "type": "Villager",
     "series": 4,
@@ -3737,9 +4111,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "375": {
+  {
+    "id": 375,
     "name": "Becky",
     "type": "Villager",
     "series": 4,
@@ -3747,9 +4122,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "376": {
+  {
+    "id": 376,
     "name": "Rizzo",
     "type": "Villager",
     "series": 4,
@@ -3757,9 +4133,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "377": {
+  {
+    "id": 377,
     "name": "Sydney",
     "type": "Villager",
     "series": 4,
@@ -3767,9 +4144,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "378": {
+  {
+    "id": 378,
     "name": "Barold",
     "type": "Villager",
     "series": 4,
@@ -3777,9 +4155,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "379": {
+  {
+    "id": 379,
     "name": "Nibbles",
     "type": "Villager",
     "series": 4,
@@ -3787,9 +4166,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "380": {
+  {
+    "id": 380,
     "name": "Kevin",
     "type": "Villager",
     "series": 4,
@@ -3797,9 +4177,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "381": {
+  {
+    "id": 381,
     "name": "Gloria",
     "type": "Villager",
     "series": 4,
@@ -3807,9 +4188,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "382": {
+  {
+    "id": 382,
     "name": "Lobo",
     "type": "Villager",
     "series": 4,
@@ -3817,9 +4199,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "383": {
+  {
+    "id": 383,
     "name": "Hippeux",
     "type": "Villager",
     "series": 4,
@@ -3827,9 +4210,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "384": {
+  {
+    "id": 384,
     "name": "Margie",
     "type": "Villager",
     "series": 4,
@@ -3837,9 +4221,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "385": {
+  {
+    "id": 385,
     "name": "Lucky",
     "type": "Villager",
     "series": 4,
@@ -3847,9 +4232,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "386": {
+  {
+    "id": 386,
     "name": "Rosie",
     "type": "Villager",
     "series": 4,
@@ -3857,9 +4243,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "387": {
+  {
+    "id": 387,
     "name": "Rowan",
     "type": "Villager",
     "series": 4,
@@ -3867,9 +4254,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "388": {
+  {
+    "id": 388,
     "name": "Maelle",
     "type": "Villager",
     "series": 4,
@@ -3877,9 +4265,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "389": {
+  {
+    "id": 389,
     "name": "Bruce",
     "type": "Villager",
     "series": 4,
@@ -3887,9 +4276,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "390": {
+  {
+    "id": 390,
     "name": "O'Hare",
     "type": "Villager",
     "series": 4,
@@ -3897,9 +4287,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "391": {
+  {
+    "id": 391,
     "name": "Gayle",
     "type": "Villager",
     "series": 4,
@@ -3907,9 +4298,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "392": {
+  {
+    "id": 392,
     "name": "Cranston",
     "type": "Villager",
     "series": 4,
@@ -3917,9 +4309,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "393": {
+  {
+    "id": 393,
     "name": "Frobert",
     "type": "Villager",
     "series": 4,
@@ -3927,9 +4320,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "394": {
+  {
+    "id": 394,
     "name": "Grizzly",
     "type": "Villager",
     "series": 4,
@@ -3937,9 +4331,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "395": {
+  {
+    "id": 395,
     "name": "Cally",
     "type": "Villager",
     "series": 4,
@@ -3947,9 +4342,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "396": {
+  {
+    "id": 396,
     "name": "Simon",
     "type": "Villager",
     "series": 4,
@@ -3957,9 +4353,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "397": {
+  {
+    "id": 397,
     "name": "Iggly",
     "type": "Villager",
     "series": 4,
@@ -3967,9 +4364,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "398": {
+  {
+    "id": 398,
     "name": "Angus",
     "type": "Villager",
     "series": 4,
@@ -3977,9 +4375,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "399": {
+  {
+    "id": 399,
     "name": "Twiggy",
     "type": "Villager",
     "series": 4,
@@ -3987,9 +4386,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "400": {
+  {
+    "id": 400,
     "name": "Robin",
     "type": "Villager",
     "series": 4,
@@ -3997,9 +4397,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "401": {
+  {
+    "id": 401,
     "name": "Vivian",
     "type": "Villager",
     "series": 5,
@@ -4007,9 +4408,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "402": {
+  {
+    "id": 402,
     "name": "Hopkins",
     "type": "Villager",
     "series": 5,
@@ -4017,9 +4419,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "403": {
+  {
+    "id": 403,
     "name": "June",
     "type": "Villager",
     "series": 5,
@@ -4027,9 +4430,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "404": {
+  {
+    "id": 404,
     "name": "Piper",
     "type": "Villager",
     "series": 5,
@@ -4037,9 +4441,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "405": {
+  {
+    "id": 405,
     "name": "Paolo",
     "type": "Villager",
     "series": 5,
@@ -4047,9 +4452,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "406": {
+  {
+    "id": 406,
     "name": "Hornsby",
     "type": "Villager",
     "series": 5,
@@ -4057,9 +4463,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "407": {
+  {
+    "id": 407,
     "name": "Stella",
     "type": "Villager",
     "series": 5,
@@ -4067,9 +4474,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "408": {
+  {
+    "id": 408,
     "name": "Tybalt",
     "type": "Villager",
     "series": 5,
@@ -4077,9 +4485,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "409": {
+  {
+    "id": 409,
     "name": "Huck",
     "type": "Villager",
     "series": 5,
@@ -4087,9 +4496,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "410": {
+  {
+    "id": 410,
     "name": "Sylvana",
     "type": "Villager",
     "series": 5,
@@ -4097,9 +4507,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "411": {
+  {
+    "id": 411,
     "name": "Boris",
     "type": "Villager",
     "series": 5,
@@ -4107,9 +4518,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "412": {
+  {
+    "id": 412,
     "name": "Wade",
     "type": "Villager",
     "series": 5,
@@ -4117,9 +4529,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "413": {
+  {
+    "id": 413,
     "name": "Carrie",
     "type": "Villager",
     "series": 5,
@@ -4127,9 +4540,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "414": {
+  {
+    "id": 414,
     "name": "Ketchup",
     "type": "Villager",
     "series": 5,
@@ -4137,9 +4551,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "415": {
+  {
+    "id": 415,
     "name": "Rex",
     "type": "Villager",
     "series": 5,
@@ -4147,9 +4562,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "416": {
+  {
+    "id": 416,
     "name": "Stu",
     "type": "Villager",
     "series": 5,
@@ -4157,9 +4573,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "417": {
+  {
+    "id": 417,
     "name": "Ursala",
     "type": "Villager",
     "series": 5,
@@ -4167,9 +4584,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "418": {
+  {
+    "id": 418,
     "name": "Jacob",
     "type": "Villager",
     "series": 5,
@@ -4177,9 +4595,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "419": {
+  {
+    "id": 419,
     "name": "Maddie",
     "type": "Villager",
     "series": 5,
@@ -4187,9 +4606,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "420": {
+  {
+    "id": 420,
     "name": "Billy",
     "type": "Villager",
     "series": 5,
@@ -4197,9 +4617,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "421": {
+  {
+    "id": 421,
     "name": "Boyd",
     "type": "Villager",
     "series": 5,
@@ -4207,9 +4628,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "422": {
+  {
+    "id": 422,
     "name": "Bitty",
     "type": "Villager",
     "series": 5,
@@ -4217,9 +4639,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "423": {
+  {
+    "id": 423,
     "name": "Maggie",
     "type": "Villager",
     "series": 5,
@@ -4227,9 +4650,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "424": {
+  {
+    "id": 424,
     "name": "Murphy",
     "type": "Villager",
     "series": 5,
@@ -4237,9 +4661,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "425": {
+  {
+    "id": 425,
     "name": "Plucky",
     "type": "Villager",
     "series": 5,
@@ -4247,9 +4672,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "426": {
+  {
+    "id": 426,
     "name": "Sandy",
     "type": "Villager",
     "series": 5,
@@ -4257,9 +4683,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "427": {
+  {
+    "id": 427,
     "name": "Claude",
     "type": "Villager",
     "series": 5,
@@ -4267,9 +4694,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "428": {
+  {
+    "id": 428,
     "name": "Raddle",
     "type": "Villager",
     "series": 5,
@@ -4277,9 +4705,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "429": {
+  {
+    "id": 429,
     "name": "Julia",
     "type": "Villager",
     "series": 5,
@@ -4287,9 +4716,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "430": {
+  {
+    "id": 430,
     "name": "Louie",
     "type": "Villager",
     "series": 5,
@@ -4297,9 +4727,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "431": {
+  {
+    "id": 431,
     "name": "Bea",
     "type": "Villager",
     "series": 5,
@@ -4307,9 +4738,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "432": {
+  {
+    "id": 432,
     "name": "Admiral",
     "type": "Villager",
     "series": 4,
@@ -4317,9 +4749,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "433": {
+  {
+    "id": 433,
     "name": "Ellie",
     "type": "Villager",
     "series": 5,
@@ -4327,9 +4760,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "434": {
+  {
+    "id": 434,
     "name": "Boots",
     "type": "Villager",
     "series": 5,
@@ -4337,9 +4771,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "435": {
+  {
+    "id": 435,
     "name": "Weber",
     "type": "Villager",
     "series": 5,
@@ -4347,9 +4782,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "436": {
+  {
+    "id": 436,
     "name": "Candi",
     "type": "Villager",
     "series": 5,
@@ -4357,9 +4793,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "437": {
+  {
+    "id": 437,
     "name": "Leopold",
     "type": "Villager",
     "series": 5,
@@ -4367,9 +4804,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "438": {
+  {
+    "id": 438,
     "name": "Spike",
     "type": "Villager",
     "series": 5,
@@ -4377,9 +4815,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "439": {
+  {
+    "id": 439,
     "name": "Cashmere",
     "type": "Villager",
     "series": 5,
@@ -4387,9 +4826,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "440": {
+  {
+    "id": 440,
     "name": "Tad",
     "type": "Villager",
     "series": 5,
@@ -4397,9 +4837,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "441": {
+  {
+    "id": 441,
     "name": "Norma",
     "type": "Villager",
     "series": 5,
@@ -4407,9 +4848,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "442": {
+  {
+    "id": 442,
     "name": "Gonzo",
     "type": "Villager",
     "series": 5,
@@ -4417,9 +4859,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "443": {
+  {
+    "id": 443,
     "name": "Sprocket",
     "type": "Villager",
     "series": 5,
@@ -4427,9 +4870,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "444": {
+  {
+    "id": 444,
     "name": "Snooty",
     "type": "Villager",
     "series": 5,
@@ -4437,9 +4881,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "445": {
+  {
+    "id": 445,
     "name": "Olive",
     "type": "Villager",
     "series": 5,
@@ -4447,9 +4892,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "446": {
+  {
+    "id": 446,
     "name": "Dobie",
     "type": "Villager",
     "series": 5,
@@ -4457,9 +4903,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "447": {
+  {
+    "id": 447,
     "name": "Buzz",
     "type": "Villager",
     "series": 5,
@@ -4467,9 +4914,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "448": {
+  {
+    "id": 448,
     "name": "Cleo",
     "type": "Villager",
     "series": 5,
@@ -4477,9 +4925,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "449": {
+  {
+    "id": 449,
     "name": "Ike",
     "type": "Villager",
     "series": 5,
@@ -4487,9 +4936,10 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   },
-  "450": {
+  {
+    "id": 450,
     "name": "Tasha",
     "type": "Villager",
     "series": 5,
@@ -4497,6 +4947,6 @@
     "light-color": "",
     "dark-color": "",
     "darker-color": "",
-    "image": ""
+    "imageUrl": "/Amiibo/001.png"
   }
-}
+]
