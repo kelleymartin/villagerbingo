@@ -335,7 +335,7 @@ export default class Home extends React.Component {
           <p
             className="nameTag"
             style={{
-              backgroundColor: villager.bubbleColor,
+              backgroundColor: villager.darkerColor,
               color: `#ffffff`,
             }}
           >
@@ -726,9 +726,6 @@ export default class Home extends React.Component {
             </div>
 
             {/* <div className="separator"></div> */}
-            <a className="tile">
-              <img className="amiibo" src="/Amiibo/001.png" />
-            </a>
 
             <div className="setSelection">
               <label className="selectionLabel">Select amiibo series:</label>
