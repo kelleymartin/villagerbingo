@@ -754,7 +754,7 @@ export default class Home extends React.Component {
             </div>
 
             <div className="fractionSelection">
-              <label># cards in packs:</label>
+              <label>Select cards per pack:</label>
               <button
                 className="three"
                 disabled={this.state.gameState.amiiboSeriesId === 5}

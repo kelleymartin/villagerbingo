@@ -19,7 +19,7 @@
   }
 
   .navbar {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
   }
 
@@ -81,7 +81,6 @@
   .optionsBox > label {
     font-size: 30px;
     font-weight: 600;
-
   }
 
   .flexButtons {
@@ -157,6 +156,35 @@
 
   .faceName {
     font-size: 20px;
+  }
+
+  .fractionSelection {
+    grid-template-columns: 2fr 120px 2fr;
+    column-gap: 5px;
+  }
+
+  .three {
+    grid-column-start: 1;
+    justify-self: end;
+  }
+
+  .six {
+    grid-column-start: 3;
+  }
+
+  .fractionSelection > button {
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+    font-size: 40px;
+  }
+
+  .fractionSelection > button:disabled {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background-color: transparent;
+    background-image: none;
   }
 
   .buttons {
@@ -262,7 +290,7 @@
     margin-top: 50px;
     margin-left: 40px;
   }
-/* 
+  /* 
   .red {
     order: 0;
   }
