@@ -1,11 +1,10 @@
 import Head from "next/head";
 import pickRandom from "pick-random";
-import html2canvas from "html2canvas";
 
 import amiibo from "../data/amiibo.json";
 import urlFormat, { encodeState } from "../lib/url-encode";
 import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
-import { VillagerDropdown } from "../components/villager-dropdown";
+import { NavDropdown } from "../components/nav-dropdown";
 
 const ALL_THEMES = [
   {
@@ -708,10 +707,7 @@ export default class Home extends React.Component {
                 How to play
               </button>
 
-              <select onChange="">
-                <option value="https://villager.bingo/">NMT</option>
-                <option value="https://villager.bingo/amiibo/">Amiibo</option>
-              </select>
+              <NavDropdown value="/amiibo"/>
 
               <div className="settingsButtonBorder"></div>
               <button
@@ -737,6 +733,8 @@ export default class Home extends React.Component {
               {SERIES_OPTIONS.map((seriesOption) => {
                 const isActive =
                   seriesOption.seriesId === this.gameState.amiiboSeriesId;
+                const marker = isActive ? "✓" : "";
+                // const markerClass = is ? "selected-theme" : "";
                 return (
                   <button
                     key={seriesOption.seriesId}
@@ -750,7 +748,7 @@ export default class Home extends React.Component {
                       });
                     }}
                   >
-                    {seriesOption.label}
+                    {marker} {seriesOption.label}
                   </button>
                 );
               })}
