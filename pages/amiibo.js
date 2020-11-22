@@ -693,6 +693,8 @@ export default class Home extends React.Component {
             {/* <div className="separatorBig"></div> */}
 
             <div className={navbarClasses.join(" ")}>
+              <NavDropdown value="/amiibo" />
+
               <div className="howToButtonBorder">How to play</div>
               <button
                 className="howToButton"
@@ -706,8 +708,6 @@ export default class Home extends React.Component {
               >
                 How to play
               </button>
-
-              <NavDropdown value="/amiibo"/>
 
               <div className="settingsButtonBorder"></div>
               <button
@@ -734,7 +734,6 @@ export default class Home extends React.Component {
                 const isActive =
                   seriesOption.seriesId === this.gameState.amiiboSeriesId;
                 const marker = isActive ? "✓" : "";
-                // const markerClass = is ? "selected-theme" : "";
                 return (
                   <button
                     key={seriesOption.seriesId}
@@ -755,38 +754,37 @@ export default class Home extends React.Component {
             </div>
 
             <div className="fractionSelection">
-              <label>
-                <input
-                  type="radio"
-                  disabled={this.state.gameState.amiiboSeriesId === 5}
-                  checked={
-                    this.state.gameState.amiiboSeriesId !== 5 &&
-                    this.state.gameState.amiiboNPCFraction === 3
-                  }
-                  onClick={(e) => {
-                    this.setGameState({
-                      amiiboNPCFraction: 3,
-                    });
-                  }}
-                />
-                One in three are NPCs
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  disabled={this.state.gameState.amiiboSeriesId === 5}
-                  checked={
-                    this.state.gameState.amiiboSeriesId !== 5 &&
-                    this.state.gameState.amiiboNPCFraction === 6
-                  }
-                  onClick={(e) => {
-                    this.setGameState({
-                      amiiboNPCFraction: 6,
-                    });
-                  }}
-                />
-                One in six are NPCs
-              </label>
+              <label># cards in packs:</label>
+              <button
+                className="three"
+                disabled={this.state.gameState.amiiboSeriesId === 5}
+                checked={
+                  this.state.gameState.amiiboSeriesId !== 5 &&
+                  this.state.gameState.amiiboNPCFraction === 3
+                }
+                onClick={(e) => {
+                  this.setGameState({
+                    amiiboNPCFraction: 3,
+                  });
+                }}
+              >
+                3
+              </button>
+              <button
+                className="six"
+                disabled={this.state.gameState.amiiboSeriesId === 5}
+                checked={
+                  this.state.gameState.amiiboSeriesId !== 5 &&
+                  this.state.gameState.amiiboNPCFraction === 6
+                }
+                onClick={(e) => {
+                  this.setGameState({
+                    amiiboNPCFraction: 6,
+                  });
+                }}
+              >
+                6
+              </button>
             </div>
 
             {/* <div className="separator"></div> */}
