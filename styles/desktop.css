@@ -725,92 +725,110 @@ ul.downshift-options > li.downshift-selected {
   grid-area: label;
 }
 
-.easyButton,
-.standardButton,
-.hardButton,
-.speciesButton,
-.personalitiesButton {
+.setSelection > button {
   height: 34px;
   width: 100%;
   border-radius: 17px;
-  /* border: none; */
   color: #333;
   font-size: 20px;
   font-weight: 500;
 }
 
-/* .dark-mode .easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
+.dark-mode .setSelection > button {
   font-weight: 400;
-} */
+  background-image: none;
+  color: #fffce9;
+}
 
-.easyButton {
+.gray-mode .setSelection >  button {
+  color: #e6e6e6;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #b3b3b3;
+  font-weight: 400;
+}
+
+.easyButton,
+.amiibo-series-1 {
   grid-area: easy;
   /* background-image: linear-gradient(to bottom, #FFE886, #BBEEB0); */
   border: 2px solid #78dd62;
   background-color: transparent;
 }
 
-.dark-mode .easyButton {
-  background-image: none;
-  background-color: #2f831c;
-  color: #fffce9;
+.amiibo-series-1.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #BBEEB0);
 }
 
-.standardButton {
+.dark-mode .amiibo-series-1.amiibo-series-active {
+  background-image: none;
+  background-color: #2f831c;
+}
+
+.standardButton,
+.amiibo-series-2 {
   grid-area: standard;
-  background-image: linear-gradient(to bottom, #ffe886, #9febf0);
+  background-color: transparent;
   border: 2px solid #3fd8e0;
 }
 
-.amiibo-series-active {
-  font-size: 2em;
-  color: red;
-  background-color: greenyellow;
+.amiibo-series-2.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #9FEBF0);
 }
 
-.dark-mode .standardButton {
+.dark-mode .amiibo-series-2.amiibo-series-active {
   background-image: none;
   background-color: #14767c;
-  color: #fffce9;
 }
 
-.hardButton {
+.hardButton,
+.amiibo-series-3 {
   grid-area: hard;
-  /* background-image: linear-gradient(to bottom, #FFE886, #D0B7E6); */
+  border: 2px solid #0961F6;
+  background-color: transparent;
+}
+
+.amiibo-series-3.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #84B0FB);
+}
+
+.dark-mode .amiibo-series-3.amiibo-series-active {
+  background-image: none;
+  background-color: #04307B;
+}
+
+.speciesButton,
+.amiibo-series-4 {
+  grid-area: species;
+  /* background-image: linear-gradient(to bottom, #FFE886, #FCC9E6); */
   border: 2px solid #a06fce;
   background-color: transparent;
 }
 
-.dark-mode .hardButton {
-  background-image: none;
-  background-color: #502876;
-  color: #fffce9;
+.amiibo-series-4.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #D0B7E6);
 }
 
-.speciesButton {
-  grid-area: species;
-  /* background-image: linear-gradient(to bottom, #FFE886, #FCC9E6); */
+.dark-mode .amiibo-series-4.amiibo-series-active {
+  background-image: none;
+  background-color: #502876;
+}
+
+.personalitiesButton,
+.amiibo-series-5 {
+  grid-area: personalities;
+  /* background-image: linear-gradient(to bottom, #FFE886, #E0D5B9); */
   border: 2px solid #f993ce;
   background-color: transparent;
 }
 
-.dark-mode .speciesButton {
-  background-image: none;
-  background-color: #bc0a71;
-  color: #fffce9;
+.amiibo-series-5.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #FCC9E6);
 }
 
-.personalitiesButton {
-  grid-area: personalities;
-  /* background-image: linear-gradient(to bottom, #FFE886, #E0D5B9); */
-  border: 2px solid #c0ab72;
-  background-color: transparent;
-}
-
-.dark-mode .personalitiesButton {
+.dark-mode .amiibo-series-5.amiibo-series-active {
   background-image: none;
-  background-color: #6a5a2f;
-  color: #fffce9;
+  background-color: #BC0A71;
 }
 
 button {
@@ -829,6 +847,7 @@ button {
 
 .save,
 .create {
+  min-width: 250px;
   font-size: 30px;
   color: #333;
   padding: 0 20px;
@@ -932,6 +951,16 @@ button {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.amiibo {
+  width: 135px;
+  object-position: -8px -16px;
+}
+
+.amiibo-5 {
+  width: auto;
+  object-position: -19px -22px;
 }
 
 .nameTagWrap {
@@ -1446,14 +1475,4 @@ select {
 
 .gray-mode .bottomBar {
   display: none;
-}
-
-.amiibo {
-  width: 135px;
-  object-position: -8px -16px;
-}
-
-.amiibo-5 {
-  width: auto;
-  object-position: -19px -22px;
 }

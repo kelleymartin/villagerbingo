@@ -708,6 +708,11 @@ export default class Home extends React.Component {
                 How to play
               </button>
 
+              <select onChange="">
+                <option value="https://villager.bingo/">NMT</option>
+                <option value="https://villager.bingo/amiibo/">Amiibo</option>
+              </select>
+
               <div className="settingsButtonBorder"></div>
               <button
                 className="settingsButton"
