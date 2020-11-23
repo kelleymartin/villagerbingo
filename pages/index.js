@@ -386,14 +386,12 @@ export default class Home extends React.Component {
         id="preselected-villagers-autocomplete"
         labelText="Include target villagers:"
         excludedVillagers={excluded}
-        disabled={this.gameState.preselectedVillagers.length >= 24}
+        // disabled={this.gameState.preselectedVillagers.length >= 24}
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
               changedSettings: true,
-              preselectedVillagers: prevState.preselectedVillagers
-                .concat([selection])
-                .slice(0, 24),
+              preselectedVillagers: [selection],
             };
           }, afterSelectionApplied);
         }}

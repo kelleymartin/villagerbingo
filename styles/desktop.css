@@ -717,7 +717,7 @@ ul.downshift-options > li.downshift-selected {
 }
 
 .includeTotal {
-  display: none;
+  /* display: none; */
   grid-area: button;
   justify-self: left;
   height: 34px;
