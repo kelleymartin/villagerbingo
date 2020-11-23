@@ -75,7 +75,6 @@
   .optionsBox > label {
     font-size: 30px;
     font-weight: 600;
-
   }
 
   .flexButtons {
@@ -95,7 +94,8 @@
     font-size: 20px;
   }
 
-  .exclusionBox {
+  .excluded-villagers-autocomplete-box,
+  .preselected-villagers-autocomplete-box {
     grid-template-areas:
       "top top top top top top top"
       "left input input input button button right";
@@ -103,7 +103,8 @@
 
   .typeAName,
   .copy,
-  .clear {
+  .namePill,
+  .dreamTemp {
     height: 50px;
     border-radius: 25px;
     font-size: 30px;
@@ -124,7 +125,8 @@
   }
 
   .copy,
-  .clear {
+  .namePill,
+  .dreamTemp {
     margin-left: 5px;
     width: 240px;
   }
@@ -153,9 +155,9 @@
     font-size: 20px;
   }
 
-  .includeTotal {
-    font-size: 30px;
-    align-self: center;
+  .namePill {
+    grid-area: button;
+    grid-template-columns: 1fr 20px;
   }
 
   .buttons {
@@ -166,7 +168,7 @@
   .create {
     border-radius: 30px;
     font-size: 40px;
-    /* border: 3px solid #FF791F; */
+    width: 370px;
   }
 
   select {
@@ -260,7 +262,7 @@
     margin-top: 50px;
     margin-left: 40px;
   }
-/* 
+  /* 
   .red {
     order: 0;
   }

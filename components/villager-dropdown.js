@@ -69,7 +69,7 @@ export function VillagerDropdown(props) {
                 className="typeAName"
                 {...getInputProps({ disabled })}
                 ref={exclusionInput}
-                placeholder={disabled ? "" : "Type a name..."}
+                placeholder={disabled ? "" : "Type a name"}
               />
               <button
                 className="toggle"

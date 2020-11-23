@@ -312,9 +312,9 @@ export default class Home extends React.Component {
           draggable="false"
           alt={`${villager.name}, the ${villager.personality} ${villager.species}`}
         />
-        {this.gameState.preselectedVillagers.includes(villager) && (
+        {/* {this.gameState.preselectedVillagers.includes(villager) && (
           <img className="starIndicator" src="/StarPieceRareCropped.png" />
-        )}
+        )} */}
         <div className="nameTagWrap">
           <p
             className="nameTag"
@@ -384,9 +384,9 @@ export default class Home extends React.Component {
     return (
       <VillagerDropdown
         id="preselected-villagers-autocomplete"
-        labelText="Include target villagers:"
+        labelText="Include hunt dreamie:"
         excludedVillagers={excluded}
-        // disabled={this.gameState.preselectedVillagers.length >= 24}
+        disabled={this.gameState.preselectedVillagers.length >= 1}
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
@@ -396,21 +396,34 @@ export default class Home extends React.Component {
           }, afterSelectionApplied);
         }}
       >
-        <p className="includeTotal">
-          {this.gameState.preselectedVillagers.length} total
-        </p>
-        {/* <button
-          type="button"
-          className="clear"
-          onClick={(e) => {
-            e.preventDefault();
-            this.setGameState({
-              preselectedVillagers: [],
-            });
-          }}
-        >
-          Clear all
-        </button> */}
+        {this.gameState.preselectedVillagers.map((villager) => {
+          return (
+            <a
+              className="namePill"
+              href="#"
+              key={villager.name}
+              title={`Remove ${villager.name}`}
+              style={{
+                backgroundColor: villager.bubbleColor,
+                color: villager.textColor,
+                border: `2px solid ${villager.textColor}`,
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                this.setGameState({
+                  changedSettings: true,
+                  preselectedVillagers: this.gameState.preselectedVillagers.filter(
+                    (v) => v !== villager
+                  ),
+                });
+              }}
+            >
+              <p className="dreamName" >{villager.name}</p>
+              <p className="ex">X</p>
+            </a>
+          );
+        })}
+        <p className="dreamTemp">No dreamie</p>
       </VillagerDropdown>
     );
   }
@@ -910,50 +923,9 @@ export default class Home extends React.Component {
 
             {this.renderVillagerPreselector()}
 
-            <div className="facesBox inclusionBox">
-              {this.gameState.preselectedVillagers.map((villager) => {
-                return (
-                  <a
-                    className="faceWrap"
-                    href="#"
-                    key={villager.name}
-                    title={`Remove ${villager.name}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.setGameState({
-                        changedSettings: true,
-                        preselectedVillagers: this.gameState.preselectedVillagers.filter(
-                          (v) => v !== villager
-                        ),
-                      });
-                    }}
-                  >
-                    <div
-                      className="faceIcon"
-                      style={{
-                        backgroundColor: villager.textColor,
-                        backgroundImage: `url(${villager.iconUrl})`,
-                        backgroundSize: "contain",
-                        border: `2px solid ${villager.bubbleColor}`,
-                      }}
-                    ></div>
-                    <p
-                      className="faceName"
-                      style={{
-                        backgroundColor: villager.bubbleColor,
-                        color: villager.textColor,
-                      }}
-                    >
-                      {villager.name}
-                    </p>
-                  </a>
-                );
-              })}
-            </div>
+             <div className="separator"></div>
 
-            {/* <div className="separator"></div>
-
-            <div className="setSelection">
+            {/*<div className="setSelection">
               <label className="selectionLabel">Select a villager set:</label>
               <div className="easyBorder"></div>
               <button className="easyButton">{'<14 species'}</button>
@@ -984,7 +956,7 @@ export default class Home extends React.Component {
                 onClick={(e) => this.handleCreateBoard(e)}
               >
                 Create board
-                {this.gameState.changedSettings && "*"}
+                {/* {this.gameState.changedSettings && "*"} */}
               </button>
             </div>
 
