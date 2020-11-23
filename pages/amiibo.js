@@ -751,7 +751,8 @@ export default class Home extends React.Component {
                   </button>
                 );
               })}
-              <select
+            </div>
+            <select
                 className="seriesDropdown"
                 value={this.gameState.amiiboSeriesId}
                 onChange={(e) => {
@@ -772,7 +773,6 @@ export default class Home extends React.Component {
                   );
                 })}
               </select>
-            </div>
 
             <div className="fractionSelection">
               <label>Select cards per pack:</label>

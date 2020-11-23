@@ -158,10 +158,28 @@
     font-size: 20px;
   }
 
+  .setSelection > button {
+    display: none;
+  }
+
+  .seriesDropdown {
+    display: inline;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    width: 310px;
+    /* border: 2px solid #0961F6;
+    background-color: #9FEBF0; */
+  }
+
   .fractionSelection {
     grid-template-columns: 2fr 120px 2fr;
     column-gap: 5px;
   }
+
+.fractionSelection > button.active {
+  border: 10px solid #0961F6;
+}
 
   .three {
     grid-column-start: 1;
