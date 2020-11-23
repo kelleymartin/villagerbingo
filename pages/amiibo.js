@@ -282,6 +282,10 @@ export default class Home extends React.Component {
   renderBoardTile(villager, index) {
     const isSelected = this.gameState.selectedVillagers.includes(villager);
 
+    const isWelcome = this.state.gameState.amiiboSeriesId === 5;
+    // const isActive =
+    //   !isWelcome && this.state.gameState.amiiboNPCFraction === value;
+
     const title = isSelected
       ? `Unmark ${villager.name}`
       : `Mark ${villager.name} as seen`;
@@ -329,13 +333,12 @@ export default class Home extends React.Component {
           draggable="false"
           alt={villager.name}
         />
-        {/* <img className="starIndicator" src="/StarPieceRareCropped.png"></img> */}
         <div className="nameTagWrap">
           <p
             className="nameTag"
             style={{
-              backgroundColor: villager.darkerColor,
-              color: `#ffffff`,
+              backgroundColor: isWelcome ? villager.lighterColor : villager.darkerColor,
+              color: isWelcome ? "#000" : "#FFF",
             }}
           >
             {villager.name}
@@ -753,26 +756,26 @@ export default class Home extends React.Component {
               })}
             </div>
             <select
-                className="seriesDropdown"
-                value={this.gameState.amiiboSeriesId}
-                onChange={(e) => {
-                  e.preventDefault();
-                  this.setGameState({
-                    amiiboSeriesId: Number(e.currentTarget.value),
-                  });
-                }}
-              >
-                {SERIES_OPTIONS.map((seriesOption) => {
-                  return (
-                    <option
-                      value={seriesOption.seriesId}
-                      key={seriesOption.seriesId}
-                    >
-                      {seriesOption.label}
-                    </option>
-                  );
-                })}
-              </select>
+              className="seriesDropdown"
+              value={this.gameState.amiiboSeriesId}
+              onChange={(e) => {
+                e.preventDefault();
+                this.setGameState({
+                  amiiboSeriesId: Number(e.currentTarget.value),
+                });
+              }}
+            >
+              {SERIES_OPTIONS.map((seriesOption) => {
+                return (
+                  <option
+                    value={seriesOption.seriesId}
+                    key={seriesOption.seriesId}
+                  >
+                    {seriesOption.label}
+                  </option>
+                );
+              })}
+            </select>
 
             <div className="fractionSelection">
               <label>Select cards per pack:</label>
