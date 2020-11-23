@@ -127,7 +127,7 @@ h1 {
   position: relative;
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
   grid-template-rows: auto;
-  gap: 5px;
+  column-gap: 5px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
@@ -138,11 +138,17 @@ h1 {
   background-color: #866c00;
 }
 
+.navDropdown {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  width: 100%;
+}
+
 .howToButtonBorder {
   grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
   width: fit-content;
   height: 34px;
   border-radius: 17px;
@@ -170,11 +176,10 @@ h1 {
 }
 
 .howToButton {
-  /* display: none; */
   grid-column-start: 1;
   grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
   width: fit-content;
   height: 30px;
   margin-top: 2px;
@@ -199,8 +204,8 @@ h1 {
 .settingsButtonBorder {
   grid-column-start: 6;
   grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
   width: 100%;
   height: 34px;
   border-radius: 17px;
@@ -212,8 +217,8 @@ h1 {
 .settingsButton {
   grid-column-start: 6;
   grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
   width: 121px;
   height: 30px;
   margin: 2px;
@@ -237,30 +242,14 @@ h1 {
   border-bottom-right-radius: 0;
 }
 
-.howToBoxBorder {
-  display: none;
-  position: absolute;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  margin-top: -4px;
-  width: 378px;
-  height: 100%;
-  border-radius: 0 17px 17px 17px;
-  background-image: linear-gradient(to bottom, #a06fce, #c0ab72);
-  background-color: #a06fce;
-  z-index: -10;
-}
-
 .howToBox {
   position: absolute;
   grid-column-start: 1;
   /* previous on main: */
   /* grid-column-start: 1; */
   grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   margin-top: -4px;
   margin-bottom: 2px;
   width: 100%;
@@ -274,20 +263,6 @@ h1 {
   z-index: 10;
 }
 
-.settingsBoxBorder {
-  display: none;
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  margin-top: -4px;
-  width: 100%;
-  border-radius: 17px 0 17px 17px;
-  /* background-image: linear-gradient(to bottom , #0961F6, #C0AB72); */
-  background-color: #a06fce;
-  z-index: -20;
-}
-
 .settingsBox {
   position: absolute;
   display: grid;
@@ -295,8 +270,8 @@ h1 {
   grid-template-rows: auto;
   grid-column-start: 4;
   grid-column-end: 8;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
   margin-top: -4px;
   width: 100%;
   border-radius: 15px 0 15px 15px;
@@ -355,6 +330,7 @@ h1 {
   align-items: center;
   grid-column-start: 2;
   grid-column-end: 3;
+  padding: 0;
 }
 
 .light {
@@ -364,7 +340,7 @@ h1 {
   font-size: 14px;
   /* margin-left: 5px; */
   background-image: linear-gradient(#d0b7e6, #84b0fb);
-  border: 2px solid #0961f6;
+  border: 3px solid #0961f6;
   /* border: none; */
   padding: 0;
 }
@@ -394,7 +370,7 @@ h1 {
 .dark-mode .dark {
   background-image: none;
   background-color: #ffe886;
-  border: 2px solid #ffd00d;
+  border: 3px solid #ffd00d;
   color: #333;
   font-weight: 500;
 }
@@ -406,7 +382,7 @@ h1 {
 }
 
 .gray-mode .gray {
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   background-color: #e6e6e6;
   color: #4d4d4d;
   font-weight: 500;
@@ -470,13 +446,18 @@ fieldset {
   border: 2px solid #b3b3b3;
 }
 
-.exclusionBox > label {
+.exclusionBox > label,
+.setSelection > label,
+.fractionSelection > label {
   font-weight: 600;
   font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
-  grid-area: top;
   /* justify-self: left; */
+}
+
+.exclusionBox > label {
+  grid-area: top;
 }
 
 .dark-mode label,
@@ -567,13 +548,13 @@ input:disabled {
 }
 
 .dark-mode .toggle {
-  background-color: #04307b;
   color: #84b0fb;
 }
 
 .gray-mode .toggle {
-  background-color: #4d4d4d;
+  background-color: transparent;
   color: #e6e6e6;
+  border: none;
 }
 
 .toggle:disabled {
@@ -721,87 +702,215 @@ ul.downshift-options > li.downshift-selected {
   grid-area: label;
 }
 
-.easyButton,
-.standardButton,
-.hardButton,
-.speciesButton,
-.personalitiesButton {
+.setSelection > button {
   height: 34px;
-  width: 100%;
   border-radius: 17px;
-  /* border: none; */
   color: #333;
   font-size: 20px;
   font-weight: 500;
+  padding: 0;
 }
 
-/* .dark-mode .easyButton, .standardButton, .hardButton, .speciesButton, .personalitiesButton{
+.dark-mode .setSelection > button {
   font-weight: 400;
-} */
+  background-image: none;
+  color: #fffce9;
+}
 
-.easyButton {
+.gray-mode .setSelection > button {
+  color: #e6e6e6;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #b3b3b3;
+  font-weight: 400;
+}
+
+.easyButton,
+.amiibo-series-1 {
   grid-area: easy;
-  /* background-image: linear-gradient(to bottom, #FFE886, #BBEEB0); */
   border: 2px solid #78dd62;
   background-color: transparent;
 }
 
-.dark-mode .easyButton {
-  background-image: none;
-  background-color: #2f831c;
-  color: #fffce9;
+.amiibo-series-1.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #bbeeb0);
+  border: 4px solid #78dd62;
 }
 
-.standardButton {
+.dark-mode .amiibo-series-1.amiibo-series-active {
+  background-image: none;
+  background-color: #2f831c;
+}
+
+.gray-mode .amiibo-series.amiibo-series-active {
+  background-image: none;
+  background-color: #4d4d4d;
+  border: 4px solid #b3b3b3;
+}
+
+.standardButton,
+.amiibo-series-2 {
   grid-area: standard;
-  background-image: linear-gradient(to bottom, #ffe886, #9febf0);
+  background-color: transparent;
   border: 2px solid #3fd8e0;
 }
 
-.dark-mode .standardButton {
-  background-image: none;
-  background-color: #14767c;
-  color: #fffce9;
+.amiibo-series-2.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #9febf0);
+  border: 4px solid #3fd8e0;
 }
 
-.hardButton {
+.dark-mode .amiibo-series-2.amiibo-series-active {
+  background-image: none;
+  background-color: #14767c;
+}
+
+.hardButton,
+.amiibo-series-3 {
   grid-area: hard;
-  /* background-image: linear-gradient(to bottom, #FFE886, #D0B7E6); */
+  border: 2px solid #0961f6;
+  background-color: transparent;
+}
+
+.amiibo-series-3.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #84b0fb);
+  border: 4px solid #0961f6;
+}
+
+.dark-mode .amiibo-series-3.amiibo-series-active {
+  background-image: none;
+  background-color: #04307b;
+}
+
+.speciesButton,
+.amiibo-series-4 {
+  grid-area: species;
   border: 2px solid #a06fce;
   background-color: transparent;
 }
 
-.dark-mode .hardButton {
+.amiibo-series-4.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #d0b7e6);
+  border: 4px solid #a06fce;
+}
+
+.dark-mode .amiibo-series-4.amiibo-series-active {
   background-image: none;
   background-color: #502876;
-  color: #fffce9;
 }
 
-.speciesButton {
-  grid-area: species;
-  /* background-image: linear-gradient(to bottom, #FFE886, #FCC9E6); */
+.personalitiesButton,
+.amiibo-series-5 {
+  grid-area: personalities;
   border: 2px solid #f993ce;
   background-color: transparent;
+  min-width: 120px;
+  max-width: max-content;
 }
 
-.dark-mode .speciesButton {
+.amiibo-series-5.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #fcc9e6);
+  border: 4px solid #f993ce;
+}
+
+.dark-mode .amiibo-series-5.amiibo-series-active {
   background-image: none;
   background-color: #bc0a71;
-  color: #fffce9;
 }
 
-.personalitiesButton {
-  grid-area: personalities;
-  /* background-image: linear-gradient(to bottom, #FFE886, #E0D5B9); */
-  border: 2px solid #c0ab72;
+.seriesDropdown {
+  display: none;
+}
+
+.fractionSelection {
+  display: grid;
+  grid-template-columns: 1fr 50px 50px 1fr;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.fractionSelection > label {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.fractionSelection > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #0961f6;
   background-color: transparent;
+  font-size: 30px;
+  font-weight: 600;
 }
 
-.dark-mode .personalitiesButton {
-  background-image: none;
-  background-color: #6a5a2f;
-  color: #fffce9;
+.fractionSelection > button.active {
+  background-image: linear-gradient(#9febf0, #84b0fb);
+  border: 5px solid #0961f6;
 }
+
+.dark-mode .three,
+.dark-mode .six {
+  color: #fffce9;
+  border: 2px solid #A00000;
+}
+
+.gray-mode .three,
+.gray-mode .six {
+  color: #e6e6e6;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #b3b3b3;
+}
+
+.dark-mode .three.active,
+.dark-mode .six.active {
+  background-image: none;
+  background-color: #A00000;
+  border: 5px solid #FF4040;
+}
+
+.gray-mode .three.active,
+.gray-mode .six.active {
+  background-image: none;
+  background-color: #4d4d4d;
+  border: 5px solid #b3b3b3;
+}
+
+.fractionSelection > button:disabled {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+}
+
+.three {
+  grid-column-start: 2;
+}
+
+/* 
+input[type="radio"] {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+.fractionSelection > label {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #FF4040;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+input[type="radio"]:checked{
+  background-color: green;
+} */
 
 button {
   font-family: proxima-soft, sans-serif;
@@ -819,6 +928,7 @@ button {
 
 .save,
 .create {
+  min-width: 250px;
   font-size: 30px;
   color: #333;
   padding: 0 20px;
@@ -924,10 +1034,14 @@ button {
   overflow: hidden;
 }
 
-.picture {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
+.amiibo {
+  width: 135px;
+  object-position: -8px -16px;
+}
+
+.amiibo-5 {
+  width: auto;
+  object-position: -19px -22px;
 }
 
 .nameTagWrap {
@@ -1152,7 +1266,7 @@ select {
 
 .dark-mode .opacityDropdown {
   background-image: none;
-  background-color: #FFE886;
+  background-color: #ffe886;
   color: #333;
   border: 2px solid #ffd00d;
 }

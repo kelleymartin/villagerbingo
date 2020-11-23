@@ -6,6 +6,7 @@ import villagers from "../data/villagers.json";
 import urlFormat, { encodeState } from "../lib/url-encode";
 import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
 import { VillagerDropdown } from "../components/villager-dropdown";
+import { NavDropdown } from "../components/nav-dropdown";
 
 const ALL_THEMES = [
   {
@@ -74,7 +75,7 @@ export const getServerSideProps = (context) => {
 
 export default class Home extends React.Component {
   state = {
-    gameState: urlFormat.decodeState(this.props.initialURL),
+    gameState: urlFormat.decodeState(this.props.initialURL, villagers),
     settingsExpanded: false,
     howToExpanded: false,
     optionsExpanded: false,
@@ -801,6 +802,8 @@ export default class Home extends React.Component {
               >
                 How to play
               </button>
+
+              <NavDropdown value="/" />
 
               <div className="settingsButtonBorder"></div>
               <button
