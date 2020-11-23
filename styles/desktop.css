@@ -1083,6 +1083,10 @@ min-width: 250px;
   overflow: hidden;
 }
 
+.picture {
+  width: 120px;
+}
+
 .amiibo {
   width: 135px;
   object-position: -8px -16px;
