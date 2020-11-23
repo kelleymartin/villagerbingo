@@ -433,19 +433,19 @@ export default class Home extends React.Component {
     const villagerSets = [
       {
         value: "easy",
-        label: "Easy",
+        label: ">14 per species",
       },
       {
         value: "standard",
-        label: "Standard",
+        label: "All species",
       },
       {
         value: "hard",
-        label: "Hard",
+        label: "<14 per species",
       },
       {
         value: "species-only",
-        label: "Species per Tile",
+        label: "1 species per tile",
       },
       {
         value: "personality-species",
@@ -454,29 +454,32 @@ export default class Home extends React.Component {
     ];
 
     return (
-      <fieldset>
-        <legend>Villager Set:</legend>
 
-        {villagerSets.map((set) => (
-          <React.Fragment key={set.value}>
-            <label style={{ display: "block" }}>
-              <input
-                type="radio"
-                name="villagerset"
-                value={set.value}
-                checked={set.value === this.gameState.villagerSet}
-                onChange={(e) => {
-                  this.setGameState({
-                    changedSettings: true,
-                    villagerSet: set.value,
-                  });
-                }}
-              />{" "}
-              {set.label}
-            </label>
-          </React.Fragment>
-        ))}
-      </fieldset>
+      <div className="gameModeSelection">
+      <label className="selectionLabel">Select a game mode:</label>
+      {villagerSets.map((set) => {
+        const isActive =
+        set.value === this.gameState.villagerSet;
+        const marker = isActive ? "✓" : "";
+        return (
+          <button
+            // key={seriesOption.seriesId}
+            className={`game-mode game-mode-${
+              set.value
+            } ${isActive ? "game-mode-active" : ""}`}
+            onClick={(e) => {
+              e.preventDefault();
+              this.setGameState({
+                changedSettings: true,
+                villagerSet: set.value,
+              });
+            }}
+          >
+            {marker} {set.label}
+          </button>
+        );
+      })}
+    </div>
     );
   }
 
@@ -928,21 +931,9 @@ export default class Home extends React.Component {
 
              <div className="separator"></div>
 
-            {/*<div className="setSelection">
-              <label className="selectionLabel">Select a villager set:</label>
-              <div className="easyBorder"></div>
-              <button className="easyButton">{'<14 species'}</button>
-              <div className="standardBorder"></div>
-              <button className="standardButton">All villagers</button>
-              <div className="hardBorder"></div>
-              <button className="hardButton">Hard</button>
-              <div className="speciesBorder"></div>
-              <button className="speciesButton">Per species</button>
-              <div className="personalitiesBorder"></div>
-              <button className="personalitiesButton">Personality</button>
-            </div>
+            {this.renderVillagerSetSelector()}
 
-            <div className="separator"></div> */}
+            <div className="separator"></div>
 
             <div className="buttons">
               <button
