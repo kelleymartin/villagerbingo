@@ -751,40 +751,60 @@ export default class Home extends React.Component {
                   </button>
                 );
               })}
+              <select
+                className="seriesDropdown"
+                value={this.gameState.amiiboSeriesId}
+                onChange={(e) => {
+                  e.preventDefault();
+                  this.setGameState({
+                    amiiboSeriesId: Number(e.currentTarget.value),
+                  });
+                }}
+              >
+                {SERIES_OPTIONS.map((seriesOption) => {
+                  return (
+                    <option
+                      value={seriesOption.seriesId}
+                      key={seriesOption.seriesId}
+                    >
+                      {seriesOption.label}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
 
             <div className="fractionSelection">
               <label>Select cards per pack:</label>
-              <button
-                className="three"
-                disabled={this.state.gameState.amiiboSeriesId === 5}
-                checked={
-                  this.state.gameState.amiiboSeriesId !== 5 &&
-                  this.state.gameState.amiiboNPCFraction === 3
-                }
-                onClick={(e) => {
-                  this.setGameState({
-                    amiiboNPCFraction: 3,
-                  });
-                }}
-              >
-                3
-              </button>
-              <button
-                className="six"
-                disabled={this.state.gameState.amiiboSeriesId === 5}
-                checked={
-                  this.state.gameState.amiiboSeriesId !== 5 &&
-                  this.state.gameState.amiiboNPCFraction === 6
-                }
-                onClick={(e) => {
-                  this.setGameState({
-                    amiiboNPCFraction: 6,
-                  });
-                }}
-              >
-                6
-              </button>
+              {[
+                {
+                  value: 3,
+                  className: "three",
+                },
+                {
+                  value: 6,
+                  className: "six",
+                },
+              ].map(({ value, className }) => {
+                const isDisabled = this.state.gameState.amiiboSeriesId === 5;
+                const isActive =
+                  !isDisabled &&
+                  this.state.gameState.amiiboNPCFraction === value;
+                return (
+                  <button
+                    key={value}
+                    className={`${className} ${isActive ? "active" : ""}`}
+                    disabled={isDisabled}
+                    onClick={(e) => {
+                      this.setGameState({
+                        amiiboNPCFraction: value,
+                      });
+                    }}
+                  >
+                    {value}
+                  </button>
+                );
+              })}
             </div>
 
             {/* <div className="separator"></div> */}
