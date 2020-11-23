@@ -576,7 +576,7 @@ export default class Home extends React.Component {
 
     return (
       <>
-        <h2>Choose your marker:</h2>
+        <h2>Choose your marker(s):</h2>
         <div className={optionsClass.join(" ")}>
           <select
             className="setDropdown"
@@ -776,6 +776,8 @@ export default class Home extends React.Component {
                 );
               })}
             </select>
+
+            <div className="separator"></div>
 
             <div className="fractionSelection">
               <label>Select cards per pack:</label>
