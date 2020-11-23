@@ -112,14 +112,17 @@
     font-size: 20px;
   }
 
-  .exclusionBox {
+  .excluded-villagers-autocomplete-box,
+  .preselected-villagers-autocomplete-box {
     grid-template-areas:
       "top top top top top top top"
       "left input input input button button right";
   }
 
   .typeAName,
-  .copy {
+  .copy,
+  .namePill,
+  .dreamTemp {
     height: 50px;
     border-radius: 25px;
     font-size: 30px;
@@ -139,7 +142,9 @@
     padding-top: 4px;
   }
 
-  .copy {
+  .copy,
+  .namePill,
+  .dreamTemp {
     margin-left: 5px;
     width: 240px;
   }
@@ -150,9 +155,7 @@
   }
 
   .facesBox {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-top: 30px;
   }
 
@@ -170,6 +173,11 @@
     font-size: 20px;
   }
 
+  .namePill {
+    grid-area: button;
+    grid-template-columns: 1fr 20px;
+  }
+  
   .setSelection > button {
     display: none;
   }
@@ -225,6 +233,7 @@
     border: none;
     background-color: transparent;
     background-image: none;
+
   }
 
   .buttons {
@@ -236,7 +245,7 @@
     width: 370px;
     border-radius: 30px;
     font-size: 40px;
-    /* border: 3px solid #FF791F; */
+    width: 370px;
   }
 
   select {

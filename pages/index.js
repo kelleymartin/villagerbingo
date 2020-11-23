@@ -166,23 +166,36 @@ export default class Home extends React.Component {
     });
   }
 
-  pickBoardVillagers(mode, possibleVillagers) {
+  pickBoardVillagers(mode, possibleVillagers, preselectedVillagers) {
+    const additionalCount = 24 - preselectedVillagers.length;
     if (mode === "hard") {
-      return Array.from({ length: 24 }, () => possibleVillagers[0]);
+      return Array.from(
+        { length: additionalCount },
+        () => possibleVillagers[0]
+      );
     }
 
-    return pickRandom(possibleVillagers, { count: 24 });
+    return pickRandom(possibleVillagers, { count: additionalCount }).concat(
+      preselectedVillagers
+    );
   }
 
   handleCreateBoard(event) {
     event.preventDefault();
 
+    const excludedAndPreselected = new Set(
+      this.gameState.excludedVillagers.concat(
+        this.gameState.preselectedVillagers
+      )
+    );
+
     const possibleVillagers = villagers.filter((villager) => {
-      return !this.gameState.excludedVillagers.includes(villager);
+      return !excludedAndPreselected.has(villager);
     });
     const boardVillagers = this.pickBoardVillagers(
       this.gameState.villagerSet,
-      possibleVillagers
+      possibleVillagers,
+      this.gameState.preselectedVillagers
     );
 
     const sortedVillagers = boardVillagers.sort((a, b) => {
@@ -192,6 +205,7 @@ export default class Home extends React.Component {
     this.setGameState({
       boardVillagers: sortedVillagers,
       selectedVillagers: [],
+      changedSettings: false,
     });
   }
 
@@ -299,7 +313,9 @@ export default class Home extends React.Component {
           draggable="false"
           alt={`${villager.name}, the ${villager.personality} ${villager.species}`}
         />
-        {/* <img className="starIndicator" src="/StarPieceRareCropped.png"></img> */}
+        {/* {this.gameState.preselectedVillagers.includes(villager) && (
+          <img className="starIndicator" src="/StarPieceRareCropped.png" />
+        )} */}
         <div className="nameTagWrap">
           <p
             className="nameTag"
@@ -320,33 +336,44 @@ export default class Home extends React.Component {
     return (
       <VillagerDropdown
         id="excluded-villagers-autocomplete"
-        labelText="Exclude a current villager:"
+        labelText="Exclude current villagers:"
         disabled={this.gameState.excludedVillagers.length === 9}
         excludedVillagers={this.gameState.excludedVillagers}
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
+              changedSettings: true,
               excludedVillagers: prevState.excludedVillagers.concat([
                 selection,
               ]),
+              preselectedVillagers: prevState.preselectedVillagers.filter(
+                (villager) => villager !== selection
+              ),
             };
           }, afterSelectionApplied);
         }}
-        onCopyClick={(e) => {
-          e.preventDefault();
-          const cleanedState = Object.assign({}, this.gameState, {
-            // Reset values we don't want in the shared URL:
-            boardLabel: "",
-            boardVillagers: [],
-            selectedVillagers: [],
-            selectedColor: null,
-            selectedFreePlot: "",
-            villagerSet: "standard",
-          });
-          const shareData = encodeState(location.href, cleanedState);
-          navigator.clipboard.writeText(`${shareData}&cs=cau`);
-        }}
-      />
+      >
+        <button
+          type="button"
+          className="copy"
+          onClick={(e) => {
+            e.preventDefault();
+            const cleanedState = Object.assign({}, this.gameState, {
+              // Reset values we don't want in the shared URL:
+              boardLabel: "",
+              boardVillagers: [],
+              selectedVillagers: [],
+              selectedColor: null,
+              selectedFreePlot: "",
+              villagerSet: "standard",
+            });
+            const shareData = encodeState(location.href, cleanedState);
+            navigator.clipboard.writeText(`${shareData}&cs=cau`);
+          }}
+        >
+          Copy as url
+        </button>
+      </VillagerDropdown>
     );
   }
 
@@ -358,18 +385,47 @@ export default class Home extends React.Component {
     return (
       <VillagerDropdown
         id="preselected-villagers-autocomplete"
-        labelText="Preselect villagers:"
+        labelText="Include hunt dreamie:"
         excludedVillagers={excluded}
+        disabled={this.gameState.preselectedVillagers.length >= 1}
         onSelection={(selection, afterSelectionApplied) => {
           this.setGameState((prevState) => {
             return {
-              preselectedVillagers: prevState.preselectedVillagers.concat([
-                selection,
-              ]),
+              changedSettings: true,
+              preselectedVillagers: [selection],
             };
           }, afterSelectionApplied);
         }}
-      />
+      >
+        {this.gameState.preselectedVillagers.map((villager) => {
+          return (
+            <a
+              className="namePill"
+              href="#"
+              key={villager.name}
+              title={`Remove ${villager.name}`}
+              style={{
+                backgroundColor: villager.bubbleColor,
+                color: villager.textColor,
+                border: `2px solid ${villager.textColor}`,
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                this.setGameState({
+                  changedSettings: true,
+                  preselectedVillagers: this.gameState.preselectedVillagers.filter(
+                    (v) => v !== villager
+                  ),
+                });
+              }}
+            >
+              <p className="dreamName" >{villager.name}</p>
+              <p className="ex">X</p>
+            </a>
+          );
+        })}
+        <p className="dreamTemp">No dreamie</p>
+      </VillagerDropdown>
     );
   }
 
@@ -411,6 +467,7 @@ export default class Home extends React.Component {
                 checked={set.value === this.gameState.villagerSet}
                 onChange={(e) => {
                   this.setGameState({
+                    changedSettings: true,
                     villagerSet: set.value,
                   });
                 }}
@@ -587,10 +644,12 @@ export default class Home extends React.Component {
           <label className="themeLabel">Mode:</label>
           <div className="flexButtons">{this.renderModeSelection()}</div>
           {/* <div className="divider"></div>
-        <label className="languageLabel">Villager names:</label>
+        <h3 className="languageLabel">Villager names</h3>
+        <label className="languageLabel">Language:</label>
         <div className="divider"></div>
-        <label className="alphabetLabel">Alphabetize:</label>
-        {this.renderVillagerSetSelector()} */}
+        <label className="languageLabel">Contrast:</label>
+        <div className="divider"></div>
+        <label className="alphabetLabel">Alphabetize:</label> */}
         </div>
       </>
     );
@@ -833,6 +892,7 @@ export default class Home extends React.Component {
                     onClick={(e) => {
                       e.preventDefault();
                       this.setGameState({
+                        changedSettings: true,
                         excludedVillagers: this.gameState.excludedVillagers.filter(
                           (v) => v !== villager
                         ),
@@ -862,41 +922,13 @@ export default class Home extends React.Component {
               })}
             </div>
 
-            {/* <div className="separator"></div>
+            <div className="separator"></div>
 
             {this.renderVillagerPreselector()}
 
-            <div className="namesBox">
-              {this.gameState.preselectedVillagers.map((villager) => {
-                return (
-                  <a
-                    href="#"
-                    key={villager.name}
-                    title={`Remove ${villager.name}`}
-                    className="namesName"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.setGameState({
-                        preselectedVillagers: this.gameState.preselectedVillagers.filter(
-                          (v) => v !== villager
-                        ),
-                      });
-                    }}
-                    style={{
-                      backgroundColor: villager.bubbleColor,
-                      color: villager.textColor,
-                      border: `2px solid ${this.state.settings.blotter}`,
-                    }}
-                  >
-                    {villager.name} X
-                  </a>
-                );
-              })}
-            </div> */}
+             <div className="separator"></div>
 
-            {/* <div className="separator"></div>
-
-            <div className="setSelection">
+            {/*<div className="setSelection">
               <label className="selectionLabel">Select a villager set:</label>
               <div className="easyBorder"></div>
               <button className="easyButton">{'<14 species'}</button>
@@ -927,6 +959,7 @@ export default class Home extends React.Component {
                 onClick={(e) => this.handleCreateBoard(e)}
               >
                 Create board
+                {/* {this.gameState.changedSettings && "*"} */}
               </button>
             </div>
 

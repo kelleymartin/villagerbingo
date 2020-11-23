@@ -5,11 +5,11 @@ import villagers from "../data/villagers.json";
 
 export function VillagerDropdown(props) {
   const {
+    children,
     id,
     excludedVillagers,
     disabled,
     onSelection,
-    onCopyClick,
     labelText,
     // wrapperClassName,
   } = props;
@@ -58,7 +58,7 @@ export function VillagerDropdown(props) {
         selectedItem,
         getRootProps,
       }) => (
-        <div className="exclusionBox">
+        <div className={`${id}-box`}>
           <label {...getLabelProps()}>{labelText}</label>
           <div className="inputBox">
             <div
@@ -127,11 +127,7 @@ export function VillagerDropdown(props) {
                 : null}
             </ul>
           </div>
-          {onCopyClick && (
-            <button type="button" className="copy" onClick={onCopyClick}>
-              Copy as url
-            </button>
-          )}
+          {children}
         </div>
       )}
     </Downshift>
