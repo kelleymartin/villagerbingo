@@ -445,16 +445,12 @@ fieldset {
 .excluded-villagers-autocomplete-box > label,
 .preselected-villagers-autocomplete-box > label,
 .fractionSelection > label {
-
+  grid-area: top;
   font-weight: 600;
   font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
   /* justify-self: left; */
-}
-
-.exclusionBox > label {
-  grid-area: top;
 }
 
 .dark-mode label,
@@ -749,6 +745,10 @@ ul.downshift-options > li.downshift-selected {
 
 .selectionLabel {
   grid-area: label;
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0 0 10px;
+  padding: 0;
 }
 
 .setSelection > button {
