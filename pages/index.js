@@ -433,7 +433,7 @@ export default class Home extends React.Component {
     const villagerSets = [
       {
         value: "easy",
-        label: ">14 per species",
+        label: "Small species only",
       },
       {
         value: "standard",
@@ -441,7 +441,7 @@ export default class Home extends React.Component {
       },
       {
         value: "hard",
-        label: "<14 per species",
+        label: "Large species only",
       },
       {
         value: "species-only",
@@ -449,7 +449,7 @@ export default class Home extends React.Component {
       },
       {
         value: "personality-species",
-        label: "Species + Personality",
+        label: "Species + personality",
       },
     ];
 
@@ -479,6 +479,13 @@ export default class Home extends React.Component {
           </button>
         );
       })}
+      <h3 className="header1">Named villagers:</h3>
+      <h3 className="header2">Anonymous villagers:</h3>
+      <p className="sub1">Angus & Zucker | 0.00% hit</p>
+      <p className="sub2">All villagers | 0.00% hit</p>
+      <p className="sub3">Ankha & Wart Jr. | 0.00% hit</p>
+      <p className="sub4">Alligator & Wolf | 68.6% hit </p>
+      <p className="sub5">Jock pig & Smug lion | 0.00% hit</p>
     </div>
     );
   }

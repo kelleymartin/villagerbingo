@@ -755,12 +755,51 @@ ul.downshift-options > li.downshift-selected {
   gap: 5px;
   grid-template-areas:
     "label label label"
-    "easy center right"
-    "easy center species"
-    "standard center species"
-    "standard center personalities"
-    "hard center personalities"
-    "hard center right";
+    "header1 center header2"
+    "easy center right1"
+    "sub1 center species"
+    "left1 center sub4"
+    "standard center right2"
+    "sub2 center personalities"
+    "left2 center sub5"
+    "hard center right3"
+    "sub3 center right3";
+}
+
+.gameModeSelection > h3{
+  justify-self: center;
+}
+
+.gameModeSelection > p {
+  margin: 0;
+}
+
+.header1 {
+  grid-area: header1;
+}
+
+.header2 {
+  grid-area: header2;
+}
+
+.sub1 {
+  grid-area: sub1;
+}
+
+.sub2 {
+  grid-area: sub2;
+}
+
+.sub3 {
+  grid-area: sub3;
+}
+
+.sub4 {
+  grid-area: sub4;
+}
+
+.sub5 {
+  grid-area: sub5;
 }
 
 .selectionLabel {
@@ -863,6 +902,10 @@ ul.downshift-options > li.downshift-selected {
   background-color: transparent;
 }
 
+.game-mode-species-only {
+  align-self: end;
+}
+
 .game-mode-species-only.game-mode-active,
 .amiibo-series-4.amiibo-series-active {
   background-image: linear-gradient(to bottom, #ffe886, #d0b7e6);
@@ -879,8 +922,8 @@ ul.downshift-options > li.downshift-selected {
   grid-area: personalities;
   border: 2px solid #f993ce;
   background-color: transparent;
-  min-width: 120px;
-  max-width: max-content;
+  /* min-width: 120px;
+  max-width: max-content; */
 }
 
 .game-mode-personality-species.game-mode-active,
