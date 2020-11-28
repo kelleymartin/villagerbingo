@@ -7,6 +7,7 @@ import urlFormat, { encodeState } from "../lib/url-encode";
 import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
 import { VillagerDropdown } from "../components/villager-dropdown";
 import { NavDropdown } from "../components/nav-dropdown";
+import { toSpeciesItem } from "../lib/species-item";
 
 const ALL_THEMES = [
   {
@@ -167,6 +168,24 @@ export default class Home extends React.Component {
   }
 
   pickBoardVillagers(mode, possibleVillagers, preselectedVillagers) {
+    if (mode === "species-only") {
+      const preselectedSpecies = new Set(
+        preselectedVillagers.map((v) => v.species)
+      );
+      const possibleSpecies = new Set(
+        possibleVillagers
+          .map((v) => v.species)
+          .filter((s) => !preselectedSpecies.has(s))
+      );
+
+      const additionalCount = 24 - preselectedSpecies.size;
+
+      console.log({ possibleSpecies, preselectedSpecies });
+      return pickRandom(Array.from(possibleSpecies), { count: additionalCount })
+        .concat(Array.from(preselectedSpecies))
+        .map(toSpeciesItem);
+    }
+
     const additionalCount = 24 - preselectedVillagers.length;
     if (mode === "hard") {
       return Array.from(
@@ -277,6 +296,13 @@ export default class Home extends React.Component {
     if (this.state.settings.tileBlurEnabled && isSelected) {
       tileStyle.filter = `blur(4px)`;
     }
+
+    const themedVillager = Object.assign(
+      {},
+      villager,
+      (villager.themes && villager.themes[this.state.settings.theme]) || {}
+    );
+
     //djhnghvewbnref
     return (
       <a
@@ -284,6 +310,11 @@ export default class Home extends React.Component {
         key={villager.name}
         className={`tile tile${index}`}
         title={title}
+        style={{
+          backgroundColor: themedVillager.backgroundColor
+            ? themedVillager.backgroundColor
+            : "transparent",
+        }}
         onClick={(e) => {
           e.preventDefault();
 
@@ -306,7 +337,7 @@ export default class Home extends React.Component {
         }}
       >
         <img
-          src={villager.imageUrl}
+          src={themedVillager.imageUrl}
           style={tileStyle}
           className="picture"
           crossOrigin="anonymous"
@@ -320,8 +351,8 @@ export default class Home extends React.Component {
           <p
             className="nameTag"
             style={{
-              backgroundColor: villager.bubbleColor,
-              color: villager.textColor,
+              backgroundColor: themedVillager.bubbleColor,
+              color: themedVillager.textColor,
             }}
           >
             {villager.name}
@@ -419,7 +450,7 @@ export default class Home extends React.Component {
                 });
               }}
             >
-              <p className="dreamName" >{villager.name}</p>
+              <p className="dreamName">{villager.name}</p>
               <p className="ex">X</p>
             </a>
           );
@@ -454,39 +485,37 @@ export default class Home extends React.Component {
     ];
 
     return (
-
       <div className="gameModeSelection">
-      <label className="selectionLabel">Select a game mode:</label>
-      {villagerSets.map((set) => {
-        const isActive =
-        set.value === this.gameState.villagerSet;
-        const marker = isActive ? "✓" : "";
-        return (
-          <button
-            // key={seriesOption.seriesId}
-            className={`game-mode game-mode-${
-              set.value
-            } ${isActive ? "game-mode-active" : ""}`}
-            onClick={(e) => {
-              e.preventDefault();
-              this.setGameState({
-                changedSettings: true,
-                villagerSet: set.value,
-              });
-            }}
-          >
-            {marker} {set.label}
-          </button>
-        );
-      })}
-      <h3 className="header1">Named villagers:</h3>
-      <h3 className="header2">Anonymous villagers:</h3>
-      <p className="sub1">Angus & Zucker | 0.00% hit</p>
-      <p className="sub2">All villagers | 0.00% hit</p>
-      <p className="sub3">Ankha & Wart Jr. | 0.00% hit</p>
-      <p className="sub4">Alligator & Wolf | 68.6% hit </p>
-      <p className="sub5">Jock pig & Smug lion | 0.00% hit</p>
-    </div>
+        <label className="selectionLabel">Select a game mode:</label>
+        {villagerSets.map((set) => {
+          const isActive = set.value === this.gameState.villagerSet;
+          const marker = isActive ? "✓" : "";
+          return (
+            <button
+              // key={seriesOption.seriesId}
+              className={`game-mode game-mode-${set.value} ${
+                isActive ? "game-mode-active" : ""
+              }`}
+              onClick={(e) => {
+                e.preventDefault();
+                this.setGameState({
+                  changedSettings: true,
+                  villagerSet: set.value,
+                });
+              }}
+            >
+              {marker} {set.label}
+            </button>
+          );
+        })}
+        <h3 className="header1">Named villagers:</h3>
+        <h3 className="header2">Anonymous villagers:</h3>
+        <p className="sub1">Angus & Zucker | 0.00% hit</p>
+        <p className="sub2">All villagers | 0.00% hit</p>
+        <p className="sub3">Ankha & Wart Jr. | 0.00% hit</p>
+        <p className="sub4">Alligator & Wolf | 68.6% hit </p>
+        <p className="sub5">Jock pig & Smug lion | 0.00% hit</p>
+      </div>
     );
   }
 
@@ -515,7 +544,7 @@ export default class Home extends React.Component {
     }
     return (
       <div className="boardBox" id="capture">
-        <div className="boardTiles">
+        <div className={`boardTiles ${this.gameState.villagerSet}`}>
           {this.gameState.boardVillagers.slice(0, 12).map((villager, index) => {
             return this.renderBoardTile(villager, index);
           })}
@@ -936,7 +965,7 @@ export default class Home extends React.Component {
 
             {this.renderVillagerPreselector()}
 
-             <div className="separator"></div>
+            <div className="separator"></div>
 
             {this.renderVillagerSetSelector()}
 

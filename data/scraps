@@ -1,0 +1,57 @@
+  renderVillagerSetSelector() {
+    const villagerSets = [
+      {
+        value: "easy",
+        label: "Small species only",
+      },
+      {
+        value: "standard",
+        label: "All species",
+      },
+      {
+        value: "hard",
+        label: "Large species only",
+      },
+      {
+        value: "species-only",
+        label: "1 species per tile",
+      },
+      {
+        value: "personality-species",
+        label: "Species + personality",
+      },
+    ];
+
+        <h3 className="header1">Named villagers:</h3>
+        <h3 className="header2">Anonymous villagers:</h3>
+        <p className="sub1">Angus & Zucker | 0.00% hit</p>
+        <p className="sub2">All villagers | 0.00% hit</p>
+        <p className="sub3">Ankha & Wart Jr. | 0.00% hit</p>
+        <p className="sub4">Alligator & Wolf | 68.6% hit </p>
+        <p className="sub5">Jock pig & Smug lion | 0.00% hit</p>
+
+.gameModeSelection {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  grid-template-rows: auto;
+  gap: 5px;
+  grid-template-areas:
+    "label label label"
+    "header1 center header2"
+    "easy center right1"
+    "sub1 center species"
+    "left1 center sub4"
+    "standard center right2"
+    "sub2 center personalities"
+    "left2 center sub5"
+    "hard center right3"
+    "sub3 center right3";
+}
+
+.gameModeSelection > h3 {
+  justify-self: center;
+}
+
+.gameModeSelection > p {
+  margin: 0;
+}
