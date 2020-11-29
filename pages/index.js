@@ -474,7 +474,7 @@ export default class Home extends React.Component {
 
     return (
       <div className="gameModeSelection">
-        <label className="selectionLabel">Select a game mode:</label><a className="questionMark"></a>
+        <label className="selectionLabel">Select a game mode:</label>
         {villagerSets.map((set) => {
           const isActive = set.value === this.gameState.villagerSet;
           const marker = isActive ? "✓" : "";
@@ -496,24 +496,6 @@ export default class Home extends React.Component {
             </button>
           );
         })}
-        <h3 className="header1">Named villagers:</h3>
-        <h3 className="header2">Anonymous villagers:</h3>
-        <div className="biskitTile">
-          <div className="nameTagWrap">
-            <p className="nameTag">Biskit</p>
-          </div>
-        </div>
-        <p className="sub2">
-          ~6.14%<br></br>hit per island
-        </p>
-        <p className="sub4">
-          ~68.6%<br></br>hit per island
-        </p>
-        <div className="dogTile">
-          <div className="nameTagWrap">
-            <p className="nameTag">Dog</p>
-          </div>
-        </div>
       </div>
     );
   }

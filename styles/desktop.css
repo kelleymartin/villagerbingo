@@ -761,20 +761,6 @@ ul.downshift-options > li.downshift-selected {
   margin: 0;
 }
 
-.gameModeSelection > .selectionLabel {
-  margin-left: -20px;
-}
-
-.questionMark {
-  grid-area: label;
-  width: 20px;
-  height: 20px;
-  background-image: url("/questionMark.svg");
-  justify-self: end;
-  margin-top: 10px;
-  margin-right: 5px;
-}
-
 .header1 {
   display: none;
   grid-area: header1;
