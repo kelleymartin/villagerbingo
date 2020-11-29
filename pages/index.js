@@ -463,30 +463,18 @@ export default class Home extends React.Component {
   renderVillagerSetSelector() {
     const villagerSets = [
       {
-        value: "easy",
-        label: "Small species only",
-      },
-      {
         value: "standard",
-        label: "All species",
-      },
-      {
-        value: "hard",
-        label: "Large species only",
+        label: "Villagers",
       },
       {
         value: "species-only",
-        label: "1 species per tile",
-      },
-      {
-        value: "personality-species",
-        label: "Species + personality",
+        label: "Species",
       },
     ];
 
     return (
       <div className="gameModeSelection">
-        <label className="selectionLabel">Select a game mode:</label>
+        <label className="selectionLabel">Select a game mode:</label><a className="questionMark"></a>
         {villagerSets.map((set) => {
           const isActive = set.value === this.gameState.villagerSet;
           const marker = isActive ? "✓" : "";
@@ -510,11 +498,22 @@ export default class Home extends React.Component {
         })}
         <h3 className="header1">Named villagers:</h3>
         <h3 className="header2">Anonymous villagers:</h3>
-        <p className="sub1">Angus & Zucker | 0.00% hit</p>
-        <p className="sub2">All villagers | 0.00% hit</p>
-        <p className="sub3">Ankha & Wart Jr. | 0.00% hit</p>
-        <p className="sub4">Alligator & Wolf | 68.6% hit </p>
-        <p className="sub5">Jock pig & Smug lion | 0.00% hit</p>
+        <div className="biskitTile">
+          <div className="nameTagWrap">
+            <p className="nameTag">Biskit</p>
+          </div>
+        </div>
+        <p className="sub2">
+          ~6.14%<br></br>hit per island
+        </p>
+        <p className="sub4">
+          ~68.6%<br></br>hit per island
+        </p>
+        <div className="dogTile">
+          <div className="nameTagWrap">
+            <p className="nameTag">Dog</p>
+          </div>
+        </div>
       </div>
     );
   }
