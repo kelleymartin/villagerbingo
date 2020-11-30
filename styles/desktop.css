@@ -934,29 +934,29 @@ ul.downshift-options > li.downshift-selected {
 
 .biskitTile > .nameTagWrap > .nameTag {
   background-color: #ffaa3b;
-  color: #511F00;
+  color: #511f00;
 }
 
 .dogTile {
   grid-area: dogTile;
-  background-color: #FFEACE;
+  background-color: #ffeace;
   background-image: url("/Species/Dog.svg");
   background-repeat: no-repeat;
   align-self: end;
 }
 
 .dogTile > .nameTagWrap > .nameTag {
-  background-color: #FCC9E6;
-  color: #BC0A71;
+  background-color: #fcc9e6;
+  color: #bc0a71;
 }
 
 .dark-mode .dogTile {
-  background-color: #4F2C00;
+  background-color: #4f2c00;
 }
 
 .dark-mode .dogTile > .nameTagWrap > .nameTag {
-  background-color: #BC0A71;
-  color: #FCC9E6;
+  background-color: #bc0a71;
+  color: #fcc9e6;
 }
 
 .gray-mode .dogTile {
@@ -1086,8 +1086,13 @@ button {
 }
 
 .save {
-  display: none;
+  /* display: none; */
   background-image: linear-gradient(to bottom, #3fd8e0, #7fa9ff, #a06fce);
+}
+
+#render-preview {
+  position: absolute;
+  left: -1000px;
 }
 
 .create {
@@ -1130,12 +1135,12 @@ button {
 .dark-mode .boardBox {
   background-image: linear-gradient(
     to left top,
-    #811D1D,
-    #9D5900,
+    #811d1d,
+    #9d5900,
     #866c00,
     #2f831c,
     #14767c,
-    #04307B,
+    #04307b,
     #502876,
     #bc0a71
   );

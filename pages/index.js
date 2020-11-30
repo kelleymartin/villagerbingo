@@ -8,6 +8,7 @@ import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
 import { VillagerDropdown } from "../components/villager-dropdown";
 import { NavDropdown } from "../components/nav-dropdown";
 import { toSpeciesItem } from "../lib/species-item";
+import { BoardCanvas } from "../components/board-canvas";
 
 const ALL_THEMES = [
   {
@@ -226,13 +227,6 @@ export default class Home extends React.Component {
       selectedVillagers: [],
       changedSettings: false,
     });
-  }
-
-  /**
-   * @param {Event} event
-   */
-  handleSaveClick(event) {
-    event.preventDefault();
   }
 
   renderBlotter(index) {
@@ -591,20 +585,14 @@ export default class Home extends React.Component {
   handleDownloadImage(event) {
     event.preventDefault();
 
-    var container = document.getElementById("capture");
-    html2canvas(container, {
-      allowTaint: false,
-      useCORS: true,
-      scrollX: -8,
-      scrollY: -window.scrollY,
-    }).then((canvas) => {
-      var link = document.createElement("a");
-      document.body.appendChild(link);
-      link.download = "villagerbingo.jpg";
-      link.href = canvas.toDataURL();
-      link.target = "_blank";
-      link.click();
-    });
+    const canvas = document.getElementById("render-preview");
+    const link = document.createElement("a");
+    document.body.appendChild(link);
+    link.download = "villagerbingo.jpg";
+    link.href = canvas.toDataURL("image/jpeg");
+    link.target = "_blank";
+    link.click();
+    document.body.removeChild(link);
   }
 
   /**
@@ -970,6 +958,12 @@ export default class Home extends React.Component {
                 {/* {this.gameState.changedSettings && "*"} */}
               </button>
             </div>
+
+            <BoardCanvas
+              id="render-preview"
+              selectedVillagers={this.state.gameState.selectedVillagers}
+              boardVillagers={this.state.gameState.boardVillagers}
+            />
 
             {this.renderBoard()}
 
