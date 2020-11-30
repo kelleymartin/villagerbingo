@@ -105,3 +105,58 @@
             <p className="nameTag">Dog</p>
           </div>
         </div>
+
+---------------
+
+<h3>Welcome to Villager Bingo!</h3>
+          <h4>Exclude current villagers</h4>
+          <p>
+            Select the villagers that are currently living on the island.
+            Villagers selected here will never appear on your board. Click/tap
+            their face to un-exclude them.
+          </p>
+          <h4>Copy as url</h4>
+          <p>
+            Click/tap the button to copy the with the excluded villagers to your
+            clipboard. Share this with others so they can easily create a board
+            with the same excluded villagers.
+          </p>
+          <h4>Include hunt dreamie</h4>
+          <p>
+            Choose one villager to make a guaranteed appearance on your board.
+            Click/tap their name to remove them and be able to choose another.
+          </p>
+          <h4>Select game version</h4>
+          <div className="howToModeBox">
+            <div className="biskitButton">✓ Villagers</div>
+            <div className="dogButton">✓ Species</div>
+            <p className="biskitText">391 tiles, one for each villager.</p>
+            <p className="dogText">35 tiles, one for each species.</p>
+            <div className="biskitTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Biskit</p>
+              </div>
+            </div>
+            <p className="or">
+              <b>OR</b>
+            </p>
+            <div className="dogTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Dog</p>
+              </div>
+            </div>
+            <p className="biskitSub">
+              ~6.14%<br></br>hit per island
+            </p>
+            <p className="dogSub">
+              ~68.6%<br></br>hit per island
+            </p>
+          </div>
+          <h4>Choose your marker(s)</h4>
+          <p>
+            Use dropdown to select a marker set. Within that set, either choose
+            a specific marker, or select the question mark to get a mix of
+            markers from that set on your board.
+          </p>   
+
+-------------

@@ -182,7 +182,7 @@
     grid-gap: 5px;
     grid-template-areas:
       "label label label"
-      "easy center species";
+      "villagers center easy";
   }
 
   .biskitTile,

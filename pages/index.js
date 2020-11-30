@@ -468,7 +468,7 @@ export default class Home extends React.Component {
 
     return (
       <div className="gameModeSelection">
-        <label className="selectionLabel">Select a game mode:</label>
+        <label className="selectionLabel">Select game version:</label>
         {villagerSets.map((set) => {
           const isActive = set.value === this.gameState.villagerSet;
           const marker = isActive ? "✓" : "";
@@ -635,7 +635,62 @@ export default class Home extends React.Component {
     return (
       <>
         <div className="howToBoxBorder"></div>
-        <div className="howToBox">Coming soon!</div>
+        <div className="howToBox">
+          <h3>Welcome to Villager Bingo!</h3>
+          <h4>Share blank board setup</h4>
+          <span className="copy">Copy as url</span>
+          <p>
+            copies an url to your clipboard with just the excluded villagers for
+            sharing with others.
+          </p>
+          <h4>Label your boards</h4>
+          <p>
+            Click/tap "Free plot" to give each board a name to help tell them
+            apart.
+          </p>
+          <h4>Move board between devices</h4>
+          <p>
+            Copy the url from the address bar and send it to yourself to
+            continue playing on a different device.
+          </p>
+          <h4>Retrieve an old board</h4>
+          <p>
+            If you have closed the tab on a board and want it back, search for
+            it in your browser history.
+          </p>
+          <h4>Game versions details</h4>
+          <div className="howToModeBox">
+            <div className="biskitButton">✓ Villagers</div>
+            <div className="dogButton">✓ Species</div>
+            <p className="biskitText">
+              391 tiles<br></br>one per villager
+            </p>
+            <p className="dogText">
+              35 tiles<br></br>one per species
+            </p>
+            <div className="biskitTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Biskit</p>
+              </div>
+            </div>
+            <p className="or">
+              <b>OR</b>
+            </p>
+            <div className="dogTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Dog</p>
+              </div>
+            </div>
+            <p className="biskitSub">
+              <b>~6.14%</b>
+              <br></br>hit chance<br></br>per NMT island
+            </p>
+            <p className="dogSub">
+              <b>~68.6%</b>
+              <br></br>hit chance<br></br>per NMT island
+            </p>
+          </div>
+        </div>
       </>
     );
   }
@@ -856,7 +911,7 @@ export default class Home extends React.Component {
             {/* <div className="separatorBig"></div> */}
 
             <div className={navbarClasses.join(" ")}>
-              <div className="howToButtonBorder">How to play</div>
+              <div className="howToButtonBorder">Tips</div>
               <button
                 className="howToButton"
                 onClick={(e) => {
@@ -867,7 +922,7 @@ export default class Home extends React.Component {
                   }));
                 }}
               >
-                How to play
+                Tips
               </button>
 
               <NavDropdown value="/" />
