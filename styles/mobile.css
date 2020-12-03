@@ -18,6 +18,27 @@
     background-color: #1a1a1a;
   }
 
+  .update {
+    width: 630px;
+    margin-top: 110px;
+    /* margin-left: 0; */
+  }
+
+  .update > h3 {
+    font-size: 40px;
+  }
+
+  .updateX {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    padding: 50px 0;
+  }
+
+  .update > ul > li {
+    font-size: 24px;
+  }
+
   .navbar {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -29,11 +50,11 @@
 
   label,
   h2 {
-    font-size: 45px;
+    font-size: 50px;
   }
 
   .light {
-    border: 5px solid #0961f6;
+    border: 5px solid #7fa9ff;
   }
 
   .dark-mode .dark {
@@ -42,12 +63,6 @@
 
   .gray-mode .gray {
     border: 5px solid #fff;
-  }
-
-  .exclusionBox > label,
-  .setSelection > label,
-  .fractionSelection > label {
-    font-size: 45px;
   }
 
   .howToButtonBorder {
@@ -68,6 +83,48 @@
   .howToBox {
     grid-column-start: 1;
     font-size: 30px;
+  }
+/* 
+  .howToBox > h3 {
+    font-size: 24px;
+  } */
+
+  .howToBox > h4 {
+    font-size: 24px;
+  }
+
+  .howToBox > p {
+    font-size: 20px;
+  }
+
+  .howToCopyWrap > .copy {
+    height: 34px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .howToModeBox {
+    display: grid;
+    grid-template-columns: 1.3fr 0.3fr 1.3fr;
+    grid-template-areas:
+      "biskitButton top dogButton"
+      "biskitText top dogText"
+      "biskitTile or dogTile"
+      "biskitSub middle dogSub";
+  }
+
+  .biskitTile,
+  .dogTile {
+    justify-self: center;
+  }
+
+  .biskitText,
+  .dogText,
+  .biskitSub,
+  .dogSub {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .settingsButtonBorder {
@@ -116,13 +173,14 @@
   .preselected-villagers-autocomplete-box {
     grid-template-areas:
       "top top top top top top top"
-      "left input input input button button right";
+      "input input input input button button button";
   }
 
   .typeAName,
   .copy,
   .namePill,
-  .dreamTemp {
+  .dreamTemp,
+  .gameModeSelection > button {
     height: 50px;
     border-radius: 25px;
     font-size: 30px;
@@ -130,7 +188,7 @@
 
   .typeAName {
     margin-right: 5px;
-    width: 365px;
+    width: 370px;
   }
 
   .toggle {
@@ -146,7 +204,7 @@
   .namePill,
   .dreamTemp {
     margin-left: 5px;
-    width: 240px;
+    width: 245px;
   }
 
   ul.downshift-options > li {
@@ -177,9 +235,17 @@
     grid-area: button;
     grid-template-columns: 1fr 20px;
   }
-  
+
   .setSelection > button {
     display: none;
+  }
+
+  .gameModeSelection {
+    grid-template-columns: 1fr 120px 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+      "label label label"
+      "villagers center easy";
   }
 
   .seriesDropdown {
@@ -188,7 +254,7 @@
     grid-column-end: 5;
     grid-row-start: 3;
     width: 310px;
-    /* border: 2px solid #0961F6;
+    /* border: 2px solid #7FA9FF;
     background-color: #9FEBF0; */
   }
 
@@ -214,12 +280,12 @@
   }
 
   .fractionSelection > button.active {
-    border: 10px solid #0961f6;
+    border: 10px solid #7fa9ff;
   }
 
   .dark-mode .three.active,
   .dark-mode .six.active {
-    border: 10px solid #FF4040;
+    border: 10px solid #db6161;
   }
 
   .gray-mode .three.active,
@@ -233,7 +299,6 @@
     border: none;
     background-color: transparent;
     background-image: none;
-
   }
 
   .buttons {

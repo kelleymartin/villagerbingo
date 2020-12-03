@@ -7,6 +7,8 @@ import urlFormat, { encodeState } from "../lib/url-encode";
 import { BLOTTER_BY_ID, BLOTTER_SETS, OPACITIES } from "../lib/blotters";
 import { VillagerDropdown } from "../components/villager-dropdown";
 import { NavDropdown } from "../components/nav-dropdown";
+import { toSpeciesItem } from "../lib/species-item";
+import { BoardCanvas } from "../components/board-canvas";
 
 const ALL_THEMES = [
   {
@@ -23,10 +25,26 @@ const ALL_THEMES = [
   },
 ];
 
+// const ALL_ORDERS = [
+//   {
+//     id: "down",
+//     label: "Down",
+//   },
+//   {
+//     id: "across",
+//     label: "Across",
+//   },
+//   {
+//     id: "none",
+//     label: "None",
+//   },
+// ];
+
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
 const SETTING_BLOTTER_OPACITY = "blotterOpacity";
 const SETTING_TILE_BLUR = "tileBlurEnabled";
+const SETTING_LAST_SEEN_UPDATE = "lastSeenUpdate";
 
 // "Random" angles between -50 and 49
 const ANGLES_BY_INDEX = [
@@ -86,6 +104,7 @@ export default class Home extends React.Component {
       [SETTING_BLOTTER_ROTATION]: false,
       [SETTING_BLOTTER_OUTLINE]: false,
       [SETTING_TILE_BLUR]: false,
+      [SETTING_LAST_SEEN_UPDATE]: Number.MAX_SAFE_INTEGER,
     },
     blotterSetId: "color",
   };
@@ -162,11 +181,31 @@ export default class Home extends React.Component {
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
         [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_LAST_SEEN_UPDATE]:
+          Number(localStorage.getItem(SETTING_LAST_SEEN_UPDATE)) || 0,
       },
     });
   }
 
   pickBoardVillagers(mode, possibleVillagers, preselectedVillagers) {
+    if (mode === "species-only") {
+      const preselectedSpecies = new Set(
+        preselectedVillagers.map((v) => v.species)
+      );
+      const possibleSpecies = new Set(
+        possibleVillagers
+          .map((v) => v.species)
+          .filter((s) => !preselectedSpecies.has(s))
+      );
+
+      const additionalCount = 24 - preselectedSpecies.size;
+
+      console.log({ possibleSpecies, preselectedSpecies });
+      return pickRandom(Array.from(possibleSpecies), { count: additionalCount })
+        .concat(Array.from(preselectedSpecies))
+        .map(toSpeciesItem);
+    }
+
     const additionalCount = 24 - preselectedVillagers.length;
     if (mode === "hard") {
       return Array.from(
@@ -207,13 +246,6 @@ export default class Home extends React.Component {
       selectedVillagers: [],
       changedSettings: false,
     });
-  }
-
-  /**
-   * @param {Event} event
-   */
-  handleSaveClick(event) {
-    event.preventDefault();
   }
 
   renderBlotter(index) {
@@ -277,6 +309,13 @@ export default class Home extends React.Component {
     if (this.state.settings.tileBlurEnabled && isSelected) {
       tileStyle.filter = `blur(4px)`;
     }
+
+    const themedVillager = Object.assign(
+      {},
+      villager,
+      (villager.themes && villager.themes[this.state.settings.theme]) || {}
+    );
+
     //djhnghvewbnref
     return (
       <a
@@ -284,6 +323,11 @@ export default class Home extends React.Component {
         key={villager.name}
         className={`tile tile${index}`}
         title={title}
+        style={{
+          backgroundColor: themedVillager.backgroundColor
+            ? themedVillager.backgroundColor
+            : "transparent",
+        }}
         onClick={(e) => {
           e.preventDefault();
 
@@ -306,7 +350,7 @@ export default class Home extends React.Component {
         }}
       >
         <img
-          src={villager.imageUrl}
+          src={themedVillager.imageUrl}
           style={tileStyle}
           className="picture"
           crossOrigin="anonymous"
@@ -320,8 +364,8 @@ export default class Home extends React.Component {
           <p
             className="nameTag"
             style={{
-              backgroundColor: villager.bubbleColor,
-              color: villager.textColor,
+              backgroundColor: themedVillager.bubbleColor,
+              color: themedVillager.textColor,
             }}
           >
             {villager.name}
@@ -419,7 +463,7 @@ export default class Home extends React.Component {
                 });
               }}
             >
-              <p className="dreamName" >{villager.name}</p>
+              <p className="dreamName">{villager.name}</p>
               <p className="ex">X</p>
             </a>
           );
@@ -432,51 +476,40 @@ export default class Home extends React.Component {
   renderVillagerSetSelector() {
     const villagerSets = [
       {
-        value: "easy",
-        label: "Easy",
-      },
-      {
         value: "standard",
-        label: "Standard",
-      },
-      {
-        value: "hard",
-        label: "Hard",
+        label: "Villagers",
       },
       {
         value: "species-only",
-        label: "Species per Tile",
-      },
-      {
-        value: "personality-species",
-        label: "Species + Personality",
+        label: "Species",
       },
     ];
 
     return (
-      <fieldset>
-        <legend>Villager Set:</legend>
-
-        {villagerSets.map((set) => (
-          <React.Fragment key={set.value}>
-            <label style={{ display: "block" }}>
-              <input
-                type="radio"
-                name="villagerset"
-                value={set.value}
-                checked={set.value === this.gameState.villagerSet}
-                onChange={(e) => {
-                  this.setGameState({
-                    changedSettings: true,
-                    villagerSet: set.value,
-                  });
-                }}
-              />{" "}
-              {set.label}
-            </label>
-          </React.Fragment>
-        ))}
-      </fieldset>
+      <div className="gameModeSelection">
+        <label className="selectionLabel">Select game version:</label>
+        {villagerSets.map((set) => {
+          const isActive = set.value === this.gameState.villagerSet;
+          const marker = isActive ? "✓" : "";
+          return (
+            <button
+              key={set.value}
+              className={`game-mode game-mode-${set.value} ${
+                isActive ? "game-mode-active" : ""
+              }`}
+              onClick={(e) => {
+                e.preventDefault();
+                this.setGameState({
+                  changedSettings: true,
+                  villagerSet: set.value,
+                });
+              }}
+            >
+              {marker} {set.label}
+            </button>
+          );
+        })}
+      </div>
     );
   }
 
@@ -505,7 +538,7 @@ export default class Home extends React.Component {
     }
     return (
       <div className="boardBox" id="capture">
-        <div className="boardTiles">
+        <div className={`boardTiles ${this.gameState.villagerSet}`}>
           {this.gameState.boardVillagers.slice(0, 12).map((villager, index) => {
             return this.renderBoardTile(villager, index);
           })}
@@ -571,20 +604,14 @@ export default class Home extends React.Component {
   handleDownloadImage(event) {
     event.preventDefault();
 
-    var container = document.getElementById("capture");
-    html2canvas(container, {
-      allowTaint: false,
-      useCORS: true,
-      scrollX: -8,
-      scrollY: -window.scrollY,
-    }).then((canvas) => {
-      var link = document.createElement("a");
-      document.body.appendChild(link);
-      link.download = "villagerbingo.jpg";
-      link.href = canvas.toDataURL();
-      link.target = "_blank";
-      link.click();
-    });
+    const canvas = document.getElementById("render-preview");
+    const link = document.createElement("a");
+    document.body.appendChild(link);
+    link.download = "villagerbingo.jpg";
+    link.href = canvas.toDataURL("image/jpeg");
+    link.target = "_blank";
+    link.click();
+    document.body.removeChild(link);
   }
 
   /**
@@ -627,7 +654,65 @@ export default class Home extends React.Component {
     return (
       <>
         <div className="howToBoxBorder"></div>
-        <div className="howToBox">Coming soon!</div>
+        <div className="howToBox">
+          {/* <h3>Thanks for playing Villager Bingo!</h3> */}
+          <div className="howToCopyWrap">
+            <h4>Share your hunt with</h4>
+            <div className="copy">Copy as url</div>
+          </div>
+          <p>
+            After excluding your current villagers, use this button to send out
+            a clean url for others to create their own unique board with
+            matching excluded villagers.
+          </p>
+          <h4>Label your board(s)</h4>
+          <p>
+            Click/tap <span className="howToFree">Free plot</span> to give each
+            board a name to help tell them apart.
+          </p>
+          <h4>Move board between devices</h4>
+          <p>
+            Copy the url from the address bar and send it to yourself to
+            continue playing on a different device.
+          </p>
+          <h4>Retrieve an old board</h4>
+          <p>
+            If you have closed the tab on a board and want it back, search for
+            it in your browser history.
+          </p>
+          <h4>Game versions details</h4>
+          <div className="howToModeBox">
+            <div className="biskitButton">✓ Villagers</div>
+            <div className="dogButton">✓ Species</div>
+            <p className="biskitText">
+              391 tiles<br></br>one per villager
+            </p>
+            <p className="dogText">
+              35 tiles<br></br>one per species
+            </p>
+            <div className="biskitTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Biskit</p>
+              </div>
+            </div>
+            <p className="or">
+              <b>OR</b>
+            </p>
+            <div className="dogTile">
+              <div className="nameTagWrap">
+                <p className="nameTag">Dog</p>
+              </div>
+            </div>
+            <p className="biskitSub">
+              <b>~6.14%</b>
+              <br></br>hit chance<br></br>per NMT island
+            </p>
+            <p className="dogSub">
+              <b>~68.6%</b>
+              <br></br>hit chance<br></br>per NMT island
+            </p>
+          </div>
+        </div>
       </>
     );
   }
@@ -644,12 +729,17 @@ export default class Home extends React.Component {
           <label className="themeLabel">Mode:</label>
           <div className="flexButtons">{this.renderModeSelection()}</div>
           {/* <div className="divider"></div>
-        <h3 className="languageLabel">Villager names</h3>
-        <label className="languageLabel">Language:</label>
-        <div className="divider"></div>
-        <label className="languageLabel">Contrast:</label>
-        <div className="divider"></div>
-        <label className="alphabetLabel">Alphabetize:</label> */}
+          <h3 className="languageLabel">Villager names</h3>
+          <label className="languageLabel">Language:</label>
+          <div className="divider"></div>
+          <label className="languageLabel">Contrast:</label>
+          <div className="divider"></div>
+          <label className="alphabetLabel">Alphabetize:</label>
+          <div className="flexButtons">
+            <button className="alpha">Down</button>
+            <button className="alpha">Across</button>
+            <button className="alpha">None</button>
+          </div> */}
         </div>
       </>
     );
@@ -809,6 +899,48 @@ export default class Home extends React.Component {
     return blotter.id;
   }
 
+  renderUpdateNotice() {
+    const lastSeenTimestamp = this.state.settings[SETTING_LAST_SEEN_UPDATE];
+    const updateDate = "2020-12-03";
+    const latestTimestamp = Date.parse(updateDate);
+
+    if (lastSeenTimestamp >= latestTimestamp) {
+      return <></>;
+    }
+
+    return (
+      <div className="updateWrap">
+        <div className="update">
+          <a
+            className="updateX"
+            onClick={(e) => {
+              e.preventDefault();
+
+              this.setSettings({
+                [SETTING_LAST_SEEN_UPDATE]: latestTimestamp,
+              });
+            }}
+          >
+            X
+          </a>
+          <h3>Latest Update - {updateDate}</h3>
+          <ul>
+            <li>Added second game version: Species</li>
+            <li className="indent">Only 35 possible tiles; one per species</li>
+            <li className="indent">
+              Quicker game; ideal for short hunts and/or frequent hits with
+              blackout potential
+            </li>
+            <li>Named original game version "Villagers"</li>
+            <li>Renamed "How to play" to "Tips"</li>
+            <li>Added tips & game version info under Tips</li>
+            <li>Changed some colors to match the new species tiles</li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const navbarClasses = ["navbar"];
     if (this.state.howToExpanded) {
@@ -846,9 +978,10 @@ export default class Home extends React.Component {
             </h1>
 
             {/* <div className="separatorBig"></div> */}
+            {this.renderUpdateNotice()}
 
             <div className={navbarClasses.join(" ")}>
-              <div className="howToButtonBorder">How to play</div>
+              <div className="howToButtonBorder">Tips</div>
               <button
                 className="howToButton"
                 onClick={(e) => {
@@ -859,7 +992,7 @@ export default class Home extends React.Component {
                   }));
                 }}
               >
-                How to play
+                Tips
               </button>
 
               <NavDropdown value="/" />
@@ -926,33 +1059,13 @@ export default class Home extends React.Component {
 
             {this.renderVillagerPreselector()}
 
-             <div className="separator"></div>
+            <div className="separator"></div>
 
-            {/*<div className="setSelection">
-              <label className="selectionLabel">Select a villager set:</label>
-              <div className="easyBorder"></div>
-              <button className="easyButton">{'<14 species'}</button>
-              <div className="standardBorder"></div>
-              <button className="standardButton">All villagers</button>
-              <div className="hardBorder"></div>
-              <button className="hardButton">Hard</button>
-              <div className="speciesBorder"></div>
-              <button className="speciesButton">Per species</button>
-              <div className="personalitiesBorder"></div>
-              <button className="personalitiesButton">Personality</button>
-            </div>
+            {this.renderVillagerSetSelector()}
 
-            <div className="separator"></div> */}
+            <div className="separator"></div>
 
             <div className="buttons">
-              <button
-                className="save"
-                type="button"
-                onClick={(e) => this.handleDownloadImage(e)}
-              >
-                Save picture
-              </button>
-
               <button
                 className="create"
                 type="button"
@@ -963,7 +1076,26 @@ export default class Home extends React.Component {
               </button>
             </div>
 
+            <BoardCanvas
+              id="render-preview"
+              selectedVillagers={this.state.gameState.selectedVillagers}
+              boardVillagers={this.state.gameState.boardVillagers}
+            />
+
             {this.renderBoard()}
+
+            <div className="underButtons">
+              <button className="statsButton" disabled>
+                Board stats
+              </button>
+              <button
+                className="save"
+                type="button"
+                onClick={(e) => this.handleDownloadImage(e)}
+              >
+                Save image
+              </button>
+            </div>
 
             {this.renderBlotterSelector()}
 
@@ -995,9 +1127,18 @@ export default class Home extends React.Component {
                 .
               </p>
               <p className="disclaimer">
+                In-game images courtesy of{" "}
+                <a href="http://acnhapi.com/" className="footerLink">
+                  acnhapi.com
+                </a>{" "}
+                and{" "}
+                <a href="https://tinyurl.com/acnh-sheet" className="footerLink">
+                  ACNH Spreadsheet
+                </a>
+                .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
-                any intellectual property associated with Nintendo or Animal
-                Crossing.
+                any<br></br>intellectual property associated with Nintendo or
+                Animal Crossing.
               </p>
             </div>
           </div>

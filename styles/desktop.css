@@ -30,15 +30,7 @@ body {
 .gray-mode {
   background-color: #1a1a1a;
   color: #e6e6e6;
-  filter: grayscale(1);
-}
-
-/* .dark-mode img {
-  filter: brightness(0.9);
-} */
-
-.gray-mode img {
-  filter: brightness(0.8);
+  filter: grayscale(1) brightness(0.9);
 }
 
 .gray-mode .logo > img {
@@ -110,16 +102,80 @@ h1 {
   border-radius: 3px;
   background-image: linear-gradient(
     to left,
-    rgba(255, 64, 64, 0.3),
-    rgba(255, 121, 31, 0.3),
+    rgba(219, 97, 97, 0.3),
+    rgba(255, 170, 59, 0.3),
     rgba(255, 208, 13, 0.3),
     rgba(120, 221, 98, 0.3),
     rgba(63, 216, 224, 0.3),
-    rgba(9, 97, 246, 0.3),
+    rgba(127, 169, 255, 0.3),
     rgba(160, 111, 206, 0.3),
-    rgba(249, 147, 206, 0.3),
-    rgba(192, 171, 114, 0.3)
+    rgba(249, 147, 206, 0.3)
   );
+}
+
+.updateWrap {
+  position: fixed;
+  background-color: rgba(249, 247, 241, 0.8);
+  z-index: 500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dark-mode .updateWrap {
+  background-color: rgba(35, 30, 17, 0.8);
+}
+
+.gray-mode .updateWrap {
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+.update {
+  position: relative;
+  width: 370px;
+  margin: 90px auto 30px;
+  background-image: linear-gradient(#9febf0, #bbeeb0);
+  border: solid 2px #78dd62;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.dark-mode .update {
+  background-image: none;
+  background-color: #0A3B3E;
+  border: solid 2px #1EB2B9;
+}
+
+.gray-mode .update {
+  background-image: none;
+  background-color: #1a1a1a;
+  border: solid 2px #808080;
+
+}
+
+.updateX {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.update > ul > li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.indent {
+  margin-left: 20px;
 }
 
 .navbar {
@@ -149,13 +205,13 @@ h1 {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
+  min-width: 125px;
   width: fit-content;
   height: 34px;
   border-radius: 17px;
   padding: 1px 8px;
   font-size: 20px;
   font-weight: 500;
-  /* background-image: linear-gradient(to bottom, #C0AB72 , #A06FCE); */
   background-color: #a06fce;
   justify-self: start;
   /* z-index: -10; */
@@ -180,6 +236,7 @@ h1 {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
+  min-width: 121px;
   width: fit-content;
   height: 30px;
   margin-top: 2px;
@@ -209,7 +266,6 @@ h1 {
   width: 100%;
   height: 34px;
   border-radius: 17px;
-  /* background-image: linear-gradient(to bottom, #C0AB72 , #0961F6); */
   background-color: #a06fce;
   /* z-index: -10; */
 }
@@ -299,6 +355,129 @@ h1 {
   border: 2px solid #b3b3b3;
 }
 
+.howToBox > h4,
+.howToCopyWrap > h4 {
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.howToCopyWrap > h4 {
+  margin-top: 0;
+}
+
+.howToCopyWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0;
+}
+
+.howToBox > p {
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+  justify-self: start;
+}
+
+.howToModeBox {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  grid-template-areas:
+    "biskitButton top top dogButton"
+    "biskitText top top dogText"
+    "biskitTile or or dogTile"
+    "biskitSub middle middle dogSub";
+}
+
+.howToCopyWrap > .copy {
+  margin-left: 5px;
+}
+
+.howToFree {
+  font-weight: 600;
+  background-image: linear-gradient(to top left, #78dd62, #3fd8e0);
+  padding: 0 5px;
+}
+
+.dark-mode .howToFree {
+  background-image: linear-gradient(to top left, #2f831c, #14767c);
+}
+
+.gray-mode .howToFree {
+  background-image: none;
+  background-color: #4d4d4d;
+}
+
+.biskitText {
+  grid-area: biskitText;
+}
+
+.dogText {
+  grid-area: dogText;
+}
+
+.biskitTile {
+  grid-area: biskitTile;
+  background-image: url("https://acnhapi.com/v1/images/villagers/114");
+  background-size: contain;
+  align-self: end;
+}
+
+.biskitTile > .nameTagWrap > .nameTag {
+  background-color: #ffaa3b;
+  color: #511f00;
+}
+
+.dogTile {
+  grid-area: dogTile;
+  background-color: #ffeace;
+  background-image: url("/Species/Dog.svg");
+  background-repeat: no-repeat;
+  align-self: end;
+}
+
+.dogTile > .nameTagWrap > .nameTag {
+  background-color: #fcc9e6;
+  color: #bc0a71;
+}
+
+.dark-mode .dogTile {
+  background-color: #4f2c00;
+}
+
+.dark-mode .dogTile > .nameTagWrap > .nameTag {
+  background-color: #bc0a71;
+  color: #fcc9e6;
+}
+
+.gray-mode .dogTile {
+  background-color: #000;
+  background-image: url("/Species/grayDog.svg");
+}
+
+.or {
+  grid-area: or;
+  align-self: center;
+  font-size: 30px;
+}
+
+.biskitSub,
+.dogSub,
+.biskitText,
+.dogText {
+  font-size: 16px;
+  margin: 5px 0;
+  line-height: 20px;
+}
+
+.biskitSub {
+  grid-area: biskitSub;
+}
+
+.dogSub {
+  grid-area: dogSub;
+}
+
 .settingsBox > label {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -340,14 +519,15 @@ h3 {
   border-radius: 12px;
   font-size: 14px;
   /* margin-left: 5px; */
-  background-image: linear-gradient(#d0b7e6, #84b0fb);
-  border: 3px solid #0961f6;
+  background-image: linear-gradient(#bfd4ff, #d0b7e6);
+  border: 3px solid #a06fce;
   /* border: none; */
   padding: 0;
 }
 
 .dark,
-.gray {
+.gray,
+.alpha {
   height: 24px;
   width: 72px;
   border-radius: 12px;
@@ -355,7 +535,7 @@ h3 {
   /* margin-left: 5px; */
   background-image: none;
   background-color: transparent;
-  border: 2px solid #0961f6;
+  border: 2px solid #a06fce;
   /* border: none; */
   padding: 0;
 }
@@ -411,12 +591,13 @@ fieldset {
 }
 
 .preselected-villagers-autocomplete-box,
-.setSelection {
+.setSelection,
+.gameModeSelection {
   margin-bottom: 20px;
 }
 
 .copy {
-  background-image: linear-gradient(to bottom, #9febf0, #84b0fb);
+  background-image: linear-gradient(to bottom, #9febf0, #bfd4ff);
   grid-area: button;
   justify-self: left;
   height: 34px;
@@ -424,12 +605,9 @@ fieldset {
   padding-left: 6px;
   padding-right: 6px;
   border-radius: 17px;
-  border: 2px solid #0961f6;
+  border: 2px solid #7fa9ff;
   font-size: 20px;
   font-weight: 500;
-}
-
-.copy {
   min-width: 120px;
   width: fit-content;
 }
@@ -440,7 +618,8 @@ fieldset {
   background-image: none;
 }
 
-.gray-mode button {
+.gray-mode button,
+.howToCopyWrap > .copy {
   color: #e6e6e6;
   background-color: #4d4d4d;
   background-image: none;
@@ -451,7 +630,6 @@ fieldset {
 .preselected-villagers-autocomplete-box > label {
   grid-area: top;
   font-weight: 600;
-  font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
   /* justify-self: left; */
@@ -496,7 +674,7 @@ fieldset {
   font-family: proxima-soft, sans-serif;
   font-size: 20px;
   font-weight: 500;
-  border: 2px solid #0961f6;
+  border: 2px solid #7fa9ff;
   border-radius: 17px;
   background-color: #9febf0;
   margin: 0;
@@ -521,8 +699,8 @@ input:disabled {
 
 .dark-mode input:disabled,
 .dark-mode .toggle:disabled {
-  background-color: #84b0fb;
-  border: 2px solid #84b0fb;
+  background-color: #bfd4ff;
+  border: 2px solid #bfd4ff;
 }
 
 .gray-mode input:disabled,
@@ -546,7 +724,7 @@ input:disabled {
 
 .dark-mode .toggle {
   background-color: transparent;
-  color: #84b0fb;
+  color: #bfd4ff;
 }
 
 .gray-mode .toggle {
@@ -598,7 +776,7 @@ ul.downshift-options > li.downshift-selected {
 }
 
 .dark-mode ul.downshift-options > li.downshift-highlight {
-  background-color: #84b0fb;
+  background-color: #bfd4ff;
   color: #333;
   font-weight: 600;
 }
@@ -716,9 +894,9 @@ ul.downshift-options > li.downshift-selected {
   width: 120px;
   height: 34px;
   border-radius: 17px;
-  color: #0749b9;
-  background-color: #9febf0;
-  border: 2px solid #9febf0;
+  color: #333;
+  background-color: #cff5f7;
+  border: 2px solid #cff5f7;
   font-size: 20px;
   font-weight: 500;
 }
@@ -726,7 +904,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .dreamTemp {
   background-color: #04307b;
   border: 2px solid #04307b;
-  color: #9febf0;
+  color: #bfd4ff;
   font-weight: 400;
 }
 
@@ -737,25 +915,39 @@ ul.downshift-options > li.downshift-selected {
   font-weight: 400;
 }
 
-.setSelection {
+.setSelection,
+.gameModeSelection {
   display: grid;
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   gap: 5px;
+}
+
+.setSelection {
   grid-template-areas:
     "left label label label label label right"
     "left easy standard hard species personalities right";
 }
 
+.gameModeSelection {
+  grid-template-areas:
+    "left biskitTile label label label dogTile right"
+    "left biskitTile villagers hard easy dogTile right"
+    "left biskitTile sub2 sub3 sub4 dogTile right";
+}
+
 .selectionLabel {
   grid-area: label;
   font-weight: 600;
-  font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
 }
 
-.setSelection > button {
+.setSelection > button,
+.gameModeSelection > button,
+.biskitButton,
+.dogButton,
+.underButtons > button {
   height: 34px;
   border-radius: 17px;
   color: #333;
@@ -764,13 +956,21 @@ ul.downshift-options > li.downshift-selected {
   padding: 0;
 }
 
-.dark-mode .setSelection > button {
+.dark-mode .setSelection > button,
+.dark-mode .gameModeSelection > button,
+.dark-mode .biskitButton,
+.dark-mode .dogButton,
+.underButtons > button {
   font-weight: 400;
   background-image: none;
   color: #fffce9;
 }
 
-.gray-mode .setSelection > button {
+.gray-mode .setSelection > button,
+.gray-mode .gameModeSelection > button,
+.gray-mode .biskitButton,
+.gray-mode .dogButton,
+.underButtons > button {
   color: #e6e6e6;
   background-color: transparent;
   background-image: none;
@@ -778,30 +978,37 @@ ul.downshift-options > li.downshift-selected {
   font-weight: 400;
 }
 
-.easyButton,
+.game-mode-species-only,
 .amiibo-series-1 {
   grid-area: easy;
   border: 2px solid #78dd62;
   background-color: transparent;
 }
 
-.amiibo-series-1.amiibo-series-active {
+.game-mode-species-only.game-mode-active,
+.amiibo-series-1.amiibo-series-active,
+.dogButton {
   background-image: linear-gradient(to bottom, #ffe886, #bbeeb0);
   border: 4px solid #78dd62;
 }
 
-.dark-mode .amiibo-series-1.amiibo-series-active {
+.dark-mode .game-mode-species-only.game-mode-active,
+.dark-mode .amiibo-series-1.amiibo-series-active,
+.dark-mode .dogButton {
   background-image: none;
   background-color: #2f831c;
 }
 
-.gray-mode .amiibo-series.amiibo-series-active {
+.gray-mode .game-mode-species-only.game-mode-active,
+.gray-mode .game-mode-standard.game-mode-active,
+.gray-mode .amiibo-series.amiibo-series-active,
+.gray-mode .dogButton,
+.gray-mode .biskitButton {
   background-image: none;
   background-color: #4d4d4d;
   border: 4px solid #b3b3b3;
 }
 
-.standardButton,
 .amiibo-series-2 {
   grid-area: standard;
   background-color: transparent;
@@ -818,16 +1025,15 @@ ul.downshift-options > li.downshift-selected {
   background-color: #14767c;
 }
 
-.hardButton,
 .amiibo-series-3 {
   grid-area: hard;
-  border: 2px solid #0961f6;
+  border: 2px solid #7fa9ff;
   background-color: transparent;
 }
 
 .amiibo-series-3.amiibo-series-active {
-  background-image: linear-gradient(to bottom, #ffe886, #84b0fb);
-  border: 4px solid #0961f6;
+  background-image: linear-gradient(to bottom, #ffe886, #bfd4ff);
+  border: 4px solid #7fa9ff;
 }
 
 .dark-mode .amiibo-series-3.amiibo-series-active {
@@ -835,7 +1041,6 @@ ul.downshift-options > li.downshift-selected {
   background-color: #04307b;
 }
 
-.speciesButton,
 .amiibo-series-4 {
   grid-area: species;
   border: 2px solid #a06fce;
@@ -852,13 +1057,12 @@ ul.downshift-options > li.downshift-selected {
   background-color: #502876;
 }
 
-.personalitiesButton,
 .amiibo-series-5 {
   grid-area: personalities;
   border: 2px solid #f993ce;
   background-color: transparent;
-  min-width: 120px;
-  max-width: max-content;
+  /* min-width: 120px;
+  max-width: max-content; */
 }
 
 .amiibo-series-5.amiibo-series-active {
@@ -869,6 +1073,34 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .amiibo-series-5.amiibo-series-active {
   background-image: none;
   background-color: #bc0a71;
+}
+
+.game-mode-standard {
+  grid-area: villagers;
+  border: 2px solid #db6161;
+  background-color: transparent;
+}
+
+.game-mode-standard.game-mode-active,
+.biskitButton {
+  background-image: linear-gradient(to bottom, #ffe886, #edb0b0);
+  border: 4px solid #db6161;
+}
+
+.dark-mode .game-mode-standard.game-mode-active,
+.dark-mode .biskitButton {
+  background-image: none;
+  background-color: #811d1d;
+}
+
+.biskitButton {
+  grid-area: biskitButton;
+  line-height: 24px;
+}
+
+.dogButton {
+  grid-area: dogButton;
+  line-height: 24px;
 }
 
 .seriesDropdown {
@@ -888,7 +1120,6 @@ ul.downshift-options > li.downshift-selected {
   grid-column-start: 1;
   grid-column-end: 5;
   font-weight: 600;
-  font-size: 36px;
   margin: 0 0 10px;
   padding: 0;
 }
@@ -897,15 +1128,15 @@ ul.downshift-options > li.downshift-selected {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  border: 2px solid #0961f6;
+  border: 2px solid #7fa9ff;
   background-color: transparent;
   font-size: 30px;
   font-weight: 600;
 }
 
 .fractionSelection > button.active {
-  background-image: linear-gradient(#9febf0, #84b0fb);
-  border: 5px solid #0961f6;
+  background-image: linear-gradient(#9febf0, #bfd4ff);
+  border: 5px solid #7fa9ff;
 }
 
 .dark-mode .three,
@@ -926,7 +1157,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .six.active {
   background-image: none;
   background-color: #a00000;
-  border: 5px solid #ff4040;
+  border: 5px solid #db6161;
 }
 
 .gray-mode .three.active,
@@ -959,7 +1190,7 @@ input[type="radio"] {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  border: 2px solid #FF4040;
+  border: 2px solid #DB6161;
   font-size: 30px;
   text-align: center;
   font-weight: 600;
@@ -983,7 +1214,11 @@ button {
   margin: 20px auto 20px;
 }
 
-.save,
+#render-preview {
+  position: absolute;
+  left: -1000px;
+}
+
 .create {
   min-width: 250px;
   font-size: 30px;
@@ -991,16 +1226,8 @@ button {
   padding: 0 20px;
   font-weight: 600;
   border-radius: 25px;
-}
-
-.save {
-  display: none;
-  background-image: linear-gradient(to bottom, #3fd8e0, #0961f6, #a06fce);
-}
-
-.create {
-  background-image: linear-gradient(to bottom, #ffe886, #ffbc8f);
-  border: 2px solid #ff791f;
+  background-image: linear-gradient(to bottom, #ffe886, #ffd59d);
+  border: 2px solid #ffaa3b;
 }
 
 .dark-mode .create {
@@ -1022,15 +1249,14 @@ button {
   margin-right: auto;
   background-image: linear-gradient(
     to left top,
-    #ff4040,
-    #ff791f,
+    #db6161,
+    #ffaa3b,
     #ffd00d,
     #78dd62,
     #3fd8e0,
-    #0961f6,
+    #7fa9ff,
     #a06fce,
-    #f993ce,
-    #c0ab72
+    #f993ce
   );
   padding: 5px;
   border-radius: 15px;
@@ -1039,15 +1265,14 @@ button {
 .dark-mode .boardBox {
   background-image: linear-gradient(
     to left top,
-    #a00000,
-    #8f3900,
+    #811d1d,
+    #9d5900,
     #866c00,
     #2f831c,
     #14767c,
     #04307b,
     #502876,
-    #bc0a71,
-    #6a5a2f
+    #bc0a71
   );
 }
 
@@ -1066,6 +1291,10 @@ button {
   height: 620px;
 }
 
+.gray-mode .boardTiles.species-only .tile {
+  background-color: #000 !important;
+}
+
 .tileBlank {
   background-color: #fff;
   opacity: 0.5;
@@ -1082,7 +1311,9 @@ button {
   background-color: #000;
 }
 
-.tile {
+.tile,
+.biskitTile,
+.dogTile {
   display: block;
   width: 120px;
   height: 120px;
@@ -1109,7 +1340,7 @@ button {
   width: 120px;
   position: absolute;
   top: 80px;
-  z-index: 20;
+  z-index: 5;
 }
 
 .nameTag {
@@ -1120,7 +1351,6 @@ button {
   padding: 10px 10px 12px;
   line-height: 0px;
   border-radius: 15px;
-  z-index: 2;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1161,6 +1391,7 @@ button {
   top: 39px;
   left: 0;
   width: 120px;
+  filter: drop-shadow(2px 2px 0 #fff);
 }
 
 .starIndicator {
@@ -1171,10 +1402,22 @@ button {
   z-index: 10;
 }
 
+label,
 h2 {
   font-weight: 600;
   font-size: 36px;
   margin: 0;
+}
+
+.underButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 -5px;
+}
+
+.underButtons > button {
+  min-width: 125px;
+  width: fit-content;
 }
 
 .blotterSelectorBox {
@@ -1300,15 +1543,14 @@ select {
   border-radius: 1px;
   background-image: linear-gradient(
     to left,
-    rgba(255, 64, 64, 0.5),
-    rgba(255, 121, 31, 0.5),
+    rgba(219, 97, 97, 0.5),
+    rgba(255, 170, 59, 0.5),
     rgba(255, 208, 13, 0.5),
     rgba(120, 221, 98, 0.5),
     rgba(63, 216, 224, 0.5),
-    rgba(9, 97, 246, 0.5),
+    rgba(127, 169, 255, 0.5),
     rgba(160, 111, 206, 0.5),
-    rgba(249, 147, 206, 0.5),
-    rgba(192, 171, 114, 0.5)
+    rgba(249, 147, 206, 0.5)
   );
 }
 
@@ -1320,9 +1562,9 @@ select {
   line-height: 0;
   width: 80px;
   justify-self: end;
-  border: 2px solid #0961f6;
+  border: 2px solid #a06fce;
   /* background-color: #FCC9E6; */
-  background-image: linear-gradient(#d0b7e6, #84b0fb);
+  background-image: linear-gradient(#bfd4ff, #d0b7e6);
 }
 
 .dark-mode .opacityDropdown {
@@ -1358,7 +1600,7 @@ select {
   height: 90px;
   width: 90px;
   position: absolute;
-  z-index: 10;
+  z-index: 4;
   top: 0px;
   left: 0px;
   background-position: center;
@@ -1401,7 +1643,7 @@ select {
 }
 
 .red {
-  background-color: #ff4040;
+  background-color: #db6161;
 }
 
 .gray-mode .red {
@@ -1410,7 +1652,7 @@ select {
 }
 
 .orange {
-  background-color: #ff791f;
+  background-color: #ffaa3b;
 }
 
 .gray-mode .orange {
@@ -1446,7 +1688,7 @@ select {
 }
 
 .blue {
-  background-color: #0961f6;
+  background-color: #7fa9ff;
 }
 
 .gray-mode .blue {
@@ -1472,15 +1714,6 @@ select {
   opacity: 1;
 }
 
-.gold {
-  background-color: #c0ab72;
-}
-
-.gray-mode .gold {
-  background-color: #ffffff;
-  opacity: 1;
-}
-
 .cursor {
   width: 40px;
   margin-top: 70%;
@@ -1503,16 +1736,15 @@ select {
   margin-right: auto;
   border-radius: 3px;
   background-image: linear-gradient(
-    to left,
-    rgba(255, 64, 64, 0.3),
-    rgba(255, 121, 31, 0.3),
+    to right,
+    rgba(219, 97, 97, 0.3),
+    rgba(255, 170, 59, 0.3),
     rgba(255, 208, 13, 0.3),
     rgba(120, 221, 98, 0.3),
     rgba(63, 216, 224, 0.3),
-    rgba(9, 97, 246, 0.3),
+    rgba(127, 169, 255, 0.3),
     rgba(160, 111, 206, 0.3),
-    rgba(249, 147, 206, 0.3),
-    rgba(192, 171, 114, 0.3)
+    rgba(249, 147, 206, 0.3)
   );
 }
 
@@ -1527,16 +1759,15 @@ select {
   margin: 5px 0px 5px;
   border-radius: 1px;
   background-image: linear-gradient(
-    to left,
-    rgba(255, 64, 64, 0.5),
-    rgba(255, 121, 31, 0.5),
+    to right,
+    rgba(219, 97, 97, 0.5),
+    rgba(255, 170, 59, 0.5),
     rgba(255, 208, 13, 0.5),
     rgba(120, 221, 98, 0.5),
     rgba(63, 216, 224, 0.5),
-    rgba(9, 97, 246, 0.5),
+    rgba(127, 169, 255, 0.5),
     rgba(160, 111, 206, 0.5),
-    rgba(249, 147, 206, 0.5),
-    rgba(192, 171, 114, 0.5)
+    rgba(249, 147, 206, 0.5)
   );
   /* background-color: #A06FCE; */
   grid-column-start: 1;
@@ -1583,7 +1814,7 @@ select {
 } */
 
 /* .footerLink {
-  background-image: linear-gradient(to right, #FF4040, #FF791F, #FFD00D, #78DD62, #3FD8E0, #0961F6, #A06FCE, #F993CE, #C0AB72);
+  background-image: linear-gradient(to right, #DB6161, #FFAA3B, #FFD00D, #78DD62, #3FD8E0, #7FA9FF, #A06FCE, #F993CE);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 100% 2px;
@@ -1593,7 +1824,7 @@ select {
 }
 
 .footerLink:hover {
-  background-image: linear-gradient(to right, rgba(255, 64, 64, 0.3), rgba(255, 121, 31, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(9, 97, 246, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3), rgba(192, 171, 114, 0.3));
+  background-image: linear-gradient(to right, rgba(219, 97, 97, 0.3), rgba(255, 170, 59, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(127, 169, 255, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3));
   background-size: 100% 50px;
 } */
 
@@ -1602,16 +1833,15 @@ select {
   width: 100%;
   height: 5px;
   background-image: linear-gradient(
-    to right,
-    rgba(255, 64, 64, 0.3),
-    rgba(255, 121, 31, 0.3),
+    to left,
+    rgba(219, 97, 97, 0.3),
+    rgba(255, 170, 59, 0.3),
     rgba(255, 208, 13, 0.3),
     rgba(120, 221, 98, 0.3),
     rgba(63, 216, 224, 0.3),
-    rgba(9, 97, 246, 0.3),
+    rgba(127, 169, 255, 0.3),
     rgba(160, 111, 206, 0.3),
-    rgba(249, 147, 206, 0.3),
-    rgba(192, 171, 114, 0.3)
+    rgba(249, 147, 206, 0.3)
   );
 }
 
