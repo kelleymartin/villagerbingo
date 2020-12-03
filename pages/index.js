@@ -200,7 +200,6 @@ export default class Home extends React.Component {
 
       const additionalCount = 24 - preselectedSpecies.size;
 
-      console.log({ possibleSpecies, preselectedSpecies });
       return pickRandom(Array.from(possibleSpecies), { count: additionalCount })
         .concat(Array.from(preselectedSpecies))
         .map(toSpeciesItem);
@@ -231,18 +230,33 @@ export default class Home extends React.Component {
     const possibleVillagers = villagers.filter((villager) => {
       return !excludedAndPreselected.has(villager);
     });
-    const boardVillagers = this.pickBoardVillagers(
+
+    const unsortedBoardVillagers = this.pickBoardVillagers(
       this.gameState.villagerSet,
       possibleVillagers,
       this.gameState.preselectedVillagers
     );
 
-    const sortedVillagers = boardVillagers.sort((a, b) => {
+    const sortedVillagers = unsortedBoardVillagers.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
 
+    // Awful "shuffle" implementation.
+    const sourceVillager = unsortedBoardVillagers.slice(0);
+    const randomizedBoardVillagers = [];
+    while (sourceVillager.length > 0) {
+      const randomIndex = Math.min(
+        sourceVillager.length - 1,
+        Math.floor(Math.random() * sourceVillager.length)
+      );
+      randomizedBoardVillagers.push(...sourceVillager.splice(randomIndex, 1));
+    }
+
     this.setGameState({
-      boardVillagers: sortedVillagers,
+      boardVillagers:
+        this.gameState.villagerSet === "species-only"
+          ? randomizedBoardVillagers
+          : sortedVillagers,
       selectedVillagers: [],
       changedSettings: false,
     });
