@@ -866,7 +866,7 @@ export default class Home extends React.Component {
                 </a>
                 .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
-                any intellectual property associated with Nintendo or Animal
+                any<br></br>intellectual property associated with Nintendo or Animal
                 Crossing.
               </p>
             </div>

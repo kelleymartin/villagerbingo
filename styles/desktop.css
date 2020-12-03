@@ -348,6 +348,10 @@ h1 {
   margin-bottom: 0;
 }
 
+.howToBox >h4:first-of-type {
+  margin-top: 0;
+}
+
 .howToBox > p,
 .copyText {
   margin: 0;

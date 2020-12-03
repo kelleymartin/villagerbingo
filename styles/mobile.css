@@ -84,12 +84,16 @@
     grid-column-start: 1;
     font-size: 30px;
   }
-
+/* 
   .howToBox > h3 {
+    font-size: 24px;
+  } */
+
+  .howToBox > h4 {
     font-size: 24px;
   }
 
-  .howToBox > h4 {
+  .howToBox > p {
     font-size: 20px;
   }
 

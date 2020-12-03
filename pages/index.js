@@ -651,7 +651,7 @@ export default class Home extends React.Component {
       <>
         <div className="howToBoxBorder"></div>
         <div className="howToBox">
-          <h3>Welcome to Villager Bingo!</h3>
+          {/* <h3>Thanks for playing Villager Bingo!</h3> */}
           <h4>Label your board(s)</h4>
           <p>
             Click/tap <span className="howToFree">Free plot</span> to give each
@@ -1113,7 +1113,7 @@ export default class Home extends React.Component {
                 </a>
                 .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
-                any intellectual property associated with Nintendo or Animal
+                any<br></br>intellectual property associated with Nintendo or Animal
                 Crossing.
               </p>
             </div>
