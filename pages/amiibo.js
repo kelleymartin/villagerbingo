@@ -856,6 +856,15 @@ export default class Home extends React.Component {
                 .
               </p>
               <p className="disclaimer">
+              In-game images courtesy of{" "}
+                <a href="http://acnhapi.com/" className="footerLink">
+                  acnhapi.com
+                </a>{" "}
+                and{" "}
+                <a href="https://tinyurl.com/acnh-sheet" className="footerLink">
+                  ACNH Spreadsheet
+                </a>
+                .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
                 any intellectual property associated with Nintendo or Animal
                 Crossing.

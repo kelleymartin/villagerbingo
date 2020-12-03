@@ -25,6 +25,21 @@ const ALL_THEMES = [
   },
 ];
 
+const ALL_ORDERS = [
+  {
+    id: "down",
+    label: "Down",
+  },
+  {
+    id: "across",
+    label: "Across",
+  },
+  {
+    id: "none",
+    label: "None",
+  },
+];
+
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
 const SETTING_BLOTTER_OPACITY = "blotterOpacity";
@@ -637,16 +652,10 @@ export default class Home extends React.Component {
         <div className="howToBoxBorder"></div>
         <div className="howToBox">
           <h3>Welcome to Villager Bingo!</h3>
-          <h4>Share blank board setup</h4>
-          <span className="copy">Copy as url</span>
+          <h4>Label your board(s)</h4>
           <p>
-            copies an url to your clipboard with just the excluded villagers for
-            sharing with others.
-          </p>
-          <h4>Label your boards</h4>
-          <p>
-            Click/tap "Free plot" to give each board a name to help tell them
-            apart.
+            Click/tap <span className="howToFree">Free plot</span> to give each
+            board a name to help tell them apart.
           </p>
           <h4>Move board between devices</h4>
           <p>
@@ -710,9 +719,14 @@ export default class Home extends React.Component {
         <h3 className="languageLabel">Villager names</h3>
         <label className="languageLabel">Language:</label>
         <div className="divider"></div>
-        <label className="languageLabel">Contrast:</label>
-        <div className="divider"></div>
-        <label className="alphabetLabel">Alphabetize:</label> */}
+        <label className="languageLabel">Contrast:</label> */}
+          <div className="divider"></div>
+          <label className="alphabetLabel">Alphabetize:</label>
+          <div className="flexButtons">
+            <button className="alpha">Down</button>
+            <button className="alpha">Across</button>
+            <button className="alpha">None</button>
+          </div>
         </div>
       </>
     );
@@ -909,6 +923,38 @@ export default class Home extends React.Component {
             </h1>
 
             {/* <div className="separatorBig"></div> */}
+            <div className="updateWrap">
+              <div className="update">
+                <h3>Latest Update - 2020-12-02</h3>
+                <a className="updateX">X</a>
+                <ul>
+                  <li>Added second game version: Species</li>
+                  <li className="indent">
+                    Only 35 possible tiles; one per species
+                  </li>
+                  <li className="indent">
+                    Quicker game; ideal for short hunts and/or frequent hits
+                    with blackout potential
+                  </li>
+                  <li>Named original game version "Villagers"</li>
+                  <li>Added alphabetization setting</li>
+                  <li className="indent">
+                    Find it top left in the Settings dropdown
+                  </li>
+                  <li className="indent">
+                    Three options: Down (vertical), Across (horizontal), and
+                    None
+                  </li>
+                  <li className="indent">
+                    Overrides standard standard setting for each version
+                    (Villagers = Down & Species = None)
+                  </li>
+                  <li>Renamed "How to play" to "Tips"</li>
+                  <li>Added tips & game version info under Tips</li>
+                  <li>Changed some colors to match the new species tiles</li>
+                </ul>
+              </div>
+            </div>
 
             <div className={navbarClasses.join(" ")}>
               <div className="howToButtonBorder">Tips</div>
@@ -997,14 +1043,6 @@ export default class Home extends React.Component {
 
             <div className="buttons">
               <button
-                className="save"
-                type="button"
-                onClick={(e) => this.handleDownloadImage(e)}
-              >
-                Save picture
-              </button>
-
-              <button
                 className="create"
                 type="button"
                 onClick={(e) => this.handleCreateBoard(e)}
@@ -1021,6 +1059,19 @@ export default class Home extends React.Component {
             />
 
             {this.renderBoard()}
+
+            <div className="underButtons">
+              <button className="statsButton" disabled>
+                Board stats
+              </button>
+              <button
+                className="save"
+                type="button"
+                onClick={(e) => this.handleDownloadImage(e)}
+              >
+                Save image
+              </button>
+            </div>
 
             {this.renderBlotterSelector()}
 
@@ -1052,6 +1103,15 @@ export default class Home extends React.Component {
                 .
               </p>
               <p className="disclaimer">
+                In-game images courtesy of{" "}
+                <a href="http://acnhapi.com/" className="footerLink">
+                  acnhapi.com
+                </a>{" "}
+                and{" "}
+                <a href="https://tinyurl.com/acnh-sheet" className="footerLink">
+                  ACNH Spreadsheet
+                </a>
+                .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
                 any intellectual property associated with Nintendo or Animal
                 Crossing.

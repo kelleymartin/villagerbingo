@@ -18,6 +18,27 @@
     background-color: #1a1a1a;
   }
 
+  .update {
+    width: 630px;
+    margin-top: 0px;
+    margin-left: 0;
+  }
+
+  .update > h3 {
+    font-size: 40px;
+  }
+
+  .updateX {
+    font-size: 80px;
+    width: 100px;
+    height: 100px;
+    padding: 50px 0;
+  }
+
+  .update > ul > li {
+    font-size: 20px;
+  }
+
   .navbar {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -62,6 +83,38 @@
   .howToBox {
     grid-column-start: 1;
     font-size: 30px;
+  }
+
+  .howToBox > h3 {
+    font-size: 24px;
+  }
+
+  .howToBox > h4 {
+    font-size: 20px;
+  }
+
+  .howToBox > .copy {
+    background-image: linear-gradient(to bottom, #9febf0, #bfd4ff);
+    grid-area: button;
+    justify-self: left;
+    height: 34px;
+    color: #333;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 17px;
+    border: 2px solid #7fa9ff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .dark-mode .howToBox > .copy {
+    color: #fffce9;
+    background-color: #04307b;
+    background-image: none;
+  }
+
+  .copyText {
+    line-height: 0;
   }
 
   .settingsButtonBorder {
@@ -183,14 +236,6 @@
     grid-template-areas:
       "label label label"
       "villagers center easy";
-  }
-
-  .biskitTile,
-  .sub2,
-  .sub4,
-  .dogTile,
-  .questionMark {
-    display: none;
   }
 
   .seriesDropdown {

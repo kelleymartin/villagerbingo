@@ -30,11 +30,7 @@ body {
 .gray-mode {
   background-color: #1a1a1a;
   color: #e6e6e6;
-  filter: grayscale(1);
-}
-
-.gray-mode img {
-  filter: brightness(0.8);
+  filter: grayscale(1) brightness(0.9);
 }
 
 .gray-mode .logo > img {
@@ -115,6 +111,59 @@ h1 {
     rgba(160, 111, 206, 0.3),
     rgba(249, 147, 206, 0.3)
   );
+}
+
+.updateWrap {
+  display: none;
+  position: absolute;
+  width: 630px;
+  height: 100vh;
+  margin-top: -10px;
+  background-color: rgba(249, 247, 241, 0.8);
+  z-index: 500;
+}
+
+.dark-mode .updateWrap {
+  background-color: rgba(35, 30, 17, 0.8);
+}
+
+.gray-mode .updateWrap {
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+.update {
+  position: sticky;
+  top: 10px;
+  width: 370px;
+  margin-top: 68px;
+  margin-left: 130px;
+  background-image: linear-gradient(#9FEBF0, #BBEEB0);
+  border: solid 2px #78DD62;
+  border-radius: 15px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.updateX {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  right: 0;
+  padding: 30px 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.update > ul > li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.indent {
+  margin-left: 20px;
 }
 
 .navbar {
@@ -299,11 +348,12 @@ h1 {
   margin-bottom: 0;
 }
 
-.howToBox > p {
+.howToBox > p,
+.copyText {
   margin: 0;
   font-size: 16px;
   text-align: left;
-  justify-self: left;
+  justify-self: start;
 }
 
 .howToModeBox {
@@ -319,6 +369,21 @@ h1 {
 .howToBox > .copy {
   margin-right: 5px;
   align-self: start;
+}
+
+.howToFree {
+  font-weight: 600;
+  background-image: linear-gradient(to top left, #78DD62, #3FD8E0);
+  padding: 0 5px;
+}
+
+.dark-mode .howToFree {
+  background-image: linear-gradient(to top left, #2F831C, #14767C);
+}
+
+.gray-mode .howToFree {
+  background-image: none;
+  background-color: #4d4d4d;
 }
 
 .biskitText {
@@ -439,7 +504,8 @@ h3 {
 }
 
 .dark,
-.gray {
+.gray,
+.alpha {
   height: 24px;
   width: 72px;
   border-radius: 12px;
@@ -520,9 +586,6 @@ fieldset {
   border: 2px solid #7fa9ff;
   font-size: 20px;
   font-weight: 500;
-}
-
-.copy {
   min-width: 120px;
   width: fit-content;
 }
@@ -818,7 +881,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .dreamTemp {
   background-color: #04307b;
   border: 2px solid #04307b;
-  color: #9febf0;
+  color: #BFD4FF;
   font-weight: 400;
 }
 
@@ -860,7 +923,8 @@ ul.downshift-options > li.downshift-selected {
 .setSelection > button,
 .gameModeSelection > button,
 .biskitButton,
-.dogButton {
+.dogButton,
+.underButtons > button {
   height: 34px;
   border-radius: 17px;
   color: #333;
@@ -872,7 +936,8 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .setSelection > button,
 .dark-mode .gameModeSelection > button,
 .dark-mode .biskitButton,
-.dark-mode .dogButton {
+.dark-mode .dogButton,
+.underButtons > button  {
   font-weight: 400;
   background-image: none;
   color: #fffce9;
@@ -881,7 +946,8 @@ ul.downshift-options > li.downshift-selected {
 .gray-mode .setSelection > button,
 .gray-mode .gameModeSelection > button,
 .gray-mode .biskitButton,
-.gray-mode .dogButton {
+.gray-mode .dogButton,
+.underButtons > button  {
   color: #e6e6e6;
   background-color: transparent;
   background-image: none;
@@ -1007,13 +1073,11 @@ ul.downshift-options > li.downshift-selected {
 .biskitButton {
   grid-area: biskitButton;
   line-height: 24px;
-  margin: 10px 0 5px;
 }
 
 .dogButton {
   grid-area: dogButton;
   line-height: 24px;
-  margin: 10px 0 0;
 }
 
 .seriesDropdown {
@@ -1127,7 +1191,11 @@ button {
   margin: 20px auto 20px;
 }
 
-.save,
+#render-preview {
+  position: absolute;
+  left: -1000px;
+}
+
 .create {
   min-width: 250px;
   font-size: 30px;
@@ -1135,19 +1203,6 @@ button {
   padding: 0 20px;
   font-weight: 600;
   border-radius: 25px;
-}
-
-.save {
-  /* display: none; */
-  background-image: linear-gradient(to bottom, #3fd8e0, #7fa9ff, #a06fce);
-}
-
-#render-preview {
-  position: absolute;
-  left: -1000px;
-}
-
-.create {
   background-image: linear-gradient(to bottom, #ffe886, #ffd59d);
   border: 2px solid #ffaa3b;
 }
@@ -1262,7 +1317,7 @@ button {
   width: 120px;
   position: absolute;
   top: 80px;
-  z-index: 20;
+  z-index: 5;
 }
 
 .nameTag {
@@ -1273,7 +1328,6 @@ button {
   padding: 10px 10px 12px;
   line-height: 0px;
   border-radius: 15px;
-  z-index: 2;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1330,6 +1384,17 @@ h2 {
   font-weight: 600;
   font-size: 36px;
   margin: 0;
+}
+
+.underButtons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 -5px;
+}
+
+.underButtons > button {
+  min-width: 125px;
+  width: fit-content;
 }
 
 .blotterSelectorBox {
@@ -1512,7 +1577,7 @@ select {
   height: 90px;
   width: 90px;
   position: absolute;
-  z-index: 10;
+  z-index: 4;
   top: 0px;
   left: 0px;
   background-position: center;
