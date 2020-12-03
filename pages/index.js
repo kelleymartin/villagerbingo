@@ -1098,7 +1098,7 @@ export default class Home extends React.Component {
 
             {this.renderBoard()}
 
-            <div className="underButtons">
+            {/* <div className="underButtons">
               <button className="statsButton" disabled>
                 Board stats
               </button>
@@ -1109,7 +1109,7 @@ export default class Home extends React.Component {
               >
                 Save image
               </button>
-            </div>
+            </div> */}
 
             {this.renderBlotterSelector()}
 
