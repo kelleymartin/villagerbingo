@@ -25,20 +25,20 @@ const ALL_THEMES = [
   },
 ];
 
-const ALL_ORDERS = [
-  {
-    id: "down",
-    label: "Down",
-  },
-  {
-    id: "across",
-    label: "Across",
-  },
-  {
-    id: "none",
-    label: "None",
-  },
-];
+// const ALL_ORDERS = [
+//   {
+//     id: "down",
+//     label: "Down",
+//   },
+//   {
+//     id: "across",
+//     label: "Across",
+//   },
+//   {
+//     id: "none",
+//     label: "None",
+//   },
+// ];
 
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
@@ -716,17 +716,17 @@ export default class Home extends React.Component {
           <label className="themeLabel">Mode:</label>
           <div className="flexButtons">{this.renderModeSelection()}</div>
           {/* <div className="divider"></div>
-        <h3 className="languageLabel">Villager names</h3>
-        <label className="languageLabel">Language:</label>
-        <div className="divider"></div>
-        <label className="languageLabel">Contrast:</label> */}
+          <h3 className="languageLabel">Villager names</h3>
+          <label className="languageLabel">Language:</label>
+          <div className="divider"></div>
+          <label className="languageLabel">Contrast:</label>
           <div className="divider"></div>
           <label className="alphabetLabel">Alphabetize:</label>
           <div className="flexButtons">
             <button className="alpha">Down</button>
             <button className="alpha">Across</button>
             <button className="alpha">None</button>
-          </div>
+          </div> */}
         </div>
       </>
     );
