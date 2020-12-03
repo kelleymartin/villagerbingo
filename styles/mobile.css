@@ -97,28 +97,34 @@
     font-size: 20px;
   }
 
-  .howToBox > .copy {
-    background-image: linear-gradient(to bottom, #9febf0, #bfd4ff);
-    grid-area: button;
-    justify-self: left;
+  .howToCopyWrap > .copy {
     height: 34px;
-    color: #333;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 17px;
-    border: 2px solid #7fa9ff;
+    width: fit-content;
     font-size: 20px;
     font-weight: 500;
   }
 
-  .dark-mode .howToBox > .copy {
-    color: #fffce9;
-    background-color: #04307b;
-    background-image: none;
+  .howToModeBox {
+    display: grid;
+    grid-template-columns: 1.3fr 0.3fr 1.3fr;
+    grid-template-areas:
+      "biskitButton top dogButton"
+      "biskitText top dogText"
+      "biskitTile or dogTile"
+      "biskitSub middle dogSub";
   }
 
-  .copyText {
-    line-height: 0;
+  .biskitTile,
+  .dogTile {
+    justify-self: center;
+  }
+
+  .biskitText,
+  .dogText,
+  .biskitSub,
+  .dogSub {
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .settingsButtonBorder {

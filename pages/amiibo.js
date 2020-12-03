@@ -337,7 +337,9 @@ export default class Home extends React.Component {
           <p
             className="nameTag"
             style={{
-              backgroundColor: isWelcome ? villager.lighterColor : villager.darkerColor,
+              backgroundColor: isWelcome
+                ? villager.lighterColor
+                : villager.darkerColor,
               color: isWelcome ? "#000" : "#FFF",
             }}
           >
@@ -477,7 +479,25 @@ export default class Home extends React.Component {
     return (
       <>
         <div className="howToBoxBorder"></div>
-        <div className="howToBox">Coming soon!</div>
+        <div className="howToBox">
+          <h4>Selecting cards per pack</h4>
+          <p>Different regions have a different number of amiibo cards per pack. This affects the villager to NPC ratio, which the board will reflect.</p>
+          <h4>Label your board(s)</h4>
+          <p>
+            Click/tap <span className="howToFree">Free plot</span> to give each
+            board a name to help tell them apart.
+          </p>
+          <h4>Move board between devices</h4>
+          <p>
+            Copy the url from the address bar and send it to yourself to
+            continue playing on a different device.
+          </p>
+          <h4>Retrieve an old board</h4>
+          <p>
+            If you have closed the tab on a board and want it back, search for
+            it in your browser history.
+          </p>
+        </div>
       </>
     );
   }
@@ -698,7 +718,7 @@ export default class Home extends React.Component {
             <div className={navbarClasses.join(" ")}>
               <NavDropdown value="/amiibo" />
 
-              <div className="howToButtonBorder">How to play</div>
+              <div className="howToButtonBorder">Tips</div>
               <button
                 className="howToButton"
                 onClick={(e) => {
@@ -709,7 +729,7 @@ export default class Home extends React.Component {
                   }));
                 }}
               >
-                How to play
+                Tips
               </button>
 
               <div className="settingsButtonBorder"></div>
@@ -856,7 +876,7 @@ export default class Home extends React.Component {
                 .
               </p>
               <p className="disclaimer">
-              In-game images courtesy of{" "}
+                In-game images courtesy of{" "}
                 <a href="http://acnhapi.com/" className="footerLink">
                   acnhapi.com
                 </a>{" "}
@@ -866,8 +886,8 @@ export default class Home extends React.Component {
                 </a>
                 .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
-                any<br></br>intellectual property associated with Nintendo or Animal
-                Crossing.
+                any<br></br>intellectual property associated with Nintendo or
+                Animal Crossing.
               </p>
             </div>
           </div>

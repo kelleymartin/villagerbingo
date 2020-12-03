@@ -355,17 +355,24 @@ h1 {
   border: 2px solid #b3b3b3;
 }
 
-.howToBox > h4 {
+.howToBox > h4,
+.howToCopyWrap > h4 {
   text-align: start;
   margin-bottom: 0;
 }
 
-.howToBox > h4:first-of-type {
+.howToCopyWrap > h4 {
   margin-top: 0;
 }
 
-.howToBox > p,
-.copyText {
+.howToCopyWrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 0;
+}
+
+.howToBox > p {
   margin: 0;
   font-size: 16px;
   text-align: left;
@@ -382,9 +389,8 @@ h1 {
     "biskitSub middle middle dogSub";
 }
 
-.howToBox > .copy {
-  margin-right: 5px;
-  align-self: start;
+.howToCopyWrap > .copy {
+  margin-left: 5px;
 }
 
 .howToFree {
@@ -612,7 +618,8 @@ fieldset {
   background-image: none;
 }
 
-.gray-mode button {
+.gray-mode button,
+.howToCopyWrap > .copy {
   color: #e6e6e6;
   background-color: #4d4d4d;
   background-image: none;

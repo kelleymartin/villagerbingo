@@ -656,6 +656,15 @@ export default class Home extends React.Component {
         <div className="howToBoxBorder"></div>
         <div className="howToBox">
           {/* <h3>Thanks for playing Villager Bingo!</h3> */}
+          <div className="howToCopyWrap">
+            <h4>Share your hunt with</h4>
+            <div className="copy">Copy as url</div>
+          </div>
+          <p>
+            After excluding your current villagers, use this button to send out
+            a clean url for others to create their own unique board with
+            matching excluded villagers.
+          </p>
           <h4>Label your board(s)</h4>
           <p>
             Click/tap <span className="howToFree">Free plot</span> to give each
