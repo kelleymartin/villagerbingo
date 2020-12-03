@@ -44,6 +44,7 @@ const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
 const SETTING_BLOTTER_OPACITY = "blotterOpacity";
 const SETTING_TILE_BLUR = "tileBlurEnabled";
+const SETTING_LAST_SEEN_UPDATE = "lastSeenUpdate";
 
 // "Random" angles between -50 and 49
 const ANGLES_BY_INDEX = [
@@ -103,6 +104,7 @@ export default class Home extends React.Component {
       [SETTING_BLOTTER_ROTATION]: false,
       [SETTING_BLOTTER_OUTLINE]: false,
       [SETTING_TILE_BLUR]: false,
+      [SETTING_LAST_SEEN_UPDATE]: Number.MAX_SAFE_INTEGER,
     },
     blotterSetId: "color",
   };
@@ -179,6 +181,8 @@ export default class Home extends React.Component {
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
         [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
+        [SETTING_LAST_SEEN_UPDATE]:
+          Number(localStorage.getItem(SETTING_LAST_SEEN_UPDATE)) || 0,
       },
     });
   }
@@ -489,7 +493,7 @@ export default class Home extends React.Component {
           const marker = isActive ? "✓" : "";
           return (
             <button
-              // key={seriesOption.seriesId}
+              key={set.value}
               className={`game-mode game-mode-${set.value} ${
                 isActive ? "game-mode-active" : ""
               }`}
@@ -886,6 +890,48 @@ export default class Home extends React.Component {
     return blotter.id;
   }
 
+  renderUpdateNotice() {
+    const lastSeenTimestamp = this.state.settings[SETTING_LAST_SEEN_UPDATE];
+    const updateDate = "2020-12-03";
+    const latestTimestamp = Date.parse(updateDate);
+
+    if (lastSeenTimestamp >= latestTimestamp) {
+      return <></>;
+    }
+
+    return (
+      <div className="updateWrap">
+        <div className="update">
+          <a
+            className="updateX"
+            onClick={(e) => {
+              e.preventDefault();
+
+              this.setSettings({
+                [SETTING_LAST_SEEN_UPDATE]: latestTimestamp,
+              });
+            }}
+          >
+            X
+          </a>
+          <h3>Latest Update - {updateDate}</h3>
+          <ul>
+            <li>Added second game version: Species</li>
+            <li className="indent">Only 35 possible tiles; one per species</li>
+            <li className="indent">
+              Quicker game; ideal for short hunts and/or frequent hits with
+              blackout potential
+            </li>
+            <li>Named original game version "Villagers"</li>
+            <li>Renamed "How to play" to "Tips"</li>
+            <li>Added tips & game version info under Tips</li>
+            <li>Changed some colors to match the new species tiles</li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const navbarClasses = ["navbar"];
     if (this.state.howToExpanded) {
@@ -923,38 +969,7 @@ export default class Home extends React.Component {
             </h1>
 
             {/* <div className="separatorBig"></div> */}
-            <div className="updateWrap">
-              <div className="update">
-                <h3>Latest Update - 2020-12-02</h3>
-                <a className="updateX">X</a>
-                <ul>
-                  <li>Added second game version: Species</li>
-                  <li className="indent">
-                    Only 35 possible tiles; one per species
-                  </li>
-                  <li className="indent">
-                    Quicker game; ideal for short hunts and/or frequent hits
-                    with blackout potential
-                  </li>
-                  <li>Named original game version "Villagers"</li>
-                  <li>Added alphabetization setting</li>
-                  <li className="indent">
-                    Find it top left in the Settings dropdown
-                  </li>
-                  <li className="indent">
-                    Three options: Down (vertical), Across (horizontal), and
-                    None
-                  </li>
-                  <li className="indent">
-                    Overrides standard standard setting for each version
-                    (Villagers = Down & Species = None)
-                  </li>
-                  <li>Renamed "How to play" to "Tips"</li>
-                  <li>Added tips & game version info under Tips</li>
-                  <li>Changed some colors to match the new species tiles</li>
-                </ul>
-              </div>
-            </div>
+            {this.renderUpdateNotice()}
 
             <div className={navbarClasses.join(" ")}>
               <div className="howToButtonBorder">Tips</div>
@@ -1113,8 +1128,8 @@ export default class Home extends React.Component {
                 </a>
                 .<br></br>
                 Villager Bingo is a fan-made website that claims no ownership of
-                any<br></br>intellectual property associated with Nintendo or Animal
-                Crossing.
+                any<br></br>intellectual property associated with Nintendo or
+                Animal Crossing.
               </p>
             </div>
           </div>

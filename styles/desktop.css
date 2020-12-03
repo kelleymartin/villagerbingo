@@ -114,13 +114,15 @@ h1 {
 }
 
 .updateWrap {
-  display: none;
-  position: absolute;
-  width: 630px;
-  height: 100vh;
-  margin-top: -10px;
+  position: fixed;
   background-color: rgba(249, 247, 241, 0.8);
   z-index: 500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .dark-mode .updateWrap {
@@ -132,22 +134,32 @@ h1 {
 }
 
 .update {
-  position: sticky;
-  top: 10px;
+  position: relative;
   width: 370px;
-  margin-top: 68px;
-  margin-left: 130px;
-  background-image: linear-gradient(#9FEBF0, #BBEEB0);
-  border: solid 2px #78DD62;
+  margin: 90px auto 30px;
+  background-image: linear-gradient(#9febf0, #bbeeb0);
+  border: solid 2px #78dd62;
   border-radius: 15px;
   padding: 10px;
-  z-index: 1000;
+}
+
+.dark-mode .update {
+  background-image: none;
+  background-color: #0A3B3E;
+  border: solid 2px #1EB2B9;
+}
+
+.gray-mode .update {
+  background-image: none;
+  background-color: #1a1a1a;
+  border: solid 2px #808080;
+
 }
 
 .updateX {
-  position: absolute;
   width: 60px;
   height: 60px;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 30px 0;
@@ -348,7 +360,7 @@ h1 {
   margin-bottom: 0;
 }
 
-.howToBox >h4:first-of-type {
+.howToBox > h4:first-of-type {
   margin-top: 0;
 }
 
@@ -362,12 +374,12 @@ h1 {
 
 .howToModeBox {
   display: grid;
-  grid-template-columns: 1fr .5fr .5fr 1fr;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
   grid-template-areas:
-  "biskitButton top top dogButton"
-  "biskitText top top dogText"
-  "biskitTile or or dogTile"
-  "biskitSub middle middle dogSub";
+    "biskitButton top top dogButton"
+    "biskitText top top dogText"
+    "biskitTile or or dogTile"
+    "biskitSub middle middle dogSub";
 }
 
 .howToBox > .copy {
@@ -377,12 +389,12 @@ h1 {
 
 .howToFree {
   font-weight: 600;
-  background-image: linear-gradient(to top left, #78DD62, #3FD8E0);
+  background-image: linear-gradient(to top left, #78dd62, #3fd8e0);
   padding: 0 5px;
 }
 
 .dark-mode .howToFree {
-  background-image: linear-gradient(to top left, #2F831C, #14767C);
+  background-image: linear-gradient(to top left, #2f831c, #14767c);
 }
 
 .gray-mode .howToFree {
@@ -885,7 +897,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .dreamTemp {
   background-color: #04307b;
   border: 2px solid #04307b;
-  color: #BFD4FF;
+  color: #bfd4ff;
   font-weight: 400;
 }
 
@@ -941,7 +953,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .gameModeSelection > button,
 .dark-mode .biskitButton,
 .dark-mode .dogButton,
-.underButtons > button  {
+.underButtons > button {
   font-weight: 400;
   background-image: none;
   color: #fffce9;
@@ -951,7 +963,7 @@ ul.downshift-options > li.downshift-selected {
 .gray-mode .gameModeSelection > button,
 .gray-mode .biskitButton,
 .gray-mode .dogButton,
-.underButtons > button  {
+.underButtons > button {
   color: #e6e6e6;
   background-color: transparent;
   background-image: none;
@@ -1071,7 +1083,7 @@ ul.downshift-options > li.downshift-selected {
 .dark-mode .game-mode-standard.game-mode-active,
 .dark-mode .biskitButton {
   background-image: none;
-  background-color: #811D1D;
+  background-color: #811d1d;
 }
 
 .biskitButton {
