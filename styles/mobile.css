@@ -20,8 +20,8 @@
 
   .update {
     width: 630px;
-    margin-top: 0px;
-    margin-left: 0;
+    margin-top: 110px;
+    /* margin-left: 0; */
   }
 
   .update > h3 {
