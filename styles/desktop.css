@@ -1823,26 +1823,38 @@ select {
   color: #e6e6e6;
 }
 
-/* .footerLink:hover{
-  color: #333;
-  background-image: linear-gradient(45deg, #f3ec78, #af4261);
-  background-clip: text;
-} */
-
-/* .footerLink {
-  background-image: linear-gradient(to right, #DB6161, #FFAA3B, #FFD00D, #78DD62, #3FD8E0, #7FA9FF, #A06FCE, #F993CE);
-    background-position: 0 100%;
+.footerLink {
+  background-image: linear-gradient(to left, #DB6161, #FFAA3B, #FFD00D, #78DD62, #3FD8E0, #7FA9FF, #A06FCE, #F993CE);
+    background-position: 0 90%;
     background-repeat: repeat-x;
-    background-size: 100% 2px;
+    background-size: 100% 1px;
   color: #000;
   text-decoration: none;
-  transition: background-size .2s;
+  transition: background-size;
 }
 
-.footerLink:hover {
-  background-image: linear-gradient(to right, rgba(219, 97, 97, 0.3), rgba(255, 170, 59, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(127, 169, 255, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3));
+/* .footerLink:hover {
+  background-image: linear-gradient(to left, rgba(219, 97, 97, 0.3), rgba(255, 170, 59, 0.3), rgba(255, 208, 13, 0.3), rgba(120, 221, 98, 0.3), rgba(63, 216, 224, 0.3), rgba(127, 169, 255, 0.3), rgba(160, 111, 206, 0.3), rgba(249, 147, 206, 0.3));
   background-size: 100% 50px;
 } */
+
+.footerLink:hover {
+  background-image: linear-gradient(to left, #DB6161, #FFAA3B, #FFD00D, #78DD62, #3FD8E0, #7FA9FF, #A06FCE, #F993CE);
+  background-size: 100% 50px;
+  color: transparent;
+  background-clip: text;
+}
+
+.gray-mode .footerLink {
+  text-decoration: underline;
+  background-image: none;
+}
+
+.gray-mode .footerLink:hover {
+  text-decoration: underline;
+  background-image: none;
+  color: #e6e6e6;
+}
 
 .bottomBar {
   display: block;
