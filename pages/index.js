@@ -976,7 +976,7 @@ export default class Home extends React.Component {
 
         <main>
           <div className="container">
-            <img src="/Dodo.svg" className="dodo" alt="" />
+            <div className="dodo"></div>
             <h1>
               <a className="logo" href="/">
                 ACNH Villager Bing

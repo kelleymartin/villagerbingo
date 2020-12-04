@@ -53,9 +53,27 @@ html {
 
 .dodo {
   position: absolute;
-  margin-top: 6px;
-  margin-left: 85px;
+  width: 39px;
+  height: 32px;
+  margin-top: 5px;
+  margin-left: 400px;
+  background-image: url("/Dodo.svg");
 }
+
+/* .dodo:hover {
+  animation-name: dodo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dodo {
+  from {
+    background-image: url("/DodoUp.svg");
+  }
+  to {
+    background-image: url("/DodoDown.svg");
+  }
+} */
 
 h1 {
   font-weight: 700;

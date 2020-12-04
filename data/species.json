@@ -88,12 +88,12 @@
     "grayTextColor": "#E6E6E6"
   },
   "cub": {
-    "lightBackgroundColor": "#CFF5F7",
-    "lightBubbleColor": "#EDB0B0",
-    "lightTextColor": "#811D1D",
-    "darkBackgroundColor": "#0A3B3E",
-    "darkBubbleColor": "#811D1D",
-    "darkTextColor": "#EDB0B0",
+    "lightBackgroundColor": "#FFF3C3",
+    "lightBubbleColor": "#9FEBF0",
+    "lightTextColor": "#14767C",
+    "darkBackgroundColor": "#433600",
+    "darkBubbleColor": "#14767C",
+    "darkTextColor": "#9FEBF0",
     "grayBackgroundColor": "#000",
     "grayBubbleColor": "#4D4D4D",
     "grayTextColor": "#E6E6E6"
