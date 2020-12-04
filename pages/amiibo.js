@@ -481,7 +481,11 @@ export default class Home extends React.Component {
         <div className="howToBoxBorder"></div>
         <div className="howToBox">
           <h4>Selecting cards per pack</h4>
-          <p>Different regions have a different number of amiibo cards per pack. This affects the villager to NPC ratio, which the board will reflect.</p>
+          <p>
+            Different regions have a different number of amiibo cards per pack.
+            This affects the villager to NPC ratio, which the board will
+            reflect.
+          </p>
           <h4>Label your board(s)</h4>
           <p>
             Click/tap <span className="howToFree">Free plot</span> to give each
@@ -698,7 +702,7 @@ export default class Home extends React.Component {
 
         <main>
           <div className="container">
-            <img src="/Dodo.svg" className="dodo" alt="" />
+            <div className="dodo"></div>
             <h1>
               <a className="logo" href="/">
                 ACNH Villager Bing
