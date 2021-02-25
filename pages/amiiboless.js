@@ -9,7 +9,6 @@ import { VillagerDropdown } from "../components/villager-dropdown";
 import { NavDropdown } from "../components/nav-dropdown";
 import { toSpeciesItem } from "../lib/species-item";
 import { BoardCanvas } from "../components/board-canvas";
-import { BoardColors } from "../lib/board-color";
 
 const ALL_THEMES = [
   {
@@ -51,29 +50,13 @@ const SETTING_LAST_SEEN_UPDATE = "lastSeenUpdate";
 const ANGLES_BY_INDEX = [
   19,
   -12,
-  -43,
-  26,
-  -5,
+  43,
+  -26,
+  25,
   -36,
   33,
   2,
-  -29,
-  40,
-  9,
-  -22,
-  47,
-  16,
-  -15,
-  -46,
-  23,
-  -8,
-  -39,
-  30,
-  -1,
-  -32,
-  37,
-  6,
-  -25,
+  -49,
 ];
 
 function pickRandomColor() {
@@ -189,34 +172,18 @@ export default class Home extends React.Component {
   }
 
   pickBoardVillagers(mode, possibleVillagers, preselectedVillagers) {
-    if (mode === "species-only") {
-      const preselectedSpecies = new Set(
-        preselectedVillagers.map((v) => v.species)
-      );
-      const possibleSpecies = new Set(
-        possibleVillagers
-          .map((v) => v.species)
-          .filter((s) => !preselectedSpecies.has(s))
-      );
-
-      const additionalCount = 24 - preselectedSpecies.size;
-
-      return pickRandom(Array.from(possibleSpecies), { count: additionalCount })
-        .concat(Array.from(preselectedSpecies))
-        .map(toSpeciesItem);
-    }
-
-    const additionalCount = 24 - preselectedVillagers.length;
-    if (mode === "hard") {
-      return Array.from(
-        { length: additionalCount },
-        () => possibleVillagers[0]
-      );
-    }
-
-    return pickRandom(possibleVillagers, { count: additionalCount }).concat(
-      preselectedVillagers
-    );
+    return possibleVillagers.filter((villager) => {
+      return [
+        "Audie",
+        "Cyd",
+        "Dom",
+        "Judy",
+        "Megan",
+        "Raymond",
+        "Reneigh",
+        "Sherb",
+      ].includes(villager.name);
+    });
   }
 
   handleCreateBoard(event) {
@@ -304,7 +271,7 @@ export default class Home extends React.Component {
 
     return (
       <div
-        className={`blot ${blotterId} blot-${blotter.setId}`}
+        className={`bigBlot ${blotterId} bigBlot-${blotter.setId}`}
         style={blotStyle}
       ></div>
     );
@@ -336,7 +303,7 @@ export default class Home extends React.Component {
       <a
         href="#"
         key={villager.name}
-        className={`tile tile${index}`}
+        className={`bigTile bigTile${index}`}
         title={title}
         style={{
           backgroundColor: themedVillager.backgroundColor
@@ -367,7 +334,7 @@ export default class Home extends React.Component {
         <img
           src={themedVillager.imageUrl}
           style={tileStyle}
-          className="picture"
+          className="bigPicture"
           crossOrigin="anonymous"
           draggable="false"
           alt={`${villager.name}, the ${villager.personality} ${villager.species}`}
@@ -375,9 +342,9 @@ export default class Home extends React.Component {
         {/* {this.gameState.preselectedVillagers.includes(villager) && (
           <img className="starIndicator" src="/StarPieceRareCropped.png" />
         )} */}
-        <div className="nameTagWrap">
+        <div className="bigNameTagWrap">
           <p
-            className="nameTag"
+            className="bigNameTag"
             style={{
               backgroundColor: themedVillager.bubbleColor,
               color: themedVillager.textColor,
@@ -388,103 +355,6 @@ export default class Home extends React.Component {
         </div>
         {isSelected ? this.renderBlotter(index) : null}
       </a>
-    );
-  }
-
-  renderVillagerSelector() {
-    return (
-      <VillagerDropdown
-        id="excluded-villagers-autocomplete"
-        labelText="Exclude current villagers:"
-        disabled={this.gameState.excludedVillagers.length === 9}
-        excludedVillagers={this.gameState.excludedVillagers}
-        onSelection={(selection, afterSelectionApplied) => {
-          this.setGameState((prevState) => {
-            return {
-              changedSettings: true,
-              excludedVillagers: prevState.excludedVillagers.concat([
-                selection,
-              ]),
-              preselectedVillagers: prevState.preselectedVillagers.filter(
-                (villager) => villager !== selection
-              ),
-            };
-          }, afterSelectionApplied);
-        }}
-      >
-        <button
-          type="button"
-          className="copy"
-          onClick={(e) => {
-            e.preventDefault();
-            const cleanedState = Object.assign({}, this.gameState, {
-              // Reset values we don't want in the shared URL:
-              boardLabel: "",
-              boardVillagers: [],
-              selectedVillagers: [],
-              selectedColor: null,
-              selectedFreePlot: "",
-              villagerSet: "standard",
-            });
-            const shareData = encodeState(location.href, cleanedState);
-            navigator.clipboard.writeText(`${shareData}&cs=cau`);
-          }}
-        >
-          Copy as url
-        </button>
-      </VillagerDropdown>
-    );
-  }
-
-  renderVillagerPreselector() {
-    const excluded = this.gameState.excludedVillagers.concat(
-      this.gameState.preselectedVillagers
-    );
-
-    return (
-      <VillagerDropdown
-        id="preselected-villagers-autocomplete"
-        labelText="Include hunt dreamie:"
-        excludedVillagers={excluded}
-        disabled={this.gameState.preselectedVillagers.length >= 1}
-        onSelection={(selection, afterSelectionApplied) => {
-          this.setGameState((prevState) => {
-            return {
-              changedSettings: true,
-              preselectedVillagers: [selection],
-            };
-          }, afterSelectionApplied);
-        }}
-      >
-        {this.gameState.preselectedVillagers.map((villager) => {
-          return (
-            <a
-              className="namePill"
-              href="#"
-              key={villager.name}
-              title={`Remove ${villager.name}`}
-              style={{
-                backgroundColor: villager.bubbleColor,
-                color: villager.textColor,
-                border: `2px solid ${villager.textColor}`,
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                this.setGameState({
-                  changedSettings: true,
-                  preselectedVillagers: this.gameState.preselectedVillagers.filter(
-                    (v) => v !== villager
-                  ),
-                });
-              }}
-            >
-              <p className="dreamName">{villager.name}</p>
-              <p className="ex">X</p>
-            </a>
-          );
-        })}
-        <p className="dreamTemp">No dreamie</p>
-      </VillagerDropdown>
     );
   }
 
@@ -530,16 +400,16 @@ export default class Home extends React.Component {
 
   renderBlank() {
     return (
-      <div className="boardBox" id="capture">
-        <div className="boardTiles">
-          {Array.from({ length: 12 }, (value, idx) => (
-            <div key={idx} className="tileBlank"></div>
+      <div className="bigBox" id="capture">
+        <div className="bigGrid">
+          {Array.from({ length: 4 }, (value, idx) => (
+            <div key={idx} className="bigBlank"></div>
           ))}
 
           {this.renderFreePlot()}
 
-          {Array.from({ length: 12 }, (value, idx) => (
-            <div key={idx} className="tileBlank"></div>
+          {Array.from({ length: 4 }, (value, idx) => (
+            <div key={idx} className="bigBlank"></div>
           ))}
         </div>
       </div>
@@ -552,14 +422,14 @@ export default class Home extends React.Component {
       return this.renderBlank();
     }
     return (
-      <div className="boardBox" id="capture">
-        <div className={`boardTiles ${this.gameState.villagerSet}`}>
-          {this.gameState.boardVillagers.slice(0, 12).map((villager, index) => {
+      <div className="bigBox" id="capture">
+        <div className={`bigGrid ${this.gameState.villagerSet}`}>
+          {this.gameState.boardVillagers.slice(0, 4).map((villager, index) => {
             return this.renderBoardTile(villager, index);
           })}
           {this.renderFreePlot()}
-          {this.gameState.boardVillagers.slice(12).map((villager, index) => {
-            return this.renderBoardTile(villager, index + 13);
+          {this.gameState.boardVillagers.slice(4).map((villager, index) => {
+            return this.renderBoardTile(villager, index + 5);
           })}
         </div>
       </div>
@@ -578,9 +448,9 @@ export default class Home extends React.Component {
     }
 
     return (
-      <a href="#" className="free">
+      <a href="#" className="bigFree">
         <input
-          className="overlap"
+          className="bigOverlap"
           type="text"
           value={this.gameState.boardLabel}
           placeholder="Free plot"
@@ -606,7 +476,7 @@ export default class Home extends React.Component {
             src="/FreePlot.png"
             style={tileStyle}
             crossOrigin="anonymous"
-            className="plot"
+            className="bigPlot"
             alt=""
             draggable="false"
           />
@@ -1028,53 +898,6 @@ export default class Home extends React.Component {
               {this.renderHowTo()}
               {this.renderSettings()}
             </div>
-            {this.renderVillagerSelector()}
-            <div className="facesBox">
-              {this.gameState.excludedVillagers.map((villager) => {
-                return (
-                  <a
-                    href="#"
-                    key={villager.name}
-                    title={`Deselect ${villager.name}`}
-                    className="faceWrap"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.setGameState({
-                        changedSettings: true,
-                        excludedVillagers: this.gameState.excludedVillagers.filter(
-                          (v) => v !== villager
-                        ),
-                      });
-                    }}
-                  >
-                    <div
-                      className="faceIcon"
-                      style={{
-                        backgroundColor: villager.textColor,
-                        backgroundImage: `url(${villager.iconUrl})`,
-                        backgroundSize: "contain",
-                        border: `2px solid ${villager.bubbleColor}`,
-                      }}
-                    ></div>
-                    <p
-                      className="faceName"
-                      style={{
-                        backgroundColor: villager.bubbleColor,
-                        color: villager.textColor,
-                      }}
-                    >
-                      {villager.name}
-                    </p>
-                  </a>
-                );
-              })}
-            </div>
-
-            <div className="separator"></div>
-
-            {this.renderVillagerPreselector()}
-
-            <div className="separator"></div>
 
             {this.renderVillagerSetSelector()}
 
@@ -1113,8 +936,6 @@ export default class Home extends React.Component {
             </div> */}
 
             {this.renderBlotterSelector()}
-
-            {this.renderBoardColorSelection()}
 
             <div className="footer">
               <div className="separator"></div>

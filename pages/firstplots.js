@@ -9,7 +9,6 @@ import { VillagerDropdown } from "../components/villager-dropdown";
 import { NavDropdown } from "../components/nav-dropdown";
 import { toSpeciesItem } from "../lib/species-item";
 import { BoardCanvas } from "../components/board-canvas";
-import { BoardColors } from "../lib/board-color";
 
 const ALL_THEMES = [
   {
@@ -214,6 +213,10 @@ export default class Home extends React.Component {
       );
     }
 
+    possibleVillagers = possibleVillagers.filter((villager) => {
+      return ["Lazy", "Normal", "Peppy"].includes(villager.personality);
+    });
+
     return pickRandom(possibleVillagers, { count: additionalCount }).concat(
       preselectedVillagers
     );
@@ -388,51 +391,6 @@ export default class Home extends React.Component {
         </div>
         {isSelected ? this.renderBlotter(index) : null}
       </a>
-    );
-  }
-
-  renderVillagerSelector() {
-    return (
-      <VillagerDropdown
-        id="excluded-villagers-autocomplete"
-        labelText="Exclude current villagers:"
-        disabled={this.gameState.excludedVillagers.length === 9}
-        excludedVillagers={this.gameState.excludedVillagers}
-        onSelection={(selection, afterSelectionApplied) => {
-          this.setGameState((prevState) => {
-            return {
-              changedSettings: true,
-              excludedVillagers: prevState.excludedVillagers.concat([
-                selection,
-              ]),
-              preselectedVillagers: prevState.preselectedVillagers.filter(
-                (villager) => villager !== selection
-              ),
-            };
-          }, afterSelectionApplied);
-        }}
-      >
-        <button
-          type="button"
-          className="copy"
-          onClick={(e) => {
-            e.preventDefault();
-            const cleanedState = Object.assign({}, this.gameState, {
-              // Reset values we don't want in the shared URL:
-              boardLabel: "",
-              boardVillagers: [],
-              selectedVillagers: [],
-              selectedColor: null,
-              selectedFreePlot: "",
-              villagerSet: "standard",
-            });
-            const shareData = encodeState(location.href, cleanedState);
-            navigator.clipboard.writeText(`${shareData}&cs=cau`);
-          }}
-        >
-          Copy as url
-        </button>
-      </VillagerDropdown>
     );
   }
 
@@ -1028,49 +986,6 @@ export default class Home extends React.Component {
               {this.renderHowTo()}
               {this.renderSettings()}
             </div>
-            {this.renderVillagerSelector()}
-            <div className="facesBox">
-              {this.gameState.excludedVillagers.map((villager) => {
-                return (
-                  <a
-                    href="#"
-                    key={villager.name}
-                    title={`Deselect ${villager.name}`}
-                    className="faceWrap"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      this.setGameState({
-                        changedSettings: true,
-                        excludedVillagers: this.gameState.excludedVillagers.filter(
-                          (v) => v !== villager
-                        ),
-                      });
-                    }}
-                  >
-                    <div
-                      className="faceIcon"
-                      style={{
-                        backgroundColor: villager.textColor,
-                        backgroundImage: `url(${villager.iconUrl})`,
-                        backgroundSize: "contain",
-                        border: `2px solid ${villager.bubbleColor}`,
-                      }}
-                    ></div>
-                    <p
-                      className="faceName"
-                      style={{
-                        backgroundColor: villager.bubbleColor,
-                        color: villager.textColor,
-                      }}
-                    >
-                      {villager.name}
-                    </p>
-                  </a>
-                );
-              })}
-            </div>
-
-            <div className="separator"></div>
 
             {this.renderVillagerPreselector()}
 
@@ -1113,8 +1028,6 @@ export default class Home extends React.Component {
             </div> */}
 
             {this.renderBlotterSelector()}
-
-            {this.renderBoardColorSelection()}
 
             <div className="footer">
               <div className="separator"></div>
