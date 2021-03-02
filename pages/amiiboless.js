@@ -205,9 +205,9 @@ export default class Home extends React.Component {
       this.gameState.preselectedVillagers
     );
 
-    const sortedVillagers = unsortedBoardVillagers.sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    });
+    // const sortedVillagers = unsortedBoardVillagers.sort((a, b) => {
+    //   return a.name.localeCompare(b.name);
+    // });
 
     // Awful "shuffle" implementation.
     const sourceVillager = unsortedBoardVillagers.slice(0);

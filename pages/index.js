@@ -1114,7 +1114,7 @@ export default class Home extends React.Component {
 
             {this.renderBlotterSelector()}
 
-            {this.renderBoardColorSelection()}
+            {/* {this.renderBoardColorSelection()} */}
 
             <div className="footer">
               <div className="separator"></div>
