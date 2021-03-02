@@ -993,7 +993,7 @@ export default class Home extends React.Component {
             </h1>
 
             {/* <div className="separatorBig"></div> */}
-            {this.renderUpdateNotice()}
+            {/* {this.renderUpdateNotice()} */}
 
             <div className={navbarClasses.join(" ")}>
               <div className="howToButtonBorder">Tips</div>
