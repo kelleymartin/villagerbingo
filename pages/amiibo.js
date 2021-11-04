@@ -42,6 +42,10 @@ const SERIES_OPTIONS = [
     seriesId: 5,
     label: "Welcome",
   },
+  {
+    seriesId: 6,
+    label: "Series 5",
+  },
 ];
 
 const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";

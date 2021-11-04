@@ -931,7 +931,6 @@ ul.downshift-options > li.downshift-selected {
   font-weight: 400;
 }
 
-.setSelection,
 .gameModeSelection {
   display: grid;
   grid-template-columns: 0px 1fr 1fr 1fr 1fr 1fr 0px;
@@ -940,9 +939,23 @@ ul.downshift-options > li.downshift-selected {
 }
 
 .setSelection {
+  display: grid;
+  grid-template-columns: 0px 1fr 1fr 1fr 0px;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+/* .setSelection {
   grid-template-areas:
     "left label label label label label right"
     "left easy standard hard species personalities right";
+} */
+
+.setSelection {
+  grid-template-areas:
+    "left label label label right"
+    "left easy standard hard right"
+    "left species personalities new right";
 }
 
 .gameModeSelection {
@@ -1087,6 +1100,24 @@ ul.downshift-options > li.downshift-selected {
 }
 
 .dark-mode .amiibo-series-5.amiibo-series-active {
+  background-image: none;
+  background-color: #bc0a71;
+}
+
+.amiibo-series-6 {
+  grid-area: new;
+  border: 2px solid #f993ce;
+  background-color: transparent;
+  /* min-width: 120px;
+  max-width: max-content; */
+}
+
+.amiibo-series-6.amiibo-series-active {
+  background-image: linear-gradient(to bottom, #ffe886, #fcc9e6);
+  border: 4px solid #f993ce;
+}
+
+.dark-mode .amiibo-series-6.amiibo-series-active {
   background-image: none;
   background-color: #bc0a71;
 }
@@ -1350,6 +1381,11 @@ button {
 .amiibo-5 {
   width: auto;
   object-position: -19px -22px;
+}
+
+.amiibo-6 {
+  width: 135px;
+  object-position: -8px -16px;
 }
 
 .nameTagWrap {
