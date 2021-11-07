@@ -44,7 +44,7 @@ const SETTING_BLOTTER_ROTATION = "blotterRotationEnabled";
 const SETTING_BLOTTER_OUTLINE = "blotterOutlineEnabled";
 const SETTING_BLOTTER_OPACITY = "blotterOpacity";
 const SETTING_TILE_BLUR = "tileBlurEnabled";
-const SETTING_LAST_SEEN_UPDATE = "lastSeenUpdate";
+// const SETTING_LAST_SEEN_UPDATE = "lastSeenUpdate";
 
 // "Random" angles between -50 and 49
 const ANGLES_BY_INDEX = [
@@ -104,7 +104,7 @@ export default class Home extends React.Component {
       [SETTING_BLOTTER_ROTATION]: false,
       [SETTING_BLOTTER_OUTLINE]: false,
       [SETTING_TILE_BLUR]: false,
-      [SETTING_LAST_SEEN_UPDATE]: Number.MAX_SAFE_INTEGER,
+      // [SETTING_LAST_SEEN_UPDATE]: Number.MAX_SAFE_INTEGER,
     },
     blotterSetId: "color",
   };
@@ -181,8 +181,8 @@ export default class Home extends React.Component {
         [SETTING_BLOTTER_OUTLINE]:
           localStorage.getItem(SETTING_BLOTTER_OUTLINE) === "true",
         [SETTING_TILE_BLUR]: localStorage.getItem(SETTING_TILE_BLUR) === "true",
-        [SETTING_LAST_SEEN_UPDATE]:
-          Number(localStorage.getItem(SETTING_LAST_SEEN_UPDATE)) || 0,
+        // [SETTING_LAST_SEEN_UPDATE]:
+        //   Number(localStorage.getItem(SETTING_LAST_SEEN_UPDATE)) || 0,
       },
     });
   }
