@@ -913,47 +913,47 @@ export default class Home extends React.Component {
     return blotter.id;
   }
 
-  renderUpdateNotice() {
-    const lastSeenTimestamp = this.state.settings[SETTING_LAST_SEEN_UPDATE];
-    const updateDate = "2020-12-03";
-    const latestTimestamp = Date.parse(updateDate);
+  // renderUpdateNotice() {
+  //   const lastSeenTimestamp = this.state.settings[SETTING_LAST_SEEN_UPDATE];
+  //   const updateDate = "2020-12-03";
+  //   const latestTimestamp = Date.parse(updateDate);
 
-    if (lastSeenTimestamp >= latestTimestamp) {
-      return <></>;
-    }
+  //   if (lastSeenTimestamp >= latestTimestamp) {
+  //     return <></>;
+  //   }
 
-    return (
-      <div className="updateWrap">
-        <div className="update">
-          <a
-            className="updateX"
-            onClick={(e) => {
-              e.preventDefault();
+  //   return (
+  //     <div className="updateWrap">
+  //       <div className="update">
+  //         <a
+  //           className="updateX"
+  //           onClick={(e) => {
+  //             e.preventDefault();
 
-              this.setSettings({
-                [SETTING_LAST_SEEN_UPDATE]: latestTimestamp,
-              });
-            }}
-          >
-            X
-          </a>
-          <h3>Latest Update - {updateDate}</h3>
-          <ul>
-            <li>Added second game version: Species</li>
-            <li className="indent">Only 35 possible tiles; one per species</li>
-            <li className="indent">
-              Quicker game; ideal for short hunts and/or frequent hits with
-              blackout potential
-            </li>
-            <li>Named original game version "Villagers"</li>
-            <li>Renamed "How to play" to "Tips"</li>
-            <li>Added tips & game version info under Tips</li>
-            <li>Changed some colors to match the new species tiles</li>
-          </ul>
-        </div>
-      </div>
-    );
-  }
+  //             this.setSettings({
+  //               [SETTING_LAST_SEEN_UPDATE]: latestTimestamp,
+  //             });
+  //           }}
+  //         >
+  //           X
+  //         </a>
+  //         <h3>Latest Update - {updateDate}</h3>
+  //         <ul>
+  //           <li>Added second game version: Species</li>
+  //           <li className="indent">Only 35 possible tiles; one per species</li>
+  //           <li className="indent">
+  //             Quicker game; ideal for short hunts and/or frequent hits with
+  //             blackout potential
+  //           </li>
+  //           <li>Named original game version "Villagers"</li>
+  //           <li>Renamed "How to play" to "Tips"</li>
+  //           <li>Added tips & game version info under Tips</li>
+  //           <li>Changed some colors to match the new species tiles</li>
+  //         </ul>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   render() {
     const navbarClasses = ["navbar"];
